@@ -22,7 +22,7 @@ define('SELECT_MODULE'  , TRUE);
 
 // -- Environment
 //define('MY_ENV', 'development'); //development testing production
-define('MY_ENV', 'production'); //development testing production
+define('MY_ENV', 'development'); //development testing production
 
 // -- System & Application
 define('MY_SYS', 'sys213');
