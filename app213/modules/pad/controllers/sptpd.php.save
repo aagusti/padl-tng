@@ -1,0 +1,659 @@
+<?php if (!defined('BASEPATH')) exit('No direct script access allowed');
+
+class sptpd extends CI_Controller {
+	private $module = 'pendataan';
+	private $controller = 'sptpd';
+
+    function __construct()
+    {
+        parent::__construct();
+        if (!is_login()) {
+            echo "<script>window.location.replace('" . base_url() . "');</script>";
+            exit;
+        }
+
+		if ($this->uri->segment(2) == 'skpd') {
+			$this->module = 'penetapan';
+			$this->controller = 'skpd';
+		}
+
+        $this->load->model(array(
+            'apps_model', 'sptpd_model', 'skpd_model', 
+            'reklame_nilai_strategis_model',
+        ));
+
+		$this->load->helper(active_module()); // cm kasih prefix namanya doang :D, ga pake _helper (pad_helper)
+    }
+
+	function load_auth() {
+        $this->load->library('module_auth', array('module' => $this->module));
+    }
+    
+    public function index($id)
+    {
+		$this->load_auth();
+        if (!$this->module_auth->read) {
+            $this->session->set_flashdata('msg_warning', $this->module_auth->msg_read);
+            redirect('info');
+        }
+
+        $data['current']    = $this->module;
+        $data['controller'] = $this->controller;
+        $data['apps']       = $this->apps_model->get_active_only();
+
+		if (!wp_login()) {
+			$select_data = $this->load->model('sptpd_type_model')->get_select();
+			$options     = array();
+			if($select_data) {
+			foreach ($select_data as $row) {
+				$options[$row->id] = $row->typenm;
+			}}
+			$options[999] = 'SEMUA DOKUMEN';
+			$js                        = 'id="type_id" class="input-small" onChange="void(0);"';
+			$select = form_dropdown('type_id', $options, 999, $js);
+			$select = preg_replace("/[\r\n]+/", "", $select);;
+			$data['select_sptpd_type'] = $select;
+            
+            $options = array(
+                '1' => 'BELUM PROSES',
+                '2' => 'SUDAH PROSES',
+            );
+            $js = 'id="proses_id" class="input-medium"';
+            $select = form_dropdown('proses_id', $options, 1, $js);
+            $select = preg_replace("/[\r\n]+/", "", $select);
+            $data['select_proses_id'] = $select;
+            if($id != 'default')
+            $select_data = $this->load->model('usaha_model')->get_select_one($id);
+            if ($id == 'default')
+            $select_data = $this->load->model('usaha_model')->get_select();
+            $options     = array();
+            if($select_data) {
+            foreach ($select_data as $row) {
+                $options[$row->id] = $row->nama;
+            }}
+            if($id != 'default')
+            $js = 'id="usaha_id" class="input-medium" readonly';
+
+            if ($id == 'default')
+            $js = 'id="usaha_id" class="input-medium"';
+            if($id){
+            $selected = $row->id; //selected id (filter langsung)
+            $select = form_dropdown('usaha_id', $options, $selected, $js);
+            if($id != 'default'){
+            $this->session->unset_userdata('usaha_nama');
+            $this->session->set_userdata('usaha_nama', $options);
+            }
+            if ($id == 'default')
+            {
+            $array = array('SEMUA USAHA');
+            $this->session->unset_userdata('usaha_nama');
+            $this->session->set_userdata('usaha_nama', $array);
+            }
+            $data['add_id'] = $id;
+            }
+            else{
+            $options[999] = 'SEMUA PAJAK';
+            $select = form_dropdown('usaha_id', $options, 999, $js);
+            }
+            $select = preg_replace("/[\r\n]+/", "", $select);;
+            $data['select_usaha'] = $select;
+            
+			$this->load->view(active_module().'/vsptpd', $data);
+		    } else {
+			$select_data = $this->load->model('sptpd_type_model')->get_select();
+			$options     = array();
+			if($select_data) {
+			foreach ($select_data as $row) {
+				$options[$row->id] = $row->typenm;
+			}}
+			$options[999] = 'SEMUA DOKUMEN';
+			$js                        = 'id="type_id" class="input-small" onChange="void(0);"';
+			$select = form_dropdown('type_id', $options, 999, $js);
+			$select = preg_replace("/[\r\n]+/", "", $select);;
+			$data['select_sptpd_type'] = $select;
+            $select_data = $this->load->model('usaha_model')->get_select();
+			$options     = array();
+			if($select_data) {
+			foreach ($select_data as $row) {
+				$options[$row->id] = $row->nama;
+			}}
+			$js                   = 'id="usaha_id" class="input-medium"';
+			$options[999] = 'SEMUA PAJAK';
+			$select = form_dropdown('usaha_id', $options, 999, $js);
+			$select = preg_replace("/[\r\n]+/", "", $select);;
+			$data['select_usaha'] = $select;
+            
+			$this->load->view(active_module().'/wp/vsptpd', $data);
+		}
+    }
+
+    function grid()
+    {
+        $type_id   = $this->uri->segment(4); // on sptpd
+        $proses_id = $this->uri->segment(4); // on skpd
+        $usaha_id  = $this->uri->segment(5);
+        $terimatgl = $this->uri->segment(6);
+        $terimatgl = empty($terimatgl) ? date('Y-m-d') : date('Y-m-d', strtotime($terimatgl));
+        
+        $this->load->library('Datatables');
+
+		if (!wp_login()) {
+			if ($this->controller == 'sptpd') {
+				$this->datatables->select('s.id, get_sptno(s.id) as sptno, s.terimatgl, st.typenm,
+					get_nopd(cu.id, true) as npwpd, case when s.r_nama is not null then r_nama else c.nama end as customernm, 
+                    p.nama, get_bulan(extract(month from s.masadari)::int, TRUE)||extract(year from s.masadari) as masa, 
+                    s.dasar, s.pajak_terhutang as pajak,
+					cu.usaha_id, s.type_id, cu.def_pajak_id, cu.id as cuid', false);
+				$this->datatables->from('pad_spt s');
+				$this->datatables->join('pad_customer_usaha cu', 's.customer_usaha_id=cu.id', 'left');
+				$this->datatables->join('pad_customer c', 'cu.customer_id=c.id', 'left');
+				$this->datatables->join('pad_usaha u', 'cu.usaha_id=u.id', 'left');
+				$this->datatables->join('pad_jenis_pajak p', 's.pajak_id=p.id', 'left');
+				$this->datatables->join('pad_spt_type st', 'st.id=s.type_id', 'left');
+
+                if($type_id <> 999 && !empty($type_id))
+                    $this->datatables->filter('s.type_id', $type_id);
+                    
+				if ($this->input->get('iSortCol_0') == 1) {
+					$sort = $this->input->get('sSortDir_0');
+					$this->datatables->order_by('s.sptno', $sort);
+				}
+                
+                if($this->input->get('sSearch') == '')
+                    $this->datatables->filter('s.terimatgl', $terimatgl);
+			}
+
+			if ($this->controller == 'skpd') {
+				$this->datatables->select('s.id, get_kohirno(s.id) as kohirno, k.kohirtgl, get_sptno(s.id) as sptno,
+					get_nopd(cu.id, true) as npwpd, case when s.r_nama is not null then r_nama else c.nama end as customernm, 
+                    p.nama, get_bulan(extract(month from s.masadari)::int, TRUE)||extract(year from s.masadari) as masa, 
+                    s.dasar, s.pajak_terhutang as pajak,
+					cu.usaha_id, s.type_id', false);
+				$this->datatables->from('pad_spt s');
+				$this->datatables->join('pad_customer_usaha cu', 's.customer_usaha_id=cu.id', 'left');
+				$this->datatables->join('pad_customer c', 'cu.customer_id=c.id', 'left');
+				$this->datatables->join('pad_usaha u', 'cu.usaha_id=u.id', 'left');
+				$this->datatables->join('pad_jenis_pajak p', 's.pajak_id=p.id', 'left');
+				$this->datatables->join('pad_spt_type st', 'st.id=s.type_id', 'left');
+				$this->datatables->join('pad_kohir k', 'k.spt_id=s.id', 'left');
+
+				$this->datatables->where('upper(st.typenm) like', 'SK%');
+
+				if ($this->input->get('iSortCol_0') == 1) {
+					$sort = $this->input->get('sSortDir_0');
+					$this->datatables->order_by('k.kohirno', $sort);
+				}
+                
+                if ($proses_id == 2) 
+                    $this->datatables->where('k.kohirno is not NULL');
+                else
+                    $this->datatables->where('k.kohirno is NULL');
+                    
+                if($this->input->get('sSearch') == '')
+                    if ($proses_id == 2) 
+                        $this->datatables->filter('k.kohirtgl', $terimatgl);
+                    else
+                        $this->datatables->filter('s.terimatgl', $terimatgl);
+			}
+
+			// $this->datatables->where('s.tahun', pad_tahun_anggaran());
+			if($usaha_id <> 999 && !empty($usaha_id))
+				$this->datatables->filter('cu.usaha_id', $usaha_id);
+            
+			$this->datatables->rupiah_column('8,9');
+			$this->datatables->date_column('2');
+			
+		} else {
+			if ($this->controller == 'sptpd') {
+				$this->datatables->select('s.id, (s.tahun||\'.\'||s.sptno::text) as sptno, s.terimatgl,
+					get_nopd(cu.id, true) as npwpd, c.nama, s.masadari, s.masasd,
+                    s.dasar, s.pajak_terhutang as pajak,
+					case when tl.id > 0 then 1 else 0 end tid, 
+					cu.usaha_id, s.type_id', false);
+				$this->datatables->from('pad_spt s');
+				$this->datatables->join('pad_customer_usaha cu', 's.customer_usaha_id=cu.id', 'left');
+				$this->datatables->join('pad_customer c', 'cu.customer_id=c.id', 'left');
+				$this->datatables->join('pad_usaha u', 'cu.usaha_id=u.id', 'left');
+				$this->datatables->join('pad_jenis_pajak p', 's.pajak_id=p.id', 'left');
+				$this->datatables->join('pad_spt_type st', 'st.id=s.type_id', 'left');
+				$this->datatables->join('pad_terima_line tl', 's.id=tl.spt_id', 'left');
+
+				if ($this->input->get('iSortCol_0') == 1) {
+					$sort = $this->input->get('sSortDir_0');
+					$this->datatables->order_by('s.sptno', $sort);
+				}
+			}
+			
+			// $this->datatables->where('s.tahun', pad_tahun_anggaran());
+			$this->datatables->where('c.id', wp_id());
+			
+			if($type_id <> 999 && !empty($type_id))
+				$this->datatables->where('s.type_id', $type_id);
+			if($usaha_id <> 999 && !empty($usaha_id))
+				$this->datatables->where('cu.usaha_id', $usaha_id);
+
+			$this->datatables->checkbox_column('9');
+			$this->datatables->rupiah_column('8,9');
+			$this->datatables->date_column('2');
+		}
+		
+
+        echo $this->datatables->generate();
+    }
+
+   
+
+    //admin
+    private function fvalidation()
+    {
+        //spt global
+        $jenis_usaha = $this->uri->segment(4);
+
+        $this->form_validation->set_error_delimiters('<span>', '</span>');
+        $this->form_validation->set_rules('tahun', 'tahun', 'required|numeric');
+        $this->form_validation->set_rules('terimatgl', 'terimatgl', 'required');
+        $this->form_validation->set_rules('customer_id', 'customer_id', 'required|numeric');
+        $this->form_validation->set_rules('customer_usaha_id', 'customer_usaha_id', 'required|numeric');
+        $this->form_validation->set_rules('pajak_id', 'pajak_id', 'required|numeric');
+        $this->form_validation->set_rules('rekening_id', 'rekening_id', 'required|numeric');
+        $this->form_validation->set_rules('so', 'so', 'required|trim');
+        $this->form_validation->set_rules('type_id', 'type_id', 'required|numeric');
+        $this->form_validation->set_rules('masapajak_bulan', 'masapajak_bulan', 'required');
+        //$this->form_validation->set_rules('masasd', 'masasd', 'required');
+        $this->form_validation->set_rules('jatuhtempotgl', 'jatuhtempotgl', 'required');
+        $this->form_validation->set_rules('r_bayarid', 'r_bayarid', 'required|numeric');
+
+        //air
+        if ($jenis_usaha == pad_air_tanah_id()) {
+            if (pad_to_decimal($this->input->post('dasar')) <= 0 )
+            $this->form_validation->set_rules('dasar', 'NPA', 'required|is_natural_no_zero');
+            if (pad_to_decimal($this->input->post('volume')) <= 0 )
+            $this->form_validation->set_rules('volume', 'volume', 'required|is_natural_no_zero');
+        }
+
+        //reklame
+        if ($jenis_usaha == pad_reklame_id()) {
+            //$this->form_validation->set_rules('r_nsl_kecamatan_id', 'r_nsl_kecamatan_id', 'required|numeric');
+            //$this->form_validation->set_rules('r_nsl_type_id', 'r_nsl_type_id', 'required|numeric');
+            //$this->form_validation->set_rules('r_nsl_nilai', 'r_nsl_nilai', 'required|numeric');
+            //$this->form_validation->set_rules('r_kelurahan_id', 'r_kelurahan_id', 'required|numeric');
+            $this->form_validation->set_rules('r_nsr', 'r_nsr', 'required|numeric');
+            // $this->form_validation->set_rules('r_nsrno', 'r_nsrno', 'required|trim');
+            //$this->form_validation->set_rules('r_nsrtgl', 'r_nsrtgl', 'required');
+            $this->form_validation->set_rules('r_tarifid', 'r_tarifid', 'required|numeric');
+            //$this->form_validation->set_rules('r_kontrak', 'r_kontrak', 'required|numeric');
+            $this->form_validation->set_rules('r_lama', 'r_lama', 'required|numeric');
+            $this->form_validation->set_rules('r_jalanklas_id', 'r_jalanklas_id', 'required|numeric');
+            $this->form_validation->set_rules('r_jalan_id', 'r_jalan_id', 'required|numeric');
+            //$this->form_validation->set_rules('r_lokasi', 'r_lokasi', 'required|trim');
+            $this->form_validation->set_rules('r_judul', 'r_judul', 'required|trim');
+            $this->form_validation->set_rules('r_panjang', 'r_panjang', 'required');
+            $this->form_validation->set_rules('r_lebar', 'r_lebar', 'required');
+            $this->form_validation->set_rules('r_muka', 'r_muka', 'required');
+            $this->form_validation->set_rules('r_banyak', 'r_banyak', 'required|numeric');
+            $this->form_validation->set_rules('r_luas', 'r_luas', 'required');
+            //$this->form_validation->set_rules('r_lokasi_id', 'r_lokasi_id', 'required|numeric');
+            $this->form_validation->set_rules('r_calculated', 'r_calculated', 'required');
+            $this->form_validation->set_rules('r_status', 'r_status', 'trim');
+        }
+    }
+
+
+    private function fpost($jenis_usaha = NULL)
+    { 
+        //spt global
+        $data['nopd']              = $this->input->post('nopd');
+
+        $data['id']                = $this->input->post('id');
+        $data['sptno']             = $this->input->post('sptno');
+        $data['tahun']             = $this->input->post('tahun');
+        $data['terimatgl']         = $this->input->post('terimatgl');
+        $data['customer_id']       = $this->input->post('customer_id');
+        $data['customer_usaha_id'] = $this->input->post('customer_usaha_id');
+        $data['pajak_id']          = $this->input->post('pajak_id');
+        $data['rekening_id']       = $this->input->post('rekening_id');
+        $data['so']                = $this->input->post('so');
+        $data['type_id']           = $this->input->post('type_id');
+        $data['masadari']          = $this->input->post('masadari');
+        $data['masasd']            = $this->input->post('masasd');
+        $data['jatuhtempotgl']     = $this->input->post('jatuhtempotgl');
+
+        $data['minimal_omset']   = $this->input->post('minimal_omset');
+        $data['dasar']      = pad_to_decimal($this->input->post('dasar'));
+        $data['tarif']      = pad_to_decimal($this->input->post('tarif'));
+        $data['denda']      = pad_to_decimal($this->input->post('denda'));
+        $data['bunga']      = pad_to_decimal($this->input->post('bunga'));
+        $data['setoran']    = pad_to_decimal($this->input->post('setoran'));
+        $data['kenaikan']   = pad_to_decimal($this->input->post('kenaikan'));
+        $data['kompensasi'] = pad_to_decimal($this->input->post('kompensasi'));
+        $data['lain2']      = pad_to_decimal($this->input->post('lain2'));
+		
+        $data['r_nsr']     = pad_to_decimal($this->input->post('r_nsr'));
+        $data['r_bayarid'] = $this->input->post('r_bayarid');
+
+        $data['doc_no'] = $this->input->post('doc_no');
+        $data['cara_bayar'] = $this->input->post('cara_bayar');
+
+
+        $data['kirimtgl']     = $this->input->post('kirimtgl');
+        $data['notes']        = $this->input->post('notes');
+        $data['no_skpd_lama'] = $this->input->post('no_skpd_lama');
+        $data['unit_id']      = $this->input->post('unit_id');
+        $data['enabled']      = $this->input->post('enabled');
+        $data['terimanip']    = $this->input->post('terimanip');
+        $data['isprint_dc']   = $this->input->post('isprint_dc');
+
+        $data['created'] = date('Y-m-d h:i:s');
+        $data['create_uid']  = sipkd_user_id();
+        $data['updated']  = date('Y-m-d h:i:s');
+        $data['update_uid']   = sipkd_user_id();
+        
+        //omset 31 Hari
+        $data['omset1']      = pad_to_decimal($this->input->post('omset1'));
+        $data['omset2']      = pad_to_decimal($this->input->post('omset2'));
+        $data['omset3']      = pad_to_decimal($this->input->post('omset3'));
+        $data['omset4']      = pad_to_decimal($this->input->post('omset4'));
+        $data['omset5']      = pad_to_decimal($this->input->post('omset5'));
+        $data['omset6']      = pad_to_decimal($this->input->post('omset6'));
+        $data['omset7']      = pad_to_decimal($this->input->post('omset7'));
+        $data['omset8']      = pad_to_decimal($this->input->post('omset8'));
+        $data['omset9']      = pad_to_decimal($this->input->post('omset9'));
+        $data['omset10']      = pad_to_decimal($this->input->post('omset10'));
+        $data['omset11']      = pad_to_decimal($this->input->post('omset11'));
+        $data['omset12']      = pad_to_decimal($this->input->post('omset12'));
+        $data['omset13']      = pad_to_decimal($this->input->post('omset13'));
+        $data['omset14']      = pad_to_decimal($this->input->post('omset14'));
+        $data['omset15']      = pad_to_decimal($this->input->post('omset15'));
+        $data['omset16']      = pad_to_decimal($this->input->post('omset16'));
+        $data['omset17']      = pad_to_decimal($this->input->post('omset17'));
+        $data['omset18']      = pad_to_decimal($this->input->post('omset18'));
+        $data['omset19']      = pad_to_decimal($this->input->post('omset19'));
+        $data['omset20']      = pad_to_decimal($this->input->post('omset20'));
+        $data['omset21']      = pad_to_decimal($this->input->post('omset21'));
+        $data['omset22']      = pad_to_decimal($this->input->post('omset22'));
+        $data['omset23']      = pad_to_decimal($this->input->post('omset23'));
+        $data['omset24']      = pad_to_decimal($this->input->post('omset24'));
+        $data['omset25']      = pad_to_decimal($this->input->post('omset25'));
+        $data['omset26']      = pad_to_decimal($this->input->post('omset26'));
+        $data['omset27']      = pad_to_decimal($this->input->post('omset27'));
+        $data['omset28']      = pad_to_decimal($this->input->post('omset28'));
+        $data['omset29']      = pad_to_decimal($this->input->post('omset29'));
+        $data['omset30']      = pad_to_decimal($this->input->post('omset30'));
+        $data['omset31']      = pad_to_decimal($this->input->post('omset31')); 
+
+        $data['keterangan1']      = $this->input->post('keterangan1');
+        $data['keterangan2']      = $this->input->post('keterangan2');
+        $data['keterangan3']      = $this->input->post('keterangan3');
+        $data['keterangan4']      = $this->input->post('keterangan4');
+        $data['keterangan5']      = $this->input->post('keterangan5');
+        $data['keterangan6']      = $this->input->post('keterangan6');
+        $data['keterangan7']      = $this->input->post('keterangan7');
+        $data['keterangan8']      = $this->input->post('keterangan8');
+        $data['keterangan9']      = $this->input->post('keterangan9');
+        $data['keterangan10']      = $this->input->post('keterangan10');
+        $data['keterangan11']      = $this->input->post('keterangan11');
+        $data['keterangan12']      = $this->input->post('keterangan12');
+        $data['keterangan13']      = $this->input->post('keterangan13');
+        $data['keterangan14']      = $this->input->post('keterangan14');
+        $data['keterangan15']      = $this->input->post('keterangan15');
+        $data['keterangan16']      = $this->input->post('keterangan16');
+        $data['keterangan17']      = $this->input->post('keterangan17');
+        $data['keterangan18']      = $this->input->post('keterangan18');
+        $data['keterangan19']      = $this->input->post('keterangan19');
+        $data['keterangan20']      = $this->input->post('keterangan20');
+        $data['keterangan21']      = $this->input->post('keterangan21');
+        $data['keterangan22']      = $this->input->post('keterangan22');
+        $data['keterangan23']      = $this->input->post('keterangan23');
+        $data['keterangan24']      = $this->input->post('keterangan24');
+        $data['keterangan25']      = $this->input->post('keterangan25');
+        $data['keterangan26']      = $this->input->post('keterangan26');
+        $data['keterangan27']      = $this->input->post('keterangan27');
+        $data['keterangan28']      = $this->input->post('keterangan28');
+        $data['keterangan29']      = $this->input->post('keterangan29');
+        $data['keterangan30']      = $this->input->post('keterangan30');
+        $data['keterangan31']      = $this->input->post('keterangan31'); 
+
+
+
+        $data['nama']   = $this->input->post('nama'); // kota Tangerang
+
+        //air
+        if ($jenis_usaha == pad_air_tanah_id()) {
+            $data['air_manfaat_id'] = $this->input->post('air_manfaat_id');
+            $data['air_zona_id']    = $this->input->post('air_zona_id');
+            $data['meteran_awal']   = pad_to_decimal($this->input->post('meteran_awal'));
+            $data['meteran_akhir']  = pad_to_decimal($this->input->post('meteran_akhir'));
+            $data['volume']         = pad_to_decimal($this->input->post('volume'));
+            $data['satuan']         = $this->input->post('satuan');
+        }
+
+        //reklame
+        if ($jenis_usaha == pad_reklame_id()) {
+            $data['r_nsrno']  = $this->input->post('r_nsrno');
+            $data['r_nsrtgl'] = $this->input->post('r_nsrtgl');
+
+            $data['r_jalanklas_id'] = $this->input->post('r_jalanklas_id');
+            $data['r_jalan_id']     = $this->input->post('r_jalan_id');
+            $data['r_lokasi']       = $this->input->post('r_lokasi');
+            $data['r_judul']        = $this->input->post('r_judul');
+
+            $data['r_panjang'] = pad_to_decimal($this->input->post('r_panjang'), 1);
+            $data['r_lebar']   = pad_to_decimal($this->input->post('r_lebar'), 1);
+            $data['r_muka']    = pad_to_decimal($this->input->post('r_muka'), 1);
+            $data['r_banyak']  = pad_to_decimal($this->input->post('r_banyak'), 1);
+            $data['r_luas']    = pad_to_decimal($this->input->post('r_luas'), 1);
+
+            $data['r_tarifid']    = $this->input->post('r_tarifid');
+            $data['r_nsl_nilai']  = pad_to_decimal($this->input->post('r_nsl_nilai'));
+            $data['r_lama']       = pad_to_decimal($this->input->post('r_lama'));
+            $data['r_kontrak']    = pad_to_decimal($this->input->post('r_kontrak'));
+            $data['r_calculated'] = pad_to_decimal($this->input->post('r_calculated'));
+
+            $data['r_nsl_kecamatan_id'] = $this->input->post('r_nsl_kecamatan_id');
+            $data['r_nsl_type_id']      = $this->input->post('r_nsl_type_id');
+            $data['r_lokasi_id']        = $this->input->post('r_lokasi_id');
+            $data['r_kelurahan_id']     = $this->input->post('r_kelurahan_id');
+            
+            //new
+            $data['r_nsr_id']     = $this->input->post('r_nsr_id');
+            $data['r_lokasi_pasang_id']     = $this->input->post('r_lokasi_pasang_id');
+            $data['r_lokasi_pasang_val']     = $this->input->post('r_lokasi_pasang_val');
+            $data['r_jalanklas_val']     = $this->input->post('r_jalanklas_val');
+            $data['r_sudut_pandang_id']     = $this->input->post('r_sudut_pandang_id');
+            $data['r_sudut_pandang_val']     = $this->input->post('r_sudut_pandang_val');
+            $data['r_tinggi']     = pad_to_decimal($this->input->post('r_tinggi'),0);
+            $data['r_njop']     = pad_to_decimal($this->input->post('r_njop'),1);
+            $data['r_status']     = $this->input->post('r_status');
+            
+        }
+		
+        $data['pajak'] = pad_to_decimal($this->input->post('pajak'));
+        $data['kode'] = $this->input->post('kode');
+        $data['jatuhtempo'] = $this->input->post('jatuhtempo');
+        return $data;
+    }
+
+    public function add()
+    {
+		$this->load_auth();
+        if (!$this->module_auth->create) {
+            $this->session->set_flashdata('msg_warning', $this->module_auth->msg_create);
+            redirect(active_module_url("{$this->controller}/index/{$p_usaha_id}"));
+        }
+		
+		// cek apakah wp memiliki jenis pajak ini ->  $this->uri->segment(4)
+        if (wp_login()) {
+			$model = $this->load->model('pad_model');
+			if (!$model->check_cu(wp_id() , $this->uri->segment(4))) {
+				$this->session->set_flashdata('msg_error', 'Anda tidak memiliki hak akses menambah data untuk jenis pajak ini.');
+				redirect(active_module_url());
+			}
+        }
+
+        $p_usaha_id = $this->uri->segment(4);
+        $post_data  = $this->fpost($p_usaha_id);
+
+        $data['current'] = $this->module;
+        $data['apps']    = $this->apps_model->get_active_only();
+        $data['faction'] = active_module_url("{$this->controller}/add/{$p_usaha_id}");
+        $data['dt']      = $post_data;
+
+        $this->fvalidation();
+        if ($this->form_validation->run() == TRUE) {
+            $input_post = $post_data;
+            // $sptno      = $this->sptpd_model->generate_sptno(pad_tahun_anggaran());
+            $sptno      = $this->sptpd_model->generate_sptno(date('Y', strtotime($input_post['terimatgl'])));
+
+            //untuk spanduk dan semuaaaaaaaaaaaaa
+            $wp_data = $this->load->model('subjek_pajak_model')->get($input_post['customer_id']);
+            $wp_nama = $wp_data->nama;
+            if($wp_nama != $input_post['nama']) $wp_nama = $input_post['nama'];
+            $wp_alamat = $wp_data->alamat;
+            
+            
+            /*
+            //cek nama wp - kalo beda bikin baru
+            if($wp_nama != $input_post['nama']) {
+                $ret = $this->load->model('subjek_pajak_model')->duplicate_wp(
+                    $cid,
+                    $cuid,
+                    $wp_data->rp, 
+                    $wp_data->pb,  
+                    $wp_data->kecamatan_id,
+                    $wp_data->kelurahan_id,
+                    $input_post['nama']
+                );
+                
+                $cid  = $ret->cid; 
+                $cuid = $ret->cuid;
+            }
+            */
+            
+            $cid  = $input_post['customer_id'];
+            $cuid = $input_post['customer_usaha_id'];
+
+            $update_data = array(                
+                'sptno' => $sptno,
+
+                'customer_id' => $cid,
+                'customer_usaha_id' => $cuid,
+                'pajak_id' => $input_post['pajak_id'],
+                'tahun' => date('Y', strtotime($input_post['terimatgl'])), //$input_post['tahun'],
+                'terimatgl' => date('Y-m-d', strtotime($input_post['terimatgl'])),
+                'type_id' => $input_post['type_id'],
+                'so' => $input_post['so'],
+                'jatuhtempotgl' => date('Y-m-d', strtotime($input_post['jatuhtempotgl'])),
+                'masadari' => date('Y-m-d', strtotime($input_post['masadari'])),
+                'masasd' => date('Y-m-d', strtotime($input_post['masasd'])),
+
+                'minimal_omset' => $input_post['minimal_omset'],
+                'dasar' => $input_post['dasar'],
+                'tarif' => $input_post['tarif'],
+                'denda' => $input_post['denda'],
+                'bunga' => $input_post['bunga'],
+                'setoran' => $input_post['setoran'],
+                'kenaikan' => $input_post['kenaikan'],
+                'kompensasi' => $input_post['kompensasi'],
+                'lain2' => $input_post['lain2'],
+				
+                'pajak_terhutang' => $input_post['pajak'],
+
+                'r_bayarid' => $input_post['r_bayarid'],
+                'r_nsr' => $input_post['r_nsr'],
+                'rekening_id' => $input_post['rekening_id'],
+
+                'doc_no' => $input_post['doc_no'],
+                'cara_bayar' => $input_post['cara_bayar'],
+
+
+                /*Omset 31 Hari*/
+                'omset1' => $input_post['omset1'], 'omset6' => $input_post['omset6'],
+                'omset2' => $input_post['omset2'], 'omset7' => $input_post['omset7'],
+                'omset3' => $input_post['omset3'], 'omset8' => $input_post['omset8'],
+                'omset4' => $input_post['omset4'], 'omset9' => $input_post['omset9'],
+                'omset5' => $input_post['omset5'], 'omset10' => $input_post['omset10'],
+                
+                'omset11' => $input_post['omset11'], 'omset16' => $input_post['omset16'],
+                'omset12' => $input_post['omset12'], 'omset17' => $input_post['omset17'],
+                'omset13' => $input_post['omset13'], 'omset18' => $input_post['omset18'],
+                'omset14' => $input_post['omset14'], 'omset19' => $input_post['omset19'],
+                'omset15' => $input_post['omset15'], 'omset20' => $input_post['omset20'],
+
+                'omset21' => $input_post['omset21'], 'omset26' => $input_post['omset26'],
+                'omset22' => $input_post['omset22'], 'omset27' => $input_post['omset27'],
+                'omset23' => $input_post['omset23'], 'omset28' => $input_post['omset28'],
+                'omset24' => $input_post['omset24'], 'omset29' => $input_post['omset29'],
+                'omset25' => $input_post['omset25'], 'omset30' => $input_post['omset30'],
+
+                'omset31' => $input_post['omset31'],
+
+                // Keterangan
+
+                'keterangan1' => $input_post['keterangan1'], 'keterangan6' => $input_post['keterangan6'],
+                'keterangan2' => $input_post['keterangan2'], 'keterangan7' => $input_post['keterangan7'],
+                'keterangan3' => $input_post['keterangan3'], 'keterangan8' => $input_post['keterangan8'],
+                'keterangan4' => $input_post['keterangan4'], 'keterangan9' => $input_post['keterangan9'],
+                'keterangan5' => $input_post['keterangan5'], 'keterangan10' => $input_post['keterangan10'],
+                
+                'keterangan11' => $input_post['keterangan11'], 'keterangan16' => $input_post['keterangan16'],
+                'keterangan12' => $input_post['keterangan12'], 'keterangan17' => $input_post['keterangan17'],
+                'keterangan13' => $input_post['keterangan13'], 'keterangan18' => $input_post['keterangan18'],
+                'keterangan14' => $input_post['keterangan14'], 'keterangan19' => $input_post['keterangan19'],
+                'keterangan15' => $input_post['keterangan15'], 'keterangan20' => $input_post['keterangan20'],
+
+                'keterangan21' => $input_post['keterangan21'], 'keterangan26' => $input_post['keterangan26'],
+                'keterangan22' => $input_post['keterangan22'], 'keterangan27' => $input_post['keterangan27'],
+                'keterangan23' => $input_post['keterangan23'], 'keterangan28' => $input_post['keterangan28'],
+                'keterangan24' => $input_post['keterangan24'], 'keterangan29' => $input_post['keterangan29'],
+                'keterangan25' => $input_post['keterangan25'], 'keterangan30' => $input_post['keterangan30'],
+
+                'keterangan31' => $input_post['keterangan31'],
+
+
+
+
+                'created' => date('Y-m-d h:i:s'),
+                'create_uid' => sipkd_user_id(),
+                'terimanip' => sipkd_user_id(),
+                'unit_id' => pad_pemda_unitid(),
+
+                'enabled' => 1,
+                'satuan' => NULL,
+                
+                /*
+                'updated' => date('Y-m-d', strtotime($input_post['updated'])),
+                'update_uid' => $input_post['update_uid'],
+                'kirimtgl' => date('Y-m-d', strtotime($input_post['kirimtgl'])),
+                'isprint_dc' => $input_post['isprint_dc'],
+                'notes' => $input_post['notes'],
+                'no_skpd_lama' => $input_post['no_skpd_lama'],
+                */
+            );
+
+            $reklame_data = array();
+            if ($p_usaha_id == pad_reklame_id()) {
+                $input_post   = $post_data;
+                $reklame_data = array(
+                    'r_nsrno' => $input_post['r_nsrno'],
+                    'r_nsrtgl' => empty($input_post['r_nsrtgl']) ? NULL : date('Y-m-d', strtotime($input_post['r_nsrtgl'])),
+                    'r_tarifid' => $input_post['r_tarifid'],
+                    'r_kontrak' => $input_post['r_kontrak'],
+                    'r_lama' => $input_post['r_lama'],
+                    'r_jalanklas_id' => $input_post['r_jalanklas_id'],
+                    'r_jalan_id' => $input_post['r_jalan_id'],
+                    'r_lokasi' => $input_post['r_lokasi'],
+                    'r_judul' => $input_post['r_judul'],
+                    'r_panjang' => $input_post['r_panjang'],
+                    'r_lebar' => $input_post['r_lebar'],
+                    'r_muka' => $input_post['r_muka'],
+                    'r_banyak' => $input_post['r_banyak'],
+                    'r_luas' => $input_post['r_luas'],
+                    'r_lokasi_id' => $input_post['r_lokasi_id'],
+                    'r_calculated' => $input_post['r_calculated'],
+                    // 'r_nsl_kecamatan_id' => $input_post['r_nsl_kecamatan_id'],
+                    // 'r_nsl_type_id' => $input_post['r_nsl_type_id'],
+                    // 'r_nsl_nilai' => $input_post['r_nsl_nilai'],
+                    // 'r_kelurahan_id' => $input_post['r_kelurahan_id'],
+                    
+                    'r_nsr_id' => $input_post['r_nsr_id'],
+                    'r_lokasi_pasang_id' => $input_post['r_lokasi_pasang_id'],

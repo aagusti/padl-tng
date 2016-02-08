@@ -1,0 +1,942 @@
+# Webalizer V2.23-08 Incremental Data - 12/02/2015 00:31:12
+2015 12 2 0 31 12
+2614 2378 19 304 65 15 22323116 1991 50 0 0 0
+1 1 577 1 2
+2613 2378 22322691 19 1990 49 0 0
+1 0 425 1 1 1 0 0
+0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0
+0 0 0 0 0 0 0 0
+5 2 1515 5 0 0
+2 0 850 2 0 0
+6 6 2235 3 0 0
+0 0 0 0 0 0
+0 0 0 0 0 0
+6 6 2016 5 0 0
+0 0 0 0 0 0
+159 153 900698 117 0 0
+47 40 230664 46 0 0
+566 471 2942489 466 0 0
+117 103 479284 116 0 0
+100 87 585542 93 0 0
+148 143 746021 113 0 0
+577 530 4175170 538 0 0
+268 248 1653770 232 0 0
+22 18 117305 21 0 0
+123 122 581905 123 0 0
+290 285 2145201 62 0 0
+62 57 509488 21 0 0
+109 107 7243924 21 0 0
+5 0 4189 5 0 0
+0 0 0 0 0 0
+1 0 425 1 0 0
+1 0 425 1 0 0
+0
+0
+0
+2378
+0
+0
+0
+0
+0
+0
+0
+0
+173
+0
+24
+0
+0
+1
+0
+0
+0
+35
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+3
+0
+0
+0
+0
+0
+# -urls- 
+/pad/subjek_pajak/get_op/1072
+0 1 0 1701 0 0 0 0
+/pad/subjek_pajak/grid_objek_pajak/4488
+0 2 0 644 0 0 0 0
+/pad/subjek_pajak/grid_objek_pajak/912
+0 5 0 2490 0 0 0 0
+/phpMyAdmin/scripts/setup.php
+0 1 0 336 1 0 0 0
+/assets/datatables/media/js/jquery.dataTables.min.js
+0 15 0 330916 0 0 0 0
+/pad/menu/4
+0 2 0 19032 0 0 0 0
+/myadmin/scripts/setup.php
+0 1 0 336 0 0 0 0
+/pad/subjek_pajak/edit/912
+0 2 0 30430 0 0 0 0
+/pad/sptpd/get_pajak/729/64
+0 2 0 640 0 0 0 0
+/pad/sspd/
+0 17 0 188589 0 0 0 0
+/pad/sptpd/get_pajak_detail/28/01-11-2015/14860000
+0 1 0 4059 0 0 0 0
+/pad/stpd/grid/1/201508
+0 1 0 322 0 0 0 0
+/pad/sptpd/get_cu/4429/192/60
+0 2 0 1154 0 0 0 0
+/pad/subjek_pajak/get_op/1053
+0 1 0 1699 0 0 0 0
+/pad/sptpd/get_validasi/2/1/8
+0 2 0 17062 0 0 0 0
+/assets/bootstrap/js/bootstrap-combobox.js
+0 15 0 56386 0 0 0 0
+/pad/sptpd/index/2/
+0 38 0 1034060 0 0 0 0
+/pendataan/sptpd/grid/999/2
+0 2 0 626 0 0 0 0
+/pendataan/sptpd/grid/1/999
+0 1 0 312 0 0 0 0
+/assets/img/logorpt__.png
+1 8 0 303456 0 0 0 0
+/pad/sptpd/index/1/
+0 3 0 82570 0 0 0 0
+/pad/sptpd/edit/2/1/8/64/885
+0 1 0 11714 0 0 0 0
+/pad/subjek_pajak/get_max_sumur/534/534/977
+0 2 0 551 0 0 0 0
+/pad/subjek_pajak/grid_at/912/4043/412
+0 1 0 11001 0 0 0 0
+/pad/subjek_pajak/grid_kd/534/4205/1072
+0 1 0 7989 0 0 0 0
+/pad/subjek_pajak/grid_objek_pajak/4151
+0 4 0 1508 0 0 0 0
+/pad/subjek_pajak/grid_at/912/4030/408
+0 1 0 10989 0 0 0 0
+/pad/subjek_pajak/grid_at/534/4205/1072
+0 1 0 11824 0 0 0 0
+/pad/subjek_pajak/get_op/977
+0 2 0 2877 0 0 0 0
+/pad/sptpd/get_cu/4559/707/64
+0 1 0 573 0 0 0 0
+/assets/bootstrap/fonts/glyphicons-halflings-regular.woff
+0 1 0 23715 0 0 0 0
+/pad/skpd/grid/
+0 2 0 644 0 0 0 0
+/pad/subjek_pajak/grid_at/4741/4741/874
+0 1 0 10895 0 0 0 0
+/pad/subjek_pajak/grid
+0 185 0 244441 1 2 0 0
+/pad/menu/1
+0 25 0 199205 2 0 0 0
+/pad/subjek_pajak/get_max_sumur/4151/4114/431
+0 2 0 550 0 0 0 0
+/pad/sptpd/index/4
+0 4 0 82426 0 0 0 0
+/pad/sptpd/add/6
+0 1 0 11586 0 0 0 0
+/pad/sptpd/grid/
+0 114 0 257312 0 0 0 0
+/pad/menu/8
+0 5 0 41124 0 0 0 0
+/pad/sptpd/index/7
+0 3 0 62121 0 0 0 0
+/assets/jq/smoothness/images/ui-bg_highlight-soft_75_cccccc_1x100.png
+1 2 0 752 0 0 0 0
+/pad/subjek_pajak/edit/736/624
+0 1 0 15239 0 0 0 0
+/pad/subjek_pajak/grid_kd/912/4030/408
+0 1 0 7486 0 0 0 0
+/pad/sptpd/get_pajak_detail/60/01-11-2015/0
+0 1 0 373 0 0 0 0
+/pad/subjek_pajak/grid_kd/534/4096/1058
+0 1 0 7988 0 0 0 0
+/pad/subjek_pajak/grid_at/4151/4114/431
+0 2 0 22168 0 0 0 0
+/assets/pad/img/ajax-loader-bert.gif
+1 3 0 9504 0 0 0 0
+/pendataan/sptpd/grid/
+0 8 0 2649 0 0 0 0
+/pad/sptpd/get_pajak_detail/64/01-11-2015/270000
+0 1 0 377 0 0 0 0
+/pad/menu/5
+0 4 0 34133 0 0 0 0
+/pad/subjek_pajak/get_op/496
+0 1 0 1764 0 0 0 0
+/assets/adminlte/dist/fonts/fontawesome-webfont.woff
+0 13 0 360379 0 0 0 0
+/pad/stpd/
+0 7 0 65586 0 0 0 0
+/pad/subjek_pajak/grid_kd/
+0 25 0 188869 1 0 0 0
+/pad/subjek_pajak/grid_objek_pajak/534
+0 1 0 464 0 0 0 0
+/assets/js/numberFormatter.js
+0 15 0 14565 0 0 0 0
+/assets/jq/smoothness/images/ui-bg_glass_75_e6e6e6_1x400.png
+1 12 0 4183 0 0 0 0
+/pad/skpd/grid/1/999/01-01-2015/01-12-2015/999/999
+0 2 0 645 0 0 0 0
+/pad/subjek_pajak/proces_op/edit
+0 4 0 776 0 0 0 0
+/pad/pajak/get_tarif/59
+0 3 0 1151 0 0 0 0
+/pad/subjek_pajak/grid_at/912/4319/496
+0 1 0 11082 0 0 0 0
+/pad/subjek_pajak/grid_objek_pajak/736
+0 2 0 775 0 0 0 0
+/pendataan/sptpd/get_pajak_detail/58/01-11-2015
+0 1 0 358 0 0 0 0
+/pad/sptpd/get_validasi/2/1/3
+0 1 0 8530 0 0 0 0
+/pad/subjek_pajak/get_max_sumur/912/4043/412
+0 1 0 276 0 0 0 0
+/pad/sptpd/get_validasi/2/1/11
+0 4 0 34394 0 0 0 0
+/pad/sptpd/get_pajak_detail/28/01-11-2015/0
+0 2 0 754 0 0 0 0
+/pad/sptpd/get_pajak_detail/64/01-11-2015/1800000
+0 1 0 377 0 0 0 0
+/assets/datatables/media/js/jquery.dataTables.columnFilter.js
+0 15 0 118140 0 0 0 0
+/assets/pad/js/additional-methods.min.js
+0 14 0 74918 0 0 0 0
+/pad/subjek_pajak/grid_at/534/4023/1053
+0 1 0 11823 0 0 0 0
+/pad/subjek_pajak/grid_at/
+0 25 0 278954 0 1 0 0
+/assets/adminlte/plugins/slimScroll/jquery.slimScroll.min.js
+0 15 0 36062 0 0 0 0
+/pad/sptpd/edit/2/1/11/60/192
+0 1 0 11714 0 0 0 0
+/pad/sptpd/grid/999/7/01-01-2015/01-12-2015/999/999
+0 3 0 975 0 0 0 0
+/pendataan/sptpd/get_cu/4151/431/26
+0 1 0 469 0 0 0 0
+/pad/subjek_pajak/edit/4566
+0 1 0 15197 0 0 0 0
+/assets/pad/js/jquery.monthpicker.js
+0 14 0 53942 0 0 0 0
+/pad/subjek_pajak/get_max_sumur/912/4319/496
+0 1 0 276 0 0 0 0
+/assets/datatables/extras/TableTools/media/js/ZeroClipboard.min.js
+0 15 0 36780 0 0 0 0
+/pad/
+0 25 0 191480 0 0 0 0
+/assets/img/user.png
+1 15 0 33261 0 0 0 0
+/pad/sptpd/grid/999/4/01-09-2014/01-12-2015/999/999
+0 2 0 651 0 0 0 0
+/pad/sptpd/get_pajak/704/64
+0 1 0 320 0 0 0 0
+/pad/subjek_pajak/edit/3362
+0 1 0 15169 0 0 0 0
+/pad/sptpd/get_pajak/885/64
+0 3 0 960 0 0 0 0
+/pad/pajak/grid_tarif/60
+0 3 0 1231 0 0 0 0
+/pad/subjek_pajak/grid_kd/534/534/977
+0 2 0 15939 0 0 0 0
+/assets/datatables/extras/TableTools/media/js/TableTools.min.js
+0 15 0 136935 0 0 0 0
+/pad/sptpd/get_validasi/3/1/14
+0 1 0 8537 0 0 0 0
+/pad/stpd/grid/1/201510
+0 8 0 4068 0 0 0 0
+/pad/sptpd/index/3
+0 17 0 334138 0 0 0 0
+/assets/bootstrap/js/bootstrap-typeahead.min.js
+0 15 0 28817 0 0 0 0
+/pad/subjek_pajak/edit/315
+0 1 0 15126 0 0 0 0
+/pad/sptpd/add/3
+0 7 0 84804 0 0 0 0
+/assets/pad/js/bootstrap.file-input.js
+0 2 0 4384 0 0 0 0
+/pad/menu/3
+0 19 0 148984 1 0 0 0
+/pendataan/user_reg/add/
+0 1 0 4428 0 0 0 0
+/pad/subjek_pajak/grid_objek_pajak/3362
+0 1 0 322 0 0 0 0
+/pad/subjek_pajak/get_op/1058
+0 1 0 1700 0 0 0 0
+/pad/sptpd/get_pajak_detail/31/01-11-2015/0
+0 1 0 374 0 0 0 0
+/assets/datatables/media/js/jquery.dataTables.ext.js
+0 15 0 15045 0 0 0 0
+/pad/subjek_pajak/grid_objek_pajak/11
+0 2 0 644 0 0 0 0
+/pad/sptpd/get_pajak_detail/41/01-11-2015/0
+0 1 0 377 0 0 0 0
+/pad/sptpd/grid/999/4/01-01-2015/01-12-2015/999/999
+0 5 0 1624 0 0 0 0
+/pad/subjek_pajak/grid_objek_pajak/4750
+0 1 0 404 0 0 0 0
+/pad/sptpd/get_validasi/2/1/1
+0 8 0 67985 0 0 0 0
+/pad/sptpd/get_cu/4555/704/64
+0 1 0 525 0 0 0 0
+/pad/subjek_pajak/grid_kd/736/5736/624
+0 1 0 7422 0 0 0 0
+/pad/subjek_pajak/grid_objek_pajak/4391
+0 1 0 322 0 0 0 0
+/pad/subjek_pajak/grid_for_spt/3/
+0 94 0 84946 0 0 0 0
+/pad/subjek_pajak/edit/4151
+0 2 0 30079 0 0 0 0
+/pad/sptpd/grid/999/3/01-01-2015/01-12-2015/999/999
+0 26 0 32671 0 0 0 0
+/pad/sptpd/get_validasi/2/1/10
+0 2 0 17066 0 0 0 0
+/pad/sptpd/get_pajak/878/41
+0 1 0 316 0 0 0 0
+/pad/sptpd/grid/999/4/01-01-2015/01-12-2015/1/999
+0 1 0 322 0 0 0 0
+/pad/subjek_pajak/edit/4750
+0 1 0 15427 0 0 0 0
+/pad/subjek_pajak/grid_kd/912/4319/496
+0 1 0 7490 0 0 0 0
+/pad/subjek_pajak/edit/534
+0 1 0 15160 0 0 0 0
+/favicon.ico
+0 3 0 1116 0 0 0 0
+/pad/sptpd/get_cu/4583/729/64
+0 2 0 4760 0 0 0 0
+/pad/sptpd/get_cu/4263/471/31
+0 1 0 589 0 0 0 0
+/pad/sptpd/index/6
+0 3 0 58232 0 0 0 0
+/pad/pemda/
+0 2 0 11819 0 0 0 0
+/pad/sptpd/get_pajak_detail/57/01-11-2015/0
+0 1 0 375 0 0 0 0
+/pad/sptpd/get_validasi/2/1/7
+0 3 0 25601 0 0 0 0
+/pad/sptpd/get_pajak/775/64
+0 1 0 320 0 0 0 0
+/pad/subjek_pajak/grid_kd/4741/4741/874
+0 1 0 7424 0 0 0 0
+/pad/subjek_pajak/grid_objek_pajak/2411
+0 1 0 322 0 0 0 0
+/assets/img/favicon.ico
+0 15 0 20346 0 0 0 0
+/pad/subjek_pajak/edit/4488
+0 2 0 30465 0 0 0 0
+/pad/monitoring_tagihan/grid
+0 1 0 322 0 0 0 0
+/pad/sptpd/get_pajak/192/60
+0 1 0 313 0 0 0 0
+/pad/sptpd/get_pajak_detail/45/01-11-2015/0
+0 1 0 375 0 0 0 0
+/pad/sptpd/get_pajak/737/64
+0 2 0 640 0 0 0 0
+/pad/sptpd/get_validasi/1/1/12
+0 1 0 8444 0 0 0 0
+/pad/sptpd/get_validasi/2/1/4
+0 1 0 8463 0 0 0 0
+/pad/subjek_pajak/edit/4593
+0 1 0 15208 0 0 0 0
+/pendataan/sptpd/get_pajak_detail/26/01-11-2015
+0 1 0 359 0 0 0 0
+/pad/subjek_pajak/get_max_sumur/534/4023/1053
+0 1 0 275 0 0 0 0
+/assets/adminlte/plugins/datepicker/bootstrap-datepicker.min.js
+0 6 0 49596 0 0 0 0
+/pendataan/user_reg/grid_wp/
+0 16 0 13802 1 1 0 0
+/assets/js/autoNumeric.min.js
+0 15 0 95805 0 0 0 0
+/pad/subjek_pajak/grid_at/534/4151/1064
+0 1 0 11824 0 0 0 0
+/assets/datatables/extras/TableTools/media/css/TableTools.css
+0 15 0 35877 0 0 0 0
+/assets/bootstrap/fonts/glyphicons-halflings-regular.woff2
+0 8 0 110030 0 0 0 0
+/admin/
+0 23 0 114708 0 0 0 0
+/pad/sptpd/grid/999/2/01-01-2015/01-12-2015/999/999
+0 75 0 187614 0 1 0 0
+/pad/sptpd/get_pajak_detail/64/01-11-2015/3600000
+0 1 0 377 0 0 0 0
+/pad/monitoring_tagihan/grid/201512
+0 1 0 322 0 0 0 0
+/pad/subjek_pajak/grid_objek_pajak/1265
+0 1 0 370 0 0 0 0
+/pad/pajak/edit/60
+0 2 0 23958 0 0 0 0
+/pad/sptpd/get_cu/4593/885/64
+0 4 0 2266 0 0 0 0
+/pad/skpd/kbt/999/
+0 1 0 21126 0 0 0 0
+/pad/sptpd/get_pajak_detail/64/01-11-2015/675000
+0 1 0 377 0 0 0 0
+/pad/sptpd/get_pajak_detail/64/01-11-2015/81171800
+0 1 0 377 0 0 0 0
+/pad/sptpd/get_pajak_detail/64/01-11-2015/1457500
+0 1 0 377 0 0 0 0
+/pendataan/sptpd/get_cu/2964/314/58
+0 1 0 469 0 0 0 0
+/pad/subjek_pajak/edit/2521
+0 1 0 15076 0 0 0 0
+/pad/stpd/grid/1/201509
+0 2 0 645 0 0 0 0
+/pad/subjek_pajak/edit/4741
+0 1 0 18856 0 0 0 0
+/pad/subjek_pajak/grid_at/736/5736/624
+0 1 0 10892 0 0 0 0
+/assets/datatables/media/css/demo_page.css
+0 15 0 14861 0 0 0 0
+/pad/lap_penerimaan/
+0 1 0 6144 0 0 0 0
+/assets/jq/smoothness/images/ui-icons_888888_256x240.png
+1 12 0 46809 0 0 0 0
+/pendataan/sptpd/grid/1/2
+0 8 0 2490 0 0 0 0
+/pad/sptpd/index/2
+0 31 0 606209 0 0 0 0
+/pad/subjek_pajak/get_op/874
+0 1 0 1485 0 0 0 0
+/pad/subjek_pajak/grid_objek_pajak/36
+0 3 0 966 0 0 0 0
+/assets/adminlte/dist/css/AdminLTE.min.css
+0 18 0 235220 0 0 0 0
+/pad/sptpd/get_pajak/471/31
+0 1 0 334 0 0 0 0
+/pad/subjek_pajak/edit/2411
+0 1 0 15132 0 0 0 0
+/pad/subjek_pajak/
+0 36 0 275971 0 0 0 0
+/w00tw00t.at.blackhats.romanian.anti-sec:)
+0 1 0 336 0 0 0 0
+/pad/sptpd/get_validasi/2/1/9
+0 1 0 8529 0 0 0 0
+/assets/bootstrap/js/bootstrap.min.js
+0 15 0 146236 0 0 0 0
+/login
+0 51 0 598990 3 2 0 0
+/pad/sptpd/edit/3/1/13/28/879
+0 1 0 12040 0 0 0 0
+/pad/pajak/grid
+0 8 0 9305 0 0 0 0
+/assets/img/bank-bjb.jpg
+1 8 0 6305864 0 0 0 0
+/pad/subjek_pajak/grid_objek_pajak/4473
+0 1 0 322 0 0 0 0
+/pad/subjek_pajak/grid_objek_pajak/2521
+0 1 0 322 0 0 0 0
+/pad/sptpd/get_cu/912/412/45
+0 1 0 571 0 0 0 0
+/MyAdmin/scripts/setup.php
+0 1 0 336 0 0 0 0
+/pad/sptpd/grid/999/4/01-01-2015/01-12-2015/0/999
+0 1 0 326 0 0 0 0
+/pad/sptpd/add/2
+0 18 0 219555 0 0 0 0
+/pad/subjek_pajak/get_max_sumur/534/4096/1058
+0 1 0 275 0 0 0 0
+/pad/subjek_pajak/grid_for_spt/2/
+0 265 0 269130 4 3 0 0
+/pad/subjek_pajak/get_op/408
+0 1 0 1787 0 0 0 0
+/assets/img/logo-kota-tangerang.png
+1 11 0 303977 0 0 0 0
+/pad/subjek_pajak/get_op/412
+0 1 0 1785 0 0 0 0
+/pad/sptpd/get_cu/4594/737/64
+0 2 0 1158 0 0 0 0
+/pad/sptpd/edit/2/1/7/64/775
+0 1 0 11719 0 0 0 0
+/pad/sptpd/get_pajak/707/64
+0 1 0 320 0 0 0 0
+/assets/adminlte/plugins/fastclick/fastclick.min.js
+0 15 0 47595 0 0 0 0
+/pad/sptpd/get_validasi/3/1/13
+0 1 0 8535 0 0 0 0
+/pad/subjek_pajak/edit/4391
+0 1 0 15188 0 0 0 0
+/pad/subjek_pajak/edit/11
+0 2 0 30209 0 0 0 0
+/pendataan/sptpd/add/
+0 3 0 46325 0 0 0 0
+/pad/objek_pajak/grid/
+0 2 0 1841 0 0 0 0
+/pad/subjek_pajak/grid_objek_pajak/4593
+0 1 0 380 0 0 0 0
+/pad/subjek_pajak/grid_at/534/534/977
+0 2 0 23509 0 0 0 0
+/pad/sptpd/get_pajak_detail/64/01-11-2015/6000000
+0 1 0 377 0 0 0 0
+/pad/sptpd/get_pajak_detail/61/01-11-2015/51671600
+0 2 0 750 0 0 0 0
+/pad/subjek_pajak/edit/1265
+0 1 0 15230 0 0 0 0
+/assets/js/formremember.js
+0 15 0 17595 0 0 0 0
+/pendataan/user_reg/edit/4495
+0 1 0 4503 0 0 0 0
+/pad/subjek_pajak/edit/36
+0 3 0 45743 0 0 0 0
+/pad/subjek_pajak/get_max_sumur/534/4151/1064
+0 1 0 275 0 0 0 0
+/pad/air_kelompok_usaha/grid_for_hda/
+0 26 0 13694 0 0 0 0
+/pad/sptpd/get_pajak_detail/60/01-11-2015/51671600
+0 2 0 748 0 0 0 0
+/pendataan/sptpd/get_nopd/431
+0 2 0 556 0 0 0 0
+/pad/subjek_pajak/get_max_sumur/912/4030/408
+0 1 0 276 0 0 0 0
+/pad/subjek_pajak/grid_for_spt/6/
+0 2 0 2502 0 0 0 0
+/assets/adminlte/plugins/datepicker/datepicker3.min.css
+0 15 0 45767 0 0 0 0
+/pad/subjek_pajak/grid_kd/912/4043/412
+0 1 0 7522 0 0 0 0
+/pad/sptpd/get_validasi/2/1/2
+0 1 0 8530 0 0 0 0
+/pad/sptpd/get_pajak_detail/64/01-11-2015/7770000
+0 1 0 377 0 0 0 0
+/pad/subjek_pajak/grid_objek_pajak/315
+0 1 0 382 0 0 0 0
+/pad/sspd/grid/
+0 17 0 13457 0 0 0 0
+/pad/subjek_pajak/grid_at/534/4096/1058
+0 1 0 11823 0 0 0 0
+/pad/objek_pajak/
+0 2 0 11154 0 0 0 0
+/pma/scripts/setup.php
+0 1 0 336 0 0 0 0
+/assets/css/datatablescustom.css
+0 15 0 16222 0 0 0 0
+/assets/adminlte/dist/img/avatar5.png
+1 15 0 56857 0 0 0 0
+/pad/sspd/grid/1/undefined/01-01-2015/01-12-2015
+0 26 0 20152 0 0 0 0
+/pad/sptpd/get_validasi/3/1/15
+0 1 0 8548 0 0 0 0
+/assets/adminlte/dist/css/skins/_all-skins.min.css
+0 15 0 35725 0 0 0 0
+/pad/sptpd/grid/999/2/01-01-2015/01-12-2015/999/2
+0 4 0 7124 0 0 0 0
+/pad/subjek_pajak/edit/4473
+0 1 0 15181 0 0 0 0
+/pad/subjek_pajak/get_op/624
+0 1 0 1517 0 0 0 0
+/pendataan/sptpd/get_pajak/314/undefined
+0 1 0 324 0 0 0 0
+/pad/sptpd/get_pajak_detail/41/01-10-2015/47369600
+0 1 0 378 0 0 0 0
+/pad/sspd/grid/2/undefined/01-01-2015/01-12-2015
+0 3 0 969 0 0 0 0
+/assets/jq/smoothness/images/ui-bg_flat_75_ffffff_40x100.png
+1 2 0 905 0 0 0 0
+/assets/adminlte/dist/js/app.min.js
+0 15 0 37966 0 0 0 0
+/pad/monitoring_tagihan/
+0 1 0 6103 0 0 0 0
+/pad/sptpd/get_pajak/412/45
+0 1 0 338 0 0 0 0
+/assets/adminlte/plugins/jQuery/jQuery-2.1.3.min.js
+0 17 0 507729 0 0 0 0
+/assets/pad/js/jquery.validate.min.js
+0 14 0 102147 0 0 0 0
+/pendataan/sptpd/cetak/pdf/
+0 1 0 1126749 0 0 0 0
+/pad/subjek_pajak/grid_objek_pajak/4474
+0 1 0 322 0 0 0 0
+/pad/stpd/grid/1/201511
+0 3 0 968 0 0 0 0
+/assets/adminlte/dist/css/font-awesome.min.css
+0 18 0 90442 0 0 0 0
+/pad/sptpd/cetak/pdf/
+0 13 0 61122 0 1 0 0
+/pendataan/sptpd/get_pajak/431/undefined
+0 2 0 502 0 0 0 0
+/pad/subjek_pajak/get_max_sumur/4741/4741/874
+0 1 0 275 0 0 0 0
+/
+0 43 0 6230 18 7 0 0
+/pendataan/sptpd/get_nopd/314
+0 1 0 280 0 0 0 0
+/pendataan/sptpd/
+0 8 0 47584 0 0 0 0
+/pad/subjek_pajak/grid_kd/4151/4114/431
+0 2 0 14864 0 0 0 0
+/pad/sptpd/get_pajak/879/28
+0 2 0 620 0 0 0 0
+/assets/pad/js/bootstrap-datepicker.js
+0 14 0 60718 0 0 0 0
+/pad/sptpd/grid/999/6/01-01-2015/01-12-2015/999/999
+0 3 0 975 0 1 0 0
+/pad/menu/2
+0 43 0 356393 0 1 0 0
+/pad/stpd/grid/1/201512
+0 8 0 2579 0 0 0 0
+/pendataan/sptpd/get_pajak_detail/null/01-11-2015
+0 1 0 193 0 0 0 0
+/pad/sptpd/get_validasi/2/1/6
+0 1 0 8532 0 0 0 0
+/assets/jq/smoothness/jquery-ui-1.8.4.custom.min.css
+0 15 0 70824 0 0 0 0
+/pad/subjek_pajak/grid_kd/534/4023/1053
+0 1 0 7964 0 0 0 0
+/pad/subjek_pajak/get_op/1064
+0 1 0 1705 0 0 0 0
+/pad/sptpd/get_pajak_detail/57/01-10-2015/13675000
+0 1 0 376 0 0 0 0
+/pendataan/user_reg/
+0 13 0 81263 0 0 0 0
+/pad/sptpd/index/1
+0 7 0 136136 0 0 0 0
+/pad/subjek_pajak/get_op/431
+0 2 0 3344 0 0 0 0
+/assets/adminlte/dist/js/jquery-ui.min.js
+0 15 0 964936 0 0 0 0
+/pad/menu/6
+0 16 0 122893 0 0 0 0
+/phpmyadmin/scripts/setup.php
+0 1 0 336 1 0 0 0
+/pad/subjek_pajak/get_max_sumur/534/4205/1072
+0 1 0 275 0 0 0 0
+/pad/subjek_pajak/get_max_sumur/736/5736/624
+0 1 0 275 0 0 0 0
+/pendataan/user_reg/grid
+0 15 0 22975 0 0 0 0
+/pad/sptpd/get_validasi/2/1/5
+0 1 0 8529 0 0 0 0
+/pad/pajak/
+0 2 0 18249 0 0 0 0
+/pad/stpd/grid/
+0 7 0 2254 0 0 0 0
+/assets/bootstrap/css/bootstrap.min.css
+0 18 0 351996 0 0 0 0
+/pendataan/sptpd/get_cu/2964/0/0
+0 1 0 460 0 0 0 0
+/pad/subjek_pajak/grid_objek_pajak/4566
+0 1 0 375 0 0 0 0
+/pad/sptpd/get_cu/4456/878/41
+0 1 0 601 0 0 0 0
+/pad/sptpd/get_pajak_detail/64/01-11-2015/0
+0 10 0 3760 0 0 0 0
+/pad/subjek_pajak
+0 1 0 5604 0 0 0 0
+/pad/sptpd/grid/999/1/01-01-2015/01-12-2015/999/999
+0 10 0 15215 0 1 0 0
+/pad/subjek_pajak/grid_objek_pajak/4741
+0 2 0 783 0 0 0 0
+/pendataan/user_reg/edit/5082
+0 5 0 22399 0 0 0 0
+/pad/stpd/grid/2/201510
+0 1 0 323 0 0 0 0
+/pad/sptpd/get_pajak_detail/64/01-11-2015/68280000
+0 1 0 377 0 0 0 0
+/pad/subjek_pajak/add/
+0 1 0 16187 0 0 0 0
+/pad/subjek_pajak/grid_kd/534/4151/1064
+0 1 0 7989 0 0 0 0
+/pad/sptpd/get_pajak_detail/64/01-11-2015/1350000
+0 1 0 377 0 0 0 0
+/pad/sptpd/get_pajak_detail/28/01-10-2015/16975000
+0 1 0 378 0 0 0 0
+/pendataan/
+0 19 0 206658 0 0 0 0
+/pendataan/sptpd/get_cu/4151/0/0
+0 3 0 1377 0 0 0 0
+/pad/skpd/kb/999/
+0 1 0 21111 0 0 0 0
+/pad/sptpd/get_cu/4646/775/64
+0 2 0 1134 0 0 0 0
+/pad/subjek_pajak/grid_for_spt/1/
+0 7 0 5937 0 0 0 0
+/pad/sptpd/get_cu/4700/879/28
+0 3 0 1704 0 0 0 0
+/assets/datatables/media/css/demo_table_jui.css
+0 15 0 38753 0 0 0 0
+/pad/sptpd/index/3/
+0 6 0 164536 0 0 0 0
+/pad/subjek_pajak/edit/4474
+0 1 0 15181 0 0 0 0
+/assets/pad/js/messages_id.js
+0 14 0 12310 0 0 0 0
+/pad/sptpd/add/1
+0 1 0 11586 0 0 0 0
+/pad/sptpd/get_pajak/341/57
+0 1 0 338 0 0 0 0
+/pad/pajak/proces_tarif/edit
+0 1 0 194 0 0 0 0
+/pad/sptpd/get_cu/4283/341/57
+0 1 0 538 0 0 0 0
+# End Of Table - urls
+# -sites- (monthly)
+115.239.228.100
+0 5 0 2125 5 1449014219 0 0
+-
+202.58.216.2
+0 657 613 2993768 4 1448982082 0 0
+/pad/sptpd/grid/999/3/01-01-2015/01-12-2015/999/999
+202.47.71.35
+0 1046 949 6958610 7 1448988921 0 0
+/pad/skpd/grid/1/999/01-01-2015/01-12-2015/999/999
+66.249.84.223
+0 1 1 3814 1 1448957438 0 0
+/login
+114.121.129.141
+0 1 1 4489 1 1448967287 0 0
+/login
+103.50.218.4
+0 8 6 99917 1 1448963456 0 0
+/login
+115.239.248.245
+0 11 0 4675 9 1449016272 0 0
+-
+54.226.173.127
+0 6 6 2016 1 1448947669 0 0
+/MyAdmin/scripts/setup.php
+139.228.160.17
+0 400 342 2345361 5 1448961702 0 0
+/login
+203.128.81.190
+0 430 420 9894370 3 1448998623 0 0
+/pad/sptpd/grid/999/2/01-01-2015/01-12-2015/999/2
+104.148.44.191
+0 3 2 665 1 1448928522 0 0
+/
+128.232.110.29
+0 1 0 575 1 1448987159 0 0
+/
+118.98.104.21
+0 1 0 1420 0 0 0 0
+-
+202.112.51.96
+0 1 0 538 1 1448964049 0 0
+/
+::1
+0 38 38 4446 7 1448996929 0 0
+/
+141.212.122.128
+0 1 0 576 1 1448972470 0 0
+-
+161.202.41.12
+0 1 0 1380 1 1448980946 0 0
+/phpmyadmin/scripts/setup.php
+66.249.84.219
+0 1 0 1457 0 0 0 0
+-
+5.159.233.49
+0 2 0 2914 1 1449000395 0 0
+-
+# End Of Table - sites (monthly)
+# -sites- (daily)
+115.239.248.245
+0 1 0 425 1 1449016272 0 0
+-
+# End Of Table - sites (daily)
+# -referrers- 
+http://e-sptpd.tangerangkota.go.id/pad/sptpd/index/1/
+0 12
+http://e-sptpd.tangerangkota.go.id/login
+0 125
+http://e-sptpd.tangerangkota.go.id/pad/subjek_pajak/edit/912
+0 28
+http://e-sptpd.tangerangkota.go.id/pad/sptpd/edit/3/1/13/28/879
+0 2
+http://e-sptpd.tangerangkota.go.id/pad/subjek_pajak/edit/3362
+0 4
+http://e-sptpd.tangerangkota.go.id/pad/sptpd/index/6
+0 10
+http://e-sptpd.tangerangkota.go.id/pad/sptpd/edit/2/1/7/64/775
+0 4
+http://e-sptpd.tangerangkota.go.id/pad/sptpd/add/6
+0 4
+http://e-sptpd.tangerangkota.go.id/
+0 2
+http://e-sptpd.tangerangkota.go.id/pad/sptpd/index/2/
+0 168
+http://e-sptpd.tangerangkota.go.id/pendataan/user_reg/
+0 32
+http://e-sptpd.tangerangkota.go.id/pad/subjek_pajak/edit/1265
+0 5
+http://e-sptpd.tangerangkota.go.id/assets/bootstrap/css/bootstrap.min.css
+0 8
+http://e-sptpd.tangerangkota.go.id/assets/jq/smoothness/jquery-ui-1.8.4.custom.min.css
+0 28
+http://e-sptpd.tangerangkota.go.id/pad/sptpd/edit/2/1/11/60/192
+0 7
+http://e-sptpd.tangerangkota.go.id/pad/subjek_pajak/edit/2521
+0 5
+http://e-sptpd.tangerangkota.go.id/pad/subjek_pajak
+0 3
+http://e-sptpd.tangerangkota.go.id/pad/subjek_pajak/edit/4151
+0 23
+http://e-sptpd.tangerangkota.go.id/pendataan/sptpd/add/
+0 20
+http://e-sptpd.tangerangkota.go.id/pad/subjek_pajak/edit/4473
+0 4
+http://e-sptpd.tangerangkota.go.id/pad/sptpd/index/2
+0 195
+http://e-sptpd.tangerangkota.go.id/pad/subjek_pajak/edit/4593
+0 7
+http://e-sptpd.tangerangkota.go.id/pad/sptpd/add/1
+0 13
+http://e-sptpd.tangerangkota.go.id/pad/subjek_pajak/edit/4391
+0 4
+http://e-sptpd.tangerangkota.go.id/pad/stpd/
+0 83
+http://e-sptpd.tangerangkota.go.id/pad/subjek_pajak/
+0 237
+http://e-sptpd.tangerangkota.go.id/pendataan/user_reg/add/
+0 12
+http://e-sptpd.tangerangkota.go.id/pad/subjek_pajak/edit/36
+0 17
+http://e-sptpd.tangerangkota.go.id/pad/
+0 150
+http://e-sptpd.tangerangkota.go.id/pad/skpd/kbt/999/
+0 2
+http://e-sptpd.tangerangkota.go.id/pad/sptpd/index/4
+0 51
+http://e-sptpd.tangerangkota.go.id/pad/sptpd/add/2
+0 346
+http://e-sptpd.tangerangkota.go.id/pad/objek_pajak/
+0 4
+http://e-sptpd.tangerangkota.go.id/pad/subjek_pajak/edit/315
+0 5
+http://e-sptpd.tangerangkota.go.id/pad/subjek_pajak/add/
+0 1
+- (Direct Request)
+0 161
+http://e-sptpd.tangerangkota.go.id/pad/sptpd/index/7
+0 75
+http://e-sptpd.tangerangkota.go.id/pendataan/user_reg/edit/5082
+0 13
+http://e-sptpd.tangerangkota.go.id/pad/sptpd/add/3
+0 122
+http://e-sptpd.tangerangkota.go.id/pad/pajak/edit/60
+0 9
+http://e-sptpd.tangerangkota.go.id/pad/lap_penerimaan/
+0 2
+http://e-sptpd.tangerangkota.go.id/pad/pajak/
+0 10
+http://e-sptpd.tangerangkota.go.id/pad/pemda/
+0 9
+http://e-sptpd.tangerangkota.go.id/pad/subjek_pajak/edit/11
+0 10
+http://e-sptpd.tangerangkota.go.id/pad/subjek_pajak/edit/4474
+0 4
+http://e-sptpd.tangerangkota.go.id/pad/subjek_pajak/edit/736/624
+0 13
+http://e-sptpd.dpkad.tangerangkota.org/
+0 1
+http://e-sptpd.tangerangkota.go.id/pad/subjek_pajak/edit/4750
+0 5
+http://e-sptpd.tangerangkota.go.id/pad/skpd/kb/999/
+0 3
+http://e-sptpd.tangerangkota.go.id/pad/subjek_pajak/edit/4566
+0 7
+http://e-sptpd.tangerangkota.go.id/pendataan/
+0 26
+http://e-sptpd.tangerangkota.go.id/pad/sptpd/index/3/
+0 23
+http://e-sptpd.tangerangkota.go.id/pad/sspd/
+0 107
+http://e-sptpd.tangerangkota.go.id/pad/subjek_pajak/edit/4741
+0 11
+http://e-sptpd.tangerangkota.go.id/pad/sptpd/edit/2/1/8/64/885
+0 2
+http://e-sptpd.tangerangkota.go.id/pad/sptpd/index/1
+0 25
+http://e-sptpd.tangerangkota.go.id/pendataan/sptpd/
+0 31
+http://e-sptpd.tangerangkota.go.id/pad/subjek_pajak/edit/534
+0 29
+http://e-sptpd.tangerangkota.go.id/admin/
+0 202
+http://e-sptpd.tangerangkota.go.id/pad/sptpd/index/3
+0 61
+http://e-sptpd.tangerangkota.go.id/assets/adminlte/dist/css/font-awesome.min.css
+0 11
+http://e-sptpd.tangerangkota.go.id/pad/subjek_pajak/edit/2411
+0 4
+http://e-sptpd.tangerangkota.go.id/pad/monitoring_tagihan/
+0 4
+http://e-sptpd.tangerangkota.go.id/pad/subjek_pajak/edit/4488
+0 10
+http://e-sptpd.tangerangkota.go.id/pendataan/user_reg/edit/4495
+0 3
+# End Of Table - referrers
+# -agents- 
+Google favicon
+0 2
+Mozilla/5.0 (Linux; U; Android 5.0.2; en-gb; Mi 4i Build/LRX22G) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/39
+0 1
+Mozilla/5.0 (Windows NT 6.1; WOW64; rv:42.0) Gecko/20100101 Firefox/42.0
+0 680
+Apache/2.4.10 (Debian) SVN/1.8.10 mod_fcgid/2.3.9 OpenSSL/1.0.1k (internal dummy connection)
+0 38
+Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10.6; fr; rv:1.9.2.8) Gecko/20100722 Firefox/3.6.8
+0 2
+Mozilla/5.0 (Windows NT 6.3; WOW64; rv:42.0) Gecko/20100101 Firefox/42.0
+0 456
+Morfeus Fucking Scanner
+0 1
+Mozilla/5.0 (compatible; MSIE 8.0; Windows NT 6.1; Trident/5.0)
+0 1
+Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2490.86 Safari/537.36
+0 72
+Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; Trident/5.0; 360SE)
+0 16
+Mozilla/5.0 zgrab/0.x
+0 2
+Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2490.86 Safari/537.36
+0 823
+Java/1.8.0_60
+0 16
+Mozilla/5.0 (Windows NT 6.1; rv:42.0) Gecko/20100101 Firefox/42.0
+0 494
+ZmEu
+0 6
+# End Of Table - agents
+# -search strings- 
+# End Of Table - search strings
+# -usernames- 
+# End Of Table - usernames
