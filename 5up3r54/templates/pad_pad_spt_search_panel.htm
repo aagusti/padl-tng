@@ -1,0 +1,520 @@
+<div class="searchOptions bottomPanelBorder" {$srchOpt_attrs}>
+	
+	<!-- Search panel content -->
+	<div class="srchCritTop" style="display: none;">
+		Criteria:&nbsp;
+		<input type="radio" name="srchType" class="runner-radio-button" {$all_checkbox}> {BEGIN all_checkbox_label}all{END all_checkbox_label}
+		&nbsp;&nbsp;&nbsp;
+		<input type="radio" name="srchType" class="runner-radio-button" {$any_checkbox}> {BEGIN any_checkbox_label}any{END any_checkbox_label}
+	</div>
+	
+	<div class="addOption">
+		<span class="runner-btnframe">
+		<span class="runner-btnleft"></span>
+		<span class="runner-btnright"></span>
+		<a href="#" id="showHideControlChooseMenu{$id}" class="runner-button" {$showHideCtrls_attrs}>Add field</a>
+		</span>
+		&nbsp;&nbsp;&nbsp;
+		<span class="runner-btnframe">
+		<span class="runner-btnleft"></span>
+		<span class="runner-btnright"></span>
+		<a href="#" id="showHideSearchType{$id}" class="runner-button" {$showHideCtrlsOpt_attrs}>{$showHideOpt_mess}</a>
+		</span>
+	</div>
+	
+	<!-- choose controls div -->
+	<div class="runner-panel controlChooseMenu" {$controlChooseMenuDiv_attrs}>
+		{BEGIN addSearch_id}
+			<a href="#" id="addSearchControl_id" class="addSearchControl" {$addSearchControl_id_attrs}>Id</a><br>
+		{END addSearch_id}
+		{BEGIN addSearch_tahun}
+			<a href="#" id="addSearchControl_tahun" class="addSearchControl" {$addSearchControl_tahun_attrs}>Tahun</a><br>
+		{END addSearch_tahun}
+		{BEGIN addSearch_sptno}
+			<a href="#" id="addSearchControl_sptno" class="addSearchControl" {$addSearchControl_sptno_attrs}>Sptno</a><br>
+		{END addSearch_sptno}
+		{BEGIN addSearch_customer_id}
+			<a href="#" id="addSearchControl_customer_id" class="addSearchControl" {$addSearchControl_customer_id_attrs}>Customer Id</a><br>
+		{END addSearch_customer_id}
+		{BEGIN addSearch_customer_usaha_id}
+			<a href="#" id="addSearchControl_customer_usaha_id" class="addSearchControl" {$addSearchControl_customer_usaha_id_attrs}>Customer Usaha Id</a><br>
+		{END addSearch_customer_usaha_id}
+		{BEGIN addSearch_rekening_id}
+			<a href="#" id="addSearchControl_rekening_id" class="addSearchControl" {$addSearchControl_rekening_id_attrs}>Rekening Id</a><br>
+		{END addSearch_rekening_id}
+		{BEGIN addSearch_pajak_id}
+			<a href="#" id="addSearchControl_pajak_id" class="addSearchControl" {$addSearchControl_pajak_id_attrs}>Pajak Id</a><br>
+		{END addSearch_pajak_id}
+		{BEGIN addSearch_type_id}
+			<a href="#" id="addSearchControl_type_id" class="addSearchControl" {$addSearchControl_type_id_attrs}>Type Id</a><br>
+		{END addSearch_type_id}
+		{BEGIN addSearch_so}
+			<a href="#" id="addSearchControl_so" class="addSearchControl" {$addSearchControl_so_attrs}>So</a><br>
+		{END addSearch_so}
+		{BEGIN addSearch_masadari}
+			<a href="#" id="addSearchControl_masadari" class="addSearchControl" {$addSearchControl_masadari_attrs}>Masadari</a><br>
+		{END addSearch_masadari}
+		{BEGIN addSearch_masasd}
+			<a href="#" id="addSearchControl_masasd" class="addSearchControl" {$addSearchControl_masasd_attrs}>Masasd</a><br>
+		{END addSearch_masasd}
+		{BEGIN addSearch_jatuhtempotgl}
+			<a href="#" id="addSearchControl_jatuhtempotgl" class="addSearchControl" {$addSearchControl_jatuhtempotgl_attrs}>Jatuhtempotgl</a><br>
+		{END addSearch_jatuhtempotgl}
+		{BEGIN addSearch_r_bayarid}
+			<a href="#" id="addSearchControl_r_bayarid" class="addSearchControl" {$addSearchControl_r_bayarid_attrs}>R Bayarid</a><br>
+		{END addSearch_r_bayarid}
+		{BEGIN addSearch_minimal_omset}
+			<a href="#" id="addSearchControl_minimal_omset" class="addSearchControl" {$addSearchControl_minimal_omset_attrs}>Minimal Omset</a><br>
+		{END addSearch_minimal_omset}
+		{BEGIN addSearch_dasar}
+			<a href="#" id="addSearchControl_dasar" class="addSearchControl" {$addSearchControl_dasar_attrs}>Dasar</a><br>
+		{END addSearch_dasar}
+		{BEGIN addSearch_tarif}
+			<a href="#" id="addSearchControl_tarif" class="addSearchControl" {$addSearchControl_tarif_attrs}>Tarif</a><br>
+		{END addSearch_tarif}
+		{BEGIN addSearch_denda}
+			<a href="#" id="addSearchControl_denda" class="addSearchControl" {$addSearchControl_denda_attrs}>Denda</a><br>
+		{END addSearch_denda}
+		{BEGIN addSearch_bunga}
+			<a href="#" id="addSearchControl_bunga" class="addSearchControl" {$addSearchControl_bunga_attrs}>Bunga</a><br>
+		{END addSearch_bunga}
+		{BEGIN addSearch_setoran}
+			<a href="#" id="addSearchControl_setoran" class="addSearchControl" {$addSearchControl_setoran_attrs}>Setoran</a><br>
+		{END addSearch_setoran}
+		{BEGIN addSearch_kenaikan}
+			<a href="#" id="addSearchControl_kenaikan" class="addSearchControl" {$addSearchControl_kenaikan_attrs}>Kenaikan</a><br>
+		{END addSearch_kenaikan}
+		{BEGIN addSearch_kompensasi}
+			<a href="#" id="addSearchControl_kompensasi" class="addSearchControl" {$addSearchControl_kompensasi_attrs}>Kompensasi</a><br>
+		{END addSearch_kompensasi}
+		{BEGIN addSearch_lain2}
+			<a href="#" id="addSearchControl_lain2" class="addSearchControl" {$addSearchControl_lain2_attrs}>Lain2</a><br>
+		{END addSearch_lain2}
+		{BEGIN addSearch_pajak_terhutang}
+			<a href="#" id="addSearchControl_pajak_terhutang" class="addSearchControl" {$addSearchControl_pajak_terhutang_attrs}>Pajak Terhutang</a><br>
+		{END addSearch_pajak_terhutang}
+		{BEGIN addSearch_air_manfaat_id}
+			<a href="#" id="addSearchControl_air_manfaat_id" class="addSearchControl" {$addSearchControl_air_manfaat_id_attrs}>Air Manfaat Id</a><br>
+		{END addSearch_air_manfaat_id}
+		{BEGIN addSearch_air_zona_id}
+			<a href="#" id="addSearchControl_air_zona_id" class="addSearchControl" {$addSearchControl_air_zona_id_attrs}>Air Zona Id</a><br>
+		{END addSearch_air_zona_id}
+		{BEGIN addSearch_meteran_awal}
+			<a href="#" id="addSearchControl_meteran_awal" class="addSearchControl" {$addSearchControl_meteran_awal_attrs}>Meteran Awal</a><br>
+		{END addSearch_meteran_awal}
+		{BEGIN addSearch_meteran_akhir}
+			<a href="#" id="addSearchControl_meteran_akhir" class="addSearchControl" {$addSearchControl_meteran_akhir_attrs}>Meteran Akhir</a><br>
+		{END addSearch_meteran_akhir}
+		{BEGIN addSearch_volume}
+			<a href="#" id="addSearchControl_volume" class="addSearchControl" {$addSearchControl_volume_attrs}>Volume</a><br>
+		{END addSearch_volume}
+		{BEGIN addSearch_satuan}
+			<a href="#" id="addSearchControl_satuan" class="addSearchControl" {$addSearchControl_satuan_attrs}>Satuan</a><br>
+		{END addSearch_satuan}
+		{BEGIN addSearch_r_panjang}
+			<a href="#" id="addSearchControl_r_panjang" class="addSearchControl" {$addSearchControl_r_panjang_attrs}>R Panjang</a><br>
+		{END addSearch_r_panjang}
+		{BEGIN addSearch_r_lebar}
+			<a href="#" id="addSearchControl_r_lebar" class="addSearchControl" {$addSearchControl_r_lebar_attrs}>R Lebar</a><br>
+		{END addSearch_r_lebar}
+		{BEGIN addSearch_r_muka}
+			<a href="#" id="addSearchControl_r_muka" class="addSearchControl" {$addSearchControl_r_muka_attrs}>R Muka</a><br>
+		{END addSearch_r_muka}
+		{BEGIN addSearch_r_banyak}
+			<a href="#" id="addSearchControl_r_banyak" class="addSearchControl" {$addSearchControl_r_banyak_attrs}>R Banyak</a><br>
+		{END addSearch_r_banyak}
+		{BEGIN addSearch_r_luas}
+			<a href="#" id="addSearchControl_r_luas" class="addSearchControl" {$addSearchControl_r_luas_attrs}>R Luas</a><br>
+		{END addSearch_r_luas}
+		{BEGIN addSearch_r_tarifid}
+			<a href="#" id="addSearchControl_r_tarifid" class="addSearchControl" {$addSearchControl_r_tarifid_attrs}>R Tarifid</a><br>
+		{END addSearch_r_tarifid}
+		{BEGIN addSearch_r_kontrak}
+			<a href="#" id="addSearchControl_r_kontrak" class="addSearchControl" {$addSearchControl_r_kontrak_attrs}>R Kontrak</a><br>
+		{END addSearch_r_kontrak}
+		{BEGIN addSearch_r_lama}
+			<a href="#" id="addSearchControl_r_lama" class="addSearchControl" {$addSearchControl_r_lama_attrs}>R Lama</a><br>
+		{END addSearch_r_lama}
+		{BEGIN addSearch_r_jalan_id}
+			<a href="#" id="addSearchControl_r_jalan_id" class="addSearchControl" {$addSearchControl_r_jalan_id_attrs}>R Jalan Id</a><br>
+		{END addSearch_r_jalan_id}
+		{BEGIN addSearch_r_jalanklas_id}
+			<a href="#" id="addSearchControl_r_jalanklas_id" class="addSearchControl" {$addSearchControl_r_jalanklas_id_attrs}>R Jalanklas Id</a><br>
+		{END addSearch_r_jalanklas_id}
+		{BEGIN addSearch_r_lokasi}
+			<a href="#" id="addSearchControl_r_lokasi" class="addSearchControl" {$addSearchControl_r_lokasi_attrs}>R Lokasi</a><br>
+		{END addSearch_r_lokasi}
+		{BEGIN addSearch_r_judul}
+			<a href="#" id="addSearchControl_r_judul" class="addSearchControl" {$addSearchControl_r_judul_attrs}>R Judul</a><br>
+		{END addSearch_r_judul}
+		{BEGIN addSearch_r_kelurahan_id}
+			<a href="#" id="addSearchControl_r_kelurahan_id" class="addSearchControl" {$addSearchControl_r_kelurahan_id_attrs}>R Kelurahan Id</a><br>
+		{END addSearch_r_kelurahan_id}
+		{BEGIN addSearch_r_lokasi_id}
+			<a href="#" id="addSearchControl_r_lokasi_id" class="addSearchControl" {$addSearchControl_r_lokasi_id_attrs}>R Lokasi Id</a><br>
+		{END addSearch_r_lokasi_id}
+		{BEGIN addSearch_r_calculated}
+			<a href="#" id="addSearchControl_r_calculated" class="addSearchControl" {$addSearchControl_r_calculated_attrs}>R Calculated</a><br>
+		{END addSearch_r_calculated}
+		{BEGIN addSearch_r_nsr}
+			<a href="#" id="addSearchControl_r_nsr" class="addSearchControl" {$addSearchControl_r_nsr_attrs}>R Nsr</a><br>
+		{END addSearch_r_nsr}
+		{BEGIN addSearch_r_nsrno}
+			<a href="#" id="addSearchControl_r_nsrno" class="addSearchControl" {$addSearchControl_r_nsrno_attrs}>R Nsrno</a><br>
+		{END addSearch_r_nsrno}
+		{BEGIN addSearch_r_nsrtgl}
+			<a href="#" id="addSearchControl_r_nsrtgl" class="addSearchControl" {$addSearchControl_r_nsrtgl_attrs}>R Nsrtgl</a><br>
+		{END addSearch_r_nsrtgl}
+		{BEGIN addSearch_r_nsl_kecamatan_id}
+			<a href="#" id="addSearchControl_r_nsl_kecamatan_id" class="addSearchControl" {$addSearchControl_r_nsl_kecamatan_id_attrs}>R Nsl Kecamatan Id</a><br>
+		{END addSearch_r_nsl_kecamatan_id}
+		{BEGIN addSearch_r_nsl_type_id}
+			<a href="#" id="addSearchControl_r_nsl_type_id" class="addSearchControl" {$addSearchControl_r_nsl_type_id_attrs}>R Nsl Type Id</a><br>
+		{END addSearch_r_nsl_type_id}
+		{BEGIN addSearch_r_nsl_nilai}
+			<a href="#" id="addSearchControl_r_nsl_nilai" class="addSearchControl" {$addSearchControl_r_nsl_nilai_attrs}>R Nsl Nilai</a><br>
+		{END addSearch_r_nsl_nilai}
+		{BEGIN addSearch_notes}
+			<a href="#" id="addSearchControl_notes" class="addSearchControl" {$addSearchControl_notes_attrs}>Notes</a><br>
+		{END addSearch_notes}
+		{BEGIN addSearch_unit_id}
+			<a href="#" id="addSearchControl_unit_id" class="addSearchControl" {$addSearchControl_unit_id_attrs}>Unit Id</a><br>
+		{END addSearch_unit_id}
+		{BEGIN addSearch_enabled}
+			<a href="#" id="addSearchControl_enabled" class="addSearchControl" {$addSearchControl_enabled_attrs}>Enabled</a><br>
+		{END addSearch_enabled}
+		{BEGIN addSearch_created}
+			<a href="#" id="addSearchControl_created" class="addSearchControl" {$addSearchControl_created_attrs}>Created</a><br>
+		{END addSearch_created}
+		{BEGIN addSearch_create_uid}
+			<a href="#" id="addSearchControl_create_uid" class="addSearchControl" {$addSearchControl_create_uid_attrs}>Create Uid</a><br>
+		{END addSearch_create_uid}
+		{BEGIN addSearch_updated}
+			<a href="#" id="addSearchControl_updated" class="addSearchControl" {$addSearchControl_updated_attrs}>Updated</a><br>
+		{END addSearch_updated}
+		{BEGIN addSearch_update_uid}
+			<a href="#" id="addSearchControl_update_uid" class="addSearchControl" {$addSearchControl_update_uid_attrs}>Update Uid</a><br>
+		{END addSearch_update_uid}
+		{BEGIN addSearch_terimanip}
+			<a href="#" id="addSearchControl_terimanip" class="addSearchControl" {$addSearchControl_terimanip_attrs}>Terimanip</a><br>
+		{END addSearch_terimanip}
+		{BEGIN addSearch_terimatgl}
+			<a href="#" id="addSearchControl_terimatgl" class="addSearchControl" {$addSearchControl_terimatgl_attrs}>Terimatgl</a><br>
+		{END addSearch_terimatgl}
+		{BEGIN addSearch_kirimtgl}
+			<a href="#" id="addSearchControl_kirimtgl" class="addSearchControl" {$addSearchControl_kirimtgl_attrs}>Kirimtgl</a><br>
+		{END addSearch_kirimtgl}
+		{BEGIN addSearch_isprint_dc}
+			<a href="#" id="addSearchControl_isprint_dc" class="addSearchControl" {$addSearchControl_isprint_dc_attrs}>Isprint Dc</a><br>
+		{END addSearch_isprint_dc}
+		{BEGIN addSearch_r_nsr_id}
+			<a href="#" id="addSearchControl_r_nsr_id" class="addSearchControl" {$addSearchControl_r_nsr_id_attrs}>R Nsr Id</a><br>
+		{END addSearch_r_nsr_id}
+		{BEGIN addSearch_r_lokasi_pasang_id}
+			<a href="#" id="addSearchControl_r_lokasi_pasang_id" class="addSearchControl" {$addSearchControl_r_lokasi_pasang_id_attrs}>R Lokasi Pasang Id</a><br>
+		{END addSearch_r_lokasi_pasang_id}
+		{BEGIN addSearch_r_lokasi_pasang_val}
+			<a href="#" id="addSearchControl_r_lokasi_pasang_val" class="addSearchControl" {$addSearchControl_r_lokasi_pasang_val_attrs}>R Lokasi Pasang Val</a><br>
+		{END addSearch_r_lokasi_pasang_val}
+		{BEGIN addSearch_r_jalanklas_val}
+			<a href="#" id="addSearchControl_r_jalanklas_val" class="addSearchControl" {$addSearchControl_r_jalanklas_val_attrs}>R Jalanklas Val</a><br>
+		{END addSearch_r_jalanklas_val}
+		{BEGIN addSearch_r_sudut_pandang_id}
+			<a href="#" id="addSearchControl_r_sudut_pandang_id" class="addSearchControl" {$addSearchControl_r_sudut_pandang_id_attrs}>R Sudut Pandang Id</a><br>
+		{END addSearch_r_sudut_pandang_id}
+		{BEGIN addSearch_r_sudut_pandang_val}
+			<a href="#" id="addSearchControl_r_sudut_pandang_val" class="addSearchControl" {$addSearchControl_r_sudut_pandang_val_attrs}>R Sudut Pandang Val</a><br>
+		{END addSearch_r_sudut_pandang_val}
+		{BEGIN addSearch_r_tinggi}
+			<a href="#" id="addSearchControl_r_tinggi" class="addSearchControl" {$addSearchControl_r_tinggi_attrs}>R Tinggi</a><br>
+		{END addSearch_r_tinggi}
+		{BEGIN addSearch_r_njop}
+			<a href="#" id="addSearchControl_r_njop" class="addSearchControl" {$addSearchControl_r_njop_attrs}>R Njop</a><br>
+		{END addSearch_r_njop}
+		{BEGIN addSearch_r_status}
+			<a href="#" id="addSearchControl_r_status" class="addSearchControl" {$addSearchControl_r_status_attrs}>R Status</a><br>
+		{END addSearch_r_status}
+		{BEGIN addSearch_r_njop_ketinggian}
+			<a href="#" id="addSearchControl_r_njop_ketinggian" class="addSearchControl" {$addSearchControl_r_njop_ketinggian_attrs}>R Njop Ketinggian</a><br>
+		{END addSearch_r_njop_ketinggian}
+		{BEGIN addSearch_status_pembayaran}
+			<a href="#" id="addSearchControl_status_pembayaran" class="addSearchControl" {$addSearchControl_status_pembayaran_attrs}>Status Pembayaran</a><br>
+		{END addSearch_status_pembayaran}
+		{BEGIN addSearch_rek_no_paneng}
+			<a href="#" id="addSearchControl_rek_no_paneng" class="addSearchControl" {$addSearchControl_rek_no_paneng_attrs}>Rek No Paneng</a><br>
+		{END addSearch_rek_no_paneng}
+		{BEGIN addSearch_sptno_lengkap}
+			<a href="#" id="addSearchControl_sptno_lengkap" class="addSearchControl" {$addSearchControl_sptno_lengkap_attrs}>Sptno Lengkap</a><br>
+		{END addSearch_sptno_lengkap}
+		{BEGIN addSearch_sptno_lama}
+			<a href="#" id="addSearchControl_sptno_lama" class="addSearchControl" {$addSearchControl_sptno_lama_attrs}>Sptno Lama</a><br>
+		{END addSearch_sptno_lama}
+		{BEGIN addSearch_r_nama}
+			<a href="#" id="addSearchControl_r_nama" class="addSearchControl" {$addSearchControl_r_nama_attrs}>R Nama</a><br>
+		{END addSearch_r_nama}
+		{BEGIN addSearch_r_alamat}
+			<a href="#" id="addSearchControl_r_alamat" class="addSearchControl" {$addSearchControl_r_alamat_attrs}>R Alamat</a><br>
+		{END addSearch_r_alamat}
+		{BEGIN addSearch_omset1}
+			<a href="#" id="addSearchControl_omset1" class="addSearchControl" {$addSearchControl_omset1_attrs}>Omset1</a><br>
+		{END addSearch_omset1}
+		{BEGIN addSearch_omset2}
+			<a href="#" id="addSearchControl_omset2" class="addSearchControl" {$addSearchControl_omset2_attrs}>Omset2</a><br>
+		{END addSearch_omset2}
+		{BEGIN addSearch_omset3}
+			<a href="#" id="addSearchControl_omset3" class="addSearchControl" {$addSearchControl_omset3_attrs}>Omset3</a><br>
+		{END addSearch_omset3}
+		{BEGIN addSearch_omset4}
+			<a href="#" id="addSearchControl_omset4" class="addSearchControl" {$addSearchControl_omset4_attrs}>Omset4</a><br>
+		{END addSearch_omset4}
+		{BEGIN addSearch_omset5}
+			<a href="#" id="addSearchControl_omset5" class="addSearchControl" {$addSearchControl_omset5_attrs}>Omset5</a><br>
+		{END addSearch_omset5}
+		{BEGIN addSearch_omset6}
+			<a href="#" id="addSearchControl_omset6" class="addSearchControl" {$addSearchControl_omset6_attrs}>Omset6</a><br>
+		{END addSearch_omset6}
+		{BEGIN addSearch_omset7}
+			<a href="#" id="addSearchControl_omset7" class="addSearchControl" {$addSearchControl_omset7_attrs}>Omset7</a><br>
+		{END addSearch_omset7}
+		{BEGIN addSearch_omset8}
+			<a href="#" id="addSearchControl_omset8" class="addSearchControl" {$addSearchControl_omset8_attrs}>Omset8</a><br>
+		{END addSearch_omset8}
+		{BEGIN addSearch_omset9}
+			<a href="#" id="addSearchControl_omset9" class="addSearchControl" {$addSearchControl_omset9_attrs}>Omset9</a><br>
+		{END addSearch_omset9}
+		{BEGIN addSearch_omset10}
+			<a href="#" id="addSearchControl_omset10" class="addSearchControl" {$addSearchControl_omset10_attrs}>Omset10</a><br>
+		{END addSearch_omset10}
+		{BEGIN addSearch_omset11}
+			<a href="#" id="addSearchControl_omset11" class="addSearchControl" {$addSearchControl_omset11_attrs}>Omset11</a><br>
+		{END addSearch_omset11}
+		{BEGIN addSearch_omset12}
+			<a href="#" id="addSearchControl_omset12" class="addSearchControl" {$addSearchControl_omset12_attrs}>Omset12</a><br>
+		{END addSearch_omset12}
+		{BEGIN addSearch_omset13}
+			<a href="#" id="addSearchControl_omset13" class="addSearchControl" {$addSearchControl_omset13_attrs}>Omset13</a><br>
+		{END addSearch_omset13}
+		{BEGIN addSearch_omset14}
+			<a href="#" id="addSearchControl_omset14" class="addSearchControl" {$addSearchControl_omset14_attrs}>Omset14</a><br>
+		{END addSearch_omset14}
+		{BEGIN addSearch_omset15}
+			<a href="#" id="addSearchControl_omset15" class="addSearchControl" {$addSearchControl_omset15_attrs}>Omset15</a><br>
+		{END addSearch_omset15}
+		{BEGIN addSearch_omset16}
+			<a href="#" id="addSearchControl_omset16" class="addSearchControl" {$addSearchControl_omset16_attrs}>Omset16</a><br>
+		{END addSearch_omset16}
+		{BEGIN addSearch_omset17}
+			<a href="#" id="addSearchControl_omset17" class="addSearchControl" {$addSearchControl_omset17_attrs}>Omset17</a><br>
+		{END addSearch_omset17}
+		{BEGIN addSearch_omset18}
+			<a href="#" id="addSearchControl_omset18" class="addSearchControl" {$addSearchControl_omset18_attrs}>Omset18</a><br>
+		{END addSearch_omset18}
+		{BEGIN addSearch_omset19}
+			<a href="#" id="addSearchControl_omset19" class="addSearchControl" {$addSearchControl_omset19_attrs}>Omset19</a><br>
+		{END addSearch_omset19}
+		{BEGIN addSearch_omset20}
+			<a href="#" id="addSearchControl_omset20" class="addSearchControl" {$addSearchControl_omset20_attrs}>Omset20</a><br>
+		{END addSearch_omset20}
+		{BEGIN addSearch_omset21}
+			<a href="#" id="addSearchControl_omset21" class="addSearchControl" {$addSearchControl_omset21_attrs}>Omset21</a><br>
+		{END addSearch_omset21}
+		{BEGIN addSearch_omset22}
+			<a href="#" id="addSearchControl_omset22" class="addSearchControl" {$addSearchControl_omset22_attrs}>Omset22</a><br>
+		{END addSearch_omset22}
+		{BEGIN addSearch_omset23}
+			<a href="#" id="addSearchControl_omset23" class="addSearchControl" {$addSearchControl_omset23_attrs}>Omset23</a><br>
+		{END addSearch_omset23}
+		{BEGIN addSearch_omset24}
+			<a href="#" id="addSearchControl_omset24" class="addSearchControl" {$addSearchControl_omset24_attrs}>Omset24</a><br>
+		{END addSearch_omset24}
+		{BEGIN addSearch_omset25}
+			<a href="#" id="addSearchControl_omset25" class="addSearchControl" {$addSearchControl_omset25_attrs}>Omset25</a><br>
+		{END addSearch_omset25}
+		{BEGIN addSearch_omset26}
+			<a href="#" id="addSearchControl_omset26" class="addSearchControl" {$addSearchControl_omset26_attrs}>Omset26</a><br>
+		{END addSearch_omset26}
+		{BEGIN addSearch_omset27}
+			<a href="#" id="addSearchControl_omset27" class="addSearchControl" {$addSearchControl_omset27_attrs}>Omset27</a><br>
+		{END addSearch_omset27}
+		{BEGIN addSearch_omset28}
+			<a href="#" id="addSearchControl_omset28" class="addSearchControl" {$addSearchControl_omset28_attrs}>Omset28</a><br>
+		{END addSearch_omset28}
+		{BEGIN addSearch_omset29}
+			<a href="#" id="addSearchControl_omset29" class="addSearchControl" {$addSearchControl_omset29_attrs}>Omset29</a><br>
+		{END addSearch_omset29}
+		{BEGIN addSearch_omset30}
+			<a href="#" id="addSearchControl_omset30" class="addSearchControl" {$addSearchControl_omset30_attrs}>Omset30</a><br>
+		{END addSearch_omset30}
+		{BEGIN addSearch_omset31}
+			<a href="#" id="addSearchControl_omset31" class="addSearchControl" {$addSearchControl_omset31_attrs}>Omset31</a><br>
+		{END addSearch_omset31}
+		{BEGIN addSearch_keterangan1}
+			<a href="#" id="addSearchControl_keterangan1" class="addSearchControl" {$addSearchControl_keterangan1_attrs}>Keterangan1</a><br>
+		{END addSearch_keterangan1}
+		{BEGIN addSearch_keterangan2}
+			<a href="#" id="addSearchControl_keterangan2" class="addSearchControl" {$addSearchControl_keterangan2_attrs}>Keterangan2</a><br>
+		{END addSearch_keterangan2}
+		{BEGIN addSearch_keterangan3}
+			<a href="#" id="addSearchControl_keterangan3" class="addSearchControl" {$addSearchControl_keterangan3_attrs}>Keterangan3</a><br>
+		{END addSearch_keterangan3}
+		{BEGIN addSearch_keterangan4}
+			<a href="#" id="addSearchControl_keterangan4" class="addSearchControl" {$addSearchControl_keterangan4_attrs}>Keterangan4</a><br>
+		{END addSearch_keterangan4}
+		{BEGIN addSearch_keterangan5}
+			<a href="#" id="addSearchControl_keterangan5" class="addSearchControl" {$addSearchControl_keterangan5_attrs}>Keterangan5</a><br>
+		{END addSearch_keterangan5}
+		{BEGIN addSearch_keterangan6}
+			<a href="#" id="addSearchControl_keterangan6" class="addSearchControl" {$addSearchControl_keterangan6_attrs}>Keterangan6</a><br>
+		{END addSearch_keterangan6}
+		{BEGIN addSearch_keterangan7}
+			<a href="#" id="addSearchControl_keterangan7" class="addSearchControl" {$addSearchControl_keterangan7_attrs}>Keterangan7</a><br>
+		{END addSearch_keterangan7}
+		{BEGIN addSearch_keterangan8}
+			<a href="#" id="addSearchControl_keterangan8" class="addSearchControl" {$addSearchControl_keterangan8_attrs}>Keterangan8</a><br>
+		{END addSearch_keterangan8}
+		{BEGIN addSearch_keterangan9}
+			<a href="#" id="addSearchControl_keterangan9" class="addSearchControl" {$addSearchControl_keterangan9_attrs}>Keterangan9</a><br>
+		{END addSearch_keterangan9}
+		{BEGIN addSearch_keterangan10}
+			<a href="#" id="addSearchControl_keterangan10" class="addSearchControl" {$addSearchControl_keterangan10_attrs}>Keterangan10</a><br>
+		{END addSearch_keterangan10}
+		{BEGIN addSearch_keterangan11}
+			<a href="#" id="addSearchControl_keterangan11" class="addSearchControl" {$addSearchControl_keterangan11_attrs}>Keterangan11</a><br>
+		{END addSearch_keterangan11}
+		{BEGIN addSearch_keterangan12}
+			<a href="#" id="addSearchControl_keterangan12" class="addSearchControl" {$addSearchControl_keterangan12_attrs}>Keterangan12</a><br>
+		{END addSearch_keterangan12}
+		{BEGIN addSearch_keterangan13}
+			<a href="#" id="addSearchControl_keterangan13" class="addSearchControl" {$addSearchControl_keterangan13_attrs}>Keterangan13</a><br>
+		{END addSearch_keterangan13}
+		{BEGIN addSearch_keterangan14}
+			<a href="#" id="addSearchControl_keterangan14" class="addSearchControl" {$addSearchControl_keterangan14_attrs}>Keterangan14</a><br>
+		{END addSearch_keterangan14}
+		{BEGIN addSearch_keterangan15}
+			<a href="#" id="addSearchControl_keterangan15" class="addSearchControl" {$addSearchControl_keterangan15_attrs}>Keterangan15</a><br>
+		{END addSearch_keterangan15}
+		{BEGIN addSearch_keterangan16}
+			<a href="#" id="addSearchControl_keterangan16" class="addSearchControl" {$addSearchControl_keterangan16_attrs}>Keterangan16</a><br>
+		{END addSearch_keterangan16}
+		{BEGIN addSearch_keterangan17}
+			<a href="#" id="addSearchControl_keterangan17" class="addSearchControl" {$addSearchControl_keterangan17_attrs}>Keterangan17</a><br>
+		{END addSearch_keterangan17}
+		{BEGIN addSearch_keterangan18}
+			<a href="#" id="addSearchControl_keterangan18" class="addSearchControl" {$addSearchControl_keterangan18_attrs}>Keterangan18</a><br>
+		{END addSearch_keterangan18}
+		{BEGIN addSearch_keterangan19}
+			<a href="#" id="addSearchControl_keterangan19" class="addSearchControl" {$addSearchControl_keterangan19_attrs}>Keterangan19</a><br>
+		{END addSearch_keterangan19}
+		{BEGIN addSearch_keterangan20}
+			<a href="#" id="addSearchControl_keterangan20" class="addSearchControl" {$addSearchControl_keterangan20_attrs}>Keterangan20</a><br>
+		{END addSearch_keterangan20}
+		{BEGIN addSearch_keterangan21}
+			<a href="#" id="addSearchControl_keterangan21" class="addSearchControl" {$addSearchControl_keterangan21_attrs}>Keterangan21</a><br>
+		{END addSearch_keterangan21}
+		{BEGIN addSearch_keterangan22}
+			<a href="#" id="addSearchControl_keterangan22" class="addSearchControl" {$addSearchControl_keterangan22_attrs}>Keterangan22</a><br>
+		{END addSearch_keterangan22}
+		{BEGIN addSearch_keterangan23}
+			<a href="#" id="addSearchControl_keterangan23" class="addSearchControl" {$addSearchControl_keterangan23_attrs}>Keterangan23</a><br>
+		{END addSearch_keterangan23}
+		{BEGIN addSearch_keterangan24}
+			<a href="#" id="addSearchControl_keterangan24" class="addSearchControl" {$addSearchControl_keterangan24_attrs}>Keterangan24</a><br>
+		{END addSearch_keterangan24}
+		{BEGIN addSearch_keterangan25}
+			<a href="#" id="addSearchControl_keterangan25" class="addSearchControl" {$addSearchControl_keterangan25_attrs}>Keterangan25</a><br>
+		{END addSearch_keterangan25}
+		{BEGIN addSearch_keterangan26}
+			<a href="#" id="addSearchControl_keterangan26" class="addSearchControl" {$addSearchControl_keterangan26_attrs}>Keterangan26</a><br>
+		{END addSearch_keterangan26}
+		{BEGIN addSearch_keterangan27}
+			<a href="#" id="addSearchControl_keterangan27" class="addSearchControl" {$addSearchControl_keterangan27_attrs}>Keterangan27</a><br>
+		{END addSearch_keterangan27}
+		{BEGIN addSearch_keterangan28}
+			<a href="#" id="addSearchControl_keterangan28" class="addSearchControl" {$addSearchControl_keterangan28_attrs}>Keterangan28</a><br>
+		{END addSearch_keterangan28}
+		{BEGIN addSearch_keterangan29}
+			<a href="#" id="addSearchControl_keterangan29" class="addSearchControl" {$addSearchControl_keterangan29_attrs}>Keterangan29</a><br>
+		{END addSearch_keterangan29}
+		{BEGIN addSearch_keterangan30}
+			<a href="#" id="addSearchControl_keterangan30" class="addSearchControl" {$addSearchControl_keterangan30_attrs}>Keterangan30</a><br>
+		{END addSearch_keterangan30}
+		{BEGIN addSearch_keterangan31}
+			<a href="#" id="addSearchControl_keterangan31" class="addSearchControl" {$addSearchControl_keterangan31_attrs}>Keterangan31</a><br>
+		{END addSearch_keterangan31}
+		{BEGIN addSearch_doc_no}
+			<a href="#" id="addSearchControl_doc_no" class="addSearchControl" {$addSearchControl_doc_no_attrs}>Doc No</a><br>
+		{END addSearch_doc_no}
+		{BEGIN addSearch_cara_bayar}
+			<a href="#" id="addSearchControl_cara_bayar" class="addSearchControl" {$addSearchControl_cara_bayar_attrs}>Cara Bayar</a><br>
+		{END addSearch_cara_bayar}
+		{BEGIN addSearch_kelompok_usaha_id}
+			<a href="#" id="addSearchControl_kelompok_usaha_id" class="addSearchControl" {$addSearchControl_kelompok_usaha_id_attrs}>Kelompok Usaha Id</a><br>
+		{END addSearch_kelompok_usaha_id}
+		{BEGIN addSearch_zona_id}
+			<a href="#" id="addSearchControl_zona_id" class="addSearchControl" {$addSearchControl_zona_id_attrs}>Zona Id</a><br>
+		{END addSearch_zona_id}
+		{BEGIN addSearch_manfaat_id}
+			<a href="#" id="addSearchControl_manfaat_id" class="addSearchControl" {$addSearchControl_manfaat_id_attrs}>Manfaat Id</a><br>
+		{END addSearch_manfaat_id}
+		{BEGIN addSearch_golongan}
+			<a href="#" id="addSearchControl_golongan" class="addSearchControl" {$addSearchControl_golongan_attrs}>Golongan</a><br>
+		{END addSearch_golongan}
+		{BEGIN addSearch_omset_lain}
+			<a href="#" id="addSearchControl_omset_lain" class="addSearchControl" {$addSearchControl_omset_lain_attrs}>Omset Lain</a><br>
+		{END addSearch_omset_lain}
+		{BEGIN addSearch_keterangan_lain}
+			<a href="#" id="addSearchControl_keterangan_lain" class="addSearchControl" {$addSearchControl_keterangan_lain_attrs}>Keterangan Lain</a><br>
+		{END addSearch_keterangan_lain}
+		{BEGIN addSearch_ijin_no}
+			<a href="#" id="addSearchControl_ijin_no" class="addSearchControl" {$addSearchControl_ijin_no_attrs}>Ijin No</a><br>
+		{END addSearch_ijin_no}
+		{BEGIN addSearch_jenis_masa}
+			<a href="#" id="addSearchControl_jenis_masa" class="addSearchControl" {$addSearchControl_jenis_masa_attrs}>Jenis Masa</a><br>
+		{END addSearch_jenis_masa}
+		{BEGIN addSearch_skpd_lama}
+			<a href="#" id="addSearchControl_skpd_lama" class="addSearchControl" {$addSearchControl_skpd_lama_attrs}>Skpd Lama</a><br>
+		{END addSearch_skpd_lama}
+		{BEGIN addSearch_proses}
+			<a href="#" id="addSearchControl_proses" class="addSearchControl" {$addSearchControl_proses_attrs}>Proses</a><br>
+		{END addSearch_proses}
+		{BEGIN addSearch_tanggal_validasi}
+			<a href="#" id="addSearchControl_tanggal_validasi" class="addSearchControl" {$addSearchControl_tanggal_validasi_attrs}>Tanggal Validasi</a><br>
+		{END addSearch_tanggal_validasi}
+		{BEGIN addSearch_bulan}
+			<a href="#" id="addSearchControl_bulan" class="addSearchControl" {$addSearchControl_bulan_attrs}>Bulan</a><br>
+		{END addSearch_bulan}
+		{BEGIN addSearch_no_telp}
+			<a href="#" id="addSearchControl_no_telp" class="addSearchControl" {$addSearchControl_no_telp_attrs}>No Telp</a><br>
+		{END addSearch_no_telp}
+		{BEGIN addSearch_usaha_id}
+			<a href="#" id="addSearchControl_usaha_id" class="addSearchControl" {$addSearchControl_usaha_id_attrs}>Usaha Id</a><br>
+		{END addSearch_usaha_id}
+		{BEGIN addSearch_multiple}
+			<a href="#" id="addSearchControl_multiple" class="addSearchControl" {$addSearchControl_multiple_attrs}>Multiple</a><br>
+		{END addSearch_multiple}
+		{BEGIN addSearch_bulan_telat}
+			<a href="#" id="addSearchControl_bulan_telat" class="addSearchControl" {$addSearchControl_bulan_telat_attrs}>Bulan Telat</a><br>
+		{END addSearch_bulan_telat}
+	</div>
+	
+	<table class="controlsBlock">
+	{BEGIN searchCtrlBlock}
+		<tr class="srchPanelRow" {$filterRow_attrs}>
+			<td class="srchPanelCell">{$delCtrlButt}</td>
+			<td class="srchPanelCell">{$fLabel}:&nbsp;</td>
+			<td class="srchPanelCell srchPanelCell2">
+				<div class="runner-searchtype">{$searchtype}</div>
+				<div class="runner-searchcontrol">{$searchcontrol}</div>
+				<div class="runner-searchcontrol">{$searchcontrol1}</div>
+		</tr>
+	{END searchCtrlBlock}
+	</table>
+	
+	<div class="bottomSearchButt" align="left" {$bottomSearchButt_attrs}>
+		<span class="runner-btnframe">
+		<span class="runner-btnleft"></span>
+		<span class="runner-btnright"></span>
+		<a href="#" class="runner-button" {$searchbutton_attrs}>Search</a>
+		</span>
+	</div>
+</div>

@@ -1,0 +1,109 @@
+<div class="searchOptions bottomPanelBorder" {$srchOpt_attrs}>
+	
+	<!-- Search panel content -->
+	<div class="srchCritTop" style="display: none;">
+		Criteria:&nbsp;
+		<input type="radio" name="srchType" class="runner-radio-button" {$all_checkbox}> {BEGIN all_checkbox_label}all{END all_checkbox_label}
+		&nbsp;&nbsp;&nbsp;
+		<input type="radio" name="srchType" class="runner-radio-button" {$any_checkbox}> {BEGIN any_checkbox_label}any{END any_checkbox_label}
+	</div>
+	
+	<div class="addOption">
+		<span class="runner-btnframe">
+		<span class="runner-btnleft"></span>
+		<span class="runner-btnright"></span>
+		<a href="#" id="showHideControlChooseMenu{$id}" class="runner-button" {$showHideCtrls_attrs}>Add field</a>
+		</span>
+		&nbsp;&nbsp;&nbsp;
+		<span class="runner-btnframe">
+		<span class="runner-btnleft"></span>
+		<span class="runner-btnright"></span>
+		<a href="#" id="showHideSearchType{$id}" class="runner-button" {$showHideCtrlsOpt_attrs}>{$showHideOpt_mess}</a>
+		</span>
+	</div>
+	
+	<!-- choose controls div -->
+	<div class="runner-panel controlChooseMenu" {$controlChooseMenuDiv_attrs}>
+		{BEGIN addSearch_id}
+			<a href="#" id="addSearchControl_id" class="addSearchControl" {$addSearchControl_id_attrs}>Id</a><br>
+		{END addSearch_id}
+		{BEGIN addSearch_spt_id}
+			<a href="#" id="addSearchControl_spt_id" class="addSearchControl" {$addSearchControl_spt_id_attrs}>Spt Id</a><br>
+		{END addSearch_spt_id}
+		{BEGIN addSearch_media_id}
+			<a href="#" id="addSearchControl_media_id" class="addSearchControl" {$addSearchControl_media_id_attrs}>Media Id</a><br>
+		{END addSearch_media_id}
+		{BEGIN addSearch_kelas_jalan_id}
+			<a href="#" id="addSearchControl_kelas_jalan_id" class="addSearchControl" {$addSearchControl_kelas_jalan_id_attrs}>Kelas Jalan Id</a><br>
+		{END addSearch_kelas_jalan_id}
+		{BEGIN addSearch_panjang}
+			<a href="#" id="addSearchControl_panjang" class="addSearchControl" {$addSearchControl_panjang_attrs}>Panjang</a><br>
+		{END addSearch_panjang}
+		{BEGIN addSearch_lebar}
+			<a href="#" id="addSearchControl_lebar" class="addSearchControl" {$addSearchControl_lebar_attrs}>Lebar</a><br>
+		{END addSearch_lebar}
+		{BEGIN addSearch_tinggi}
+			<a href="#" id="addSearchControl_tinggi" class="addSearchControl" {$addSearchControl_tinggi_attrs}>Tinggi</a><br>
+		{END addSearch_tinggi}
+		{BEGIN addSearch_muka}
+			<a href="#" id="addSearchControl_muka" class="addSearchControl" {$addSearchControl_muka_attrs}>Muka</a><br>
+		{END addSearch_muka}
+		{BEGIN addSearch_sisi}
+			<a href="#" id="addSearchControl_sisi" class="addSearchControl" {$addSearchControl_sisi_attrs}>Sisi</a><br>
+		{END addSearch_sisi}
+		{BEGIN addSearch_banyak}
+			<a href="#" id="addSearchControl_banyak" class="addSearchControl" {$addSearchControl_banyak_attrs}>Banyak</a><br>
+		{END addSearch_banyak}
+		{BEGIN addSearch_lama}
+			<a href="#" id="addSearchControl_lama" class="addSearchControl" {$addSearchControl_lama_attrs}>Lama</a><br>
+		{END addSearch_lama}
+		{BEGIN addSearch_nsr}
+			<a href="#" id="addSearchControl_nsr" class="addSearchControl" {$addSearchControl_nsr_attrs}>Nsr</a><br>
+		{END addSearch_nsr}
+		{BEGIN addSearch_alamat}
+			<a href="#" id="addSearchControl_alamat" class="addSearchControl" {$addSearchControl_alamat_attrs}>Alamat</a><br>
+		{END addSearch_alamat}
+		{BEGIN addSearch_update_uid}
+			<a href="#" id="addSearchControl_update_uid" class="addSearchControl" {$addSearchControl_update_uid_attrs}>Update Uid</a><br>
+		{END addSearch_update_uid}
+		{BEGIN addSearch_create_uid}
+			<a href="#" id="addSearchControl_create_uid" class="addSearchControl" {$addSearchControl_create_uid_attrs}>Create Uid</a><br>
+		{END addSearch_create_uid}
+		{BEGIN addSearch_updated}
+			<a href="#" id="addSearchControl_updated" class="addSearchControl" {$addSearchControl_updated_attrs}>Updated</a><br>
+		{END addSearch_updated}
+		{BEGIN addSearch_created}
+			<a href="#" id="addSearchControl_created" class="addSearchControl" {$addSearchControl_created_attrs}>Created</a><br>
+		{END addSearch_created}
+		{BEGIN addSearch_status_baliho}
+			<a href="#" id="addSearchControl_status_baliho" class="addSearchControl" {$addSearchControl_status_baliho_attrs}>Status Baliho</a><br>
+		{END addSearch_status_baliho}
+		{BEGIN addSearch_tambahan}
+			<a href="#" id="addSearchControl_tambahan" class="addSearchControl" {$addSearchControl_tambahan_attrs}>Tambahan</a><br>
+		{END addSearch_tambahan}
+		{BEGIN addSearch_jalan_id}
+			<a href="#" id="addSearchControl_jalan_id" class="addSearchControl" {$addSearchControl_jalan_id_attrs}>Jalan Id</a><br>
+		{END addSearch_jalan_id}
+	</div>
+	
+	<table class="controlsBlock">
+	{BEGIN searchCtrlBlock}
+		<tr class="srchPanelRow" {$filterRow_attrs}>
+			<td class="srchPanelCell">{$delCtrlButt}</td>
+			<td class="srchPanelCell">{$fLabel}:&nbsp;</td>
+			<td class="srchPanelCell srchPanelCell2">
+				<div class="runner-searchtype">{$searchtype}</div>
+				<div class="runner-searchcontrol">{$searchcontrol}</div>
+				<div class="runner-searchcontrol">{$searchcontrol1}</div>
+		</tr>
+	{END searchCtrlBlock}
+	</table>
+	
+	<div class="bottomSearchButt" align="left" {$bottomSearchButt_attrs}>
+		<span class="runner-btnframe">
+		<span class="runner-btnleft"></span>
+		<span class="runner-btnright"></span>
+		<a href="#" class="runner-button" {$searchbutton_attrs}>Search</a>
+		</span>
+	</div>
+</div>

@@ -1,0 +1,94 @@
+<div class="searchOptions bottomPanelBorder" {$srchOpt_attrs}>
+	
+	<!-- Search panel content -->
+	<div class="srchCritTop" style="display: none;">
+		Criteria:&nbsp;
+		<input type="radio" name="srchType" class="runner-radio-button" {$all_checkbox}> {BEGIN all_checkbox_label}all{END all_checkbox_label}
+		&nbsp;&nbsp;&nbsp;
+		<input type="radio" name="srchType" class="runner-radio-button" {$any_checkbox}> {BEGIN any_checkbox_label}any{END any_checkbox_label}
+	</div>
+	
+	<div class="addOption">
+		<span class="runner-btnframe">
+		<span class="runner-btnleft"></span>
+		<span class="runner-btnright"></span>
+		<a href="#" id="showHideControlChooseMenu{$id}" class="runner-button" {$showHideCtrls_attrs}>Add field</a>
+		</span>
+		&nbsp;&nbsp;&nbsp;
+		<span class="runner-btnframe">
+		<span class="runner-btnleft"></span>
+		<span class="runner-btnright"></span>
+		<a href="#" id="showHideSearchType{$id}" class="runner-button" {$showHideCtrlsOpt_attrs}>{$showHideOpt_mess}</a>
+		</span>
+	</div>
+	
+	<!-- choose controls div -->
+	<div class="runner-panel controlChooseMenu" {$controlChooseMenuDiv_attrs}>
+		{BEGIN addSearch_id}
+			<a href="#" id="addSearchControl_id" class="addSearchControl" {$addSearchControl_id_attrs}>Id</a><br>
+		{END addSearch_id}
+		{BEGIN addSearch_kode}
+			<a href="#" id="addSearchControl_kode" class="addSearchControl" {$addSearchControl_kode_attrs}>Kode</a><br>
+		{END addSearch_kode}
+		{BEGIN addSearch_kecamatan_id}
+			<a href="#" id="addSearchControl_kecamatan_id" class="addSearchControl" {$addSearchControl_kecamatan_id_attrs}>Kecamatan Id</a><br>
+		{END addSearch_kecamatan_id}
+		{BEGIN addSearch_kelurahan_id}
+			<a href="#" id="addSearchControl_kelurahan_id" class="addSearchControl" {$addSearchControl_kelurahan_id_attrs}>Kelurahan Id</a><br>
+		{END addSearch_kelurahan_id}
+		{BEGIN addSearch_latitude}
+			<a href="#" id="addSearchControl_latitude" class="addSearchControl" {$addSearchControl_latitude_attrs}>Latitude</a><br>
+		{END addSearch_latitude}
+		{BEGIN addSearch_longitude}
+			<a href="#" id="addSearchControl_longitude" class="addSearchControl" {$addSearchControl_longitude_attrs}>Longitude</a><br>
+		{END addSearch_longitude}
+		{BEGIN addSearch_pemilik_nama}
+			<a href="#" id="addSearchControl_pemilik_nama" class="addSearchControl" {$addSearchControl_pemilik_nama_attrs}>Pemilik Nama</a><br>
+		{END addSearch_pemilik_nama}
+		{BEGIN addSearch_pemilik_alamat}
+			<a href="#" id="addSearchControl_pemilik_alamat" class="addSearchControl" {$addSearchControl_pemilik_alamat_attrs}>Pemilik Alamat</a><br>
+		{END addSearch_pemilik_alamat}
+		{BEGIN addSearch_pemilik_kecamatan}
+			<a href="#" id="addSearchControl_pemilik_kecamatan" class="addSearchControl" {$addSearchControl_pemilik_kecamatan_attrs}>Pemilik Kecamatan</a><br>
+		{END addSearch_pemilik_kecamatan}
+		{BEGIN addSearch_pemilik_kelurahan}
+			<a href="#" id="addSearchControl_pemilik_kelurahan" class="addSearchControl" {$addSearchControl_pemilik_kelurahan_attrs}>Pemilik Kelurahan</a><br>
+		{END addSearch_pemilik_kelurahan}
+		{BEGIN addSearch_pemilik_kota}
+			<a href="#" id="addSearchControl_pemilik_kota" class="addSearchControl" {$addSearchControl_pemilik_kota_attrs}>Pemilik Kota</a><br>
+		{END addSearch_pemilik_kota}
+		{BEGIN addSearch_updated}
+			<a href="#" id="addSearchControl_updated" class="addSearchControl" {$addSearchControl_updated_attrs}>Updated</a><br>
+		{END addSearch_updated}
+		{BEGIN addSearch_created}
+			<a href="#" id="addSearchControl_created" class="addSearchControl" {$addSearchControl_created_attrs}>Created</a><br>
+		{END addSearch_created}
+		{BEGIN addSearch_update_uid}
+			<a href="#" id="addSearchControl_update_uid" class="addSearchControl" {$addSearchControl_update_uid_attrs}>Update Uid</a><br>
+		{END addSearch_update_uid}
+		{BEGIN addSearch_create_uid}
+			<a href="#" id="addSearchControl_create_uid" class="addSearchControl" {$addSearchControl_create_uid_attrs}>Create Uid</a><br>
+		{END addSearch_create_uid}
+	</div>
+	
+	<table class="controlsBlock">
+	{BEGIN searchCtrlBlock}
+		<tr class="srchPanelRow" {$filterRow_attrs}>
+			<td class="srchPanelCell">{$delCtrlButt}</td>
+			<td class="srchPanelCell">{$fLabel}:&nbsp;</td>
+			<td class="srchPanelCell srchPanelCell2">
+				<div class="runner-searchtype">{$searchtype}</div>
+				<div class="runner-searchcontrol">{$searchcontrol}</div>
+				<div class="runner-searchcontrol">{$searchcontrol1}</div>
+		</tr>
+	{END searchCtrlBlock}
+	</table>
+	
+	<div class="bottomSearchButt" align="left" {$bottomSearchButt_attrs}>
+		<span class="runner-btnframe">
+		<span class="runner-btnleft"></span>
+		<span class="runner-btnright"></span>
+		<a href="#" class="runner-button" {$searchbutton_attrs}>Search</a>
+		</span>
+	</div>
+</div>

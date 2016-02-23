@@ -1,0 +1,77 @@
+<div class="searchOptions bottomPanelBorder" {$srchOpt_attrs}>
+	<!-- Search panel content -->
+	<div class="srchCritTop" style="display: none;">
+		Criteria:&nbsp;
+		<input type="radio" name="srchType" class="runner-radio-button" {$all_checkbox}> {BEGIN all_checkbox_label}all{END all_checkbox_label}
+		&nbsp;&nbsp;&nbsp;
+		<input type="radio" name="srchType" class="runner-radio-button" {$any_checkbox}> {BEGIN any_checkbox_label}any{END any_checkbox_label}
+	</div>
+	
+	<div class="addOption">
+		<span class="runner-btnframe">
+		<span class="runner-btnleft"></span>
+		<span class="runner-btnright"></span>
+		<a href="#" id="showHideControlChooseMenu{$id}" class="runner-button" {$showHideCtrls_attrs}>Add field</a>
+		</span>
+		&nbsp;&nbsp;&nbsp;
+		<span class="runner-btnframe">
+		<span class="runner-btnleft"></span>
+		<span class="runner-btnright"></span>
+		<a href="#" id="showHideSearchType{$id}" class="runner-button" {$showHideCtrlsOpt_attrs}>{$showHideOpt_mess}</a>
+		</span>
+	</div>
+	
+	<!-- choose controls div -->
+	<div class="runner-panel controlChooseMenu" {$controlChooseMenuDiv_attrs}>
+		{BEGIN addSearch_id}
+			<a href="#" id="addSearchControl_id" class="addSearchControl" {$addSearchControl_id_attrs}>Id</a><br>
+		{END addSearch_id}
+		{BEGIN addSearch_sspd_id}
+			<a href="#" id="addSearchControl_sspd_id" class="addSearchControl" {$addSearchControl_sspd_id_attrs}>Sspd Id</a><br>
+		{END addSearch_sspd_id}
+		{BEGIN addSearch_tahun}
+			<a href="#" id="addSearchControl_tahun" class="addSearchControl" {$addSearchControl_tahun_attrs}>Tahun</a><br>
+		{END addSearch_tahun}
+		{BEGIN addSearch_sspdno}
+			<a href="#" id="addSearchControl_sspdno" class="addSearchControl" {$addSearchControl_sspdno_attrs}>Sspdno</a><br>
+		{END addSearch_sspdno}
+		{BEGIN addSearch_spt_id}
+			<a href="#" id="addSearchControl_spt_id" class="addSearchControl" {$addSearchControl_spt_id_attrs}>Spt Id</a><br>
+		{END addSearch_spt_id}
+		{BEGIN addSearch_old_spt_id}
+			<a href="#" id="addSearchControl_old_spt_id" class="addSearchControl" {$addSearchControl_old_spt_id_attrs}>Old Spt Id</a><br>
+		{END addSearch_old_spt_id}
+		{BEGIN addSearch_wp}
+			<a href="#" id="addSearchControl_wp" class="addSearchControl" {$addSearchControl_wp_attrs}>Wp</a><br>
+		{END addSearch_wp}
+		{BEGIN addSearch_bunga}
+			<a href="#" id="addSearchControl_bunga" class="addSearchControl" {$addSearchControl_bunga_attrs}>Bunga</a><br>
+		{END addSearch_bunga}
+		{BEGIN addSearch_denda}
+			<a href="#" id="addSearchControl_denda" class="addSearchControl" {$addSearchControl_denda_attrs}>Denda</a><br>
+		{END addSearch_denda}
+		{BEGIN addSearch_bayar}
+			<a href="#" id="addSearchControl_bayar" class="addSearchControl" {$addSearchControl_bayar_attrs}>Bayar</a><br>
+		{END addSearch_bayar}
+		{BEGIN addSearch_tgl}
+			<a href="#" id="addSearchControl_tgl" class="addSearchControl" {$addSearchControl_tgl_attrs}>Tgl</a><br>
+		{END addSearch_tgl}
+	</div>
+	
+	<div class="controlsBlock">
+		{BEGIN searchCtrlBlock}
+		<div class="srchPanelRow" {$filterRow_attrs}>
+			<div class="srchPanelCell">{$delCtrlButt}&nbsp;{$fLabel}:&nbsp;</div>
+			<div class="srchPanelCell srchPanelCell2">{$searchtype} {$searchcontrol} {$searchcontrol1}</div>
+		</div>
+		{END searchCtrlBlock}
+	</div>
+		
+	<div class="bottomSearchButt" align="left" {$bottomSearchButt_attrs}>
+		<span class="runner-btnframe">
+		<span class="runner-btnleft"></span>
+		<span class="runner-btnright"></span>
+		<a href="#" class="runner-button" {$searchbutton_attrs}>Search</a>
+		</span>
+	</div>
+</div>

@@ -1,0 +1,82 @@
+<div class="searchOptions bottomPanelBorder" {$srchOpt_attrs}>
+	
+	<!-- Search panel content -->
+	<div class="srchCritTop" style="display: none;">
+		Criteria:&nbsp;
+		<input type="radio" name="srchType" class="runner-radio-button" {$all_checkbox}> {BEGIN all_checkbox_label}all{END all_checkbox_label}
+		&nbsp;&nbsp;&nbsp;
+		<input type="radio" name="srchType" class="runner-radio-button" {$any_checkbox}> {BEGIN any_checkbox_label}any{END any_checkbox_label}
+	</div>
+	
+	<div class="addOption">
+		<span class="runner-btnframe">
+		<span class="runner-btnleft"></span>
+		<span class="runner-btnright"></span>
+		<a href="#" id="showHideControlChooseMenu{$id}" class="runner-button" {$showHideCtrls_attrs}>Add field</a>
+		</span>
+		&nbsp;&nbsp;&nbsp;
+		<span class="runner-btnframe">
+		<span class="runner-btnleft"></span>
+		<span class="runner-btnright"></span>
+		<a href="#" id="showHideSearchType{$id}" class="runner-button" {$showHideCtrlsOpt_attrs}>{$showHideOpt_mess}</a>
+		</span>
+	</div>
+	
+	<!-- choose controls div -->
+	<div class="runner-panel controlChooseMenu" {$controlChooseMenuDiv_attrs}>
+		{BEGIN addSearch_id}
+			<a href="#" id="addSearchControl_id" class="addSearchControl" {$addSearchControl_id_attrs}>Id</a><br>
+		{END addSearch_id}
+		{BEGIN addSearch_terima_id}
+			<a href="#" id="addSearchControl_terima_id" class="addSearchControl" {$addSearchControl_terima_id_attrs}>Terima Id</a><br>
+		{END addSearch_terima_id}
+		{BEGIN addSearch_spt_id}
+			<a href="#" id="addSearchControl_spt_id" class="addSearchControl" {$addSearchControl_spt_id_attrs}>Spt Id</a><br>
+		{END addSearch_spt_id}
+		{BEGIN addSearch_rekening_id}
+			<a href="#" id="addSearchControl_rekening_id" class="addSearchControl" {$addSearchControl_rekening_id_attrs}>Rekening Id</a><br>
+		{END addSearch_rekening_id}
+		{BEGIN addSearch_pajak_id}
+			<a href="#" id="addSearchControl_pajak_id" class="addSearchControl" {$addSearchControl_pajak_id_attrs}>Pajak Id</a><br>
+		{END addSearch_pajak_id}
+		{BEGIN addSearch_amount}
+			<a href="#" id="addSearchControl_amount" class="addSearchControl" {$addSearchControl_amount_attrs}>Amount</a><br>
+		{END addSearch_amount}
+		{BEGIN addSearch_enabled}
+			<a href="#" id="addSearchControl_enabled" class="addSearchControl" {$addSearchControl_enabled_attrs}>Enabled</a><br>
+		{END addSearch_enabled}
+		{BEGIN addSearch_create_date}
+			<a href="#" id="addSearchControl_create_date" class="addSearchControl" {$addSearchControl_create_date_attrs}>Create Date</a><br>
+		{END addSearch_create_date}
+		{BEGIN addSearch_create_uid}
+			<a href="#" id="addSearchControl_create_uid" class="addSearchControl" {$addSearchControl_create_uid_attrs}>Create Uid</a><br>
+		{END addSearch_create_uid}
+		{BEGIN addSearch_write_date}
+			<a href="#" id="addSearchControl_write_date" class="addSearchControl" {$addSearchControl_write_date_attrs}>Write Date</a><br>
+		{END addSearch_write_date}
+		{BEGIN addSearch_write_uid}
+			<a href="#" id="addSearchControl_write_uid" class="addSearchControl" {$addSearchControl_write_uid_attrs}>Write Uid</a><br>
+		{END addSearch_write_uid}
+	</div>
+	
+	<table class="controlsBlock">
+	{BEGIN searchCtrlBlock}
+		<tr class="srchPanelRow" {$filterRow_attrs}>
+			<td class="srchPanelCell">{$delCtrlButt}</td>
+			<td class="srchPanelCell">{$fLabel}:&nbsp;</td>
+			<td class="srchPanelCell srchPanelCell2">
+				<div class="runner-searchtype">{$searchtype}</div>
+				<div class="runner-searchcontrol">{$searchcontrol}</div>
+				<div class="runner-searchcontrol">{$searchcontrol1}</div>
+		</tr>
+	{END searchCtrlBlock}
+	</table>
+	
+	<div class="bottomSearchButt" align="left" {$bottomSearchButt_attrs}>
+		<span class="runner-btnframe">
+		<span class="runner-btnleft"></span>
+		<span class="runner-btnright"></span>
+		<a href="#" class="runner-button" {$searchbutton_attrs}>Search</a>
+		</span>
+	</div>
+</div>

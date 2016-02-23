@@ -1,0 +1,487 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<title>{$pagetitle}</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=7">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+		{BEGIN pageCSSFiles}
+		<link REL="stylesheet" href="{$pagestylepath}" type="text/css">
+		{END pageCSSFiles}
+		<!--[if IE]>
+			<link REL="stylesheet" href="styles/defaultIE.css" type="text/css">
+			{BEGIN IEcssFiles}
+			<link REL="stylesheet" href="{$stylepathIE}" type="text/css">
+			{END IEcssFiles}
+		<![endif]-->
+	</head>
+	
+	<body class="{$stylename}" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+		<table   cellpadding="0" class="runner-toptable">
+			<tr class="runner-header">
+				<td class="runner-top" colspan=3>
+					
+
+{BEGIN container_master}
+<table class="runner-c runner-c-master" cellpadding="0" >
+<tr class="{$cheaderclass_master}">
+<td class="runner-cl"><img src="images/spacer.gif"></td>
+<td class="runner-cc"></td><td class="runner-cr"><img src="images/spacer.gif"></td>
+</tr>
+<tr class="runner-row style1">
+<td class="runner-cl"></td>
+<td class="runner-cc">
+<table border="0" cellpadding="0" class="runner-hc">
+<tr>
+
+{BEGIN mastertable_block}
+<td  class="runner-cc runner-bl runner-b-masterinfoprint" {$brickclass_masterinfoprint}><span>{$showmasterfile}
+</span></td>
+{END mastertable_block}
+
+<td class="runner-cc filler"></td>
+</tr>
+</table></td>
+<td class="runner-cr"></td>
+</tr>
+
+<tr class="{$cfooterclass_master}">
+<td class="runner-cl"><img src="images/spacer.gif"></td>
+<td class="runner-cc"></td><td class="runner-cr"><img src="images/spacer.gif"></td>
+</tr>
+</table>
+{END container_master}
+
+
+
+
+				</td>
+			</tr>
+			<tr class="runner-body">
+				
+				<td class="runner-left {$blockclass_left}" >
+					
+				</td>	
+				
+				<td class="runner-center {$blockclass_center}">
+					
+
+{BEGIN container_grid}
+
+
+{BEGIN grid_block}
+{BEGIN page}
+<h1>Pad Anggaran</h1>
+<span>
+{BEGIN page_number}
+Page {$pageno} of {$maxpages} 
+{END page_number}
+</span>
+
+	<div class="runner-s-grid">	
+	<table class="runner-c runner-c-grid" cellpadding="0">
+		<thead>
+		{BEGIN grid_header}
+		<tr class="runner-toprow style1">
+			<td class="runner-cl"><img src="images/spacer.gif"></td>
+			{BEGIN record_header}
+					{BEGIN id_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN id_fieldheader}
+	<b>Id</b>
+	{END id_fieldheader}
+</th>
+{END id_fieldheadercolumn}
+	{BEGIN rekening_id_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN rekening_id_fieldheader}
+	<b>Rekening Id</b>
+	{END rekening_id_fieldheader}
+</th>
+{END rekening_id_fieldheadercolumn}
+	{BEGIN status_anggaran_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN status_anggaran_fieldheader}
+	<b>Status Anggaran</b>
+	{END status_anggaran_fieldheader}
+</th>
+{END status_anggaran_fieldheadercolumn}
+	{BEGIN target_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN target_fieldheader}
+	<b>Target</b>
+	{END target_fieldheader}
+</th>
+{END target_fieldheadercolumn}
+	{BEGIN bulan1_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN bulan1_fieldheader}
+	<b>Bulan1</b>
+	{END bulan1_fieldheader}
+</th>
+{END bulan1_fieldheadercolumn}
+	{BEGIN bulan2_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN bulan2_fieldheader}
+	<b>Bulan2</b>
+	{END bulan2_fieldheader}
+</th>
+{END bulan2_fieldheadercolumn}
+	{BEGIN bulan3_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN bulan3_fieldheader}
+	<b>Bulan3</b>
+	{END bulan3_fieldheader}
+</th>
+{END bulan3_fieldheadercolumn}
+	{BEGIN bulan4_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN bulan4_fieldheader}
+	<b>Bulan4</b>
+	{END bulan4_fieldheader}
+</th>
+{END bulan4_fieldheadercolumn}
+	{BEGIN bulan5_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN bulan5_fieldheader}
+	<b>Bulan5</b>
+	{END bulan5_fieldheader}
+</th>
+{END bulan5_fieldheadercolumn}
+	{BEGIN bulan6_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN bulan6_fieldheader}
+	<b>Bulan6</b>
+	{END bulan6_fieldheader}
+</th>
+{END bulan6_fieldheadercolumn}
+	{BEGIN bulan7_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN bulan7_fieldheader}
+	<b>Bulan7</b>
+	{END bulan7_fieldheader}
+</th>
+{END bulan7_fieldheadercolumn}
+	{BEGIN bulan8_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN bulan8_fieldheader}
+	<b>Bulan8</b>
+	{END bulan8_fieldheader}
+</th>
+{END bulan8_fieldheadercolumn}
+	{BEGIN bulan9_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN bulan9_fieldheader}
+	<b>Bulan9</b>
+	{END bulan9_fieldheader}
+</th>
+{END bulan9_fieldheadercolumn}
+	{BEGIN bulan10_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN bulan10_fieldheader}
+	<b>Bulan10</b>
+	{END bulan10_fieldheader}
+</th>
+{END bulan10_fieldheadercolumn}
+	{BEGIN bulan11_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN bulan11_fieldheader}
+	<b>Bulan11</b>
+	{END bulan11_fieldheader}
+</th>
+{END bulan11_fieldheadercolumn}
+	{BEGIN bulan12_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN bulan12_fieldheader}
+	<b>Bulan12</b>
+	{END bulan12_fieldheader}
+</th>
+{END bulan12_fieldheadercolumn}
+	{BEGIN jumlah_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN jumlah_fieldheader}
+	<b>Jumlah</b>
+	{END jumlah_fieldheader}
+</th>
+{END jumlah_fieldheadercolumn}
+	{BEGIN created_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN created_fieldheader}
+	<b>Created</b>
+	{END created_fieldheader}
+</th>
+{END created_fieldheadercolumn}
+	{BEGIN updated_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN updated_fieldheader}
+	<b>Updated</b>
+	{END updated_fieldheader}
+</th>
+{END updated_fieldheadercolumn}
+	{BEGIN create_uid_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN create_uid_fieldheader}
+	<b>Create Uid</b>
+	{END create_uid_fieldheader}
+</th>
+{END create_uid_fieldheadercolumn}
+	{BEGIN update_uid_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN update_uid_fieldheader}
+	<b>Update Uid</b>
+	{END update_uid_fieldheader}
+</th>
+{END update_uid_fieldheadercolumn}
+	{BEGIN tahun_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN tahun_fieldheader}
+	<b>Tahun</b>
+	{END tahun_fieldheader}
+</th>
+{END tahun_fieldheadercolumn}
+		
+			{END record_header}
+			<td class="runner-cr"><img src="images/spacer.gif"></td>
+			{BEGIN endrecordheader_block}
+			<td class="runner-cs">&nbsp;</td>
+			{END endrecordheader_block}
+		</tr>
+	{END grid_header}
+		</thead>
+		<tbody>	
+		{BEGIN grid_row}
+	<tr class="runner-row style1" {$rowattrs} {$rowstyle} {$rowstyle}>
+		<td class="runner-cl"></td>
+		{BEGIN grid_record}
+				{BEGIN id_fieldcolumn}
+<td  class="runner-cc {$id_class}" {$id_style}>
+	{$id_value}
+</td>
+{END id_fieldcolumn}
+	{BEGIN rekening_id_fieldcolumn}
+<td  class="runner-cc {$rekening_id_class}" {$rekening_id_style}>
+	{$rekening_id_value}
+</td>
+{END rekening_id_fieldcolumn}
+	{BEGIN status_anggaran_fieldcolumn}
+<td  class="runner-cc {$status_anggaran_class}" {$status_anggaran_style}>
+	{$status_anggaran_value}
+</td>
+{END status_anggaran_fieldcolumn}
+	{BEGIN target_fieldcolumn}
+<td  class="runner-cc {$target_class}" {$target_style}>
+	{$target_value}
+</td>
+{END target_fieldcolumn}
+	{BEGIN bulan1_fieldcolumn}
+<td  class="runner-cc {$bulan1_class}" {$bulan1_style}>
+	{$bulan1_value}
+</td>
+{END bulan1_fieldcolumn}
+	{BEGIN bulan2_fieldcolumn}
+<td  class="runner-cc {$bulan2_class}" {$bulan2_style}>
+	{$bulan2_value}
+</td>
+{END bulan2_fieldcolumn}
+	{BEGIN bulan3_fieldcolumn}
+<td  class="runner-cc {$bulan3_class}" {$bulan3_style}>
+	{$bulan3_value}
+</td>
+{END bulan3_fieldcolumn}
+	{BEGIN bulan4_fieldcolumn}
+<td  class="runner-cc {$bulan4_class}" {$bulan4_style}>
+	{$bulan4_value}
+</td>
+{END bulan4_fieldcolumn}
+	{BEGIN bulan5_fieldcolumn}
+<td  class="runner-cc {$bulan5_class}" {$bulan5_style}>
+	{$bulan5_value}
+</td>
+{END bulan5_fieldcolumn}
+	{BEGIN bulan6_fieldcolumn}
+<td  class="runner-cc {$bulan6_class}" {$bulan6_style}>
+	{$bulan6_value}
+</td>
+{END bulan6_fieldcolumn}
+	{BEGIN bulan7_fieldcolumn}
+<td  class="runner-cc {$bulan7_class}" {$bulan7_style}>
+	{$bulan7_value}
+</td>
+{END bulan7_fieldcolumn}
+	{BEGIN bulan8_fieldcolumn}
+<td  class="runner-cc {$bulan8_class}" {$bulan8_style}>
+	{$bulan8_value}
+</td>
+{END bulan8_fieldcolumn}
+	{BEGIN bulan9_fieldcolumn}
+<td  class="runner-cc {$bulan9_class}" {$bulan9_style}>
+	{$bulan9_value}
+</td>
+{END bulan9_fieldcolumn}
+	{BEGIN bulan10_fieldcolumn}
+<td  class="runner-cc {$bulan10_class}" {$bulan10_style}>
+	{$bulan10_value}
+</td>
+{END bulan10_fieldcolumn}
+	{BEGIN bulan11_fieldcolumn}
+<td  class="runner-cc {$bulan11_class}" {$bulan11_style}>
+	{$bulan11_value}
+</td>
+{END bulan11_fieldcolumn}
+	{BEGIN bulan12_fieldcolumn}
+<td  class="runner-cc {$bulan12_class}" {$bulan12_style}>
+	{$bulan12_value}
+</td>
+{END bulan12_fieldcolumn}
+	{BEGIN jumlah_fieldcolumn}
+<td  class="runner-cc {$jumlah_class}" {$jumlah_style}>
+	{$jumlah_value}
+</td>
+{END jumlah_fieldcolumn}
+	{BEGIN created_fieldcolumn}
+<td  class="runner-cc {$created_class}" {$created_style}>
+	{$created_value}
+</td>
+{END created_fieldcolumn}
+	{BEGIN updated_fieldcolumn}
+<td  class="runner-cc {$updated_class}" {$updated_style}>
+	{$updated_value}
+</td>
+{END updated_fieldcolumn}
+	{BEGIN create_uid_fieldcolumn}
+<td  class="runner-cc {$create_uid_class}" {$create_uid_style}>
+	{$create_uid_value}
+</td>
+{END create_uid_fieldcolumn}
+	{BEGIN update_uid_fieldcolumn}
+<td  class="runner-cc {$update_uid_class}" {$update_uid_style}>
+	{$update_uid_value}
+</td>
+{END update_uid_fieldcolumn}
+	{BEGIN tahun_fieldcolumn}
+<td  class="runner-cc {$tahun_class}" {$tahun_style}>
+	{$tahun_value}
+</td>
+{END tahun_fieldcolumn}
+
+		{END grid_record}
+		<td class="runner-cr"></td>
+		{BEGIN endrecord_block}
+		<td class="runner-cs">&nbsp;</td>
+		{END endrecord_block}
+	</tr>
+{END grid_row}
+										
+								<tr class="runner-bottomrow style1">
+									<td class="runner-cl"><img src="images/spacer.gif"></td>
+									{BEGIN record_footer}
+									{BEGIN id_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END id_fieldfootercolumn}
+{BEGIN rekening_id_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END rekening_id_fieldfootercolumn}
+{BEGIN status_anggaran_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END status_anggaran_fieldfootercolumn}
+{BEGIN target_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END target_fieldfootercolumn}
+{BEGIN bulan1_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END bulan1_fieldfootercolumn}
+{BEGIN bulan2_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END bulan2_fieldfootercolumn}
+{BEGIN bulan3_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END bulan3_fieldfootercolumn}
+{BEGIN bulan4_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END bulan4_fieldfootercolumn}
+{BEGIN bulan5_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END bulan5_fieldfootercolumn}
+{BEGIN bulan6_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END bulan6_fieldfootercolumn}
+{BEGIN bulan7_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END bulan7_fieldfootercolumn}
+{BEGIN bulan8_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END bulan8_fieldfootercolumn}
+{BEGIN bulan9_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END bulan9_fieldfootercolumn}
+{BEGIN bulan10_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END bulan10_fieldfootercolumn}
+{BEGIN bulan11_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END bulan11_fieldfootercolumn}
+{BEGIN bulan12_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END bulan12_fieldfootercolumn}
+{BEGIN jumlah_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END jumlah_fieldfootercolumn}
+{BEGIN created_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END created_fieldfootercolumn}
+{BEGIN updated_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END updated_fieldfootercolumn}
+{BEGIN create_uid_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END create_uid_fieldfootercolumn}
+{BEGIN update_uid_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END update_uid_fieldfootercolumn}
+{BEGIN tahun_fieldfootercolumn}
+<td class="runner-cc runner-clast"></td>
+{END tahun_fieldfootercolumn}
+
+									{END record_footer}
+									<td class="runner-cr"><img src="images/spacer.gif"></td>
+									{BEGIN endrecordtotals_block}
+									<td class="runner-cs"></td>
+									{END endrecordtotals_block}
+								</tr>
+
+		</tbody>
+	</table>
+</div>	
+{END page}
+
+{END grid_block}
+
+
+
+{END container_grid}
+
+
+				</td>	
+
+				<td class="runner-right {$blockclass_right}">
+					
+				</td>	
+			</tr>
+			<tr class="runner-footer">
+				<td class="runner-bottom" colspan=3>
+					<!--%%bottom%%-->
+				</td>
+			</tr>
+		</table>
+		{$footer}
+	{END body}
+	</body>
+</html>

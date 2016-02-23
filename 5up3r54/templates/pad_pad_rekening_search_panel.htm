@@ -1,0 +1,91 @@
+<div class="searchOptions bottomPanelBorder" {$srchOpt_attrs}>
+	
+	<!-- Search panel content -->
+	<div class="srchCritTop" style="display: none;">
+		Criteria:&nbsp;
+		<input type="radio" name="srchType" class="runner-radio-button" {$all_checkbox}> {BEGIN all_checkbox_label}all{END all_checkbox_label}
+		&nbsp;&nbsp;&nbsp;
+		<input type="radio" name="srchType" class="runner-radio-button" {$any_checkbox}> {BEGIN any_checkbox_label}any{END any_checkbox_label}
+	</div>
+	
+	<div class="addOption">
+		<span class="runner-btnframe">
+		<span class="runner-btnleft"></span>
+		<span class="runner-btnright"></span>
+		<a href="#" id="showHideControlChooseMenu{$id}" class="runner-button" {$showHideCtrls_attrs}>Add field</a>
+		</span>
+		&nbsp;&nbsp;&nbsp;
+		<span class="runner-btnframe">
+		<span class="runner-btnleft"></span>
+		<span class="runner-btnright"></span>
+		<a href="#" id="showHideSearchType{$id}" class="runner-button" {$showHideCtrlsOpt_attrs}>{$showHideOpt_mess}</a>
+		</span>
+	</div>
+	
+	<!-- choose controls div -->
+	<div class="runner-panel controlChooseMenu" {$controlChooseMenuDiv_attrs}>
+		{BEGIN addSearch_id}
+			<a href="#" id="addSearchControl_id" class="addSearchControl" {$addSearchControl_id_attrs}>Id</a><br>
+		{END addSearch_id}
+		{BEGIN addSearch_kode}
+			<a href="#" id="addSearchControl_kode" class="addSearchControl" {$addSearchControl_kode_attrs}>Kode</a><br>
+		{END addSearch_kode}
+		{BEGIN addSearch_nama}
+			<a href="#" id="addSearchControl_nama" class="addSearchControl" {$addSearchControl_nama_attrs}>Nama</a><br>
+		{END addSearch_nama}
+		{BEGIN addSearch_levelid}
+			<a href="#" id="addSearchControl_levelid" class="addSearchControl" {$addSearchControl_levelid_attrs}>Levelid</a><br>
+		{END addSearch_levelid}
+		{BEGIN addSearch_issummary}
+			<a href="#" id="addSearchControl_issummary" class="addSearchControl" {$addSearchControl_issummary_attrs}>Issummary</a><br>
+		{END addSearch_issummary}
+		{BEGIN addSearch_defsign}
+			<a href="#" id="addSearchControl_defsign" class="addSearchControl" {$addSearchControl_defsign_attrs}>Defsign</a><br>
+		{END addSearch_defsign}
+		{BEGIN addSearch_isppkd}
+			<a href="#" id="addSearchControl_isppkd" class="addSearchControl" {$addSearchControl_isppkd_attrs}>Isppkd</a><br>
+		{END addSearch_isppkd}
+		{BEGIN addSearch_tmt}
+			<a href="#" id="addSearchControl_tmt" class="addSearchControl" {$addSearchControl_tmt_attrs}>Tmt</a><br>
+		{END addSearch_tmt}
+		{BEGIN addSearch_enabled}
+			<a href="#" id="addSearchControl_enabled" class="addSearchControl" {$addSearchControl_enabled_attrs}>Enabled</a><br>
+		{END addSearch_enabled}
+		{BEGIN addSearch_created}
+			<a href="#" id="addSearchControl_created" class="addSearchControl" {$addSearchControl_created_attrs}>Created</a><br>
+		{END addSearch_created}
+		{BEGIN addSearch_create_uid}
+			<a href="#" id="addSearchControl_create_uid" class="addSearchControl" {$addSearchControl_create_uid_attrs}>Create Uid</a><br>
+		{END addSearch_create_uid}
+		{BEGIN addSearch_updated}
+			<a href="#" id="addSearchControl_updated" class="addSearchControl" {$addSearchControl_updated_attrs}>Updated</a><br>
+		{END addSearch_updated}
+		{BEGIN addSearch_update_uid}
+			<a href="#" id="addSearchControl_update_uid" class="addSearchControl" {$addSearchControl_update_uid_attrs}>Update Uid</a><br>
+		{END addSearch_update_uid}
+		{BEGIN addSearch_insidentil}
+			<a href="#" id="addSearchControl_insidentil" class="addSearchControl" {$addSearchControl_insidentil_attrs}>Insidentil</a><br>
+		{END addSearch_insidentil}
+	</div>
+	
+	<table class="controlsBlock">
+	{BEGIN searchCtrlBlock}
+		<tr class="srchPanelRow" {$filterRow_attrs}>
+			<td class="srchPanelCell">{$delCtrlButt}</td>
+			<td class="srchPanelCell">{$fLabel}:&nbsp;</td>
+			<td class="srchPanelCell srchPanelCell2">
+				<div class="runner-searchtype">{$searchtype}</div>
+				<div class="runner-searchcontrol">{$searchcontrol}</div>
+				<div class="runner-searchcontrol">{$searchcontrol1}</div>
+		</tr>
+	{END searchCtrlBlock}
+	</table>
+	
+	<div class="bottomSearchButt" align="left" {$bottomSearchButt_attrs}>
+		<span class="runner-btnframe">
+		<span class="runner-btnleft"></span>
+		<span class="runner-btnright"></span>
+		<a href="#" class="runner-button" {$searchbutton_attrs}>Search</a>
+		</span>
+	</div>
+</div>

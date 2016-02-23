@@ -1,0 +1,115 @@
+<div class="searchOptions bottomPanelBorder" {$srchOpt_attrs}>
+	
+	<!-- Search panel content -->
+	<div class="srchCritTop" style="display: none;">
+		Criteria:&nbsp;
+		<input type="radio" name="srchType" class="runner-radio-button" {$all_checkbox}> {BEGIN all_checkbox_label}all{END all_checkbox_label}
+		&nbsp;&nbsp;&nbsp;
+		<input type="radio" name="srchType" class="runner-radio-button" {$any_checkbox}> {BEGIN any_checkbox_label}any{END any_checkbox_label}
+	</div>
+	
+	<div class="addOption">
+		<span class="runner-btnframe">
+		<span class="runner-btnleft"></span>
+		<span class="runner-btnright"></span>
+		<a href="#" id="showHideControlChooseMenu{$id}" class="runner-button" {$showHideCtrls_attrs}>Add field</a>
+		</span>
+		&nbsp;&nbsp;&nbsp;
+		<span class="runner-btnframe">
+		<span class="runner-btnleft"></span>
+		<span class="runner-btnright"></span>
+		<a href="#" id="showHideSearchType{$id}" class="runner-button" {$showHideCtrlsOpt_attrs}>{$showHideOpt_mess}</a>
+		</span>
+	</div>
+	
+	<!-- choose controls div -->
+	<div class="runner-panel controlChooseMenu" {$controlChooseMenuDiv_attrs}>
+		{BEGIN addSearch_id}
+			<a href="#" id="addSearchControl_id" class="addSearchControl" {$addSearchControl_id_attrs}>Id</a><br>
+		{END addSearch_id}
+		{BEGIN addSearch_rekening_id}
+			<a href="#" id="addSearchControl_rekening_id" class="addSearchControl" {$addSearchControl_rekening_id_attrs}>Rekening Id</a><br>
+		{END addSearch_rekening_id}
+		{BEGIN addSearch_status_anggaran}
+			<a href="#" id="addSearchControl_status_anggaran" class="addSearchControl" {$addSearchControl_status_anggaran_attrs}>Status Anggaran</a><br>
+		{END addSearch_status_anggaran}
+		{BEGIN addSearch_target}
+			<a href="#" id="addSearchControl_target" class="addSearchControl" {$addSearchControl_target_attrs}>Target</a><br>
+		{END addSearch_target}
+		{BEGIN addSearch_bulan1}
+			<a href="#" id="addSearchControl_bulan1" class="addSearchControl" {$addSearchControl_bulan1_attrs}>Bulan1</a><br>
+		{END addSearch_bulan1}
+		{BEGIN addSearch_bulan2}
+			<a href="#" id="addSearchControl_bulan2" class="addSearchControl" {$addSearchControl_bulan2_attrs}>Bulan2</a><br>
+		{END addSearch_bulan2}
+		{BEGIN addSearch_bulan3}
+			<a href="#" id="addSearchControl_bulan3" class="addSearchControl" {$addSearchControl_bulan3_attrs}>Bulan3</a><br>
+		{END addSearch_bulan3}
+		{BEGIN addSearch_bulan4}
+			<a href="#" id="addSearchControl_bulan4" class="addSearchControl" {$addSearchControl_bulan4_attrs}>Bulan4</a><br>
+		{END addSearch_bulan4}
+		{BEGIN addSearch_bulan5}
+			<a href="#" id="addSearchControl_bulan5" class="addSearchControl" {$addSearchControl_bulan5_attrs}>Bulan5</a><br>
+		{END addSearch_bulan5}
+		{BEGIN addSearch_bulan6}
+			<a href="#" id="addSearchControl_bulan6" class="addSearchControl" {$addSearchControl_bulan6_attrs}>Bulan6</a><br>
+		{END addSearch_bulan6}
+		{BEGIN addSearch_bulan7}
+			<a href="#" id="addSearchControl_bulan7" class="addSearchControl" {$addSearchControl_bulan7_attrs}>Bulan7</a><br>
+		{END addSearch_bulan7}
+		{BEGIN addSearch_bulan8}
+			<a href="#" id="addSearchControl_bulan8" class="addSearchControl" {$addSearchControl_bulan8_attrs}>Bulan8</a><br>
+		{END addSearch_bulan8}
+		{BEGIN addSearch_bulan9}
+			<a href="#" id="addSearchControl_bulan9" class="addSearchControl" {$addSearchControl_bulan9_attrs}>Bulan9</a><br>
+		{END addSearch_bulan9}
+		{BEGIN addSearch_bulan10}
+			<a href="#" id="addSearchControl_bulan10" class="addSearchControl" {$addSearchControl_bulan10_attrs}>Bulan10</a><br>
+		{END addSearch_bulan10}
+		{BEGIN addSearch_bulan11}
+			<a href="#" id="addSearchControl_bulan11" class="addSearchControl" {$addSearchControl_bulan11_attrs}>Bulan11</a><br>
+		{END addSearch_bulan11}
+		{BEGIN addSearch_bulan12}
+			<a href="#" id="addSearchControl_bulan12" class="addSearchControl" {$addSearchControl_bulan12_attrs}>Bulan12</a><br>
+		{END addSearch_bulan12}
+		{BEGIN addSearch_jumlah}
+			<a href="#" id="addSearchControl_jumlah" class="addSearchControl" {$addSearchControl_jumlah_attrs}>Jumlah</a><br>
+		{END addSearch_jumlah}
+		{BEGIN addSearch_created}
+			<a href="#" id="addSearchControl_created" class="addSearchControl" {$addSearchControl_created_attrs}>Created</a><br>
+		{END addSearch_created}
+		{BEGIN addSearch_updated}
+			<a href="#" id="addSearchControl_updated" class="addSearchControl" {$addSearchControl_updated_attrs}>Updated</a><br>
+		{END addSearch_updated}
+		{BEGIN addSearch_create_uid}
+			<a href="#" id="addSearchControl_create_uid" class="addSearchControl" {$addSearchControl_create_uid_attrs}>Create Uid</a><br>
+		{END addSearch_create_uid}
+		{BEGIN addSearch_update_uid}
+			<a href="#" id="addSearchControl_update_uid" class="addSearchControl" {$addSearchControl_update_uid_attrs}>Update Uid</a><br>
+		{END addSearch_update_uid}
+		{BEGIN addSearch_tahun}
+			<a href="#" id="addSearchControl_tahun" class="addSearchControl" {$addSearchControl_tahun_attrs}>Tahun</a><br>
+		{END addSearch_tahun}
+	</div>
+	
+	<table class="controlsBlock">
+	{BEGIN searchCtrlBlock}
+		<tr class="srchPanelRow" {$filterRow_attrs}>
+			<td class="srchPanelCell">{$delCtrlButt}</td>
+			<td class="srchPanelCell">{$fLabel}:&nbsp;</td>
+			<td class="srchPanelCell srchPanelCell2">
+				<div class="runner-searchtype">{$searchtype}</div>
+				<div class="runner-searchcontrol">{$searchcontrol}</div>
+				<div class="runner-searchcontrol">{$searchcontrol1}</div>
+		</tr>
+	{END searchCtrlBlock}
+	</table>
+	
+	<div class="bottomSearchButt" align="left" {$bottomSearchButt_attrs}>
+		<span class="runner-btnframe">
+		<span class="runner-btnleft"></span>
+		<span class="runner-btnright"></span>
+		<a href="#" class="runner-button" {$searchbutton_attrs}>Search</a>
+		</span>
+	</div>
+</div>

@@ -104,7 +104,7 @@ class sspd extends CI_Controller
                 get_nopd(cu.id, true) as nopd, c.nama as customernm, p.nama as pajaknm,                                                                                                                                                     
                 get_bulan(extract(month from sp.masadari)::int, true)||extract(year from sp.masadari) as masa,                                                                                                                                                  
                 sp.jatuhtempotgl, sp.dasar, sp.pajak_terhutang, cu.usaha_id, sp.type_id, case when sp.cara_bayar = 2 then 'TLR' when sp.cara_bayar = 1 then 'TRF' END as value,                                                                                                                                                     
-                s.denda, ss.sisa,  ss.jenis_bayar, s.nomor_tagihan as bayarno", false);
+                s.bunga, ss.sisa,  ss.jenis_bayar, s.nomor_tagihan as bayarno", false);
             $this->datatables->from('pad_invoice as s');
             $this->datatables->join('pad_spt sp', "sp.id=s.source_id and s.source_nama = 'pad_spt'", 'left');
             $this->datatables->join('pad_kohir k', 'k.spt_id=sp.id', 'left');
@@ -157,7 +157,7 @@ class sspd extends CI_Controller
                // $this->datatables->filter("(sp.terimatgl='{$terimatgl}' or k.kohirtgl='{$terimatgl}')", null, false);
              $this->datatables->where("sp.terimatgl BETWEEN '$terimatgl' AND '$terimatgl2' OR k.kohirtgl='$terimatgl' ");
                 
-        $this->datatables->rupiah_column('10,11');
+        $this->datatables->rupiah_column('10,11,15,16');
         $this->datatables->date_column('2');
 
         echo $this->datatables->generate();
@@ -175,7 +175,7 @@ class sspd extends CI_Controller
         $inv_id    = $this->uri->segment(4);
         $prosestgl = $this->uri->segment(5);
 
-        $query= $this->db->query("select source_id, from pad_invoice where id=$inv_id and source_nama='pad_spt'");
+        $query= $this->db->query("select source_id from pad_invoice where id=$inv_id and source_nama='pad_spt'");
         foreach ($query->result() as $row){
                     $spt_id = $row->source_id;
         }

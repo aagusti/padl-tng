@@ -1,0 +1,247 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<title>{$pagetitle}</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=7">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+		{BEGIN pageCSSFiles}
+		<link REL="stylesheet" href="{$pagestylepath}" type="text/css">
+		{END pageCSSFiles}
+		<!--[if IE]>
+			<link REL="stylesheet" href="styles/defaultIE.css" type="text/css">
+			{BEGIN IEcssFiles}
+			<link REL="stylesheet" href="{$stylepathIE}" type="text/css">
+			{END IEcssFiles}
+		<![endif]-->
+	</head>
+	
+	<body class="{$stylename}" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+		<table   cellpadding="0" class="runner-toptable">
+			<tr class="runner-header">
+				<td class="runner-top" colspan=3>
+					
+
+
+
+
+				</td>
+			</tr>
+			<tr class="runner-body">
+				
+				<td class="runner-left {$blockclass_left}" >
+					
+				</td>	
+				
+				<td class="runner-center {$blockclass_center}">
+					
+
+{BEGIN container_grid}
+
+
+{BEGIN grid_block}
+{BEGIN page}
+<h1>Tblpejabat2</h1>
+<span>
+{BEGIN page_number}
+Page {$pageno} of {$maxpages} 
+{END page_number}
+</span>
+
+	<div class="runner-s-grid">	
+	<table class="runner-c runner-c-grid" cellpadding="0">
+		<thead>
+		{BEGIN grid_header}
+		<tr class="runner-toprow style1">
+			<td class="runner-cl"><img src="images/spacer.gif"></td>
+			{BEGIN record_header}
+					{BEGIN id2_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN id2_fieldheader}
+	<b>Id2</b>
+	{END id2_fieldheader}
+</th>
+{END id2_fieldheadercolumn}
+	{BEGIN nip2_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN nip2_fieldheader}
+	<b>Nip2</b>
+	{END nip2_fieldheader}
+</th>
+{END nip2_fieldheadercolumn}
+	{BEGIN pejabatnm2_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN pejabatnm2_fieldheader}
+	<b>Pejabatnm2</b>
+	{END pejabatnm2_fieldheader}
+</th>
+{END pejabatnm2_fieldheadercolumn}
+	{BEGIN jabatan2_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN jabatan2_fieldheader}
+	<b>Jabatan2</b>
+	{END jabatan2_fieldheader}
+</th>
+{END jabatan2_fieldheadercolumn}
+	{BEGIN golongan2_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN golongan2_fieldheader}
+	<b>Golongan2</b>
+	{END golongan2_fieldheader}
+</th>
+{END golongan2_fieldheadercolumn}
+	{BEGIN pangkat2_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN pangkat2_fieldheader}
+	<b>Pangkat2</b>
+	{END pangkat2_fieldheader}
+</th>
+{END pangkat2_fieldheadercolumn}
+	{BEGIN tmt2_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN tmt2_fieldheader}
+	<b>Tmt2</b>
+	{END tmt2_fieldheader}
+</th>
+{END tmt2_fieldheadercolumn}
+	{BEGIN enabled2_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN enabled2_fieldheader}
+	<b>Enabled2</b>
+	{END enabled2_fieldheader}
+</th>
+{END enabled2_fieldheadercolumn}
+		
+			{END record_header}
+			<td class="runner-cr"><img src="images/spacer.gif"></td>
+			{BEGIN endrecordheader_block}
+			<td class="runner-cs">&nbsp;</td>
+			{END endrecordheader_block}
+		</tr>
+	{END grid_header}
+		</thead>
+		<tbody>	
+		{BEGIN grid_row}
+	<tr class="runner-row style1" {$rowattrs} {$rowstyle} {$rowstyle}>
+		<td class="runner-cl"></td>
+		{BEGIN grid_record}
+				{BEGIN id2_fieldcolumn}
+<td  class="runner-cc {$id2_class}" {$id2_style}>
+	{$id2_value}
+</td>
+{END id2_fieldcolumn}
+	{BEGIN nip2_fieldcolumn}
+<td  class="runner-cc {$nip2_class}" {$nip2_style}>
+	{$nip2_value}
+</td>
+{END nip2_fieldcolumn}
+	{BEGIN pejabatnm2_fieldcolumn}
+<td  class="runner-cc {$pejabatnm2_class}" {$pejabatnm2_style}>
+	{$pejabatnm2_value}
+</td>
+{END pejabatnm2_fieldcolumn}
+	{BEGIN jabatan2_fieldcolumn}
+<td  class="runner-cc {$jabatan2_class}" {$jabatan2_style}>
+	{$jabatan2_value}
+</td>
+{END jabatan2_fieldcolumn}
+	{BEGIN golongan2_fieldcolumn}
+<td  class="runner-cc {$golongan2_class}" {$golongan2_style}>
+	{$golongan2_value}
+</td>
+{END golongan2_fieldcolumn}
+	{BEGIN pangkat2_fieldcolumn}
+<td  class="runner-cc {$pangkat2_class}" {$pangkat2_style}>
+	{$pangkat2_value}
+</td>
+{END pangkat2_fieldcolumn}
+	{BEGIN tmt2_fieldcolumn}
+<td  class="runner-cc {$tmt2_class}" {$tmt2_style}>
+	{$tmt2_value}
+</td>
+{END tmt2_fieldcolumn}
+	{BEGIN enabled2_fieldcolumn}
+<td  class="runner-cc {$enabled2_class}" {$enabled2_style}>
+	{$enabled2_value}
+</td>
+{END enabled2_fieldcolumn}
+
+		{END grid_record}
+		<td class="runner-cr"></td>
+		{BEGIN endrecord_block}
+		<td class="runner-cs">&nbsp;</td>
+		{END endrecord_block}
+	</tr>
+{END grid_row}
+										
+								<tr class="runner-bottomrow style1">
+									<td class="runner-cl"><img src="images/spacer.gif"></td>
+									{BEGIN record_footer}
+									{BEGIN id2_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END id2_fieldfootercolumn}
+{BEGIN nip2_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END nip2_fieldfootercolumn}
+{BEGIN pejabatnm2_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END pejabatnm2_fieldfootercolumn}
+{BEGIN jabatan2_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END jabatan2_fieldfootercolumn}
+{BEGIN golongan2_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END golongan2_fieldfootercolumn}
+{BEGIN pangkat2_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END pangkat2_fieldfootercolumn}
+{BEGIN tmt2_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END tmt2_fieldfootercolumn}
+{BEGIN enabled2_fieldfootercolumn}
+<td class="runner-cc runner-clast"></td>
+{END enabled2_fieldfootercolumn}
+
+									{END record_footer}
+									<td class="runner-cr"><img src="images/spacer.gif"></td>
+									{BEGIN endrecordtotals_block}
+									<td class="runner-cs"></td>
+									{END endrecordtotals_block}
+								</tr>
+
+		</tbody>
+	</table>
+</div>	
+{END page}
+
+{END grid_block}
+
+
+
+{END container_grid}
+
+
+				</td>	
+
+				<td class="runner-right {$blockclass_right}">
+					
+				</td>	
+			</tr>
+			<tr class="runner-footer">
+				<td class="runner-bottom" colspan=3>
+					<!--%%bottom%%-->
+				</td>
+			</tr>
+		</table>
+		{$footer}
+	{END body}
+	</body>
+</html>

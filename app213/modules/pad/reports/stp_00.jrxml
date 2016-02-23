@@ -2,7 +2,7 @@
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="stpd_air_tanah" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="e053d3b8-c2fe-4985-ac1f-7c67eb6927fc">
 	<property name="ireport.zoom" value="1.2100000000000002"/>
 	<property name="ireport.x" value="0"/>
-	<property name="ireport.y" value="46"/>
+	<property name="ireport.y" value="0"/>
 	<parameter name="stp_id" class="java.lang.Integer">
 		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
 	</parameter>
@@ -63,8 +63,8 @@
 	extract( year from stp.stpdtgl)::int as stp_tahun,
 
 	s.dasar, (100 * s.tarif) as tarif, s.pajak_terhutang,
-	(stp.stpdcount*2) stpdcount, (inv.denda+inv.bunga) denda,
-	(inv.total-(inv.denda+inv.bunga)) pokok, inv.total pajak,
+	(stp.stpdcount*2) stpdcount, (stp.bunga) denda,
+	(inv.total-(stp.bunga)) pokok, inv.total pajak,
 	terbilang(s.denda+stp.bunga)|| ' RUPIAH' terbilang,
 	get_rekening(inv.rekening_pokok) rekeningkd, inv.nama_pokok rekeningnm,
 	get_rekening(inv.rekening_denda) rekdendakd, inv.nama_denda rekdendanm,
@@ -74,15 +74,15 @@
 
 
 FROM pad_stpd stp
-inner join pad_invoice inv on stp.id = inv.source_id and inv.source_nama = 'pad_stpd'
-inner join pad_spt s on s.id = stp.spt_id
-inner join pad_invoice invs on s.id = invs.source_id and invs.source_nama = 'pad_spt'
-inner join pad_customer c on c.id=s.customer_id
-inner join pad_customer_usaha cu on cu.id=s.customer_usaha_id
-inner join pad_usaha u on u.id=cu.usaha_id
-inner join pad_jenis_pajak p on cu.def_pajak_id = p.id
-inner join pad_pegawai pg1 on pg1.id = stp.petugas_id
-inner join pad_pegawai pg2 on pg2.id = stp.pejabat_id
+left join pad_invoice inv on stp.id = inv.source_id and inv.source_nama = 'pad_stpd'
+left join pad_spt s on s.id = stp.spt_id
+left join pad_invoice invs on s.id = invs.source_id and invs.source_nama = 'pad_spt'
+left join pad_customer c on c.id=s.customer_id
+left join pad_customer_usaha cu on cu.id=s.customer_usaha_id
+left join pad_usaha u on u.id=cu.usaha_id
+left join pad_jenis_pajak p on cu.def_pajak_id = p.id
+left join pad_pegawai pg1 on pg1.id = stp.petugas_id
+left join pad_pegawai pg2 on pg2.id = stp.pejabat_id
 WHERE stp.id=$P{stp_id}]]>
 	</queryString>
 	<field name="sptno" class="java.lang.String"/>
@@ -571,7 +571,7 @@ $P{dinas}]]></textFieldExpression>
 				<textElement textAlignment="Right" verticalAlignment="Middle" markup="none">
 					<font isBold="false" isPdfEmbedded="true"/>
 				</textElement>
-				<textFieldExpression><![CDATA[new DecimalFormat("#,##0").format($F{pajak})]]></textFieldExpression>
+				<textFieldExpression><![CDATA[new DecimalFormat("#,##0").format($F{denda})]]></textFieldExpression>
 			</textField>
 			<staticText>
 				<reportElement uuid="622b56fd-4108-43f1-a430-ec9cadf9e396" x="15" y="265" width="138" height="14"/>
@@ -586,14 +586,6 @@ $P{dinas}]]></textFieldExpression>
 					<font isBold="false" isPdfEmbedded="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA["a. Bunga"]]></textFieldExpression>
-			</textField>
-			<textField>
-				<reportElement uuid="65c89847-8e2c-4f7d-985d-adc73e288933" x="444" y="251" width="109" height="14"/>
-				<box rightPadding="4"/>
-				<textElement textAlignment="Right" verticalAlignment="Middle" markup="none">
-					<font isBold="false" isPdfEmbedded="true"/>
-				</textElement>
-				<textFieldExpression><![CDATA[new DecimalFormat("#,##0").format($F{pokok})]]></textFieldExpression>
 			</textField>
 			<staticText>
 				<reportElement uuid="7b649687-420a-402a-aaf2-e032e99ece2e" x="43" y="307" width="121" height="14"/>
@@ -873,7 +865,9 @@ $P{dinas}]]></textFieldExpression>
 				<textFieldExpression><![CDATA[$F{npwpd}]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
-				<reportElement uuid="f86376fc-2d00-4f45-8ef8-62898cbba27a" x="369" y="659" width="184" height="14"/>
+				<reportElement uuid="f86376fc-2d00-4f45-8ef8-62898cbba27a" x="369" y="659" width="184" height="14">
+					<printWhenExpression><![CDATA[new Boolean($F{nomor_tagihan} != null)]]></printWhenExpression>
+				</reportElement>
 				<textElement>
 					<font size="9" isBold="false" isPdfEmbedded="true"/>
 				</textElement>
@@ -1016,6 +1010,19 @@ Telp. 55764955 Ext. 308 Fax. 55764960]]></text>
 			<line>
 				<reportElement uuid="fafeb85c-a7a1-4766-9136-cdbe64bf7b42" x="322" y="595" width="226" height="1"/>
 			</line>
+			<textField>
+				<reportElement uuid="58010fc6-51cc-4997-bdb8-f4ce4b67607e" x="444" y="63" width="111" height="36"/>
+				<box>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle" markup="html">
+					<font size="9" isBold="true" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" "]]></textFieldExpression>
+			</textField>
 		</band>
 	</detail>
 </jasperReport>

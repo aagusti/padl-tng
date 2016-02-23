@@ -12,7 +12,7 @@
 			<div class="login-logo">
 			<img src="<?=app_img_logo('assets/img/logo-kota-tangerang.png')?>" alt="logo" style="max-height:70px;">
 				<br> <b>SIMPAD</b>
-				<p style="font-size: 14px">Sistem Informasi Pendapatan Daerah [DEVEL]</p>
+				<p style="font-size: 14px">Sistem Informasi Pendapatan Daerah</p>
 				<p style="font-size: 22px"><?=LICENSE_TO?></p>
 			</div>
 			<div class="login-box-body">

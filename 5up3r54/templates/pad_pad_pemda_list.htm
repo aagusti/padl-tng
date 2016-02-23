@@ -1,0 +1,1387 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<title>{$pagetitle}</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=7">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+		{BEGIN pageCSSFiles}
+		<link REL="stylesheet" href="{$pagestylepath}" type="text/css">
+		{END pageCSSFiles}
+		<!--[if IE]>
+			<link REL="stylesheet" href="styles/defaultIE.css" type="text/css">
+			{BEGIN IEcssFiles}
+			<link REL="stylesheet" href="{$stylepathIE}" type="text/css">
+			{END IEcssFiles}
+		<![endif]-->
+	</head>
+	
+	<body class="{$stylename}" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+		<table   cellpadding="0" class="runner-toptable">
+			<tr class="runner-header">
+				<td class="runner-top" colspan=3>
+					
+
+
+
+{BEGIN container_toplinks}
+<table class="runner-c runner-c-toplinks" cellpadding="0" >
+<tr class="{$cheaderclass_toplinks}">
+<td class="runner-cl"><img src="images/spacer.gif"></td>
+<td class="runner-cc"></td><td class="runner-cr"><img src="images/spacer.gif"></td>
+</tr>
+<tr class="runner-row style1">
+<td class="runner-cl"></td>
+<td class="runner-cc">
+<table border="0" cellpadding="0" class="runner-hc">
+<tr>
+<td class="runner-cc filler"></td>
+{BEGIN prints_block}
+<td  class="runner-cc runner-br runner-b-toplinks_print" {$brickclass_toplinks_print}><span>{BEGIN print_link}
+	<span class="runner-btnframe">
+	<span class="runner-btnleft"></span>
+	<span class="runner-btnright"></span>
+	<a href="#" class="runner-button" {$printlink_attrs}>Print this page</a>
+	</span>
+{END print_link}
+
+{BEGIN printall_link}
+	<span class="runner-btnframe">
+	<span class="runner-btnleft"></span>
+	<span class="runner-btnright"></span>
+	<a href="#" class="runner-button" {$printalllink_attrs}>Print all pages</a>
+	</span>
+{END printall_link}
+
+
+
+
+</span></td>
+{END prints_block}
+
+
+{BEGIN asearch_link}
+<td  class="runner-cc runner-br runner-b-toplinks_advsearch" {$brickclass_toplinks_advsearch}><span>	<span class="runner-btnframe">
+	<span class="runner-btnleft"></span>
+	<span class="runner-btnright"></span>
+	<a href="#" class="runner-button" {$advsearchlink_attrs}>Advanced search</a>
+	</span>
+</span></td>
+{END asearch_link}
+
+
+{BEGIN import_link}
+<td  class="runner-cc runner-br runner-b-toplinks_import" {$brickclass_toplinks_import}><span>	<span class="runner-btnframe">
+	<span class="runner-btnleft"></span>
+	<span class="runner-btnright"></span>
+	<a href="pad_pad_pemda_import.php?{$crosstable_attrs}" class="runner-button" {$importlink_attrs}>Import</a>
+	</span>
+</span></td>
+{END import_link}
+
+
+{BEGIN export_link}
+<td  class="runner-cc runner-br runner-b-toplinks_export" {$brickclass_toplinks_export}><span>	<span class="runner-btnframe">
+	<span class="runner-btnleft"></span>
+	<span class="runner-btnright"></span>
+	<a target="_blank" href="pad_pad_pemda_export.php" class="runner-button" {$exportlink_attrs}>Export results</a>
+	</span>
+</span></td>
+{END export_link}
+
+
+
+</tr>
+</table></td>
+<td class="runner-cr"></td>
+</tr>
+
+<tr class="{$cfooterclass_toplinks}">
+<td class="runner-cl"><img src="images/spacer.gif"></td>
+<td class="runner-cc"></td><td class="runner-cr"><img src="images/spacer.gif"></td>
+</tr>
+</table>
+{END container_toplinks}
+
+
+
+{BEGIN container_search}
+<table class="runner-c runner-c-search" cellpadding="0" >
+<tr class="{$cheaderclass_search}">
+<td class="runner-cl"><img src="images/spacer.gif"></td>
+<td class="runner-cc"></td><td class="runner-cr"><img src="images/spacer.gif"></td>
+</tr>
+<tr class="runner-row style1">
+<td class="runner-cl"></td>
+<td class="runner-cc">
+<table border="0" cellpadding="0" class="runner-hc">
+<tr>
+
+{BEGIN searchform_block}
+<td  class="runner-cc runner-bl runner-b-search" {$brickclass_search}><span>	<span>
+		{BEGIN searchform_text}
+		<input type="text" {$searchfor_attrs} size="25">
+		{END searchform_text}
+		&nbsp;
+		{BEGIN searchform_search}
+		<span class="runner-btnframe">
+			<span class="runner-btnleft"></span>
+			<span class="runner-btnright"></span>
+			<a href="#" class="runner-button-img" {$searchbutton_attrs}><img src="images/search/search.gif"></a>
+		</span>
+		{END searchform_search}
+		&nbsp;
+		{BEGIN searchform_showall}
+		
+		<span class="runner-btnframe" {$showAllCont_attrs}>
+			<span class="runner-btnleft"></span>
+			<span class="runner-btnright"></span>
+			<a href="#" class="runner-button" {$showallbutton_attrs}>Show all</a>
+		</span>
+		{END searchform_showall}
+	</span>
+</span></td>
+{END searchform_block}
+
+
+{BEGIN searchformbuttons_block}
+<td  class="runner-cc runner-bl runner-b-search_buttons" {$brickclass_search_buttons}><span>	{BEGIN searchPanelTopButtons}
+	<span>
+		&nbsp;
+		<span class="runner-btnframe">
+		<span class="runner-btnleft"></span>
+		<span class="runner-btnright"></span>
+		<a href="#" class="runner-button-img" id="showSrchWin{$id}" {$showHideSearchWin_attrs}><img src="images/search/showWindowPin.gif"></a>
+		</span>
+		&nbsp;		
+		<span class="runner-btnframe">
+		<span class="runner-btnleft"></span>
+		<span class="runner-btnright"></span>
+		<a href="#" class="runner-button-img" id="showOptPanel{$id}" {$showHideSearchPanel_attrs}><img src="images/search/showOptions.gif"></a>
+		</span>
+	</span>
+	{END searchPanelTopButtons}
+</span></td>
+{END searchformbuttons_block}
+
+<td class="runner-cc filler"></td>
+{BEGIN details_block}
+<td  class="runner-cc runner-br runner-b-details_found" {$brickclass_details_found}><span>	<span {$details_attrs}>
+		Details found: <b><span class="runner-details_found_count">{$records_found}</span></b>
+	</span>
+</span></td>
+{END details_block}
+
+
+{BEGIN pages_block}
+<td  class="runner-cc runner-br runner-b-page_of" {$brickclass_page_of}><span>	<span {$pages_attrs}>
+		Page <b>{$page}</b> of <b>{$maxpages}</b>
+	</span>
+
+</span></td>
+{END pages_block}
+
+
+{BEGIN recordspp_block}
+<td  class="runner-cc runner-br runner-b-recsperpage" {$brickclass_recsperpage}><span>	<span id="recordspp_block{$id}" name="recordspp_block{$id}">
+			Records Per Page:&nbsp;{$recsPerPage}
+	</span>	
+</span></td>
+{END recordspp_block}
+
+
+</tr>
+</table></td>
+<td class="runner-cr"></td>
+</tr>
+
+<tr class="{$cfooterclass_search}">
+<td class="runner-cl"><img src="images/spacer.gif"></td>
+<td class="runner-cc"></td><td class="runner-cr"><img src="images/spacer.gif"></td>
+</tr>
+</table>
+{END container_search}
+
+
+				</td>
+			</tr>
+			<tr class="runner-body">
+				
+				<td class="runner-left {$blockclass_left}" >
+					
+
+
+
+{BEGIN container_logg}
+<table class="runner-c runner-c-logg" cellpadding="0" >
+<tr class="{$cheaderclass_logg}">
+<td class="runner-cl"><img src="images/spacer.gif"></td>
+<td class="runner-cc"></td><td class="runner-cr"><img src="images/spacer.gif"></td>
+</tr>
+
+{BEGIN security_block}
+<tr  class="runner-row style1 runner-b-loggedas {$brickclass_loggedas}"><td class="runner-cl"></td><td class="runner-cc runner-brickcontents" ><div id="login_block{$id}">
+	{BEGIN loggedas_message}
+	<span>Logged on as&nbsp;<b>{$username}</b><br><br>
+	</span>
+	{END loggedas_message}
+	{BEGIN guestloginbutton}
+	<span class="runner-btnframe">
+	<span class="runner-btnleft"></span>
+	<span class="runner-btnright"></span>
+	<a href="#" class="runner-button" {$guestloginlink_attrs}>Login</a>
+	</span>
+	{END guestloginbutton}
+	{BEGIN logoutbutton}
+	<span class="runner-btnframe">
+	<span class="runner-btnleft"></span>
+	<span class="runner-btnright"></span>
+	<a class="runner-button" href="login.php?a=logout" {$logoutlink_attrs}>Log out</a>
+	</span>
+	{END logoutbutton}
+<!-- Permissions -->
+</div>
+</td><td class="runner-cr"></td></tr>{END security_block}
+
+
+<tr class="{$cfooterclass_logg}">
+<td class="runner-cl"><img src="images/spacer.gif"></td>
+<td class="runner-cc"></td><td class="runner-cr"><img src="images/spacer.gif"></td>
+</tr>
+</table>
+{END container_logg}
+
+
+
+{BEGIN container_left}
+<table class="runner-c runner-c-left" cellpadding="0" >
+<tr class="{$cheaderclass_left}">
+<td class="runner-cl"><img src="images/spacer.gif"></td>
+<td class="runner-cc"></td><td class="runner-cr"><img src="images/spacer.gif"></td>
+</tr>
+
+{BEGIN searchPanel}
+<tr  class="runner-row style1 runner-b-searchpanel {$brickclass_searchpanel}"><td class="runner-cl"></td><td class="runner-cc runner-brickcontents" ><div class="searchPanelContainer">
+{$adv_search_panel}
+</div></td><td class="runner-cr"></td></tr>{END searchPanel}
+
+
+{BEGIN menu_block}
+{$mainmenu}
+{END menu_block}
+
+
+<tr class="{$cfooterclass_left}">
+<td class="runner-cl"><img src="images/spacer.gif"></td>
+<td class="runner-cc"></td><td class="runner-cr"><img src="images/spacer.gif"></td>
+</tr>
+</table>
+{END container_left}
+
+
+				</td>	
+				
+				<td class="runner-center {$blockclass_center}">
+					
+
+{BEGIN container_recordcontrols}
+<table class="runner-c runner-c-recordcontrols" cellpadding="0" >
+<tr class="{$cheaderclass_recordcontrols}">
+<td class="runner-cl"><img src="images/spacer.gif"></td>
+<td class="runner-cc"></td><td class="runner-cr"><img src="images/spacer.gif"></td>
+</tr>
+<tr class="runner-row style1">
+<td class="runner-cl"></td>
+<td class="runner-cc">
+<table border="0" cellpadding="0" class="runner-hc">
+<tr>
+
+{BEGIN newrecord_controls_block}
+<td  class="runner-cc runner-bl runner-b-recordcontrols_new" {$brickclass_recordcontrols_new}><span>		{BEGIN add_link}
+		<span class="runner-btnframe">
+		<span class="runner-btnleft"></span>
+		<span class="runner-btnright"></span>
+		<a href="#" class="runner-button" {$addlink_attrs}>Add new</a>
+		</span>
+	{END add_link}
+
+		{BEGIN inlineadd_link}
+		<span class="runner-btnframe">
+		<span class="runner-btnleft"></span>
+		<span class="runner-btnright"></span>
+		<a href="#" class="runner-button" {$inlineaddlink_attrs}>Inline Add</a>
+		</span>
+	{END inlineadd_link}
+
+
+</span></td>
+{END newrecord_controls_block}
+
+
+{BEGIN record_controls_block}
+<td  class="runner-cc runner-bl runner-b-recordcontrol" {$brickclass_recordcontrol}><span>	
+			{BEGIN editselected_link}
+		<span class="runner-btnframe" {$editselectedlink_span}>
+		<span class="runner-btnleft"></span>
+		<span class="runner-btnright"></span>
+		<a href="#" class="runner-button" {$editselectedlink_attrs}>Edit selected</a>
+		</span>
+	{END editselected_link}
+	{BEGIN saveall_link}
+		<span class="runner-btnframe" {$savealllink_span}>
+		<span class="runner-btnleft"></span>
+		<span class="runner-btnright"></span>
+		<a href="#" class="runner-button" {$savealllink_attrs}>Save all</a>
+		</span>
+	{END saveall_link}
+	{BEGIN cancelall_link}
+		<span class="runner-btnframe" {$cancelalllink_span}>
+		<span class="runner-btnleft"></span>
+		<span class="runner-btnright"></span>
+		<a href="#" class="runner-button" {$cancelalllink_attrs}>Cancel</a>
+		</span>
+	{END cancelall_link}
+
+		{BEGIN deleteselected_link}
+		<span class="runner-btnframe" {$deleteselectedlink_span}>
+		<span class="runner-btnleft"></span>
+		<span class="runner-btnright"></span>
+		<a href="#" class="runner-button" {$deleteselectedlink_attrs}>Delete selected</a>
+		</span>
+	{END deleteselected_link}
+
+		{BEGIN exportselected_link}
+		<span class="runner-btnframe" {$exportselectedlink_span}>
+		<span class="runner-btnleft"></span>
+		<span class="runner-btnright"></span>
+		<a href="#" class="runner-button" {$exportselectedlink_attrs}>Export selected</a>
+		</span>
+	{END exportselected_link}
+
+		{BEGIN printselected_link}
+		<span class="runner-btnframe" {$printselectedlink_span}>
+		<span class="runner-btnleft"></span>
+		<span class="runner-btnright"></span>
+		<a href="#" class="runner-button" {$printselectedlink_attrs}>Print selected</a>
+		</span>
+	{END printselected_link}
+
+</span></td>
+{END record_controls_block}
+
+<td class="runner-cc filler"></td>
+</tr>
+</table></td>
+<td class="runner-cr"></td>
+</tr>
+
+<tr class="{$cfooterclass_recordcontrols}">
+<td class="runner-cl"><img src="images/spacer.gif"></td>
+<td class="runner-cc"></td><td class="runner-cr"><img src="images/spacer.gif"></td>
+</tr>
+</table>
+{END container_recordcontrols}
+
+
+
+{BEGIN container_message}
+<table class="runner-c runner-c-message" cellpadding="0" >
+<tr class="{$cheaderclass_message}">
+<td class="runner-cl"><img src="images/spacer.gif"></td>
+<td class="runner-cc"></td><td class="runner-cr"><img src="images/spacer.gif"></td>
+</tr>
+<tr class="runner-row style1">
+<td class="runner-cl"></td>
+<td class="runner-cc">
+<table border="0" cellpadding="0" class="runner-hc">
+<tr>
+
+{BEGIN message_block}
+<td  class="runner-cc runner-bc runner-b-message" {$brickclass_message}><span><div class="runner-message">{$message}</div></span></td>
+{END message_block}
+
+
+</tr>
+</table></td>
+<td class="runner-cr"></td>
+</tr>
+
+<tr class="{$cfooterclass_message}">
+<td class="runner-cl"><img src="images/spacer.gif"></td>
+<td class="runner-cc"></td><td class="runner-cr"><img src="images/spacer.gif"></td>
+</tr>
+</table>
+{END container_message}
+
+
+
+{BEGIN container_grid}
+
+
+{BEGIN grid_block}
+						<table class="runner-c runner-c-grid runner-b-grid" cellpadding="0" >
+						<thead>
+															{BEGIN grid_header}
+								<tr class="runner-toprow style1 {$gridHeader_class}" >
+									{BEGIN record_header}
+									<th class="runner-cl"><img src="images/spacer.gif"></th>
+																		{BEGIN listIcons_column}
+									<th class="runner-cc" iEditCont="all">&nbsp;</th>
+									{END listIcons_column}	
+
+																		{BEGIN checkbox_column}
+									<th class="runner-cc runner-bc">
+										<input type="checkbox" {$checkboxheader_attrs}>
+									</th>
+									{END checkbox_column}
+
+																										{BEGIN id_fieldheadercolumn}
+									<th class="runner-cc ">
+									{BEGIN id_fieldheader}
+																				<a {$id_orderlinkattrs}>
+											Id
+										</a>
+									{END id_fieldheader}
+									</th>
+									{END id_fieldheadercolumn}
+
+																	{BEGIN type_fieldheadercolumn}
+									<th class="runner-cc ">
+									{BEGIN type_fieldheader}
+																				<a {$type_orderlinkattrs}>
+											Type
+										</a>
+									{END type_fieldheader}
+									</th>
+									{END type_fieldheadercolumn}
+
+																	{BEGIN kepala_nama_fieldheadercolumn}
+									<th class="runner-cc ">
+									{BEGIN kepala_nama_fieldheader}
+																				<a {$kepala_nama_orderlinkattrs}>
+											Kepala Nama
+										</a>
+									{END kepala_nama_fieldheader}
+									</th>
+									{END kepala_nama_fieldheadercolumn}
+
+																	{BEGIN alamat_fieldheadercolumn}
+									<th class="runner-cc ">
+									{BEGIN alamat_fieldheader}
+																				<a {$alamat_orderlinkattrs}>
+											Alamat
+										</a>
+									{END alamat_fieldheader}
+									</th>
+									{END alamat_fieldheadercolumn}
+
+																	{BEGIN telp_fieldheadercolumn}
+									<th class="runner-cc ">
+									{BEGIN telp_fieldheader}
+																				<a {$telp_orderlinkattrs}>
+											Telp
+										</a>
+									{END telp_fieldheader}
+									</th>
+									{END telp_fieldheadercolumn}
+
+																	{BEGIN pemda_nama_fieldheadercolumn}
+									<th class="runner-cc ">
+									{BEGIN pemda_nama_fieldheader}
+																				<a {$pemda_nama_orderlinkattrs}>
+											Pemda Nama
+										</a>
+									{END pemda_nama_fieldheader}
+									</th>
+									{END pemda_nama_fieldheadercolumn}
+
+																	{BEGIN ibukota_fieldheadercolumn}
+									<th class="runner-cc ">
+									{BEGIN ibukota_fieldheader}
+																				<a {$ibukota_orderlinkattrs}>
+											Ibukota
+										</a>
+									{END ibukota_fieldheader}
+									</th>
+									{END ibukota_fieldheadercolumn}
+
+																	{BEGIN tmt_fieldheadercolumn}
+									<th class="runner-cc ">
+									{BEGIN tmt_fieldheader}
+																				<a {$tmt_orderlinkattrs}>
+											Tmt
+										</a>
+									{END tmt_fieldheader}
+									</th>
+									{END tmt_fieldheadercolumn}
+
+																	{BEGIN jabatan_fieldheadercolumn}
+									<th class="runner-cc ">
+									{BEGIN jabatan_fieldheader}
+																				<a {$jabatan_orderlinkattrs}>
+											Jabatan
+										</a>
+									{END jabatan_fieldheader}
+									</th>
+									{END jabatan_fieldheadercolumn}
+
+																	{BEGIN ppkd_id_fieldheadercolumn}
+									<th class="runner-cc ">
+									{BEGIN ppkd_id_fieldheader}
+																				<a {$ppkd_id_orderlinkattrs}>
+											Ppkd Id
+										</a>
+									{END ppkd_id_fieldheader}
+									</th>
+									{END ppkd_id_fieldheadercolumn}
+
+																	{BEGIN reklame_id_fieldheadercolumn}
+									<th class="runner-cc ">
+									{BEGIN reklame_id_fieldheader}
+																				<a {$reklame_id_orderlinkattrs}>
+											Reklame Id
+										</a>
+									{END reklame_id_fieldheader}
+									</th>
+									{END reklame_id_fieldheadercolumn}
+
+																	{BEGIN pendapatan_id_fieldheadercolumn}
+									<th class="runner-cc ">
+									{BEGIN pendapatan_id_fieldheader}
+																				<a {$pendapatan_id_orderlinkattrs}>
+											Pendapatan Id
+										</a>
+									{END pendapatan_id_fieldheader}
+									</th>
+									{END pendapatan_id_fieldheadercolumn}
+
+																	{BEGIN pemda_nama_singkat_fieldheadercolumn}
+									<th class="runner-cc ">
+									{BEGIN pemda_nama_singkat_fieldheader}
+																				<a {$pemda_nama_singkat_orderlinkattrs}>
+											Pemda Nama Singkat
+										</a>
+									{END pemda_nama_singkat_fieldheader}
+									</th>
+									{END pemda_nama_singkat_fieldheadercolumn}
+
+																	{BEGIN airtanah_id_fieldheadercolumn}
+									<th class="runner-cc ">
+									{BEGIN airtanah_id_fieldheader}
+																				<a {$airtanah_id_orderlinkattrs}>
+											Airtanah Id
+										</a>
+									{END airtanah_id_fieldheader}
+									</th>
+									{END airtanah_id_fieldheadercolumn}
+
+																	{BEGIN self_dok_id_fieldheadercolumn}
+									<th class="runner-cc ">
+									{BEGIN self_dok_id_fieldheader}
+																				<a {$self_dok_id_orderlinkattrs}>
+											Self Dok Id
+										</a>
+									{END self_dok_id_fieldheader}
+									</th>
+									{END self_dok_id_fieldheadercolumn}
+
+																	{BEGIN office_dok_id_fieldheadercolumn}
+									<th class="runner-cc ">
+									{BEGIN office_dok_id_fieldheader}
+																				<a {$office_dok_id_orderlinkattrs}>
+											Office Dok Id
+										</a>
+									{END office_dok_id_fieldheader}
+									</th>
+									{END office_dok_id_fieldheadercolumn}
+
+																	{BEGIN tgl_jatuhtempo_self_fieldheadercolumn}
+									<th class="runner-cc ">
+									{BEGIN tgl_jatuhtempo_self_fieldheader}
+																				<a {$tgl_jatuhtempo_self_orderlinkattrs}>
+											Tgl Jatuhtempo Self
+										</a>
+									{END tgl_jatuhtempo_self_fieldheader}
+									</th>
+									{END tgl_jatuhtempo_self_fieldheadercolumn}
+
+																	{BEGIN spt_denda_fieldheadercolumn}
+									<th class="runner-cc ">
+									{BEGIN spt_denda_fieldheader}
+																				<a {$spt_denda_orderlinkattrs}>
+											Spt Denda
+										</a>
+									{END spt_denda_fieldheader}
+									</th>
+									{END spt_denda_fieldheadercolumn}
+
+																	{BEGIN tgl_spt_fieldheadercolumn}
+									<th class="runner-cc ">
+									{BEGIN tgl_spt_fieldheader}
+																				<a {$tgl_spt_orderlinkattrs}>
+											Tgl Spt
+										</a>
+									{END tgl_spt_fieldheader}
+									</th>
+									{END tgl_spt_fieldheadercolumn}
+
+																	{BEGIN pad_bunga_fieldheadercolumn}
+									<th class="runner-cc ">
+									{BEGIN pad_bunga_fieldheader}
+																				<a {$pad_bunga_orderlinkattrs}>
+											Pad Bunga
+										</a>
+									{END pad_bunga_fieldheader}
+									</th>
+									{END pad_bunga_fieldheadercolumn}
+
+																	{BEGIN fax_fieldheadercolumn}
+									<th class="runner-cc ">
+									{BEGIN fax_fieldheader}
+																				<a {$fax_orderlinkattrs}>
+											Fax
+										</a>
+									{END fax_fieldheader}
+									</th>
+									{END fax_fieldheadercolumn}
+
+																	{BEGIN website_fieldheadercolumn}
+									<th class="runner-cc ">
+									{BEGIN website_fieldheader}
+																				<a {$website_orderlinkattrs}>
+											Website
+										</a>
+									{END website_fieldheader}
+									</th>
+									{END website_fieldheadercolumn}
+
+																	{BEGIN email_fieldheadercolumn}
+									<th class="runner-cc ">
+									{BEGIN email_fieldheader}
+																				<a {$email_orderlinkattrs}>
+											Email
+										</a>
+									{END email_fieldheader}
+									</th>
+									{END email_fieldheadercolumn}
+
+																	{BEGIN daerah_fieldheadercolumn}
+									<th class="runner-cc ">
+									{BEGIN daerah_fieldheader}
+																				<a {$daerah_orderlinkattrs}>
+											Daerah
+										</a>
+									{END daerah_fieldheader}
+									</th>
+									{END daerah_fieldheadercolumn}
+
+																	{BEGIN alamat_lengkap_fieldheadercolumn}
+									<th class="runner-cc ">
+									{BEGIN alamat_lengkap_fieldheader}
+																				<a {$alamat_lengkap_orderlinkattrs}>
+											Alamat Lengkap
+										</a>
+									{END alamat_lengkap_fieldheader}
+									</th>
+									{END alamat_lengkap_fieldheadercolumn}
+
+																	{BEGIN ppj_id_fieldheadercolumn}
+									<th class="runner-cc ">
+									{BEGIN ppj_id_fieldheader}
+																				<a {$ppj_id_orderlinkattrs}>
+											Ppj Id
+										</a>
+									{END ppj_id_fieldheader}
+									</th>
+									{END ppj_id_fieldheadercolumn}
+
+																	{BEGIN hotel_id_fieldheadercolumn}
+									<th class="runner-cc ">
+									{BEGIN hotel_id_fieldheader}
+																				<a {$hotel_id_orderlinkattrs}>
+											Hotel Id
+										</a>
+									{END hotel_id_fieldheader}
+									</th>
+									{END hotel_id_fieldheadercolumn}
+
+																	{BEGIN walet_id_fieldheadercolumn}
+									<th class="runner-cc ">
+									{BEGIN walet_id_fieldheader}
+																				<a {$walet_id_orderlinkattrs}>
+											Walet Id
+										</a>
+									{END walet_id_fieldheader}
+									</th>
+									{END walet_id_fieldheadercolumn}
+
+																	{BEGIN restauran_id_fieldheadercolumn}
+									<th class="runner-cc ">
+									{BEGIN restauran_id_fieldheader}
+																				<a {$restauran_id_orderlinkattrs}>
+											Restauran Id
+										</a>
+									{END restauran_id_fieldheader}
+									</th>
+									{END restauran_id_fieldheadercolumn}
+
+																	{BEGIN hiburan_id_fieldheadercolumn}
+									<th class="runner-cc ">
+									{BEGIN hiburan_id_fieldheader}
+																				<a {$hiburan_id_orderlinkattrs}>
+											Hiburan Id
+										</a>
+									{END hiburan_id_fieldheader}
+									</th>
+									{END hiburan_id_fieldheadercolumn}
+
+																	{BEGIN parkir_id_fieldheadercolumn}
+									<th class="runner-cc ">
+									{BEGIN parkir_id_fieldheader}
+																				<a {$parkir_id_orderlinkattrs}>
+											Parkir Id
+										</a>
+									{END parkir_id_fieldheader}
+									</th>
+									{END parkir_id_fieldheadercolumn}
+
+																	{BEGIN enabled_fieldheadercolumn}
+									<th class="runner-cc ">
+									{BEGIN enabled_fieldheader}
+																				<a {$enabled_orderlinkattrs}>
+											Enabled
+										</a>
+									{END enabled_fieldheader}
+									</th>
+									{END enabled_fieldheadercolumn}
+
+																	{BEGIN surat_no_fieldheadercolumn}
+									<th class="runner-cc ">
+									{BEGIN surat_no_fieldheader}
+																				<a {$surat_no_orderlinkattrs}>
+											Surat No
+										</a>
+									{END surat_no_fieldheader}
+									</th>
+									{END surat_no_fieldheadercolumn}
+
+																	{BEGIN ijin_kd_fieldheadercolumn}
+									<th class="runner-cc ">
+									{BEGIN ijin_kd_fieldheader}
+																				<a {$ijin_kd_orderlinkattrs}>
+											Ijin Kd
+										</a>
+									{END ijin_kd_fieldheader}
+									</th>
+									{END ijin_kd_fieldheadercolumn}
+
+																	{BEGIN hotel_kd_fieldheadercolumn}
+									<th class="runner-cc ">
+									{BEGIN hotel_kd_fieldheader}
+																				<a {$hotel_kd_orderlinkattrs}>
+											Hotel Kd
+										</a>
+									{END hotel_kd_fieldheader}
+									</th>
+									{END hotel_kd_fieldheadercolumn}
+
+																	{BEGIN restoran_kd_fieldheadercolumn}
+									<th class="runner-cc ">
+									{BEGIN restoran_kd_fieldheader}
+																				<a {$restoran_kd_orderlinkattrs}>
+											Restoran Kd
+										</a>
+									{END restoran_kd_fieldheader}
+									</th>
+									{END restoran_kd_fieldheadercolumn}
+
+																	{BEGIN hiburan_kd_fieldheadercolumn}
+									<th class="runner-cc ">
+									{BEGIN hiburan_kd_fieldheader}
+																				<a {$hiburan_kd_orderlinkattrs}>
+											Hiburan Kd
+										</a>
+									{END hiburan_kd_fieldheader}
+									</th>
+									{END hiburan_kd_fieldheadercolumn}
+
+																	{BEGIN ppj_kd_fieldheadercolumn}
+									<th class="runner-cc ">
+									{BEGIN ppj_kd_fieldheader}
+																				<a {$ppj_kd_orderlinkattrs}>
+											Ppj Kd
+										</a>
+									{END ppj_kd_fieldheader}
+									</th>
+									{END ppj_kd_fieldheadercolumn}
+
+																	{BEGIN parkir_kd_fieldheadercolumn}
+									<th class="runner-cc ">
+									{BEGIN parkir_kd_fieldheader}
+																				<a {$parkir_kd_orderlinkattrs}>
+											Parkir Kd
+										</a>
+									{END parkir_kd_fieldheader}
+									</th>
+									{END parkir_kd_fieldheadercolumn}
+
+																	{BEGIN airtanah_kd_fieldheadercolumn}
+									<th class="runner-cc ">
+									{BEGIN airtanah_kd_fieldheader}
+																				<a {$airtanah_kd_orderlinkattrs}>
+											Airtanah Kd
+										</a>
+									{END airtanah_kd_fieldheader}
+									</th>
+									{END airtanah_kd_fieldheadercolumn}
+
+																	{BEGIN reklame_kd_fieldheadercolumn}
+									<th class="runner-cc ">
+									{BEGIN reklame_kd_fieldheader}
+																				<a {$reklame_kd_orderlinkattrs}>
+											Reklame Kd
+										</a>
+									{END reklame_kd_fieldheader}
+									</th>
+									{END reklame_kd_fieldheadercolumn}
+
+																	{BEGIN restauran_kd_fieldheadercolumn}
+									<th class="runner-cc runner-clast">
+									{BEGIN restauran_kd_fieldheader}
+																				<a {$restauran_kd_orderlinkattrs}>
+											Restauran Kd
+										</a>
+									{END restauran_kd_fieldheader}
+									</th>
+									{END restauran_kd_fieldheadercolumn}
+
+
+									
+									<th class="runner-cr"><img src="images/spacer.gif"></th>
+									{BEGIN endrecordheader_block}
+									<th class="runner-cs">&nbsp;</th>
+									
+									{END endrecordheader_block}
+									
+									{END record_header}
+									
+								</tr>
+								{END grid_header}
+
+						</thead>
+						<tbody>	
+															{BEGIN grid_row}
+								<tr class="runner-row style1 {$rowclass}" {$rowattrs} {$rowstyle}>
+									{BEGIN grid_record}
+									<td class="runner-cl" {$rowstyle}></td>
+
+																		{BEGIN listIcons_column}
+									<td class="runner-cc runner-bc runner-icons" iEditCont="all" {$rowstyle}>
+																		{BEGIN edit_column}
+									{BEGIN edit_link}
+									<a class="runner-button-img" {$editlink_attrs} title="Edit"><img class="runner-cicon" src="images/icon_edit_new.gif" alt="Edit"></a>
+									{END edit_link}
+									{END edit_column}
+
+																		{BEGIN inlineedit_column}
+									{BEGIN inlineedit_link}
+									<a class="runner-button-img" {$inlineeditlink_attrs} title="Inline Edit"><img class="runner-cicon" src="images/icon_inline_edit_new.gif" alt="Inline Edit"></a>
+									{END inlineedit_link}
+									{END inlineedit_column}
+
+									
+																		{BEGIN view_column}
+									{BEGIN view_link}
+									<a class="runner-button-img" {$viewlink_attrs} title="View"><img class="runner-cicon" src="images/icon_view_new.gif" alt="View"></a>
+									{END view_link}
+									{END view_column}
+									</td>	
+									{END listIcons_column}	
+
+																		{BEGIN checkbox_column}
+									<td class="runner-cc runner-bc" iEditCont="checkBox" {$rowstyle}>
+									{BEGIN checkbox}
+									<input type="checkbox" {$checkbox_attrs}>
+									{END checkbox}
+									</td>
+									{END checkbox_column}
+
+
+										{BEGIN id_fieldcolumn}
+	<td class="runner-cc  {$id_class}" {$id_style}>
+		{$id_value}
+	</td>
+{END id_fieldcolumn}
+
+	{BEGIN type_fieldcolumn}
+	<td class="runner-cc  {$type_class}" {$type_style}>
+		{$type_value}
+	</td>
+{END type_fieldcolumn}
+
+	{BEGIN kepala_nama_fieldcolumn}
+	<td class="runner-cc  {$kepala_nama_class}" {$kepala_nama_style}>
+		{$kepala_nama_value}
+	</td>
+{END kepala_nama_fieldcolumn}
+
+	{BEGIN alamat_fieldcolumn}
+	<td class="runner-cc  {$alamat_class}" {$alamat_style}>
+		{$alamat_value}
+	</td>
+{END alamat_fieldcolumn}
+
+	{BEGIN telp_fieldcolumn}
+	<td class="runner-cc  {$telp_class}" {$telp_style}>
+		{$telp_value}
+	</td>
+{END telp_fieldcolumn}
+
+	{BEGIN pemda_nama_fieldcolumn}
+	<td class="runner-cc  {$pemda_nama_class}" {$pemda_nama_style}>
+		{$pemda_nama_value}
+	</td>
+{END pemda_nama_fieldcolumn}
+
+	{BEGIN ibukota_fieldcolumn}
+	<td class="runner-cc  {$ibukota_class}" {$ibukota_style}>
+		{$ibukota_value}
+	</td>
+{END ibukota_fieldcolumn}
+
+	{BEGIN tmt_fieldcolumn}
+	<td class="runner-cc  {$tmt_class}" {$tmt_style}>
+		{$tmt_value}
+	</td>
+{END tmt_fieldcolumn}
+
+	{BEGIN jabatan_fieldcolumn}
+	<td class="runner-cc  {$jabatan_class}" {$jabatan_style}>
+		{$jabatan_value}
+	</td>
+{END jabatan_fieldcolumn}
+
+	{BEGIN ppkd_id_fieldcolumn}
+	<td class="runner-cc  {$ppkd_id_class}" {$ppkd_id_style}>
+		{$ppkd_id_value}
+	</td>
+{END ppkd_id_fieldcolumn}
+
+	{BEGIN reklame_id_fieldcolumn}
+	<td class="runner-cc  {$reklame_id_class}" {$reklame_id_style}>
+		{$reklame_id_value}
+	</td>
+{END reklame_id_fieldcolumn}
+
+	{BEGIN pendapatan_id_fieldcolumn}
+	<td class="runner-cc  {$pendapatan_id_class}" {$pendapatan_id_style}>
+		{$pendapatan_id_value}
+	</td>
+{END pendapatan_id_fieldcolumn}
+
+	{BEGIN pemda_nama_singkat_fieldcolumn}
+	<td class="runner-cc  {$pemda_nama_singkat_class}" {$pemda_nama_singkat_style}>
+		{$pemda_nama_singkat_value}
+	</td>
+{END pemda_nama_singkat_fieldcolumn}
+
+	{BEGIN airtanah_id_fieldcolumn}
+	<td class="runner-cc  {$airtanah_id_class}" {$airtanah_id_style}>
+		{$airtanah_id_value}
+	</td>
+{END airtanah_id_fieldcolumn}
+
+	{BEGIN self_dok_id_fieldcolumn}
+	<td class="runner-cc  {$self_dok_id_class}" {$self_dok_id_style}>
+		{$self_dok_id_value}
+	</td>
+{END self_dok_id_fieldcolumn}
+
+	{BEGIN office_dok_id_fieldcolumn}
+	<td class="runner-cc  {$office_dok_id_class}" {$office_dok_id_style}>
+		{$office_dok_id_value}
+	</td>
+{END office_dok_id_fieldcolumn}
+
+	{BEGIN tgl_jatuhtempo_self_fieldcolumn}
+	<td class="runner-cc  {$tgl_jatuhtempo_self_class}" {$tgl_jatuhtempo_self_style}>
+		{$tgl_jatuhtempo_self_value}
+	</td>
+{END tgl_jatuhtempo_self_fieldcolumn}
+
+	{BEGIN spt_denda_fieldcolumn}
+	<td class="runner-cc  {$spt_denda_class}" {$spt_denda_style}>
+		{$spt_denda_value}
+	</td>
+{END spt_denda_fieldcolumn}
+
+	{BEGIN tgl_spt_fieldcolumn}
+	<td class="runner-cc  {$tgl_spt_class}" {$tgl_spt_style}>
+		{$tgl_spt_value}
+	</td>
+{END tgl_spt_fieldcolumn}
+
+	{BEGIN pad_bunga_fieldcolumn}
+	<td class="runner-cc  {$pad_bunga_class}" {$pad_bunga_style}>
+		{$pad_bunga_value}
+	</td>
+{END pad_bunga_fieldcolumn}
+
+	{BEGIN fax_fieldcolumn}
+	<td class="runner-cc  {$fax_class}" {$fax_style}>
+		{$fax_value}
+	</td>
+{END fax_fieldcolumn}
+
+	{BEGIN website_fieldcolumn}
+	<td class="runner-cc  {$website_class}" {$website_style}>
+		{$website_value}
+	</td>
+{END website_fieldcolumn}
+
+	{BEGIN email_fieldcolumn}
+	<td class="runner-cc  {$email_class}" {$email_style}>
+		{$email_value}
+	</td>
+{END email_fieldcolumn}
+
+	{BEGIN daerah_fieldcolumn}
+	<td class="runner-cc  {$daerah_class}" {$daerah_style}>
+		{$daerah_value}
+	</td>
+{END daerah_fieldcolumn}
+
+	{BEGIN alamat_lengkap_fieldcolumn}
+	<td class="runner-cc  {$alamat_lengkap_class}" {$alamat_lengkap_style}>
+		{$alamat_lengkap_value}
+	</td>
+{END alamat_lengkap_fieldcolumn}
+
+	{BEGIN ppj_id_fieldcolumn}
+	<td class="runner-cc  {$ppj_id_class}" {$ppj_id_style}>
+		{$ppj_id_value}
+	</td>
+{END ppj_id_fieldcolumn}
+
+	{BEGIN hotel_id_fieldcolumn}
+	<td class="runner-cc  {$hotel_id_class}" {$hotel_id_style}>
+		{$hotel_id_value}
+	</td>
+{END hotel_id_fieldcolumn}
+
+	{BEGIN walet_id_fieldcolumn}
+	<td class="runner-cc  {$walet_id_class}" {$walet_id_style}>
+		{$walet_id_value}
+	</td>
+{END walet_id_fieldcolumn}
+
+	{BEGIN restauran_id_fieldcolumn}
+	<td class="runner-cc  {$restauran_id_class}" {$restauran_id_style}>
+		{$restauran_id_value}
+	</td>
+{END restauran_id_fieldcolumn}
+
+	{BEGIN hiburan_id_fieldcolumn}
+	<td class="runner-cc  {$hiburan_id_class}" {$hiburan_id_style}>
+		{$hiburan_id_value}
+	</td>
+{END hiburan_id_fieldcolumn}
+
+	{BEGIN parkir_id_fieldcolumn}
+	<td class="runner-cc  {$parkir_id_class}" {$parkir_id_style}>
+		{$parkir_id_value}
+	</td>
+{END parkir_id_fieldcolumn}
+
+	{BEGIN enabled_fieldcolumn}
+	<td class="runner-cc  {$enabled_class}" {$enabled_style}>
+		{$enabled_value}
+	</td>
+{END enabled_fieldcolumn}
+
+	{BEGIN surat_no_fieldcolumn}
+	<td class="runner-cc  {$surat_no_class}" {$surat_no_style}>
+		{$surat_no_value}
+	</td>
+{END surat_no_fieldcolumn}
+
+	{BEGIN ijin_kd_fieldcolumn}
+	<td class="runner-cc  {$ijin_kd_class}" {$ijin_kd_style}>
+		{$ijin_kd_value}
+	</td>
+{END ijin_kd_fieldcolumn}
+
+	{BEGIN hotel_kd_fieldcolumn}
+	<td class="runner-cc  {$hotel_kd_class}" {$hotel_kd_style}>
+		{$hotel_kd_value}
+	</td>
+{END hotel_kd_fieldcolumn}
+
+	{BEGIN restoran_kd_fieldcolumn}
+	<td class="runner-cc  {$restoran_kd_class}" {$restoran_kd_style}>
+		{$restoran_kd_value}
+	</td>
+{END restoran_kd_fieldcolumn}
+
+	{BEGIN hiburan_kd_fieldcolumn}
+	<td class="runner-cc  {$hiburan_kd_class}" {$hiburan_kd_style}>
+		{$hiburan_kd_value}
+	</td>
+{END hiburan_kd_fieldcolumn}
+
+	{BEGIN ppj_kd_fieldcolumn}
+	<td class="runner-cc  {$ppj_kd_class}" {$ppj_kd_style}>
+		{$ppj_kd_value}
+	</td>
+{END ppj_kd_fieldcolumn}
+
+	{BEGIN parkir_kd_fieldcolumn}
+	<td class="runner-cc  {$parkir_kd_class}" {$parkir_kd_style}>
+		{$parkir_kd_value}
+	</td>
+{END parkir_kd_fieldcolumn}
+
+	{BEGIN airtanah_kd_fieldcolumn}
+	<td class="runner-cc  {$airtanah_kd_class}" {$airtanah_kd_style}>
+		{$airtanah_kd_value}
+	</td>
+{END airtanah_kd_fieldcolumn}
+
+	{BEGIN reklame_kd_fieldcolumn}
+	<td class="runner-cc  {$reklame_kd_class}" {$reklame_kd_style}>
+		{$reklame_kd_value}
+	</td>
+{END reklame_kd_fieldcolumn}
+
+	{BEGIN restauran_kd_fieldcolumn}
+	<td class="runner-cc runner-clast {$restauran_kd_class}" {$restauran_kd_style}>
+		{$restauran_kd_value}
+	</td>
+{END restauran_kd_fieldcolumn}
+
+
+																		<td class="runner-cr" {$rowstyle}></td>
+									{BEGIN endrecord_block}
+									<td class="runner-cs" {$endrecordblock_attrs}>&nbsp;</td>
+									{END endrecord_block}
+																	
+									{END grid_record}
+
+								</tr>
+								{END grid_row}
+															{BEGIN grid_footer}
+																<tr class="runner-bottomrow style1{$gridFooter_class}" >
+									{BEGIN record_footer}
+									<td class="runner-cl"><img src="images/spacer.gif"></td>
+																		{BEGIN listIcons_column}
+									<td class="runner-cc"></td>
+									{END listIcons_column}	
+									
+																		{BEGIN checkbox_column}
+									<td class="runner-cc"></td>
+									{END checkbox_column}
+
+
+									{BEGIN id_fieldheadercolumn}
+<td class="runner-cc "></td>
+{END id_fieldheadercolumn}
+{BEGIN type_fieldheadercolumn}
+<td class="runner-cc "></td>
+{END type_fieldheadercolumn}
+{BEGIN kepala_nama_fieldheadercolumn}
+<td class="runner-cc "></td>
+{END kepala_nama_fieldheadercolumn}
+{BEGIN alamat_fieldheadercolumn}
+<td class="runner-cc "></td>
+{END alamat_fieldheadercolumn}
+{BEGIN telp_fieldheadercolumn}
+<td class="runner-cc "></td>
+{END telp_fieldheadercolumn}
+{BEGIN pemda_nama_fieldheadercolumn}
+<td class="runner-cc "></td>
+{END pemda_nama_fieldheadercolumn}
+{BEGIN ibukota_fieldheadercolumn}
+<td class="runner-cc "></td>
+{END ibukota_fieldheadercolumn}
+{BEGIN tmt_fieldheadercolumn}
+<td class="runner-cc "></td>
+{END tmt_fieldheadercolumn}
+{BEGIN jabatan_fieldheadercolumn}
+<td class="runner-cc "></td>
+{END jabatan_fieldheadercolumn}
+{BEGIN ppkd_id_fieldheadercolumn}
+<td class="runner-cc "></td>
+{END ppkd_id_fieldheadercolumn}
+{BEGIN reklame_id_fieldheadercolumn}
+<td class="runner-cc "></td>
+{END reklame_id_fieldheadercolumn}
+{BEGIN pendapatan_id_fieldheadercolumn}
+<td class="runner-cc "></td>
+{END pendapatan_id_fieldheadercolumn}
+{BEGIN pemda_nama_singkat_fieldheadercolumn}
+<td class="runner-cc "></td>
+{END pemda_nama_singkat_fieldheadercolumn}
+{BEGIN airtanah_id_fieldheadercolumn}
+<td class="runner-cc "></td>
+{END airtanah_id_fieldheadercolumn}
+{BEGIN self_dok_id_fieldheadercolumn}
+<td class="runner-cc "></td>
+{END self_dok_id_fieldheadercolumn}
+{BEGIN office_dok_id_fieldheadercolumn}
+<td class="runner-cc "></td>
+{END office_dok_id_fieldheadercolumn}
+{BEGIN tgl_jatuhtempo_self_fieldheadercolumn}
+<td class="runner-cc "></td>
+{END tgl_jatuhtempo_self_fieldheadercolumn}
+{BEGIN spt_denda_fieldheadercolumn}
+<td class="runner-cc "></td>
+{END spt_denda_fieldheadercolumn}
+{BEGIN tgl_spt_fieldheadercolumn}
+<td class="runner-cc "></td>
+{END tgl_spt_fieldheadercolumn}
+{BEGIN pad_bunga_fieldheadercolumn}
+<td class="runner-cc "></td>
+{END pad_bunga_fieldheadercolumn}
+{BEGIN fax_fieldheadercolumn}
+<td class="runner-cc "></td>
+{END fax_fieldheadercolumn}
+{BEGIN website_fieldheadercolumn}
+<td class="runner-cc "></td>
+{END website_fieldheadercolumn}
+{BEGIN email_fieldheadercolumn}
+<td class="runner-cc "></td>
+{END email_fieldheadercolumn}
+{BEGIN daerah_fieldheadercolumn}
+<td class="runner-cc "></td>
+{END daerah_fieldheadercolumn}
+{BEGIN alamat_lengkap_fieldheadercolumn}
+<td class="runner-cc "></td>
+{END alamat_lengkap_fieldheadercolumn}
+{BEGIN ppj_id_fieldheadercolumn}
+<td class="runner-cc "></td>
+{END ppj_id_fieldheadercolumn}
+{BEGIN hotel_id_fieldheadercolumn}
+<td class="runner-cc "></td>
+{END hotel_id_fieldheadercolumn}
+{BEGIN walet_id_fieldheadercolumn}
+<td class="runner-cc "></td>
+{END walet_id_fieldheadercolumn}
+{BEGIN restauran_id_fieldheadercolumn}
+<td class="runner-cc "></td>
+{END restauran_id_fieldheadercolumn}
+{BEGIN hiburan_id_fieldheadercolumn}
+<td class="runner-cc "></td>
+{END hiburan_id_fieldheadercolumn}
+{BEGIN parkir_id_fieldheadercolumn}
+<td class="runner-cc "></td>
+{END parkir_id_fieldheadercolumn}
+{BEGIN enabled_fieldheadercolumn}
+<td class="runner-cc "></td>
+{END enabled_fieldheadercolumn}
+{BEGIN surat_no_fieldheadercolumn}
+<td class="runner-cc "></td>
+{END surat_no_fieldheadercolumn}
+{BEGIN ijin_kd_fieldheadercolumn}
+<td class="runner-cc "></td>
+{END ijin_kd_fieldheadercolumn}
+{BEGIN hotel_kd_fieldheadercolumn}
+<td class="runner-cc "></td>
+{END hotel_kd_fieldheadercolumn}
+{BEGIN restoran_kd_fieldheadercolumn}
+<td class="runner-cc "></td>
+{END restoran_kd_fieldheadercolumn}
+{BEGIN hiburan_kd_fieldheadercolumn}
+<td class="runner-cc "></td>
+{END hiburan_kd_fieldheadercolumn}
+{BEGIN ppj_kd_fieldheadercolumn}
+<td class="runner-cc "></td>
+{END ppj_kd_fieldheadercolumn}
+{BEGIN parkir_kd_fieldheadercolumn}
+<td class="runner-cc "></td>
+{END parkir_kd_fieldheadercolumn}
+{BEGIN airtanah_kd_fieldheadercolumn}
+<td class="runner-cc "></td>
+{END airtanah_kd_fieldheadercolumn}
+{BEGIN reklame_kd_fieldheadercolumn}
+<td class="runner-cc "></td>
+{END reklame_kd_fieldheadercolumn}
+{BEGIN restauran_kd_fieldheadercolumn}
+<td class="runner-cc runner-clast"></td>
+{END restauran_kd_fieldheadercolumn}
+
+									<td class="runner-cr"><img src="images/spacer.gif"></td>
+									
+									
+									{BEGIN endrecordfooter_block}
+									<td class="runner-cs"></td>
+									{END endrecordfooter_block}
+									{END record_footer}
+								</tr>
+								{END grid_footer}
+
+						</tbody>
+					</table>
+					
+
+{END grid_block}
+
+
+
+{END container_grid}
+
+
+
+{BEGIN container_pagination}
+<table class="runner-c runner-c-pagination" cellpadding="0" >
+<tr class="{$cheaderclass_pagination}">
+<td class="runner-cl"><img src="images/spacer.gif"></td>
+<td class="runner-cc"></td><td class="runner-cr"><img src="images/spacer.gif"></td>
+</tr>
+<tr class="runner-row style1">
+<td class="runner-cl"></td>
+<td class="runner-cc">
+<table border="0" cellpadding="0" class="runner-hc">
+<tr>
+
+{BEGIN pagination_block}
+<td  class="runner-cc runner-bc runner-b-pagination" {$brickclass_pagination}><span>{$pagination}</span></td>
+{END pagination_block}
+
+
+</tr>
+</table></td>
+<td class="runner-cr"></td>
+</tr>
+
+<tr class="{$cfooterclass_pagination}">
+<td class="runner-cl"><img src="images/spacer.gif"></td>
+<td class="runner-cc"></td><td class="runner-cr"><img src="images/spacer.gif"></td>
+</tr>
+</table>
+{END container_pagination}
+
+
+				</td>	
+
+				<td class="runner-right {$blockclass_right}">
+					
+				</td>	
+			</tr>
+			<tr class="runner-footer">
+				<td class="runner-bottom" colspan=3>
+					<!--%%bottom%%-->
+				</td>
+			</tr>
+		</table>
+		{$footer}
+	{END body}
+	</body>
+</html>

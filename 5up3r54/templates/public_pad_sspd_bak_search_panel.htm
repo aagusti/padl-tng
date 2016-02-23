@@ -1,0 +1,112 @@
+<div class="searchOptions bottomPanelBorder" {$srchOpt_attrs}>
+	
+	<!-- Search panel content -->
+	<div class="srchCritTop" style="display: none;">
+		Criteria:&nbsp;
+		<input type="radio" name="srchType" class="runner-radio-button" {$all_checkbox}> {BEGIN all_checkbox_label}all{END all_checkbox_label}
+		&nbsp;&nbsp;&nbsp;
+		<input type="radio" name="srchType" class="runner-radio-button" {$any_checkbox}> {BEGIN any_checkbox_label}any{END any_checkbox_label}
+	</div>
+	
+	<div class="addOption">
+		<span class="runner-btnframe">
+		<span class="runner-btnleft"></span>
+		<span class="runner-btnright"></span>
+		<a href="#" id="showHideControlChooseMenu{$id}" class="runner-button" {$showHideCtrls_attrs}>Add field</a>
+		</span>
+		&nbsp;&nbsp;&nbsp;
+		<span class="runner-btnframe">
+		<span class="runner-btnleft"></span>
+		<span class="runner-btnright"></span>
+		<a href="#" id="showHideSearchType{$id}" class="runner-button" {$showHideCtrlsOpt_attrs}>{$showHideOpt_mess}</a>
+		</span>
+	</div>
+	
+	<!-- choose controls div -->
+	<div class="runner-panel controlChooseMenu" {$controlChooseMenuDiv_attrs}>
+		{BEGIN addSearch_id}
+			<a href="#" id="addSearchControl_id" class="addSearchControl" {$addSearchControl_id_attrs}>Id</a><br>
+		{END addSearch_id}
+		{BEGIN addSearch_tahun}
+			<a href="#" id="addSearchControl_tahun" class="addSearchControl" {$addSearchControl_tahun_attrs}>Tahun</a><br>
+		{END addSearch_tahun}
+		{BEGIN addSearch_sspdno}
+			<a href="#" id="addSearchControl_sspdno" class="addSearchControl" {$addSearchControl_sspdno_attrs}>Sspdno</a><br>
+		{END addSearch_sspdno}
+		{BEGIN addSearch_sspdtgl}
+			<a href="#" id="addSearchControl_sspdtgl" class="addSearchControl" {$addSearchControl_sspdtgl_attrs}>Sspdtgl</a><br>
+		{END addSearch_sspdtgl}
+		{BEGIN addSearch_spt_id}
+			<a href="#" id="addSearchControl_spt_id" class="addSearchControl" {$addSearchControl_spt_id_attrs}>Spt Id</a><br>
+		{END addSearch_spt_id}
+		{BEGIN addSearch_bunga}
+			<a href="#" id="addSearchControl_bunga" class="addSearchControl" {$addSearchControl_bunga_attrs}>Bunga</a><br>
+		{END addSearch_bunga}
+		{BEGIN addSearch_bulan_telat}
+			<a href="#" id="addSearchControl_bulan_telat" class="addSearchControl" {$addSearchControl_bulan_telat_attrs}>Bulan Telat</a><br>
+		{END addSearch_bulan_telat}
+		{BEGIN addSearch_hitung_bunga}
+			<a href="#" id="addSearchControl_hitung_bunga" class="addSearchControl" {$addSearchControl_hitung_bunga_attrs}>Hitung Bunga</a><br>
+		{END addSearch_hitung_bunga}
+		{BEGIN addSearch_printed}
+			<a href="#" id="addSearchControl_printed" class="addSearchControl" {$addSearchControl_printed_attrs}>Printed</a><br>
+		{END addSearch_printed}
+		{BEGIN addSearch_enabled}
+			<a href="#" id="addSearchControl_enabled" class="addSearchControl" {$addSearchControl_enabled_attrs}>Enabled</a><br>
+		{END addSearch_enabled}
+		{BEGIN addSearch_create_date}
+			<a href="#" id="addSearchControl_create_date" class="addSearchControl" {$addSearchControl_create_date_attrs}>Create Date</a><br>
+		{END addSearch_create_date}
+		{BEGIN addSearch_create_uid}
+			<a href="#" id="addSearchControl_create_uid" class="addSearchControl" {$addSearchControl_create_uid_attrs}>Create Uid</a><br>
+		{END addSearch_create_uid}
+		{BEGIN addSearch_write_date}
+			<a href="#" id="addSearchControl_write_date" class="addSearchControl" {$addSearchControl_write_date_attrs}>Write Date</a><br>
+		{END addSearch_write_date}
+		{BEGIN addSearch_write_uid}
+			<a href="#" id="addSearchControl_write_uid" class="addSearchControl" {$addSearchControl_write_uid_attrs}>Write Uid</a><br>
+		{END addSearch_write_uid}
+		{BEGIN addSearch_sspdjam}
+			<a href="#" id="addSearchControl_sspdjam" class="addSearchControl" {$addSearchControl_sspdjam_attrs}>Sspdjam</a><br>
+		{END addSearch_sspdjam}
+		{BEGIN addSearch_tp_id}
+			<a href="#" id="addSearchControl_tp_id" class="addSearchControl" {$addSearchControl_tp_id_attrs}>Tp Id</a><br>
+		{END addSearch_tp_id}
+		{BEGIN addSearch_is_validated}
+			<a href="#" id="addSearchControl_is_validated" class="addSearchControl" {$addSearchControl_is_validated_attrs}>Is Validated</a><br>
+		{END addSearch_is_validated}
+		{BEGIN addSearch_keterangan}
+			<a href="#" id="addSearchControl_keterangan" class="addSearchControl" {$addSearchControl_keterangan_attrs}>Keterangan</a><br>
+		{END addSearch_keterangan}
+		{BEGIN addSearch_denda}
+			<a href="#" id="addSearchControl_denda" class="addSearchControl" {$addSearchControl_denda_attrs}>Denda</a><br>
+		{END addSearch_denda}
+		{BEGIN addSearch_jml_bayar}
+			<a href="#" id="addSearchControl_jml_bayar" class="addSearchControl" {$addSearchControl_jml_bayar_attrs}>Jml Bayar</a><br>
+		{END addSearch_jml_bayar}
+		{BEGIN addSearch_is_valid}
+			<a href="#" id="addSearchControl_is_valid" class="addSearchControl" {$addSearchControl_is_valid_attrs}>Is Valid</a><br>
+		{END addSearch_is_valid}
+	</div>
+	
+	<table class="controlsBlock">
+	{BEGIN searchCtrlBlock}
+		<tr class="srchPanelRow" {$filterRow_attrs}>
+			<td class="srchPanelCell">{$delCtrlButt}</td>
+			<td class="srchPanelCell">{$fLabel}:&nbsp;</td>
+			<td class="srchPanelCell srchPanelCell2">
+				<div class="runner-searchtype">{$searchtype}</div>
+				<div class="runner-searchcontrol">{$searchcontrol}</div>
+				<div class="runner-searchcontrol">{$searchcontrol1}</div>
+		</tr>
+	{END searchCtrlBlock}
+	</table>
+	
+	<div class="bottomSearchButt" align="left" {$bottomSearchButt_attrs}>
+		<span class="runner-btnframe">
+		<span class="runner-btnleft"></span>
+		<span class="runner-btnright"></span>
+		<a href="#" class="runner-button" {$searchbutton_attrs}>Search</a>
+		</span>
+	</div>
+</div>

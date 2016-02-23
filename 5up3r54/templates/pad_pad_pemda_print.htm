@@ -1,0 +1,757 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<title>{$pagetitle}</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=7">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+		{BEGIN pageCSSFiles}
+		<link REL="stylesheet" href="{$pagestylepath}" type="text/css">
+		{END pageCSSFiles}
+		<!--[if IE]>
+			<link REL="stylesheet" href="styles/defaultIE.css" type="text/css">
+			{BEGIN IEcssFiles}
+			<link REL="stylesheet" href="{$stylepathIE}" type="text/css">
+			{END IEcssFiles}
+		<![endif]-->
+	</head>
+	
+	<body class="{$stylename}" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+		<table   cellpadding="0" class="runner-toptable">
+			<tr class="runner-header">
+				<td class="runner-top" colspan=3>
+					
+
+
+
+
+				</td>
+			</tr>
+			<tr class="runner-body">
+				
+				<td class="runner-left {$blockclass_left}" >
+					
+				</td>	
+				
+				<td class="runner-center {$blockclass_center}">
+					
+
+{BEGIN container_grid}
+
+
+{BEGIN grid_block}
+{BEGIN page}
+<h1>Pad Pemda</h1>
+<span>
+{BEGIN page_number}
+Page {$pageno} of {$maxpages} 
+{END page_number}
+</span>
+
+	<div class="runner-s-grid">	
+	<table class="runner-c runner-c-grid" cellpadding="0">
+		<thead>
+		{BEGIN grid_header}
+		<tr class="runner-toprow style1">
+			<td class="runner-cl"><img src="images/spacer.gif"></td>
+			{BEGIN record_header}
+					{BEGIN id_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN id_fieldheader}
+	<b>Id</b>
+	{END id_fieldheader}
+</th>
+{END id_fieldheadercolumn}
+	{BEGIN type_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN type_fieldheader}
+	<b>Type</b>
+	{END type_fieldheader}
+</th>
+{END type_fieldheadercolumn}
+	{BEGIN kepala_nama_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN kepala_nama_fieldheader}
+	<b>Kepala Nama</b>
+	{END kepala_nama_fieldheader}
+</th>
+{END kepala_nama_fieldheadercolumn}
+	{BEGIN alamat_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN alamat_fieldheader}
+	<b>Alamat</b>
+	{END alamat_fieldheader}
+</th>
+{END alamat_fieldheadercolumn}
+	{BEGIN telp_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN telp_fieldheader}
+	<b>Telp</b>
+	{END telp_fieldheader}
+</th>
+{END telp_fieldheadercolumn}
+	{BEGIN pemda_nama_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN pemda_nama_fieldheader}
+	<b>Pemda Nama</b>
+	{END pemda_nama_fieldheader}
+</th>
+{END pemda_nama_fieldheadercolumn}
+	{BEGIN ibukota_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN ibukota_fieldheader}
+	<b>Ibukota</b>
+	{END ibukota_fieldheader}
+</th>
+{END ibukota_fieldheadercolumn}
+	{BEGIN tmt_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN tmt_fieldheader}
+	<b>Tmt</b>
+	{END tmt_fieldheader}
+</th>
+{END tmt_fieldheadercolumn}
+	{BEGIN jabatan_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN jabatan_fieldheader}
+	<b>Jabatan</b>
+	{END jabatan_fieldheader}
+</th>
+{END jabatan_fieldheadercolumn}
+	{BEGIN ppkd_id_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN ppkd_id_fieldheader}
+	<b>Ppkd Id</b>
+	{END ppkd_id_fieldheader}
+</th>
+{END ppkd_id_fieldheadercolumn}
+	{BEGIN reklame_id_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN reklame_id_fieldheader}
+	<b>Reklame Id</b>
+	{END reklame_id_fieldheader}
+</th>
+{END reklame_id_fieldheadercolumn}
+	{BEGIN pendapatan_id_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN pendapatan_id_fieldheader}
+	<b>Pendapatan Id</b>
+	{END pendapatan_id_fieldheader}
+</th>
+{END pendapatan_id_fieldheadercolumn}
+	{BEGIN pemda_nama_singkat_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN pemda_nama_singkat_fieldheader}
+	<b>Pemda Nama Singkat</b>
+	{END pemda_nama_singkat_fieldheader}
+</th>
+{END pemda_nama_singkat_fieldheadercolumn}
+	{BEGIN airtanah_id_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN airtanah_id_fieldheader}
+	<b>Airtanah Id</b>
+	{END airtanah_id_fieldheader}
+</th>
+{END airtanah_id_fieldheadercolumn}
+	{BEGIN self_dok_id_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN self_dok_id_fieldheader}
+	<b>Self Dok Id</b>
+	{END self_dok_id_fieldheader}
+</th>
+{END self_dok_id_fieldheadercolumn}
+	{BEGIN office_dok_id_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN office_dok_id_fieldheader}
+	<b>Office Dok Id</b>
+	{END office_dok_id_fieldheader}
+</th>
+{END office_dok_id_fieldheadercolumn}
+	{BEGIN tgl_jatuhtempo_self_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN tgl_jatuhtempo_self_fieldheader}
+	<b>Tgl Jatuhtempo Self</b>
+	{END tgl_jatuhtempo_self_fieldheader}
+</th>
+{END tgl_jatuhtempo_self_fieldheadercolumn}
+	{BEGIN spt_denda_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN spt_denda_fieldheader}
+	<b>Spt Denda</b>
+	{END spt_denda_fieldheader}
+</th>
+{END spt_denda_fieldheadercolumn}
+	{BEGIN tgl_spt_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN tgl_spt_fieldheader}
+	<b>Tgl Spt</b>
+	{END tgl_spt_fieldheader}
+</th>
+{END tgl_spt_fieldheadercolumn}
+	{BEGIN pad_bunga_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN pad_bunga_fieldheader}
+	<b>Pad Bunga</b>
+	{END pad_bunga_fieldheader}
+</th>
+{END pad_bunga_fieldheadercolumn}
+	{BEGIN fax_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN fax_fieldheader}
+	<b>Fax</b>
+	{END fax_fieldheader}
+</th>
+{END fax_fieldheadercolumn}
+	{BEGIN website_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN website_fieldheader}
+	<b>Website</b>
+	{END website_fieldheader}
+</th>
+{END website_fieldheadercolumn}
+	{BEGIN email_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN email_fieldheader}
+	<b>Email</b>
+	{END email_fieldheader}
+</th>
+{END email_fieldheadercolumn}
+	{BEGIN daerah_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN daerah_fieldheader}
+	<b>Daerah</b>
+	{END daerah_fieldheader}
+</th>
+{END daerah_fieldheadercolumn}
+	{BEGIN alamat_lengkap_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN alamat_lengkap_fieldheader}
+	<b>Alamat Lengkap</b>
+	{END alamat_lengkap_fieldheader}
+</th>
+{END alamat_lengkap_fieldheadercolumn}
+	{BEGIN ppj_id_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN ppj_id_fieldheader}
+	<b>Ppj Id</b>
+	{END ppj_id_fieldheader}
+</th>
+{END ppj_id_fieldheadercolumn}
+	{BEGIN hotel_id_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN hotel_id_fieldheader}
+	<b>Hotel Id</b>
+	{END hotel_id_fieldheader}
+</th>
+{END hotel_id_fieldheadercolumn}
+	{BEGIN walet_id_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN walet_id_fieldheader}
+	<b>Walet Id</b>
+	{END walet_id_fieldheader}
+</th>
+{END walet_id_fieldheadercolumn}
+	{BEGIN restauran_id_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN restauran_id_fieldheader}
+	<b>Restauran Id</b>
+	{END restauran_id_fieldheader}
+</th>
+{END restauran_id_fieldheadercolumn}
+	{BEGIN hiburan_id_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN hiburan_id_fieldheader}
+	<b>Hiburan Id</b>
+	{END hiburan_id_fieldheader}
+</th>
+{END hiburan_id_fieldheadercolumn}
+	{BEGIN parkir_id_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN parkir_id_fieldheader}
+	<b>Parkir Id</b>
+	{END parkir_id_fieldheader}
+</th>
+{END parkir_id_fieldheadercolumn}
+	{BEGIN enabled_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN enabled_fieldheader}
+	<b>Enabled</b>
+	{END enabled_fieldheader}
+</th>
+{END enabled_fieldheadercolumn}
+	{BEGIN surat_no_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN surat_no_fieldheader}
+	<b>Surat No</b>
+	{END surat_no_fieldheader}
+</th>
+{END surat_no_fieldheadercolumn}
+	{BEGIN ijin_kd_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN ijin_kd_fieldheader}
+	<b>Ijin Kd</b>
+	{END ijin_kd_fieldheader}
+</th>
+{END ijin_kd_fieldheadercolumn}
+	{BEGIN hotel_kd_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN hotel_kd_fieldheader}
+	<b>Hotel Kd</b>
+	{END hotel_kd_fieldheader}
+</th>
+{END hotel_kd_fieldheadercolumn}
+	{BEGIN restoran_kd_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN restoran_kd_fieldheader}
+	<b>Restoran Kd</b>
+	{END restoran_kd_fieldheader}
+</th>
+{END restoran_kd_fieldheadercolumn}
+	{BEGIN hiburan_kd_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN hiburan_kd_fieldheader}
+	<b>Hiburan Kd</b>
+	{END hiburan_kd_fieldheader}
+</th>
+{END hiburan_kd_fieldheadercolumn}
+	{BEGIN ppj_kd_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN ppj_kd_fieldheader}
+	<b>Ppj Kd</b>
+	{END ppj_kd_fieldheader}
+</th>
+{END ppj_kd_fieldheadercolumn}
+	{BEGIN parkir_kd_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN parkir_kd_fieldheader}
+	<b>Parkir Kd</b>
+	{END parkir_kd_fieldheader}
+</th>
+{END parkir_kd_fieldheadercolumn}
+	{BEGIN airtanah_kd_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN airtanah_kd_fieldheader}
+	<b>Airtanah Kd</b>
+	{END airtanah_kd_fieldheader}
+</th>
+{END airtanah_kd_fieldheadercolumn}
+	{BEGIN reklame_kd_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN reklame_kd_fieldheader}
+	<b>Reklame Kd</b>
+	{END reklame_kd_fieldheader}
+</th>
+{END reklame_kd_fieldheadercolumn}
+	{BEGIN restauran_kd_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN restauran_kd_fieldheader}
+	<b>Restauran Kd</b>
+	{END restauran_kd_fieldheader}
+</th>
+{END restauran_kd_fieldheadercolumn}
+		
+			{END record_header}
+			<td class="runner-cr"><img src="images/spacer.gif"></td>
+			{BEGIN endrecordheader_block}
+			<td class="runner-cs">&nbsp;</td>
+			{END endrecordheader_block}
+		</tr>
+	{END grid_header}
+		</thead>
+		<tbody>	
+		{BEGIN grid_row}
+	<tr class="runner-row style1" {$rowattrs} {$rowstyle} {$rowstyle}>
+		<td class="runner-cl"></td>
+		{BEGIN grid_record}
+				{BEGIN id_fieldcolumn}
+<td  class="runner-cc {$id_class}" {$id_style}>
+	{$id_value}
+</td>
+{END id_fieldcolumn}
+	{BEGIN type_fieldcolumn}
+<td  class="runner-cc {$type_class}" {$type_style}>
+	{$type_value}
+</td>
+{END type_fieldcolumn}
+	{BEGIN kepala_nama_fieldcolumn}
+<td  class="runner-cc {$kepala_nama_class}" {$kepala_nama_style}>
+	{$kepala_nama_value}
+</td>
+{END kepala_nama_fieldcolumn}
+	{BEGIN alamat_fieldcolumn}
+<td  class="runner-cc {$alamat_class}" {$alamat_style}>
+	{$alamat_value}
+</td>
+{END alamat_fieldcolumn}
+	{BEGIN telp_fieldcolumn}
+<td  class="runner-cc {$telp_class}" {$telp_style}>
+	{$telp_value}
+</td>
+{END telp_fieldcolumn}
+	{BEGIN pemda_nama_fieldcolumn}
+<td  class="runner-cc {$pemda_nama_class}" {$pemda_nama_style}>
+	{$pemda_nama_value}
+</td>
+{END pemda_nama_fieldcolumn}
+	{BEGIN ibukota_fieldcolumn}
+<td  class="runner-cc {$ibukota_class}" {$ibukota_style}>
+	{$ibukota_value}
+</td>
+{END ibukota_fieldcolumn}
+	{BEGIN tmt_fieldcolumn}
+<td  class="runner-cc {$tmt_class}" {$tmt_style}>
+	{$tmt_value}
+</td>
+{END tmt_fieldcolumn}
+	{BEGIN jabatan_fieldcolumn}
+<td  class="runner-cc {$jabatan_class}" {$jabatan_style}>
+	{$jabatan_value}
+</td>
+{END jabatan_fieldcolumn}
+	{BEGIN ppkd_id_fieldcolumn}
+<td  class="runner-cc {$ppkd_id_class}" {$ppkd_id_style}>
+	{$ppkd_id_value}
+</td>
+{END ppkd_id_fieldcolumn}
+	{BEGIN reklame_id_fieldcolumn}
+<td  class="runner-cc {$reklame_id_class}" {$reklame_id_style}>
+	{$reklame_id_value}
+</td>
+{END reklame_id_fieldcolumn}
+	{BEGIN pendapatan_id_fieldcolumn}
+<td  class="runner-cc {$pendapatan_id_class}" {$pendapatan_id_style}>
+	{$pendapatan_id_value}
+</td>
+{END pendapatan_id_fieldcolumn}
+	{BEGIN pemda_nama_singkat_fieldcolumn}
+<td  class="runner-cc {$pemda_nama_singkat_class}" {$pemda_nama_singkat_style}>
+	{$pemda_nama_singkat_value}
+</td>
+{END pemda_nama_singkat_fieldcolumn}
+	{BEGIN airtanah_id_fieldcolumn}
+<td  class="runner-cc {$airtanah_id_class}" {$airtanah_id_style}>
+	{$airtanah_id_value}
+</td>
+{END airtanah_id_fieldcolumn}
+	{BEGIN self_dok_id_fieldcolumn}
+<td  class="runner-cc {$self_dok_id_class}" {$self_dok_id_style}>
+	{$self_dok_id_value}
+</td>
+{END self_dok_id_fieldcolumn}
+	{BEGIN office_dok_id_fieldcolumn}
+<td  class="runner-cc {$office_dok_id_class}" {$office_dok_id_style}>
+	{$office_dok_id_value}
+</td>
+{END office_dok_id_fieldcolumn}
+	{BEGIN tgl_jatuhtempo_self_fieldcolumn}
+<td  class="runner-cc {$tgl_jatuhtempo_self_class}" {$tgl_jatuhtempo_self_style}>
+	{$tgl_jatuhtempo_self_value}
+</td>
+{END tgl_jatuhtempo_self_fieldcolumn}
+	{BEGIN spt_denda_fieldcolumn}
+<td  class="runner-cc {$spt_denda_class}" {$spt_denda_style}>
+	{$spt_denda_value}
+</td>
+{END spt_denda_fieldcolumn}
+	{BEGIN tgl_spt_fieldcolumn}
+<td  class="runner-cc {$tgl_spt_class}" {$tgl_spt_style}>
+	{$tgl_spt_value}
+</td>
+{END tgl_spt_fieldcolumn}
+	{BEGIN pad_bunga_fieldcolumn}
+<td  class="runner-cc {$pad_bunga_class}" {$pad_bunga_style}>
+	{$pad_bunga_value}
+</td>
+{END pad_bunga_fieldcolumn}
+	{BEGIN fax_fieldcolumn}
+<td  class="runner-cc {$fax_class}" {$fax_style}>
+	{$fax_value}
+</td>
+{END fax_fieldcolumn}
+	{BEGIN website_fieldcolumn}
+<td  class="runner-cc {$website_class}" {$website_style}>
+	{$website_value}
+</td>
+{END website_fieldcolumn}
+	{BEGIN email_fieldcolumn}
+<td  class="runner-cc {$email_class}" {$email_style}>
+	{$email_value}
+</td>
+{END email_fieldcolumn}
+	{BEGIN daerah_fieldcolumn}
+<td  class="runner-cc {$daerah_class}" {$daerah_style}>
+	{$daerah_value}
+</td>
+{END daerah_fieldcolumn}
+	{BEGIN alamat_lengkap_fieldcolumn}
+<td  class="runner-cc {$alamat_lengkap_class}" {$alamat_lengkap_style}>
+	{$alamat_lengkap_value}
+</td>
+{END alamat_lengkap_fieldcolumn}
+	{BEGIN ppj_id_fieldcolumn}
+<td  class="runner-cc {$ppj_id_class}" {$ppj_id_style}>
+	{$ppj_id_value}
+</td>
+{END ppj_id_fieldcolumn}
+	{BEGIN hotel_id_fieldcolumn}
+<td  class="runner-cc {$hotel_id_class}" {$hotel_id_style}>
+	{$hotel_id_value}
+</td>
+{END hotel_id_fieldcolumn}
+	{BEGIN walet_id_fieldcolumn}
+<td  class="runner-cc {$walet_id_class}" {$walet_id_style}>
+	{$walet_id_value}
+</td>
+{END walet_id_fieldcolumn}
+	{BEGIN restauran_id_fieldcolumn}
+<td  class="runner-cc {$restauran_id_class}" {$restauran_id_style}>
+	{$restauran_id_value}
+</td>
+{END restauran_id_fieldcolumn}
+	{BEGIN hiburan_id_fieldcolumn}
+<td  class="runner-cc {$hiburan_id_class}" {$hiburan_id_style}>
+	{$hiburan_id_value}
+</td>
+{END hiburan_id_fieldcolumn}
+	{BEGIN parkir_id_fieldcolumn}
+<td  class="runner-cc {$parkir_id_class}" {$parkir_id_style}>
+	{$parkir_id_value}
+</td>
+{END parkir_id_fieldcolumn}
+	{BEGIN enabled_fieldcolumn}
+<td  class="runner-cc {$enabled_class}" {$enabled_style}>
+	{$enabled_value}
+</td>
+{END enabled_fieldcolumn}
+	{BEGIN surat_no_fieldcolumn}
+<td  class="runner-cc {$surat_no_class}" {$surat_no_style}>
+	{$surat_no_value}
+</td>
+{END surat_no_fieldcolumn}
+	{BEGIN ijin_kd_fieldcolumn}
+<td  class="runner-cc {$ijin_kd_class}" {$ijin_kd_style}>
+	{$ijin_kd_value}
+</td>
+{END ijin_kd_fieldcolumn}
+	{BEGIN hotel_kd_fieldcolumn}
+<td  class="runner-cc {$hotel_kd_class}" {$hotel_kd_style}>
+	{$hotel_kd_value}
+</td>
+{END hotel_kd_fieldcolumn}
+	{BEGIN restoran_kd_fieldcolumn}
+<td  class="runner-cc {$restoran_kd_class}" {$restoran_kd_style}>
+	{$restoran_kd_value}
+</td>
+{END restoran_kd_fieldcolumn}
+	{BEGIN hiburan_kd_fieldcolumn}
+<td  class="runner-cc {$hiburan_kd_class}" {$hiburan_kd_style}>
+	{$hiburan_kd_value}
+</td>
+{END hiburan_kd_fieldcolumn}
+	{BEGIN ppj_kd_fieldcolumn}
+<td  class="runner-cc {$ppj_kd_class}" {$ppj_kd_style}>
+	{$ppj_kd_value}
+</td>
+{END ppj_kd_fieldcolumn}
+	{BEGIN parkir_kd_fieldcolumn}
+<td  class="runner-cc {$parkir_kd_class}" {$parkir_kd_style}>
+	{$parkir_kd_value}
+</td>
+{END parkir_kd_fieldcolumn}
+	{BEGIN airtanah_kd_fieldcolumn}
+<td  class="runner-cc {$airtanah_kd_class}" {$airtanah_kd_style}>
+	{$airtanah_kd_value}
+</td>
+{END airtanah_kd_fieldcolumn}
+	{BEGIN reklame_kd_fieldcolumn}
+<td  class="runner-cc {$reklame_kd_class}" {$reklame_kd_style}>
+	{$reklame_kd_value}
+</td>
+{END reklame_kd_fieldcolumn}
+	{BEGIN restauran_kd_fieldcolumn}
+<td  class="runner-cc {$restauran_kd_class}" {$restauran_kd_style}>
+	{$restauran_kd_value}
+</td>
+{END restauran_kd_fieldcolumn}
+
+		{END grid_record}
+		<td class="runner-cr"></td>
+		{BEGIN endrecord_block}
+		<td class="runner-cs">&nbsp;</td>
+		{END endrecord_block}
+	</tr>
+{END grid_row}
+										
+								<tr class="runner-bottomrow style1">
+									<td class="runner-cl"><img src="images/spacer.gif"></td>
+									{BEGIN record_footer}
+									{BEGIN id_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END id_fieldfootercolumn}
+{BEGIN type_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END type_fieldfootercolumn}
+{BEGIN kepala_nama_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END kepala_nama_fieldfootercolumn}
+{BEGIN alamat_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END alamat_fieldfootercolumn}
+{BEGIN telp_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END telp_fieldfootercolumn}
+{BEGIN pemda_nama_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END pemda_nama_fieldfootercolumn}
+{BEGIN ibukota_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END ibukota_fieldfootercolumn}
+{BEGIN tmt_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END tmt_fieldfootercolumn}
+{BEGIN jabatan_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END jabatan_fieldfootercolumn}
+{BEGIN ppkd_id_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END ppkd_id_fieldfootercolumn}
+{BEGIN reklame_id_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END reklame_id_fieldfootercolumn}
+{BEGIN pendapatan_id_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END pendapatan_id_fieldfootercolumn}
+{BEGIN pemda_nama_singkat_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END pemda_nama_singkat_fieldfootercolumn}
+{BEGIN airtanah_id_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END airtanah_id_fieldfootercolumn}
+{BEGIN self_dok_id_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END self_dok_id_fieldfootercolumn}
+{BEGIN office_dok_id_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END office_dok_id_fieldfootercolumn}
+{BEGIN tgl_jatuhtempo_self_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END tgl_jatuhtempo_self_fieldfootercolumn}
+{BEGIN spt_denda_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END spt_denda_fieldfootercolumn}
+{BEGIN tgl_spt_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END tgl_spt_fieldfootercolumn}
+{BEGIN pad_bunga_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END pad_bunga_fieldfootercolumn}
+{BEGIN fax_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END fax_fieldfootercolumn}
+{BEGIN website_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END website_fieldfootercolumn}
+{BEGIN email_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END email_fieldfootercolumn}
+{BEGIN daerah_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END daerah_fieldfootercolumn}
+{BEGIN alamat_lengkap_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END alamat_lengkap_fieldfootercolumn}
+{BEGIN ppj_id_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END ppj_id_fieldfootercolumn}
+{BEGIN hotel_id_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END hotel_id_fieldfootercolumn}
+{BEGIN walet_id_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END walet_id_fieldfootercolumn}
+{BEGIN restauran_id_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END restauran_id_fieldfootercolumn}
+{BEGIN hiburan_id_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END hiburan_id_fieldfootercolumn}
+{BEGIN parkir_id_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END parkir_id_fieldfootercolumn}
+{BEGIN enabled_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END enabled_fieldfootercolumn}
+{BEGIN surat_no_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END surat_no_fieldfootercolumn}
+{BEGIN ijin_kd_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END ijin_kd_fieldfootercolumn}
+{BEGIN hotel_kd_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END hotel_kd_fieldfootercolumn}
+{BEGIN restoran_kd_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END restoran_kd_fieldfootercolumn}
+{BEGIN hiburan_kd_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END hiburan_kd_fieldfootercolumn}
+{BEGIN ppj_kd_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END ppj_kd_fieldfootercolumn}
+{BEGIN parkir_kd_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END parkir_kd_fieldfootercolumn}
+{BEGIN airtanah_kd_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END airtanah_kd_fieldfootercolumn}
+{BEGIN reklame_kd_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END reklame_kd_fieldfootercolumn}
+{BEGIN restauran_kd_fieldfootercolumn}
+<td class="runner-cc runner-clast"></td>
+{END restauran_kd_fieldfootercolumn}
+
+									{END record_footer}
+									<td class="runner-cr"><img src="images/spacer.gif"></td>
+									{BEGIN endrecordtotals_block}
+									<td class="runner-cs"></td>
+									{END endrecordtotals_block}
+								</tr>
+
+		</tbody>
+	</table>
+</div>	
+{END page}
+
+{END grid_block}
+
+
+
+{END container_grid}
+
+
+				</td>	
+
+				<td class="runner-right {$blockclass_right}">
+					
+				</td>	
+			</tr>
+			<tr class="runner-footer">
+				<td class="runner-bottom" colspan=3>
+					<!--%%bottom%%-->
+				</td>
+			</tr>
+		</table>
+		{$footer}
+	{END body}
+	</body>
+</html>

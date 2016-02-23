@@ -1,0 +1,254 @@
+<div class="searchOptions bottomPanelBorder" {$srchOpt_attrs}>
+	<!-- Search panel content -->
+	<div class="srchCritTop" style="display: none;">
+		Criteria:&nbsp;
+		<input type="radio" name="srchType" class="runner-radio-button" {$all_checkbox}> {BEGIN all_checkbox_label}all{END all_checkbox_label}
+		&nbsp;&nbsp;&nbsp;
+		<input type="radio" name="srchType" class="runner-radio-button" {$any_checkbox}> {BEGIN any_checkbox_label}any{END any_checkbox_label}
+	</div>
+	
+	<div class="addOption">
+		<span class="runner-btnframe">
+		<span class="runner-btnleft"></span>
+		<span class="runner-btnright"></span>
+		<a href="#" id="showHideControlChooseMenu{$id}" class="runner-button" {$showHideCtrls_attrs}>Add field</a>
+		</span>
+		&nbsp;&nbsp;&nbsp;
+		<span class="runner-btnframe">
+		<span class="runner-btnleft"></span>
+		<span class="runner-btnright"></span>
+		<a href="#" id="showHideSearchType{$id}" class="runner-button" {$showHideCtrlsOpt_attrs}>{$showHideOpt_mess}</a>
+		</span>
+	</div>
+	
+	<!-- choose controls div -->
+	<div class="runner-panel controlChooseMenu" {$controlChooseMenuDiv_attrs}>
+		{BEGIN addSearch_id}
+			<a href="#" id="addSearchControl_id" class="addSearchControl" {$addSearchControl_id_attrs}>Id</a><br>
+		{END addSearch_id}
+		{BEGIN addSearch_parent}
+			<a href="#" id="addSearchControl_parent" class="addSearchControl" {$addSearchControl_parent_attrs}>Parent</a><br>
+		{END addSearch_parent}
+		{BEGIN addSearch_npwpd}
+			<a href="#" id="addSearchControl_npwpd" class="addSearchControl" {$addSearchControl_npwpd_attrs}>Npwpd</a><br>
+		{END addSearch_npwpd}
+		{BEGIN addSearch_rp}
+			<a href="#" id="addSearchControl_rp" class="addSearchControl" {$addSearchControl_rp_attrs}>Rp</a><br>
+		{END addSearch_rp}
+		{BEGIN addSearch_pb}
+			<a href="#" id="addSearchControl_pb" class="addSearchControl" {$addSearchControl_pb_attrs}>Pb</a><br>
+		{END addSearch_pb}
+		{BEGIN addSearch_formno}
+			<a href="#" id="addSearchControl_formno" class="addSearchControl" {$addSearchControl_formno_attrs}>Formno</a><br>
+		{END addSearch_formno}
+		{BEGIN addSearch_reg_date}
+			<a href="#" id="addSearchControl_reg_date" class="addSearchControl" {$addSearchControl_reg_date_attrs}>Reg Date</a><br>
+		{END addSearch_reg_date}
+		{BEGIN addSearch_nama}
+			<a href="#" id="addSearchControl_nama" class="addSearchControl" {$addSearchControl_nama_attrs}>Nama</a><br>
+		{END addSearch_nama}
+		{BEGIN addSearch_kecamatan_id}
+			<a href="#" id="addSearchControl_kecamatan_id" class="addSearchControl" {$addSearchControl_kecamatan_id_attrs}>Kecamatan Id</a><br>
+		{END addSearch_kecamatan_id}
+		{BEGIN addSearch_kelurahan_id}
+			<a href="#" id="addSearchControl_kelurahan_id" class="addSearchControl" {$addSearchControl_kelurahan_id_attrs}>Kelurahan Id</a><br>
+		{END addSearch_kelurahan_id}
+		{BEGIN addSearch_kabupaten}
+			<a href="#" id="addSearchControl_kabupaten" class="addSearchControl" {$addSearchControl_kabupaten_attrs}>Kabupaten</a><br>
+		{END addSearch_kabupaten}
+		{BEGIN addSearch_alamat}
+			<a href="#" id="addSearchControl_alamat" class="addSearchControl" {$addSearchControl_alamat_attrs}>Alamat</a><br>
+		{END addSearch_alamat}
+		{BEGIN addSearch_kodepos}
+			<a href="#" id="addSearchControl_kodepos" class="addSearchControl" {$addSearchControl_kodepos_attrs}>Kodepos</a><br>
+		{END addSearch_kodepos}
+		{BEGIN addSearch_telphone}
+			<a href="#" id="addSearchControl_telphone" class="addSearchControl" {$addSearchControl_telphone_attrs}>Telphone</a><br>
+		{END addSearch_telphone}
+		{BEGIN addSearch_wpnama}
+			<a href="#" id="addSearchControl_wpnama" class="addSearchControl" {$addSearchControl_wpnama_attrs}>Wpnama</a><br>
+		{END addSearch_wpnama}
+		{BEGIN addSearch_wpalamat}
+			<a href="#" id="addSearchControl_wpalamat" class="addSearchControl" {$addSearchControl_wpalamat_attrs}>Wpalamat</a><br>
+		{END addSearch_wpalamat}
+		{BEGIN addSearch_wpkelurahan}
+			<a href="#" id="addSearchControl_wpkelurahan" class="addSearchControl" {$addSearchControl_wpkelurahan_attrs}>Wpkelurahan</a><br>
+		{END addSearch_wpkelurahan}
+		{BEGIN addSearch_wpkecamatan}
+			<a href="#" id="addSearchControl_wpkecamatan" class="addSearchControl" {$addSearchControl_wpkecamatan_attrs}>Wpkecamatan</a><br>
+		{END addSearch_wpkecamatan}
+		{BEGIN addSearch_wpkabupaten}
+			<a href="#" id="addSearchControl_wpkabupaten" class="addSearchControl" {$addSearchControl_wpkabupaten_attrs}>Wpkabupaten</a><br>
+		{END addSearch_wpkabupaten}
+		{BEGIN addSearch_wptelp}
+			<a href="#" id="addSearchControl_wptelp" class="addSearchControl" {$addSearchControl_wptelp_attrs}>Wptelp</a><br>
+		{END addSearch_wptelp}
+		{BEGIN addSearch_wpkodepos}
+			<a href="#" id="addSearchControl_wpkodepos" class="addSearchControl" {$addSearchControl_wpkodepos_attrs}>Wpkodepos</a><br>
+		{END addSearch_wpkodepos}
+		{BEGIN addSearch_pnama}
+			<a href="#" id="addSearchControl_pnama" class="addSearchControl" {$addSearchControl_pnama_attrs}>Pnama</a><br>
+		{END addSearch_pnama}
+		{BEGIN addSearch_palamat}
+			<a href="#" id="addSearchControl_palamat" class="addSearchControl" {$addSearchControl_palamat_attrs}>Palamat</a><br>
+		{END addSearch_palamat}
+		{BEGIN addSearch_pkelurahan}
+			<a href="#" id="addSearchControl_pkelurahan" class="addSearchControl" {$addSearchControl_pkelurahan_attrs}>Pkelurahan</a><br>
+		{END addSearch_pkelurahan}
+		{BEGIN addSearch_pkecamatan}
+			<a href="#" id="addSearchControl_pkecamatan" class="addSearchControl" {$addSearchControl_pkecamatan_attrs}>Pkecamatan</a><br>
+		{END addSearch_pkecamatan}
+		{BEGIN addSearch_pkabupaten}
+			<a href="#" id="addSearchControl_pkabupaten" class="addSearchControl" {$addSearchControl_pkabupaten_attrs}>Pkabupaten</a><br>
+		{END addSearch_pkabupaten}
+		{BEGIN addSearch_ptelp}
+			<a href="#" id="addSearchControl_ptelp" class="addSearchControl" {$addSearchControl_ptelp_attrs}>Ptelp</a><br>
+		{END addSearch_ptelp}
+		{BEGIN addSearch_pkodepos}
+			<a href="#" id="addSearchControl_pkodepos" class="addSearchControl" {$addSearchControl_pkodepos_attrs}>Pkodepos</a><br>
+		{END addSearch_pkodepos}
+		{BEGIN addSearch_ijin1}
+			<a href="#" id="addSearchControl_ijin1" class="addSearchControl" {$addSearchControl_ijin1_attrs}>Ijin1</a><br>
+		{END addSearch_ijin1}
+		{BEGIN addSearch_ijin1no}
+			<a href="#" id="addSearchControl_ijin1no" class="addSearchControl" {$addSearchControl_ijin1no_attrs}>Ijin1no</a><br>
+		{END addSearch_ijin1no}
+		{BEGIN addSearch_ijin1tgl}
+			<a href="#" id="addSearchControl_ijin1tgl" class="addSearchControl" {$addSearchControl_ijin1tgl_attrs}>Ijin1tgl</a><br>
+		{END addSearch_ijin1tgl}
+		{BEGIN addSearch_ijin1tglakhir}
+			<a href="#" id="addSearchControl_ijin1tglakhir" class="addSearchControl" {$addSearchControl_ijin1tglakhir_attrs}>Ijin1tglakhir</a><br>
+		{END addSearch_ijin1tglakhir}
+		{BEGIN addSearch_ijin2}
+			<a href="#" id="addSearchControl_ijin2" class="addSearchControl" {$addSearchControl_ijin2_attrs}>Ijin2</a><br>
+		{END addSearch_ijin2}
+		{BEGIN addSearch_ijin2no}
+			<a href="#" id="addSearchControl_ijin2no" class="addSearchControl" {$addSearchControl_ijin2no_attrs}>Ijin2no</a><br>
+		{END addSearch_ijin2no}
+		{BEGIN addSearch_ijin2tgl}
+			<a href="#" id="addSearchControl_ijin2tgl" class="addSearchControl" {$addSearchControl_ijin2tgl_attrs}>Ijin2tgl</a><br>
+		{END addSearch_ijin2tgl}
+		{BEGIN addSearch_ijin2tglakhir}
+			<a href="#" id="addSearchControl_ijin2tglakhir" class="addSearchControl" {$addSearchControl_ijin2tglakhir_attrs}>Ijin2tglakhir</a><br>
+		{END addSearch_ijin2tglakhir}
+		{BEGIN addSearch_ijin3}
+			<a href="#" id="addSearchControl_ijin3" class="addSearchControl" {$addSearchControl_ijin3_attrs}>Ijin3</a><br>
+		{END addSearch_ijin3}
+		{BEGIN addSearch_ijin3no}
+			<a href="#" id="addSearchControl_ijin3no" class="addSearchControl" {$addSearchControl_ijin3no_attrs}>Ijin3no</a><br>
+		{END addSearch_ijin3no}
+		{BEGIN addSearch_ijin3tgl}
+			<a href="#" id="addSearchControl_ijin3tgl" class="addSearchControl" {$addSearchControl_ijin3tgl_attrs}>Ijin3tgl</a><br>
+		{END addSearch_ijin3tgl}
+		{BEGIN addSearch_ijin3tglakhir}
+			<a href="#" id="addSearchControl_ijin3tglakhir" class="addSearchControl" {$addSearchControl_ijin3tglakhir_attrs}>Ijin3tglakhir</a><br>
+		{END addSearch_ijin3tglakhir}
+		{BEGIN addSearch_ijin4}
+			<a href="#" id="addSearchControl_ijin4" class="addSearchControl" {$addSearchControl_ijin4_attrs}>Ijin4</a><br>
+		{END addSearch_ijin4}
+		{BEGIN addSearch_ijin4no}
+			<a href="#" id="addSearchControl_ijin4no" class="addSearchControl" {$addSearchControl_ijin4no_attrs}>Ijin4no</a><br>
+		{END addSearch_ijin4no}
+		{BEGIN addSearch_ijin4tgl}
+			<a href="#" id="addSearchControl_ijin4tgl" class="addSearchControl" {$addSearchControl_ijin4tgl_attrs}>Ijin4tgl</a><br>
+		{END addSearch_ijin4tgl}
+		{BEGIN addSearch_ijin4tglakhir}
+			<a href="#" id="addSearchControl_ijin4tglakhir" class="addSearchControl" {$addSearchControl_ijin4tglakhir_attrs}>Ijin4tglakhir</a><br>
+		{END addSearch_ijin4tglakhir}
+		{BEGIN addSearch_kukuhno}
+			<a href="#" id="addSearchControl_kukuhno" class="addSearchControl" {$addSearchControl_kukuhno_attrs}>Kukuhno</a><br>
+		{END addSearch_kukuhno}
+		{BEGIN addSearch_kukuhnip}
+			<a href="#" id="addSearchControl_kukuhnip" class="addSearchControl" {$addSearchControl_kukuhnip_attrs}>Kukuhnip</a><br>
+		{END addSearch_kukuhnip}
+		{BEGIN addSearch_kukuhtgl}
+			<a href="#" id="addSearchControl_kukuhtgl" class="addSearchControl" {$addSearchControl_kukuhtgl_attrs}>Kukuhtgl</a><br>
+		{END addSearch_kukuhtgl}
+		{BEGIN addSearch_kukuh_jabat_id}
+			<a href="#" id="addSearchControl_kukuh_jabat_id" class="addSearchControl" {$addSearchControl_kukuh_jabat_id_attrs}>Kukuh Jabat Id</a><br>
+		{END addSearch_kukuh_jabat_id}
+		{BEGIN addSearch_kukuhprinted}
+			<a href="#" id="addSearchControl_kukuhprinted" class="addSearchControl" {$addSearchControl_kukuhprinted_attrs}>Kukuhprinted</a><br>
+		{END addSearch_kukuhprinted}
+		{BEGIN addSearch_enabled}
+			<a href="#" id="addSearchControl_enabled" class="addSearchControl" {$addSearchControl_enabled_attrs}>Enabled</a><br>
+		{END addSearch_enabled}
+		{BEGIN addSearch_create_uid}
+			<a href="#" id="addSearchControl_create_uid" class="addSearchControl" {$addSearchControl_create_uid_attrs}>Create Uid</a><br>
+		{END addSearch_create_uid}
+		{BEGIN addSearch_tmt}
+			<a href="#" id="addSearchControl_tmt" class="addSearchControl" {$addSearchControl_tmt_attrs}>Tmt</a><br>
+		{END addSearch_tmt}
+		{BEGIN addSearch_customer_status_id}
+			<a href="#" id="addSearchControl_customer_status_id" class="addSearchControl" {$addSearchControl_customer_status_id_attrs}>Customer Status Id</a><br>
+		{END addSearch_customer_status_id}
+		{BEGIN addSearch_kembalitgl}
+			<a href="#" id="addSearchControl_kembalitgl" class="addSearchControl" {$addSearchControl_kembalitgl_attrs}>Kembalitgl</a><br>
+		{END addSearch_kembalitgl}
+		{BEGIN addSearch_kembalioleh}
+			<a href="#" id="addSearchControl_kembalioleh" class="addSearchControl" {$addSearchControl_kembalioleh_attrs}>Kembalioleh</a><br>
+		{END addSearch_kembalioleh}
+		{BEGIN addSearch_kartuprinted}
+			<a href="#" id="addSearchControl_kartuprinted" class="addSearchControl" {$addSearchControl_kartuprinted_attrs}>Kartuprinted</a><br>
+		{END addSearch_kartuprinted}
+		{BEGIN addSearch_kembalinip}
+			<a href="#" id="addSearchControl_kembalinip" class="addSearchControl" {$addSearchControl_kembalinip_attrs}>Kembalinip</a><br>
+		{END addSearch_kembalinip}
+		{BEGIN addSearch_penerimanm}
+			<a href="#" id="addSearchControl_penerimanm" class="addSearchControl" {$addSearchControl_penerimanm_attrs}>Penerimanm</a><br>
+		{END addSearch_penerimanm}
+		{BEGIN addSearch_penerimaalamat}
+			<a href="#" id="addSearchControl_penerimaalamat" class="addSearchControl" {$addSearchControl_penerimaalamat_attrs}>Penerimaalamat</a><br>
+		{END addSearch_penerimaalamat}
+		{BEGIN addSearch_penerimatgl}
+			<a href="#" id="addSearchControl_penerimatgl" class="addSearchControl" {$addSearchControl_penerimatgl_attrs}>Penerimatgl</a><br>
+		{END addSearch_penerimatgl}
+		{BEGIN addSearch_catatnip}
+			<a href="#" id="addSearchControl_catatnip" class="addSearchControl" {$addSearchControl_catatnip_attrs}>Catatnip</a><br>
+		{END addSearch_catatnip}
+		{BEGIN addSearch_kirimtgl}
+			<a href="#" id="addSearchControl_kirimtgl" class="addSearchControl" {$addSearchControl_kirimtgl_attrs}>Kirimtgl</a><br>
+		{END addSearch_kirimtgl}
+		{BEGIN addSearch_batastgl}
+			<a href="#" id="addSearchControl_batastgl" class="addSearchControl" {$addSearchControl_batastgl_attrs}>Batastgl</a><br>
+		{END addSearch_batastgl}
+		{BEGIN addSearch_petugas_jabat_id}
+			<a href="#" id="addSearchControl_petugas_jabat_id" class="addSearchControl" {$addSearchControl_petugas_jabat_id_attrs}>Petugas Jabat Id</a><br>
+		{END addSearch_petugas_jabat_id}
+		{BEGIN addSearch_pencatat_jabat_id}
+			<a href="#" id="addSearchControl_pencatat_jabat_id" class="addSearchControl" {$addSearchControl_pencatat_jabat_id_attrs}>Pencatat Jabat Id</a><br>
+		{END addSearch_pencatat_jabat_id}
+		{BEGIN addSearch_created}
+			<a href="#" id="addSearchControl_created" class="addSearchControl" {$addSearchControl_created_attrs}>Created</a><br>
+		{END addSearch_created}
+		{BEGIN addSearch_updated}
+			<a href="#" id="addSearchControl_updated" class="addSearchControl" {$addSearchControl_updated_attrs}>Updated</a><br>
+		{END addSearch_updated}
+		{BEGIN addSearch_update_uid}
+			<a href="#" id="addSearchControl_update_uid" class="addSearchControl" {$addSearchControl_update_uid_attrs}>Update Uid</a><br>
+		{END addSearch_update_uid}
+		{BEGIN addSearch_npwpd_old}
+			<a href="#" id="addSearchControl_npwpd_old" class="addSearchControl" {$addSearchControl_npwpd_old_attrs}>Npwpd Old</a><br>
+		{END addSearch_npwpd_old}
+		{BEGIN addSearch_id_old}
+			<a href="#" id="addSearchControl_id_old" class="addSearchControl" {$addSearchControl_id_old_attrs}>Id Old</a><br>
+		{END addSearch_id_old}
+	</div>
+	
+	<div class="controlsBlock">
+		{BEGIN searchCtrlBlock}
+		<div class="srchPanelRow" {$filterRow_attrs}>
+			<div class="srchPanelCell">{$delCtrlButt}&nbsp;{$fLabel}:&nbsp;</div>
+			<div class="srchPanelCell srchPanelCell2">{$searchtype} {$searchcontrol} {$searchcontrol1}</div>
+		</div>
+		{END searchCtrlBlock}
+	</div>
+		
+	<div class="bottomSearchButt" align="left" {$bottomSearchButt_attrs}>
+		<span class="runner-btnframe">
+		<span class="runner-btnleft"></span>
+		<span class="runner-btnright"></span>
+		<a href="#" class="runner-button" {$searchbutton_attrs}>Search</a>
+		</span>
+	</div>
+</div>

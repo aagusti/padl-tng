@@ -57,7 +57,7 @@ var uID;
 var tID;
 var cuID;
 var oTable;
-
+var i = 0;
 $(window).load(function(){ 
 
 		var cu = parseInt(<?=$this->uri->segment(4);?>);
@@ -150,9 +150,10 @@ function show_rpt(rpt){
 	
 	var data = decodeURIComponent($.param(rptparams));
 	var url  = '<? echo active_module_url($controller); ?>cetak/pdf/?'+data;
-	
+	i = i+1
 	var winparams = 'width='+screen.width+',height='+screen.height+',directories=0,titlebar=0,toolbar=0,location=0,status=0,menubar=0,scrollbars=no,resizable=no';
-	window.open(url, 'Laporan', winparams);
+	
+	window.open(url, 'Laporan'+i, winparams);
 }
 
 function switch_btn() {
@@ -486,6 +487,7 @@ $(document).ready(function() {
                 	}else if (data['usaha_id']==4){
 						$('#masa_pajak').html(data['masapajak_bulan'] + "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i>[ Tanggal Ijin :  " + data['terimatgl_view'].split(' ')[0] +", Jatuh Tempo SPT : "+data['jatuhtempotgl_view'] + " ] </i>");
 	                	$('#jatuhtempotgl').val(data['jatuhtempotgl_rek']);
+	                	$('#pajak').val(data['pajak']);
 						$('#jatuhtempotgl_view').html(data['jatuhtempotgl_rek_view']);
 						if(data['bulan_telat']!=null){
                 	   		 $('#bulan_telat_view').html(data['bulan_telat']+" Bulan");
@@ -800,7 +802,7 @@ $(document).ready(function() {
 
 	            <div id="content_detail_npa">
 	            <label class="control-label col-sm-3">
-	            Perhitungan NPA
+	            Total Volume Air
 	            </label>
 	            <label class="control-label col-sm-1">
 	            :

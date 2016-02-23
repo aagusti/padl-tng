@@ -1117,14 +1117,14 @@ class sptpd extends CI_Controller {
             $lastinput = date('Y-m-d', strtotime($input_post['masadari']));
             $customer_usaha_id = $input_post['customer_usaha_id'];
             $pajak_id = $input_post['pajak_id'];
-            $masapajak_bulan = $input_post['masapajak_bulan'];
+            $masapajak_bulan = $input_post['masapajak_  bulan'];
             $rekening_id = $input_post['rekening_id'];
             $type_id = $input_post['type_id'];
 
             $cekduplikat= $this->sptpd_model->is_multiple($customer_usaha_id, $pajak_id, $type_id, $rekening_id, $lastinput, $this->session->userdata("mode"));   
             if ($cekduplikat==true) {
                 $this->session->set_flashdata('msg_warning', 'Pajak tersebut dengan Masa Pajak: '. $masapajak_bulan.' Sudah Ada, Harap Cek Data-data Sebelumnya');
-                redirect(active_module_url($this->controller.'/add/'.$this->session->userdata("usaha_id")));
+                redirect(active_module_url($this->controller.'/add/'.$p_usaha_id));
             }
             else{
                 $update_data = array_merge($update_data, $reklame_data, $air_tanah_data);
@@ -1138,7 +1138,7 @@ class sptpd extends CI_Controller {
 
         }else{
             $this->session->set_flashdata('msg_warning', 'UNKNOWN MODE');
-            redirect(active_module_url($this->controller.'/index/'.$this->session->userdata("usaha_id")));
+            redirect(active_module_url($this->controller.'/index/'.$p_usaha_id));
             }
 
 
@@ -1966,7 +1966,7 @@ class sptpd extends CI_Controller {
             $cekduplikat= $this->sptpd_model->is_multiple($customer_usaha_id, $pajak_id, $type_id, $rekening_id, $lastinput, $this->session->userdata("mode"));   
             if ($cekduplikat==true) {
                 $this->session->set_flashdata('msg_warning', 'Pajak tersebut dengan Masa Pajak: '. $masapajak_bulan.' Sudah Ada, Harap Cek Data-data Sebelumnya');
-                redirect(active_module_url($this->controller.'/index/'.$this->session->userdata("usaha_id")));
+                redirect(active_module_url($this->controller.'/index/'.$p_usaha_id));
             }
             else{
                 //data_valid
@@ -1981,7 +1981,7 @@ class sptpd extends CI_Controller {
         }
         else{
             $this->session->set_flashdata('msg_warning', 'UNKNOWN MODE');
-            redirect(active_module_url($this->controller.'/index/'.$this->session->userdata("usaha_id")));
+            redirect(active_module_url($this->controller.'/index/'.$p_usaha_id));
         }
 
             $update_uid = sipkd_user_id();
@@ -2266,13 +2266,12 @@ class sptpd extends CI_Controller {
             $data['dt']['terimanip']          = $get->terimanip;
             $data['dt']['terimatgl']          = date('d-m-Y', strtotime($get->terimatgl));
             $data['dt']['kirimtgl']           = date('d-m-Y', strtotime($get->kirimtgl));
-            $data['dt']['jatuhtempotgl']      = date('d-m-Y', strtotime($get->jatuhtempotgl));
             $data['dt']['type_id']            = $get->type_id;
             $data['dt']['so']                 = $get->so;
             $data['dt']['masadari']           = date('d-m-Y', strtotime($get->masadari));
             $data['dt']['masapajak_bulan']    = date('M-Y', strtotime($get->masadari));
             $masapajak_bulan                = date('M-Y', strtotime($get->masadari));
-
+            $data['dt']['jatuhtempotgl']      = date('d-m-Y', strtotime ( '-1 day' , strtotime ( $data['dt']['masadari'] ) ) );
 
             $data['dt']['masasd']             = date('d-m-Y', strtotime($get->masasd));
             $data['dt']['minimal_omset']           = $get->minimal_omset;
@@ -2353,6 +2352,10 @@ class sptpd extends CI_Controller {
                     $cara_bayar .= "<option value={$row->id}>{$row->cara_bayar}</option>";
             }};
             
+            $trmtgl = (new DateTime($data['dt']['terimatgl']))->format('Y-m-d');          
+            $masadari = (new DateTime($data['dt']['masadari']))->format('Y-m-d');
+            $jtptgl =  (new DateTime($data['dt']['jatuhtempotgl'] ))->format('Y-m-d');  
+
             $val_data = $this->sptpd_model->get($p_id);
             $val_data->id = $data['dt']['id'];
             $val_data->masapajak_bulan = $masapajak_bulan;
@@ -2363,37 +2366,29 @@ class sptpd extends CI_Controller {
             $val_data->persen_bunga = pad_bunga();
             $val_data->jatuhtempotgl_view = date('d-m-Y', strtotime($data['dt']['jatuhtempotgl']));  
             $val_data->terimatgl_view = date('d-m-Y', strtotime($data['dt']['terimatgl']));  
-            
-            $trmtgl = (new DateTime($data['dt']['terimatgl']))->format('Y-m-d');           
-            $jtptgl = (new DateTime($data['dt']['jatuhtempotgl']))->format('Y-m-d');
-            $masadari = (new DateTime($data['dt']['masadari']))->format('Y-m-d');
+            $val_data->masadari_view = date('d-m-Y', strtotime($data['dt']['masadari']));  
            
             if ($p_usaha_id == pad_reklame_id()){
-                if (strtotime($trmtgl) <= strtotime($jtptgl)){
-                    date_default_timezone_set('Asia/Jakarta');  // you are required to set a timezone
-                    $date1 = new DateTime($trmtgl);
-                    $date2 = new DateTime($jtptgl);
-                    $diff = $date1->diff($date2);
-                    $val_data->bulan_telat = (($diff->format('%y') * 12) + $diff->format('%m'));
-                    if($val_data->bulan_telat>24){
-                        $val_data->bulan_telat=24;
+                if (strtotime($trmtgl) > strtotime($jtptgl)){
+                    
+                    $query = $this->db->query("select hit_jdendarek_real('$val_data->jatuhtempotgl_view','$val_data->terimatgl_view') as bulan_telat");
+                    foreach ($query->result() as $row) {
+                        $val_data->bulan_telat = $row->bulan_telat;
+                        $bulan_telat_real =  $row->bulan_telat;
                     }
-                    $val_data->new_denda  = round($val_data->dasar * (pad_bunga()/100) * $val_data->bulan_telat) ;
-
-
-                    $newjtp = strtotime ( '+'.$val_data->bulan_telat.' month' , strtotime ( $jtptgl ) ) ;
-                    $newmonthjtp = date ( 'm' , $newjtp );
-                    $newyearjtp = date ( 'Y' , $newjtp );
-                    if ($newmonthjtp==03){
-                        if (($newyearjtp % 4)==0 ){
-                            $newjtp = strtotime ( '-2 day' , strtotime ( $jtptgl ) ) ;
-                        }else{
-                            $newjtp = strtotime ( '-1 day' , strtotime ( $jtptgl ) ) ;
-                        }
+                    //cari interval
+                    $query = $this->db->query("SELECT date '$jtptgl' + interval '$bulan_telat_real months' as jatuhtempo_rek_new");
+                    foreach ($query->result() as $row) {
+                        $newjtp=  $row->jatuhtempo_rek_new;
                     }
-                    $newjtp = date ( 'Y-m-d' , $newjtp );
                     $val_data->jatuhtempotgl_rek = $newjtp;
                     $val_data->jatuhtempotgl_rek_view = date('d-m-Y', strtotime($newjtp));
+
+                    if ($bulan_telat_real > 24){
+                        $val_data->bulan_telat = 24;
+                    }
+                    $val_data->new_denda  = round(($val_data->dasar * $val_data->tarif) * (pad_bunga()/100) * $val_data->bulan_telat) ;
+
                     $val_data->pajak = round(($val_data->dasar * $val_data->tarif)  + $val_data->new_denda);
                 }else{
                     $val_data->jatuhtempotgl_rek = $data['dt']['jatuhtempotgl'];
@@ -2402,16 +2397,15 @@ class sptpd extends CI_Controller {
                     $val_data->new_denda  = 0;
                     $val_data->pajak = round(($val_data->dasar * $val_data->tarif)  + $val_data->new_denda);
                 }
+                $this->session->set_userdata('masadari_temp', $masadari);
             }else if($p_usaha_id == pad_air_tanah_id()){
-                    $date1 = new DateTime(date("Y-m-d"));
-                    $date2 = new DateTime($masadari);
-                    $diff = $date1->diff($date2);
-                    $val_data->bulan_telat = (($diff->format('%y') * 12) + $diff->format('%m'));
-                    if($val_data->bulan_telat>24){
-                        $val_data->bulan_telat=24;
+                    $query = $this->db->query("select hit_jdendaat('$val_data->masadari_view','$val_data->terimatgl_view') as bulan_telat");
+                    foreach ($query->result() as $row) {
+                        $val_data->bulan_telat =  $row->bulan_telat;
                     }
                     $val_data->new_denda  = round($val_data->dasar * $val_data->tarif *(pad_bunga()/100) * $val_data->bulan_telat) ;
                     $val_data->pajak = round(($val_data->dasar * $val_data->tarif)  + $val_data->new_denda);
+               $this->session->set_userdata('masadari_temp', $masadari);
             }
 
 
@@ -2459,6 +2453,7 @@ class sptpd extends CI_Controller {
         $pejabat_id     = $this->input->post('pejabat_id');
         $type_id        = $this->input->post('type_ids');
         $bulan_telat    = $this->input->post('bulan_telat');
+        $masadari       = $this->session->userdata('masadari_temp');
 
         if ($mode=='proses_skpd'){
             $controller = 'skpd';
@@ -2493,7 +2488,7 @@ class sptpd extends CI_Controller {
          if($p_usaha_id==pad_air_tanah_id() || $p_usaha_id==pad_reklame_id()){
              $bunga      = $this->input->post('denda'); //khusus office bunga dinsert (DENDA)
              $query = $this->db->query("update pad_spt 
-                          set cara_bayar = $cara_bayar , proses = $proses, tanggal_validasi = '$tgl', denda=0, bunga=$bunga ,bulan_telat=$bulan_telat 
+                          set cara_bayar = $cara_bayar , proses = $proses, tanggal_validasi = '$tgl', denda=0, bunga=$bunga ,bulan_telat=$bulan_telat , pajak_terhutang=$pajak 
                           where id= $spt_id");
          }
          else{
@@ -2503,7 +2498,7 @@ class sptpd extends CI_Controller {
         }
 
         $query = $this->db->query("select s.id as source_id, 
-                        s.tahun, u.id as usaha_id, get_invno(s.id) as invoice_no, 
+                        s.tahun, u.id as usaha_id, get_invno(s.id) as invoice_no, s.masadari, 
                         u.nama as jenis_usaha, jp.nama as jenis_pajak,
                         get_npwpd(c.id,true) as npwpd, c.nama as nama_wp, 
                         c.alamat as alamat_wp, cu.opnm as op_nama, cu.opalamat as op_alamat, 
@@ -2552,7 +2547,10 @@ class sptpd extends CI_Controller {
            {
                $denda = $row->denda;
                $bunga = $row->bunga;
-               if ($usaha_id==pad_reklame_id()){$jatuh_tempo = $jatuhtempotgl;}
+               if ($usaha_id==pad_reklame_id()){
+                $jatuh_tempo = $jatuhtempotgl;
+                }
+
                $total = $pajak;
            }else{
                $denda = 0;
@@ -2595,7 +2593,7 @@ class sptpd extends CI_Controller {
             $save = $this->invoice_model->save($update_data);
                             
             if ($query && $save) {
-                if ($mode=='proses_skpd'){
+                if ($mode=='proses_skpd' || $mode=='recall'){
                     $this->session->set_userdata('rpt_skpd', 1);
                     $this->session->set_userdata('id_skpd', $spt_id);
 
@@ -2609,15 +2607,15 @@ class sptpd extends CI_Controller {
         
                 if($this->session->userdata('skpd_tipe')=='SKPDKB'){
                  $this->session->set_flashdata('msg_success', 'Proses SKPDKB Berhasil');
-                 redirect(active_module_url("{$controller}/kb/{$usaha_id}"));
+                 redirect(active_module_url("{$controller}/kb/{$p_usaha_id}"));
                 }
                 else if($this->session->userdata('skpd_tipe')=='SKPDKBT'){
                  $this->session->set_flashdata('msg_success', 'Proses SKPDKBT Berhasil');
-                 redirect(active_module_url("{$controller}/kbt/{$usaha_id}"));               
+                 redirect(active_module_url("{$controller}/kbt/{$p_usaha_id}"));               
                 }
                 else{
                  $this->session->set_flashdata('msg_success', 'Data berhasil divalidasi');
-                 redirect(active_module_url("{$controller}/index/{$usaha_id}"));
+                 redirect(active_module_url("{$controller}/index/{$p_usaha_id}"));
                 }
 
             }
@@ -2625,15 +2623,15 @@ class sptpd extends CI_Controller {
 
                 if($this->session->userdata('skpd_tipe')=='SKPDKB'){
                  $this->session->set_flashdata('msg_warning', 'Proses SKPDKB Gagal');
-                 redirect(active_module_url("{$controller}/kb/{$usaha_id}"));
+                 redirect(active_module_url("{$controller}/kb/{$p_usaha_id}"));
                 }
                 else if($this->session->userdata('skpd_tipe')=='SKPDKBT'){
                  $this->session->set_flashdata('msg_warning', 'Proses SKPDKBT Gagal');
-                 redirect(active_module_url("{$controller}/kbt/{$usaha_id}"));               
+                 redirect(active_module_url("{$controller}/kbt/{$p_usaha_id}"));               
                 }
                 else{
                  $this->session->set_flashdata('msg_warning', 'Data Gagal divalidasi');
-                 redirect(active_module_url("{$controller}/index/{$usaha_id}"));
+                 redirect(active_module_url("{$controller}/index/{$p_usaha_id}"));
                 }
             }
         }
@@ -2642,7 +2640,13 @@ class sptpd extends CI_Controller {
 
         if ($mode=='recall'){
             $controller = 'skpd';
-            $this->recall_skpd($p_usaha_id , $spt_id ); //PROSES SKPD
+            $newjtp = strtotime ( '-1 day' , strtotime ($masadari) ) ;
+            $jatuhtempotgl = date ( 'Y-m-d' , $newjtp );
+            $this->db->query("update pad_spt 
+              set jatuhtempotgl = '$jatuhtempotgl' where id= $spt_id");
+
+            $this->recall_skpd($p_usaha_id , $spt_id); //PROSES SKPD
+
         }
         else if ($mode=='cancel' ){
             $controller = 'sptpd';
@@ -2651,10 +2655,26 @@ class sptpd extends CI_Controller {
         $proses = 1 ; //batalkan validasi
         $updated = date('Y-m-d h:i:s');
         $update_uid = sipkd_user_id();
-        $query = $this->db->query("update pad_spt 
+
+        if($p_usaha_id==pad_reklame_id()){
+            $query = $this->db->query("select pajak_terhutang, bunga from pad_spt where id=$spt_id");
+            foreach ($query->result() as $row)
+            {
+              $pajak_terhutang   = $row->pajak_terhutang;
+              $bunga = $row->bunga;
+            }
+            $pajak = $pajak_terhutang - $bunga ;
+            $query = $this->db->query("update pad_spt 
+                      set cara_bayar = $cara_bayar , proses = $proses, pajak_terhutang=$pajak , bunga=0, 
+                      updated = '$updated', update_uid = $update_uid  
+                      where id= $spt_id");
+        }
+        else {
+            $query = $this->db->query("update pad_spt 
                                   set cara_bayar = $cara_bayar , proses = $proses, 
                                   updated = '$updated', update_uid = $update_uid  
                                   where id= $spt_id");
+        }
 
         $query_delete = $this->db->query("delete from pad_invoice 
                          where source_id=$spt_id and source_nama='$source_nama'");
@@ -2823,17 +2843,18 @@ class sptpd extends CI_Controller {
 		$this->load_auth();
         if (!$this->module_auth->delete) {
             $this->session->set_flashdata('msg_warning', $this->module_auth->msg_delete);
-            redirect(active_module_url("{$this->controller}/index/{$p_usaha_id}"));
+            redirect(active_module_url("{$this->controller}/index/{$usaha_id}"));
         }
 		
 		// cek pmb
         if ($this->sptpd_model->is_bayar($spt_id)) {
             $this->session->set_flashdata('msg_warning', $this->module_auth->msg_update);
-             redirect(active_module_url("{$this->controller}/index/{$p_usaha_id}"));
+             redirect(active_module_url("{$this->controller}/index/{$usaha_id}"));
         }
 		
         if ($usaha_id && $spt_id && $get = $this->sptpd_model->get($spt_id)) {
-            $this->skpd_model->delete_by_spt($spt_id);			
+            $this->skpd_model->delete_by_spt($spt_id);
+
 			echo "ok";
 		} else echo "hmm";
 	}
@@ -3229,6 +3250,30 @@ class sptpd extends CI_Controller {
 
     }
 
+    public function get_jdendarek($tgl_jtempo, $tgl_terima)
+    {
+        $bulan_telat_data = new stdClass();
+        $query = $this->db->query("select hit_jdendarek('$tgl_jtempo','$tgl_terima') as bulan_telat");
+        foreach ($query->result() as $row) {
+            $bulan_telat = $row->bulan_telat;
+        }
+        $ijin_no = $query->num_rows();
+        $bulan_telat_data->bulan_telat = $bulan_telat;
+        echo json_encode($bulan_telat_data);
+    }
+
+    public function get_jdendaat($tgl_jtempo, $tgl_terima)
+    {
+        $bulan_telat_data = new stdClass();
+        $query = $this->db->query("select hit_jdendaat('$tgl_jtempo','$tgl_terima') as bulan_telat");
+        foreach ($query->result() as $row) {
+            $bulan_telat = $row->bulan_telat;
+        }
+        $ijin_no = $query->num_rows();
+        $bulan_telat_data->bulan_telat = $bulan_telat;
+        echo json_encode($bulan_telat_data);
+    }
+
     function cek_ijin($ijin_no)
     {
         $date_now = date('Y-m-d');
@@ -3239,10 +3284,8 @@ class sptpd extends CI_Controller {
             $ijin_no = $row->ijin_no;
         }
         $ijin_no = $query->num_rows();
-
         $ijin_no_data->ijin_no = $ijin_no;
         echo json_encode($ijin_no_data);
-
     }
 
     function get_jalan()

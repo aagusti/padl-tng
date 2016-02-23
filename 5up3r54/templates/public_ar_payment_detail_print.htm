@@ -1,0 +1,472 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<title>{$pagetitle}</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=7">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+		{BEGIN pageCSSFiles}
+		<link REL="stylesheet" href="{$pagestylepath}" type="text/css">
+		{END pageCSSFiles}
+		<!--[if IE]>
+			<link REL="stylesheet" href="styles/defaultIE.css" type="text/css">
+			{BEGIN IEcssFiles}
+			<link REL="stylesheet" href="{$stylepathIE}" type="text/css">
+			{END IEcssFiles}
+		<![endif]-->
+	</head>
+	
+	<body class="{$stylename}" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+		<table   cellpadding="0" class="runner-toptable">
+			<tr class="runner-header">
+				<td class="runner-top" colspan=3>
+					
+
+
+
+
+				</td>
+			</tr>
+			<tr class="runner-body">
+				
+				<td class="runner-left {$blockclass_left}" >
+					
+				</td>	
+				
+				<td class="runner-center {$blockclass_center}">
+					
+
+{BEGIN container_grid}
+
+
+{BEGIN grid_block}
+{BEGIN page}
+<h1>Ar Payment Detail</h1>
+<span>
+{BEGIN page_number}
+Page {$pageno} of {$maxpages} 
+{END page_number}
+</span>
+
+	<div class="runner-s-grid">	
+	<table class="runner-c runner-c-grid" cellpadding="0">
+		<thead>
+		{BEGIN grid_header}
+		<tr class="runner-toprow style1">
+			<td class="runner-cl"><img src="images/spacer.gif"></td>
+			{BEGIN record_header}
+					{BEGIN id_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN id_fieldheader}
+	<b>Id</b>
+	{END id_fieldheader}
+</th>
+{END id_fieldheadercolumn}
+	{BEGIN kode_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN kode_fieldheader}
+	<b>Kode</b>
+	{END kode_fieldheader}
+</th>
+{END kode_fieldheadercolumn}
+	{BEGIN disabled_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN disabled_fieldheader}
+	<b>Disabled</b>
+	{END disabled_fieldheader}
+</th>
+{END disabled_fieldheadercolumn}
+	{BEGIN created_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN created_fieldheader}
+	<b>Created</b>
+	{END created_fieldheader}
+</th>
+{END created_fieldheadercolumn}
+	{BEGIN updated_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN updated_fieldheader}
+	<b>Updated</b>
+	{END updated_fieldheader}
+</th>
+{END updated_fieldheadercolumn}
+	{BEGIN create_uid_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN create_uid_fieldheader}
+	<b>Create Uid</b>
+	{END create_uid_fieldheader}
+</th>
+{END create_uid_fieldheadercolumn}
+	{BEGIN update_uid_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN update_uid_fieldheader}
+	<b>Update Uid</b>
+	{END update_uid_fieldheader}
+</th>
+{END update_uid_fieldheadercolumn}
+	{BEGIN nama_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN nama_fieldheader}
+	<b>Nama</b>
+	{END nama_fieldheader}
+</th>
+{END nama_fieldheadercolumn}
+	{BEGIN tahun_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN tahun_fieldheader}
+	<b>Tahun</b>
+	{END tahun_fieldheader}
+</th>
+{END tahun_fieldheadercolumn}
+	{BEGIN amount_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN amount_fieldheader}
+	<b>Amount</b>
+	{END amount_fieldheader}
+</th>
+{END amount_fieldheadercolumn}
+	{BEGIN ref_kode_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN ref_kode_fieldheader}
+	<b>Ref Kode</b>
+	{END ref_kode_fieldheader}
+</th>
+{END ref_kode_fieldheadercolumn}
+	{BEGIN ref_nama_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN ref_nama_fieldheader}
+	<b>Ref Nama</b>
+	{END ref_nama_fieldheader}
+</th>
+{END ref_nama_fieldheadercolumn}
+	{BEGIN tanggal_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN tanggal_fieldheader}
+	<b>Tanggal</b>
+	{END tanggal_fieldheader}
+</th>
+{END tanggal_fieldheadercolumn}
+	{BEGIN kecamatan_kd_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN kecamatan_kd_fieldheader}
+	<b>Kecamatan Kd</b>
+	{END kecamatan_kd_fieldheader}
+</th>
+{END kecamatan_kd_fieldheadercolumn}
+	{BEGIN kecamatan_nm_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN kecamatan_nm_fieldheader}
+	<b>Kecamatan Nm</b>
+	{END kecamatan_nm_fieldheader}
+</th>
+{END kecamatan_nm_fieldheadercolumn}
+	{BEGIN kelurahan_kd_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN kelurahan_kd_fieldheader}
+	<b>Kelurahan Kd</b>
+	{END kelurahan_kd_fieldheader}
+</th>
+{END kelurahan_kd_fieldheadercolumn}
+	{BEGIN kelurahan_nm_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN kelurahan_nm_fieldheader}
+	<b>Kelurahan Nm</b>
+	{END kelurahan_nm_fieldheader}
+</th>
+{END kelurahan_nm_fieldheadercolumn}
+	{BEGIN is_kota_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN is_kota_fieldheader}
+	<b>Is Kota</b>
+	{END is_kota_fieldheader}
+</th>
+{END is_kota_fieldheadercolumn}
+	{BEGIN sumber_data_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN sumber_data_fieldheader}
+	<b>Sumber Data</b>
+	{END sumber_data_fieldheader}
+</th>
+{END sumber_data_fieldheadercolumn}
+	{BEGIN sumber_id_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN sumber_id_fieldheader}
+	<b>Sumber Id</b>
+	{END sumber_id_fieldheader}
+</th>
+{END sumber_id_fieldheadercolumn}
+	{BEGIN bulan_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN bulan_fieldheader}
+	<b>Bulan</b>
+	{END bulan_fieldheader}
+</th>
+{END bulan_fieldheadercolumn}
+	{BEGIN minggu_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN minggu_fieldheader}
+	<b>Minggu</b>
+	{END minggu_fieldheader}
+</th>
+{END minggu_fieldheadercolumn}
+	{BEGIN hari_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN hari_fieldheader}
+	<b>Hari</b>
+	{END hari_fieldheader}
+</th>
+{END hari_fieldheadercolumn}
+		
+			{END record_header}
+			<td class="runner-cr"><img src="images/spacer.gif"></td>
+			{BEGIN endrecordheader_block}
+			<td class="runner-cs">&nbsp;</td>
+			{END endrecordheader_block}
+		</tr>
+	{END grid_header}
+		</thead>
+		<tbody>	
+		{BEGIN grid_row}
+	<tr class="runner-row style1" {$rowattrs} {$rowstyle} {$rowstyle}>
+		<td class="runner-cl"></td>
+		{BEGIN grid_record}
+				{BEGIN id_fieldcolumn}
+<td  class="runner-cc {$id_class}" {$id_style}>
+	{$id_value}
+</td>
+{END id_fieldcolumn}
+	{BEGIN kode_fieldcolumn}
+<td  class="runner-cc {$kode_class}" {$kode_style}>
+	{$kode_value}
+</td>
+{END kode_fieldcolumn}
+	{BEGIN disabled_fieldcolumn}
+<td  class="runner-cc {$disabled_class}" {$disabled_style}>
+	{$disabled_value}
+</td>
+{END disabled_fieldcolumn}
+	{BEGIN created_fieldcolumn}
+<td  class="runner-cc {$created_class}" {$created_style}>
+	{$created_value}
+</td>
+{END created_fieldcolumn}
+	{BEGIN updated_fieldcolumn}
+<td  class="runner-cc {$updated_class}" {$updated_style}>
+	{$updated_value}
+</td>
+{END updated_fieldcolumn}
+	{BEGIN create_uid_fieldcolumn}
+<td  class="runner-cc {$create_uid_class}" {$create_uid_style}>
+	{$create_uid_value}
+</td>
+{END create_uid_fieldcolumn}
+	{BEGIN update_uid_fieldcolumn}
+<td  class="runner-cc {$update_uid_class}" {$update_uid_style}>
+	{$update_uid_value}
+</td>
+{END update_uid_fieldcolumn}
+	{BEGIN nama_fieldcolumn}
+<td  class="runner-cc {$nama_class}" {$nama_style}>
+	{$nama_value}
+</td>
+{END nama_fieldcolumn}
+	{BEGIN tahun_fieldcolumn}
+<td  class="runner-cc {$tahun_class}" {$tahun_style}>
+	{$tahun_value}
+</td>
+{END tahun_fieldcolumn}
+	{BEGIN amount_fieldcolumn}
+<td  class="runner-cc {$amount_class}" {$amount_style}>
+	{$amount_value}
+</td>
+{END amount_fieldcolumn}
+	{BEGIN ref_kode_fieldcolumn}
+<td  class="runner-cc {$ref_kode_class}" {$ref_kode_style}>
+	{$ref_kode_value}
+</td>
+{END ref_kode_fieldcolumn}
+	{BEGIN ref_nama_fieldcolumn}
+<td  class="runner-cc {$ref_nama_class}" {$ref_nama_style}>
+	{$ref_nama_value}
+</td>
+{END ref_nama_fieldcolumn}
+	{BEGIN tanggal_fieldcolumn}
+<td  class="runner-cc {$tanggal_class}" {$tanggal_style}>
+	{$tanggal_value}
+</td>
+{END tanggal_fieldcolumn}
+	{BEGIN kecamatan_kd_fieldcolumn}
+<td  class="runner-cc {$kecamatan_kd_class}" {$kecamatan_kd_style}>
+	{$kecamatan_kd_value}
+</td>
+{END kecamatan_kd_fieldcolumn}
+	{BEGIN kecamatan_nm_fieldcolumn}
+<td  class="runner-cc {$kecamatan_nm_class}" {$kecamatan_nm_style}>
+	{$kecamatan_nm_value}
+</td>
+{END kecamatan_nm_fieldcolumn}
+	{BEGIN kelurahan_kd_fieldcolumn}
+<td  class="runner-cc {$kelurahan_kd_class}" {$kelurahan_kd_style}>
+	{$kelurahan_kd_value}
+</td>
+{END kelurahan_kd_fieldcolumn}
+	{BEGIN kelurahan_nm_fieldcolumn}
+<td  class="runner-cc {$kelurahan_nm_class}" {$kelurahan_nm_style}>
+	{$kelurahan_nm_value}
+</td>
+{END kelurahan_nm_fieldcolumn}
+	{BEGIN is_kota_fieldcolumn}
+<td  class="runner-cc {$is_kota_class}" {$is_kota_style}>
+	{$is_kota_value}
+</td>
+{END is_kota_fieldcolumn}
+	{BEGIN sumber_data_fieldcolumn}
+<td  class="runner-cc {$sumber_data_class}" {$sumber_data_style}>
+	{$sumber_data_value}
+</td>
+{END sumber_data_fieldcolumn}
+	{BEGIN sumber_id_fieldcolumn}
+<td  class="runner-cc {$sumber_id_class}" {$sumber_id_style}>
+	{$sumber_id_value}
+</td>
+{END sumber_id_fieldcolumn}
+	{BEGIN bulan_fieldcolumn}
+<td  class="runner-cc {$bulan_class}" {$bulan_style}>
+	{$bulan_value}
+</td>
+{END bulan_fieldcolumn}
+	{BEGIN minggu_fieldcolumn}
+<td  class="runner-cc {$minggu_class}" {$minggu_style}>
+	{$minggu_value}
+</td>
+{END minggu_fieldcolumn}
+	{BEGIN hari_fieldcolumn}
+<td  class="runner-cc {$hari_class}" {$hari_style}>
+	{$hari_value}
+</td>
+{END hari_fieldcolumn}
+
+		{END grid_record}
+		<td class="runner-cr"></td>
+		{BEGIN endrecord_block}
+		<td class="runner-cs">&nbsp;</td>
+		{END endrecord_block}
+	</tr>
+{END grid_row}
+										
+								<tr class="runner-bottomrow style1">
+									<td class="runner-cl"><img src="images/spacer.gif"></td>
+									{BEGIN record_footer}
+									{BEGIN id_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END id_fieldfootercolumn}
+{BEGIN kode_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END kode_fieldfootercolumn}
+{BEGIN disabled_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END disabled_fieldfootercolumn}
+{BEGIN created_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END created_fieldfootercolumn}
+{BEGIN updated_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END updated_fieldfootercolumn}
+{BEGIN create_uid_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END create_uid_fieldfootercolumn}
+{BEGIN update_uid_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END update_uid_fieldfootercolumn}
+{BEGIN nama_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END nama_fieldfootercolumn}
+{BEGIN tahun_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END tahun_fieldfootercolumn}
+{BEGIN amount_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END amount_fieldfootercolumn}
+{BEGIN ref_kode_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END ref_kode_fieldfootercolumn}
+{BEGIN ref_nama_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END ref_nama_fieldfootercolumn}
+{BEGIN tanggal_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END tanggal_fieldfootercolumn}
+{BEGIN kecamatan_kd_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END kecamatan_kd_fieldfootercolumn}
+{BEGIN kecamatan_nm_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END kecamatan_nm_fieldfootercolumn}
+{BEGIN kelurahan_kd_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END kelurahan_kd_fieldfootercolumn}
+{BEGIN kelurahan_nm_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END kelurahan_nm_fieldfootercolumn}
+{BEGIN is_kota_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END is_kota_fieldfootercolumn}
+{BEGIN sumber_data_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END sumber_data_fieldfootercolumn}
+{BEGIN sumber_id_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END sumber_id_fieldfootercolumn}
+{BEGIN bulan_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END bulan_fieldfootercolumn}
+{BEGIN minggu_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END minggu_fieldfootercolumn}
+{BEGIN hari_fieldfootercolumn}
+<td class="runner-cc runner-clast"></td>
+{END hari_fieldfootercolumn}
+
+									{END record_footer}
+									<td class="runner-cr"><img src="images/spacer.gif"></td>
+									{BEGIN endrecordtotals_block}
+									<td class="runner-cs"></td>
+									{END endrecordtotals_block}
+								</tr>
+
+		</tbody>
+	</table>
+</div>	
+{END page}
+
+{END grid_block}
+
+
+
+{END container_grid}
+
+
+				</td>	
+
+				<td class="runner-right {$blockclass_right}">
+					
+				</td>	
+			</tr>
+			<tr class="runner-footer">
+				<td class="runner-bottom" colspan=3>
+					<!--%%bottom%%-->
+				</td>
+			</tr>
+		</table>
+		{$footer}
+	{END body}
+	</body>
+</html>

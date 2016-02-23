@@ -42,7 +42,7 @@
 	margin: 0;
 	cursor: pointer;
 	* cursor: hand;
-	color: #333 !important;
+	color: #CFCFCF !important;
 }
 
 .dataTables_paginate .ui-button {

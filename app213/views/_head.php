@@ -11,7 +11,7 @@
   <link href="<?=base_url()?>assets/datatables/extras/TableTools/media/css/TableTools.css" rel="stylesheet">
   <link href="<?=base_url()?>assets/datatables/media/css/demo_page.css" rel="stylesheet">
   <link href="<?=base_url()?>assets/datatables/media/css/demo_table_jui.css" rel="stylesheet">
-  <link href="<?=base_url()?>assets/jq/smoothness/jquery-ui-1.8.4.custom.min.css" rel="stylesheet">
+  <link href="<?=base_url()?>assets/jq/smoothness/jquery-ui-1.8.4.custom.css" rel="stylesheet">
   <link href="<?=base_url()?>assets/css/datatablescustom.css" rel="stylesheet">
   <link rel="shortcut icon" href="<?=base_url()?>assets/img/favicon.ico">
 </head>
@@ -27,7 +27,7 @@ function initMenu(param) {
 <body class="skin-blue fixed <?echo $this->session->userdata('sidebar-collapse')?>">
   <div class="wrapper">
     <header class="main-header">
-      <a href="<?base_url()?>/index.php" class="logo">DEVEL<b>PAD</b></a>
+      <a href="<?base_url()?>/index.php" class="logo">DEVEL <b> PAD</b></a>
       <nav class="navbar navbar-static-top" role="navigation">
         <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button" onclick="initMenu('SC')">
           <span class="sr-only">Toggle navigation</span>

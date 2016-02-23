@@ -1,0 +1,274 @@
+<div {$pageattrs}>
+
+{BEGIN container_dcount}
+<table class="runner-c runner-c-dcount" cellpadding="0" >
+<tr class="{$cheaderclass_dcount}">
+<td class="runner-cl"><img src="images/spacer.gif"></td>
+<td class="runner-cc"></td><td class="runner-cr"><img src="images/spacer.gif"></td>
+</tr>
+
+
+<tr  class="runner-row style1 runner-b-detailspreviewheader {$brickclass_detailspreviewheader}"><td class="runner-cl"></td><td class="runner-cc runner-brickcontents" ><b>Pad Daftar</b>
+</td><td class="runner-cr"></td></tr>
+
+
+
+<tr  class="runner-row style1 runner-b-detailspreviewdetailsfount {$brickclass_detailspreviewdetailsfount}"><td class="runner-cl"></td><td class="runner-cc runner-brickcontents" >Details found: <strong>{$row_count}.</strong>
+</td><td class="runner-cr"></td></tr>
+
+
+{BEGIN display_first}
+<tr  class="runner-row style1 runner-b-detailspreviewdispfirst {$brickclass_detailspreviewdispfirst}"><td class="runner-cl"></td><td class="runner-cc runner-brickcontents" >Displaying first: <strong>{$display_count}</strong>.
+</td><td class="runner-cr"></td></tr>{END display_first}
+
+
+<tr class="{$cfooterclass_dcount}">
+<td class="runner-cl"><img src="images/spacer.gif"></td>
+<td class="runner-cc"></td><td class="runner-cr"><img src="images/spacer.gif"></td>
+</tr>
+</table>
+{END container_dcount}
+
+
+
+{BEGIN container_detailspreviewgrid}
+
+
+{BEGIN details_data}
+<table class="runner-c runner-c-detailspreviewgrid runner-b-detailspreviewgrid">
+	<tr  class="runner-toprow style1">
+		<th class="runner-cl"><img src="images/spacer.gif"></th>
+		<th class="runner-cc ">Id</th>
+		<th class="runner-cc ">Rp</th>
+		<th class="runner-cc ">Pb</th>
+		<th class="runner-cc ">Formno</th>
+		<th class="runner-cc ">Reg Date</th>
+		<th class="runner-cc ">Customernm</th>
+		<th class="runner-cc ">Kecamatan Id</th>
+		<th class="runner-cc ">Kelurahan Id</th>
+		<th class="runner-cc ">Kabupaten</th>
+		<th class="runner-cc ">Alamat</th>
+		<th class="runner-cc ">Kodepos</th>
+		<th class="runner-cc ">Telphone</th>
+		<th class="runner-cc ">Wpnama</th>
+		<th class="runner-cc ">Wpalamat</th>
+		<th class="runner-cc ">Wpkelurahan</th>
+		<th class="runner-cc ">Wpkecamatan</th>
+		<th class="runner-cc ">Wpkabupaten</th>
+		<th class="runner-cc ">Wptelp</th>
+		<th class="runner-cc ">Wpkodepos</th>
+		<th class="runner-cc ">Pnama</th>
+		<th class="runner-cc ">Palamat</th>
+		<th class="runner-cc ">Pkelurahan</th>
+		<th class="runner-cc ">Pkecamatan</th>
+		<th class="runner-cc ">Pkabupaten</th>
+		<th class="runner-cc ">Ptelp</th>
+		<th class="runner-cc ">Pkodepos</th>
+		<th class="runner-cc ">Ijin1</th>
+		<th class="runner-cc ">Ijin1no</th>
+		<th class="runner-cc ">Ijin1tgl</th>
+		<th class="runner-cc ">Ijin1tglakhir</th>
+		<th class="runner-cc ">Ijin2</th>
+		<th class="runner-cc ">Ijin2no</th>
+		<th class="runner-cc ">Ijin2tgl</th>
+		<th class="runner-cc ">Ijin2tglakhir</th>
+		<th class="runner-cc ">Ijin3</th>
+		<th class="runner-cc ">Ijin3no</th>
+		<th class="runner-cc ">Ijin3tgl</th>
+		<th class="runner-cc ">Ijin3tglakhir</th>
+		<th class="runner-cc ">Ijin4</th>
+		<th class="runner-cc ">Ijin4no</th>
+		<th class="runner-cc ">Ijin4tgl</th>
+		<th class="runner-cc ">Ijin4tglakhir</th>
+		<th class="runner-cc ">Enabled</th>
+		<th class="runner-cc ">Create Date</th>
+		<th class="runner-cc ">Create Uid</th>
+		<th class="runner-cc ">Write Date</th>
+		<th class="runner-cc ">Write Uid</th>
+		<th class="runner-cc ">Op Nm</th>
+		<th class="runner-cc ">Op Alamat</th>
+		<th class="runner-cc ">Op Usaha Id</th>
+		<th class="runner-cc ">Op So</th>
+		<th class="runner-cc ">Op Kecamatan Id</th>
+		<th class="runner-cc ">Op Kelurahan Id</th>
+		<th class="runner-cc ">Op Latitude</th>
+		<th class="runner-cc ">Op Longitude</th>
+		<th class="runner-cc ">Kd Restojmlmeja</th>
+		<th class="runner-cc ">Kd Restojmlkursi</th>
+		<th class="runner-cc ">Kd Restojmltamu</th>
+		<th class="runner-cc ">Kd Filmkursi</th>
+		<th class="runner-cc ">Kd Filmpertunjukan</th>
+		<th class="runner-cc ">Kd Filmtarif</th>
+		<th class="runner-cc ">Kd Bilyarmeja</th>
+		<th class="runner-cc ">Kd Bilyartarif</th>
+		<th class="runner-cc ">Kd Bilyarkegiatan</th>
+		<th class="runner-cc ">Kd Diskopengunjung</th>
+		<th class="runner-cc ">Kd Diskotarif</th>
+		<th class="runner-cc ">Kd Waletvolume</th>
+		<th class="runner-cc ">Email</th>
+		<th class="runner-cc ">Op Pajak Id</th>
+		<th class="runner-cc ">Npwpd</th>
+		<th class="runner-cc runner-clast">Passwd</th>
+		<th class="runner-cr"><img src="images/spacer.gif"></th>
+	</tr>
+	{BEGIN details_row}
+	<tr class="runner-row style1">
+		<td class="runner-cl"><img src="images/spacer.gif"></td>
+		<td class="runner-cc ">{$id_value}</td>
+		<td class="runner-cc ">{$rp_value}</td>
+		<td class="runner-cc ">{$pb_value}</td>
+		<td class="runner-cc ">{$formno_value}</td>
+		<td class="runner-cc ">{$reg_date_value}</td>
+		<td class="runner-cc ">{$customernm_value}</td>
+		<td class="runner-cc ">{$kecamatan_id_value}</td>
+		<td class="runner-cc ">{$kelurahan_id_value}</td>
+		<td class="runner-cc ">{$kabupaten_value}</td>
+		<td class="runner-cc ">{$alamat_value}</td>
+		<td class="runner-cc ">{$kodepos_value}</td>
+		<td class="runner-cc ">{$telphone_value}</td>
+		<td class="runner-cc ">{$wpnama_value}</td>
+		<td class="runner-cc ">{$wpalamat_value}</td>
+		<td class="runner-cc ">{$wpkelurahan_value}</td>
+		<td class="runner-cc ">{$wpkecamatan_value}</td>
+		<td class="runner-cc ">{$wpkabupaten_value}</td>
+		<td class="runner-cc ">{$wptelp_value}</td>
+		<td class="runner-cc ">{$wpkodepos_value}</td>
+		<td class="runner-cc ">{$pnama_value}</td>
+		<td class="runner-cc ">{$palamat_value}</td>
+		<td class="runner-cc ">{$pkelurahan_value}</td>
+		<td class="runner-cc ">{$pkecamatan_value}</td>
+		<td class="runner-cc ">{$pkabupaten_value}</td>
+		<td class="runner-cc ">{$ptelp_value}</td>
+		<td class="runner-cc ">{$pkodepos_value}</td>
+		<td class="runner-cc ">{$ijin1_value}</td>
+		<td class="runner-cc ">{$ijin1no_value}</td>
+		<td class="runner-cc ">{$ijin1tgl_value}</td>
+		<td class="runner-cc ">{$ijin1tglakhir_value}</td>
+		<td class="runner-cc ">{$ijin2_value}</td>
+		<td class="runner-cc ">{$ijin2no_value}</td>
+		<td class="runner-cc ">{$ijin2tgl_value}</td>
+		<td class="runner-cc ">{$ijin2tglakhir_value}</td>
+		<td class="runner-cc ">{$ijin3_value}</td>
+		<td class="runner-cc ">{$ijin3no_value}</td>
+		<td class="runner-cc ">{$ijin3tgl_value}</td>
+		<td class="runner-cc ">{$ijin3tglakhir_value}</td>
+		<td class="runner-cc ">{$ijin4_value}</td>
+		<td class="runner-cc ">{$ijin4no_value}</td>
+		<td class="runner-cc ">{$ijin4tgl_value}</td>
+		<td class="runner-cc ">{$ijin4tglakhir_value}</td>
+		<td class="runner-cc ">{$enabled_value}</td>
+		<td class="runner-cc ">{$create_date_value}</td>
+		<td class="runner-cc ">{$create_uid_value}</td>
+		<td class="runner-cc ">{$write_date_value}</td>
+		<td class="runner-cc ">{$write_uid_value}</td>
+		<td class="runner-cc ">{$op_nm_value}</td>
+		<td class="runner-cc ">{$op_alamat_value}</td>
+		<td class="runner-cc ">{$op_usaha_id_value}</td>
+		<td class="runner-cc ">{$op_so_value}</td>
+		<td class="runner-cc ">{$op_kecamatan_id_value}</td>
+		<td class="runner-cc ">{$op_kelurahan_id_value}</td>
+		<td class="runner-cc ">{$op_latitude_value}</td>
+		<td class="runner-cc ">{$op_longitude_value}</td>
+		<td class="runner-cc ">{$kd_restojmlmeja_value}</td>
+		<td class="runner-cc ">{$kd_restojmlkursi_value}</td>
+		<td class="runner-cc ">{$kd_restojmltamu_value}</td>
+		<td class="runner-cc ">{$kd_filmkursi_value}</td>
+		<td class="runner-cc ">{$kd_filmpertunjukan_value}</td>
+		<td class="runner-cc ">{$kd_filmtarif_value}</td>
+		<td class="runner-cc ">{$kd_bilyarmeja_value}</td>
+		<td class="runner-cc ">{$kd_bilyartarif_value}</td>
+		<td class="runner-cc ">{$kd_bilyarkegiatan_value}</td>
+		<td class="runner-cc ">{$kd_diskopengunjung_value}</td>
+		<td class="runner-cc ">{$kd_diskotarif_value}</td>
+		<td class="runner-cc ">{$kd_waletvolume_value}</td>
+		<td class="runner-cc ">{$email_value}</td>
+		<td class="runner-cc ">{$op_pajak_id_value}</td>
+		<td class="runner-cc ">{$npwpd_value}</td>
+		<td class="runner-cc runner-clast">{$passwd_value}</td>
+		<td class="runner-cr"><img src="images/spacer.gif"></td>
+	</tr>
+	{END details_row}
+	<tr class="runner-bottomrow style1">
+		<td class="runner-cl"><img src="images/spacer.gif"></td>
+			<td class="runner-cc "></td>
+			<td class="runner-cc "></td>
+			<td class="runner-cc "></td>
+			<td class="runner-cc "></td>
+			<td class="runner-cc "></td>
+			<td class="runner-cc "></td>
+			<td class="runner-cc "></td>
+			<td class="runner-cc "></td>
+			<td class="runner-cc "></td>
+			<td class="runner-cc "></td>
+			<td class="runner-cc "></td>
+			<td class="runner-cc "></td>
+			<td class="runner-cc "></td>
+			<td class="runner-cc "></td>
+			<td class="runner-cc "></td>
+			<td class="runner-cc "></td>
+			<td class="runner-cc "></td>
+			<td class="runner-cc "></td>
+			<td class="runner-cc "></td>
+			<td class="runner-cc "></td>
+			<td class="runner-cc "></td>
+			<td class="runner-cc "></td>
+			<td class="runner-cc "></td>
+			<td class="runner-cc "></td>
+			<td class="runner-cc "></td>
+			<td class="runner-cc "></td>
+			<td class="runner-cc "></td>
+			<td class="runner-cc "></td>
+			<td class="runner-cc "></td>
+			<td class="runner-cc "></td>
+			<td class="runner-cc "></td>
+			<td class="runner-cc "></td>
+			<td class="runner-cc "></td>
+			<td class="runner-cc "></td>
+			<td class="runner-cc "></td>
+			<td class="runner-cc "></td>
+			<td class="runner-cc "></td>
+			<td class="runner-cc "></td>
+			<td class="runner-cc "></td>
+			<td class="runner-cc "></td>
+			<td class="runner-cc "></td>
+			<td class="runner-cc "></td>
+			<td class="runner-cc "></td>
+			<td class="runner-cc "></td>
+			<td class="runner-cc "></td>
+			<td class="runner-cc "></td>
+			<td class="runner-cc "></td>
+			<td class="runner-cc "></td>
+			<td class="runner-cc "></td>
+			<td class="runner-cc "></td>
+			<td class="runner-cc "></td>
+			<td class="runner-cc "></td>
+			<td class="runner-cc "></td>
+			<td class="runner-cc "></td>
+			<td class="runner-cc "></td>
+			<td class="runner-cc "></td>
+			<td class="runner-cc "></td>
+			<td class="runner-cc "></td>
+			<td class="runner-cc "></td>
+			<td class="runner-cc "></td>
+			<td class="runner-cc "></td>
+			<td class="runner-cc "></td>
+			<td class="runner-cc "></td>
+			<td class="runner-cc "></td>
+			<td class="runner-cc "></td>
+			<td class="runner-cc "></td>
+			<td class="runner-cc "></td>
+			<td class="runner-cc "></td>
+			<td class="runner-cc "></td>
+			<td class="runner-cc "></td>
+			<td class="runner-cc runner-clast"></td>
+		<td class="runner-cr"><img src="images/spacer.gif"></td>
+	</tr>
+</table>
+
+{END details_data}
+
+
+
+{END container_detailspreviewgrid}
+
+</div>

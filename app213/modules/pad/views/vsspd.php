@@ -191,9 +191,9 @@ function reload_grid() {
 	if (proses_id == 2) {
 		/*$('th.th1').html('SSPD <span class="DataTables_sort_icon css_right ui-icon ui-icon-carat-2-n-s"></span>');*/
 		$('th.th6').html('Masa <span class="DataTables_sort_icon css_right ui-icon ui-icon-carat-2-n-s"></span>');
-		$('th.th7').html('Pajak <span class="DataTables_sort_icon css_right ui-icon ui-icon-carat-2-n-s"></span>');
-		$('th.th8').html('Denda <span class="DataTables_sort_icon css_right ui-icon ui-icon-carat-2-n-s"></span>');
-		$('th.th9').html('Bayar <span class="DataTables_sort_icon css_right ui-icon ui-icon-carat-2-n-s"></span>');
+		$('th.th7').html('J.Tempo <span class="DataTables_sort_icon css_right ui-icon ui-icon-carat-2-n-s"></span>');
+		$('th.th8').html('Dasar <span class="DataTables_sort_icon css_right ui-icon ui-icon-carat-2-n-s"></span>');
+		$('th.th9').html('Pajak <span class="DataTables_sort_icon css_right ui-icon ui-icon-carat-2-n-s"></span>');
 	} else {
 		/*$('th.th1').html('SPTPD <span class="DataTables_sort_icon css_right ui-icon ui-icon-carat-2-n-s"></span>');*/
 		$('th.th6').html('Masa <span class="DataTables_sort_icon css_right ui-icon ui-icon-carat-2-n-s"></span>');
@@ -238,8 +238,10 @@ $(document).ready(function() {
 			{ "aTargets": [11], "bSearchable": true,  "bVisible": true,  "sWidth": "97px", "sClass": "right" },
 			{ "aTargets": [12], "bSearchable": false, "bVisible": false, "sWidth": "", "sClass": "" },
 			{ "aTargets": [13], "bSearchable": false, "bVisible": false, "sWidth": "", "sClass": "" },
-			{ "aTargets": [14], "bSearchable": false, "bVisible": true, "sWidth": "", "sClass": "" },
+			{ "aTargets": [14], "bSearchable": false, "bVisible": true, "sWidth": "", "sClass": "center" },
 			{ "aTargets": [15], "bSearchable": false, "bVisible": false, "sWidth": "", "sClass": "" },
+			{ "aTargets": [16], "bSearchable": false, "bVisible": true, "sWidth": "", "sClass": "right" },
+			{ "aTargets": [17], "bSearchable": false, "bVisible": true, "sWidth": "", "sClass": "center" }
 
 
 

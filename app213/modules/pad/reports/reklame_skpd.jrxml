@@ -2,7 +2,7 @@
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="skpd_reklame" language="groovy" pageWidth="595" pageHeight="842" columnWidth="515" leftMargin="40" rightMargin="40" topMargin="20" bottomMargin="20" scriptletClass="opensipkd.os.TerbilangScriptlet" uuid="085929ad-0716-4687-9951-dcef1d54a393">
 	<property name="ireport.zoom" value="1.1000000000000003"/>
 	<property name="ireport.x" value="0"/>
-	<property name="ireport.y" value="221"/>
+	<property name="ireport.y" value="0"/>
 	<parameter name="spt_id" class="java.lang.Integer"/>
 	<parameter name="daerah" class="java.lang.String"/>
 	<parameter name="dinas" class="java.lang.String"/>
@@ -187,7 +187,7 @@ extract( year from s.jatuhtempotgl)::int as jtempo_tahun,
 to_char(s.masadari, 'DD MMM YYYY')||' s/d '||to_char(s.masasd, 'DD MMM YYYY') masa,
 s.dasar,  s.tarif, round(s.dasar*s.tarif) pajak, s.denda+s.bunga denda, s.pajak_terhutang, to_char(k.kohirtgl, 'DD-MM-YYYY') kohirtgl,
 terbilang(s.pajak_terhutang)|| ' RUPIAH' terbilang,
-(hit_jdendarek(cast(s.masadari as date), cast(k.kohirtgl as date))*2) jdenda,
+(hit_jdendarek(cast(s.masadari as date), cast(s.terimatgl as date))*2) jdenda,
 
 
 pg1.nip nip_petugas, pg1.nama petugas, pg1.jabatan jabatan_petugas,
@@ -199,8 +199,8 @@ FROM pad_spt s
 inner join pad_kohir k on k.spt_id=s.id
 inner join pad_customer c on c.id=s.customer_id
 inner join pad_customer_usaha cu on cu.id=s.customer_usaha_id
-inner join pad_kecamatan kec on kec.id=c.kecamatan_id
-inner join pad_kelurahan kel on kel.id=c.kelurahan_id and kel.kecamatan_id=kec.id
+left join pad_kecamatan kec on kec.id=c.kecamatan_id
+left join pad_kelurahan kel on kel.id=c.kelurahan_id and kel.kecamatan_id=kec.id
 inner join pad_usaha u on u.id=cu.usaha_id
 inner join pad_jenis_pajak p on p.id=s.pajak_id
 inner join pad_rekening r on r.id=p.rekening_id

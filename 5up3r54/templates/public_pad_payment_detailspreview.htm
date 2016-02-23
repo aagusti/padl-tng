@@ -1,0 +1,106 @@
+<div {$pageattrs}>
+
+{BEGIN container_dcount}
+<table class="runner-c runner-c-dcount" cellpadding="0" >
+<tr class="{$cheaderclass_dcount}">
+<td class="runner-cl"><img src="images/spacer.gif"></td>
+<td class="runner-cc"></td><td class="runner-cr"><img src="images/spacer.gif"></td>
+</tr>
+
+
+<tr  class="runner-row style1 runner-b-detailspreviewheader {$brickclass_detailspreviewheader}"><td class="runner-cl"></td><td class="runner-cc runner-brickcontents" ><b>Pad Payment</b>
+</td><td class="runner-cr"></td></tr>
+
+
+
+<tr  class="runner-row style1 runner-b-detailspreviewdetailsfount {$brickclass_detailspreviewdetailsfount}"><td class="runner-cl"></td><td class="runner-cc runner-brickcontents" >Details found: <strong>{$row_count}.</strong>
+</td><td class="runner-cr"></td></tr>
+
+
+{BEGIN display_first}
+<tr  class="runner-row style1 runner-b-detailspreviewdispfirst {$brickclass_detailspreviewdispfirst}"><td class="runner-cl"></td><td class="runner-cc runner-brickcontents" >Displaying first: <strong>{$display_count}</strong>.
+</td><td class="runner-cr"></td></tr>{END display_first}
+
+
+<tr class="{$cfooterclass_dcount}">
+<td class="runner-cl"><img src="images/spacer.gif"></td>
+<td class="runner-cc"></td><td class="runner-cr"><img src="images/spacer.gif"></td>
+</tr>
+</table>
+{END container_dcount}
+
+
+
+{BEGIN container_detailspreviewgrid}
+
+
+{BEGIN details_data}
+<table class="runner-c runner-c-detailspreviewgrid runner-b-detailspreviewgrid">
+	<tr  class="runner-toprow style1">
+		<th class="runner-cl"><img src="images/spacer.gif"></th>
+		<th class="runner-cc ">Id</th>
+		<th class="runner-cc ">Invoice Id</th>
+		<th class="runner-cc ">Tgl</th>
+		<th class="runner-cc ">Tagihan</th>
+		<th class="runner-cc ">Denda</th>
+		<th class="runner-cc ">Total Bayar</th>
+		<th class="runner-cc ">Iso Request</th>
+		<th class="runner-cc ">Transmission</th>
+		<th class="runner-cc ">Settlement</th>
+		<th class="runner-cc ">Stan</th>
+		<th class="runner-cc ">Ntb</th>
+		<th class="runner-cc ">Ntp</th>
+		<th class="runner-cc ">Bank Id</th>
+		<th class="runner-cc ">Channel Id</th>
+		<th class="runner-cc runner-clast">Bank Ip</th>
+		<th class="runner-cr"><img src="images/spacer.gif"></th>
+	</tr>
+	{BEGIN details_row}
+	<tr class="runner-row style1">
+		<td class="runner-cl"><img src="images/spacer.gif"></td>
+		<td class="runner-cc ">{$id_value}</td>
+		<td class="runner-cc ">{$invoice_id_value}</td>
+		<td class="runner-cc ">{$tgl_value}</td>
+		<td class="runner-cc ">{$tagihan_value}</td>
+		<td class="runner-cc ">{$denda_value}</td>
+		<td class="runner-cc ">{$total_bayar_value}</td>
+		<td class="runner-cc ">{$iso_request_value}</td>
+		<td class="runner-cc ">{$transmission_value}</td>
+		<td class="runner-cc ">{$settlement_value}</td>
+		<td class="runner-cc ">{$stan_value}</td>
+		<td class="runner-cc ">{$ntb_value}</td>
+		<td class="runner-cc ">{$ntp_value}</td>
+		<td class="runner-cc ">{$bank_id_value}</td>
+		<td class="runner-cc ">{$channel_id_value}</td>
+		<td class="runner-cc runner-clast">{$bank_ip_value}</td>
+		<td class="runner-cr"><img src="images/spacer.gif"></td>
+	</tr>
+	{END details_row}
+	<tr class="runner-bottomrow style1">
+		<td class="runner-cl"><img src="images/spacer.gif"></td>
+			<td class="runner-cc "></td>
+			<td class="runner-cc "></td>
+			<td class="runner-cc "></td>
+			<td class="runner-cc "></td>
+			<td class="runner-cc "></td>
+			<td class="runner-cc "></td>
+			<td class="runner-cc "></td>
+			<td class="runner-cc "></td>
+			<td class="runner-cc "></td>
+			<td class="runner-cc "></td>
+			<td class="runner-cc "></td>
+			<td class="runner-cc "></td>
+			<td class="runner-cc "></td>
+			<td class="runner-cc "></td>
+			<td class="runner-cc runner-clast"></td>
+		<td class="runner-cr"><img src="images/spacer.gif"></td>
+	</tr>
+</table>
+
+{END details_data}
+
+
+
+{END container_detailspreviewgrid}
+
+</div>

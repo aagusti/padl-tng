@@ -1,0 +1,76 @@
+<div class="searchOptions bottomPanelBorder" {$srchOpt_attrs}>
+	
+	<!-- Search panel content -->
+	<div class="srchCritTop" style="display: none;">
+		Criteria:&nbsp;
+		<input type="radio" name="srchType" class="runner-radio-button" {$all_checkbox}> {BEGIN all_checkbox_label}all{END all_checkbox_label}
+		&nbsp;&nbsp;&nbsp;
+		<input type="radio" name="srchType" class="runner-radio-button" {$any_checkbox}> {BEGIN any_checkbox_label}any{END any_checkbox_label}
+	</div>
+	
+	<div class="addOption">
+		<span class="runner-btnframe">
+		<span class="runner-btnleft"></span>
+		<span class="runner-btnright"></span>
+		<a href="#" id="showHideControlChooseMenu{$id}" class="runner-button" {$showHideCtrls_attrs}>Add field</a>
+		</span>
+		&nbsp;&nbsp;&nbsp;
+		<span class="runner-btnframe">
+		<span class="runner-btnleft"></span>
+		<span class="runner-btnright"></span>
+		<a href="#" id="showHideSearchType{$id}" class="runner-button" {$showHideCtrlsOpt_attrs}>{$showHideOpt_mess}</a>
+		</span>
+	</div>
+	
+	<!-- choose controls div -->
+	<div class="runner-panel controlChooseMenu" {$controlChooseMenuDiv_attrs}>
+		{BEGIN addSearch_id}
+			<a href="#" id="addSearchControl_id" class="addSearchControl" {$addSearchControl_id_attrs}>Id</a><br>
+		{END addSearch_id}
+		{BEGIN addSearch_spt_type_id}
+			<a href="#" id="addSearchControl_spt_type_id" class="addSearchControl" {$addSearchControl_spt_type_id_attrs}>Spt Type Id</a><br>
+		{END addSearch_spt_type_id}
+		{BEGIN addSearch_usaha_id}
+			<a href="#" id="addSearchControl_usaha_id" class="addSearchControl" {$addSearchControl_usaha_id_attrs}>Usaha Id</a><br>
+		{END addSearch_usaha_id}
+		{BEGIN addSearch_sptnm}
+			<a href="#" id="addSearchControl_sptnm" class="addSearchControl" {$addSearchControl_sptnm_attrs}>Sptnm</a><br>
+		{END addSearch_sptnm}
+		{BEGIN addSearch_sknm}
+			<a href="#" id="addSearchControl_sknm" class="addSearchControl" {$addSearchControl_sknm_attrs}>Sknm</a><br>
+		{END addSearch_sknm}
+		{BEGIN addSearch_nhnm}
+			<a href="#" id="addSearchControl_nhnm" class="addSearchControl" {$addSearchControl_nhnm_attrs}>Nhnm</a><br>
+		{END addSearch_nhnm}
+		{BEGIN addSearch_sspdnm}
+			<a href="#" id="addSearchControl_sspdnm" class="addSearchControl" {$addSearchControl_sspdnm_attrs}>Sspdnm</a><br>
+		{END addSearch_sspdnm}
+		{BEGIN addSearch_stpnm}
+			<a href="#" id="addSearchControl_stpnm" class="addSearchControl" {$addSearchControl_stpnm_attrs}>Stpnm</a><br>
+		{END addSearch_stpnm}
+		{BEGIN addSearch_kartudtnm}
+			<a href="#" id="addSearchControl_kartudtnm" class="addSearchControl" {$addSearchControl_kartudtnm_attrs}>Kartudtnm</a><br>
+		{END addSearch_kartudtnm}
+	</div>
+	
+	<table class="controlsBlock">
+	{BEGIN searchCtrlBlock}
+		<tr class="srchPanelRow" {$filterRow_attrs}>
+			<td class="srchPanelCell">{$delCtrlButt}</td>
+			<td class="srchPanelCell">{$fLabel}:&nbsp;</td>
+			<td class="srchPanelCell srchPanelCell2">
+				<div class="runner-searchtype">{$searchtype}</div>
+				<div class="runner-searchcontrol">{$searchcontrol}</div>
+				<div class="runner-searchcontrol">{$searchcontrol1}</div>
+		</tr>
+	{END searchCtrlBlock}
+	</table>
+	
+	<div class="bottomSearchButt" align="left" {$bottomSearchButt_attrs}>
+		<span class="runner-btnframe">
+		<span class="runner-btnleft"></span>
+		<span class="runner-btnright"></span>
+		<a href="#" class="runner-button" {$searchbutton_attrs}>Search</a>
+		</span>
+	</div>
+</div>

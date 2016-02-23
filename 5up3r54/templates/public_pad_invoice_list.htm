@@ -1,0 +1,1085 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<title>{$pagetitle}</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=7">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+		{BEGIN pageCSSFiles}
+		<link REL="stylesheet" href="{$pagestylepath}" type="text/css">
+		{END pageCSSFiles}
+		<!--[if IE]>
+			<link REL="stylesheet" href="styles/defaultIE.css" type="text/css">
+			{BEGIN IEcssFiles}
+			<link REL="stylesheet" href="{$stylepathIE}" type="text/css">
+			{END IEcssFiles}
+		<![endif]-->
+	</head>
+	
+	<body class="{$stylename}" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+		<table   cellpadding="0" class="runner-toptable">
+			<tr class="runner-header">
+				<td class="runner-top" colspan=3>
+					
+
+
+
+{BEGIN container_toplinks}
+<table class="runner-c runner-c-toplinks" cellpadding="0" >
+<tr class="{$cheaderclass_toplinks}">
+<td class="runner-cl"><img src="images/spacer.gif"></td>
+<td class="runner-cc"></td><td class="runner-cr"><img src="images/spacer.gif"></td>
+</tr>
+<tr class="runner-row style1">
+<td class="runner-cl"></td>
+<td class="runner-cc">
+<table border="0" cellpadding="0" class="runner-hc">
+<tr>
+<td class="runner-cc filler"></td>
+
+{BEGIN asearch_link}
+<td  class="runner-cc runner-br runner-b-toplinks_advsearch" {$brickclass_toplinks_advsearch}><span>	<span class="runner-btnframe">
+	<span class="runner-btnleft"></span>
+	<span class="runner-btnright"></span>
+	<a href="#" class="runner-button" {$advsearchlink_attrs}>Advanced search</a>
+	</span>
+</span></td>
+{END asearch_link}
+
+
+
+
+
+</tr>
+</table></td>
+<td class="runner-cr"></td>
+</tr>
+
+<tr class="{$cfooterclass_toplinks}">
+<td class="runner-cl"><img src="images/spacer.gif"></td>
+<td class="runner-cc"></td><td class="runner-cr"><img src="images/spacer.gif"></td>
+</tr>
+</table>
+{END container_toplinks}
+
+
+
+{BEGIN container_search}
+<table class="runner-c runner-c-search" cellpadding="0" >
+<tr class="{$cheaderclass_search}">
+<td class="runner-cl"><img src="images/spacer.gif"></td>
+<td class="runner-cc"></td><td class="runner-cr"><img src="images/spacer.gif"></td>
+</tr>
+<tr class="runner-row style1">
+<td class="runner-cl"></td>
+<td class="runner-cc">
+<table border="0" cellpadding="0" class="runner-hc">
+<tr>
+
+{BEGIN searchform_block}
+<td  class="runner-cc runner-bl runner-b-search" {$brickclass_search}><span>	<span>
+		{BEGIN searchform_text}
+		<input type="text" {$searchfor_attrs} size="25">
+		{END searchform_text}
+		&nbsp;
+		{BEGIN searchform_search}
+		<span class="runner-btnframe">
+			<span class="runner-btnleft"></span>
+			<span class="runner-btnright"></span>
+			<a href="#" class="runner-button-img" {$searchbutton_attrs}><img src="images/search/search.gif"></a>
+		</span>
+		{END searchform_search}
+		&nbsp;
+		{BEGIN searchform_showall}
+		
+		<span class="runner-btnframe" {$showAllCont_attrs}>
+			<span class="runner-btnleft"></span>
+			<span class="runner-btnright"></span>
+			<a href="#" class="runner-button" {$showallbutton_attrs}>Show all</a>
+		</span>
+		{END searchform_showall}
+	</span>
+</span></td>
+{END searchform_block}
+
+
+{BEGIN searchformbuttons_block}
+<td  class="runner-cc runner-bl runner-b-search_buttons" {$brickclass_search_buttons}><span>	{BEGIN searchPanelTopButtons}
+	<span>
+		&nbsp;
+		<span class="runner-btnframe">
+		<span class="runner-btnleft"></span>
+		<span class="runner-btnright"></span>
+		<a href="#" class="runner-button-img" id="showSrchWin{$id}" {$showHideSearchWin_attrs}><img src="images/search/showWindowPin.gif"></a>
+		</span>
+		&nbsp;		
+		<span class="runner-btnframe">
+		<span class="runner-btnleft"></span>
+		<span class="runner-btnright"></span>
+		<a href="#" class="runner-button-img" id="showOptPanel{$id}" {$showHideSearchPanel_attrs}><img src="images/search/showOptions.gif"></a>
+		</span>
+	</span>
+	{END searchPanelTopButtons}
+</span></td>
+{END searchformbuttons_block}
+
+<td class="runner-cc filler"></td>
+{BEGIN details_block}
+<td  class="runner-cc runner-br runner-b-details_found" {$brickclass_details_found}><span>	<span {$details_attrs}>
+		Details found: <b><span class="runner-details_found_count">{$records_found}</span></b>
+	</span>
+</span></td>
+{END details_block}
+
+
+{BEGIN pages_block}
+<td  class="runner-cc runner-br runner-b-page_of" {$brickclass_page_of}><span>	<span {$pages_attrs}>
+		Page <b>{$page}</b> of <b>{$maxpages}</b>
+	</span>
+
+</span></td>
+{END pages_block}
+
+
+{BEGIN recordspp_block}
+<td  class="runner-cc runner-br runner-b-recsperpage" {$brickclass_recsperpage}><span>	<span id="recordspp_block{$id}" name="recordspp_block{$id}">
+			Records Per Page:&nbsp;{$recsPerPage}
+	</span>	
+</span></td>
+{END recordspp_block}
+
+
+</tr>
+</table></td>
+<td class="runner-cr"></td>
+</tr>
+
+<tr class="{$cfooterclass_search}">
+<td class="runner-cl"><img src="images/spacer.gif"></td>
+<td class="runner-cc"></td><td class="runner-cr"><img src="images/spacer.gif"></td>
+</tr>
+</table>
+{END container_search}
+
+
+				</td>
+			</tr>
+			<tr class="runner-body">
+				
+				<td class="runner-left {$blockclass_left}" >
+					
+
+
+
+{BEGIN container_logg}
+<table class="runner-c runner-c-logg" cellpadding="0" >
+<tr class="{$cheaderclass_logg}">
+<td class="runner-cl"><img src="images/spacer.gif"></td>
+<td class="runner-cc"></td><td class="runner-cr"><img src="images/spacer.gif"></td>
+</tr>
+
+{BEGIN security_block}
+<tr  class="runner-row style1 runner-b-loggedas {$brickclass_loggedas}"><td class="runner-cl"></td><td class="runner-cc runner-brickcontents" ><div id="login_block{$id}">
+	{BEGIN loggedas_message}
+	<span>Logged on as&nbsp;<b>{$username}</b><br><br>
+	</span>
+	{END loggedas_message}
+	{BEGIN guestloginbutton}
+	<span class="runner-btnframe">
+	<span class="runner-btnleft"></span>
+	<span class="runner-btnright"></span>
+	<a href="#" class="runner-button" {$guestloginlink_attrs}>Login</a>
+	</span>
+	{END guestloginbutton}
+	{BEGIN logoutbutton}
+	<span class="runner-btnframe">
+	<span class="runner-btnleft"></span>
+	<span class="runner-btnright"></span>
+	<a class="runner-button" href="login.php?a=logout" {$logoutlink_attrs}>Log out</a>
+	</span>
+	{END logoutbutton}
+<!-- Permissions -->
+</div>
+</td><td class="runner-cr"></td></tr>{END security_block}
+
+
+<tr class="{$cfooterclass_logg}">
+<td class="runner-cl"><img src="images/spacer.gif"></td>
+<td class="runner-cc"></td><td class="runner-cr"><img src="images/spacer.gif"></td>
+</tr>
+</table>
+{END container_logg}
+
+
+
+{BEGIN container_left}
+<table class="runner-c runner-c-left" cellpadding="0" >
+<tr class="{$cheaderclass_left}">
+<td class="runner-cl"><img src="images/spacer.gif"></td>
+<td class="runner-cc"></td><td class="runner-cr"><img src="images/spacer.gif"></td>
+</tr>
+
+{BEGIN searchPanel}
+<tr  class="runner-row style1 runner-b-searchpanel {$brickclass_searchpanel}"><td class="runner-cl"></td><td class="runner-cc runner-brickcontents" ><div class="searchPanelContainer">
+{$adv_search_panel}
+</div></td><td class="runner-cr"></td></tr>{END searchPanel}
+
+
+{BEGIN menu_block}
+{$mainmenu}
+{END menu_block}
+
+
+<tr class="{$cfooterclass_left}">
+<td class="runner-cl"><img src="images/spacer.gif"></td>
+<td class="runner-cc"></td><td class="runner-cr"><img src="images/spacer.gif"></td>
+</tr>
+</table>
+{END container_left}
+
+
+				</td>	
+				
+				<td class="runner-center {$blockclass_center}">
+					
+
+{BEGIN container_recordcontrols}
+<table class="runner-c runner-c-recordcontrols" cellpadding="0" >
+<tr class="{$cheaderclass_recordcontrols}">
+<td class="runner-cl"><img src="images/spacer.gif"></td>
+<td class="runner-cc"></td><td class="runner-cr"><img src="images/spacer.gif"></td>
+</tr>
+<tr class="runner-row style1">
+<td class="runner-cl"></td>
+<td class="runner-cc">
+<table border="0" cellpadding="0" class="runner-hc">
+<tr>
+
+{BEGIN newrecord_controls_block}
+<td  class="runner-cc runner-bl runner-b-recordcontrols_new" {$brickclass_recordcontrols_new}><span>		{BEGIN add_link}
+		<span class="runner-btnframe">
+		<span class="runner-btnleft"></span>
+		<span class="runner-btnright"></span>
+		<a href="#" class="runner-button" {$addlink_attrs}>Add new</a>
+		</span>
+	{END add_link}
+
+		{BEGIN inlineadd_link}
+		<span class="runner-btnframe">
+		<span class="runner-btnleft"></span>
+		<span class="runner-btnright"></span>
+		<a href="#" class="runner-button" {$inlineaddlink_attrs}>Inline Add</a>
+		</span>
+	{END inlineadd_link}
+
+
+</span></td>
+{END newrecord_controls_block}
+
+
+{BEGIN record_controls_block}
+<td  class="runner-cc runner-bl runner-b-recordcontrol" {$brickclass_recordcontrol}><span>	
+			{BEGIN editselected_link}
+		<span class="runner-btnframe" {$editselectedlink_span}>
+		<span class="runner-btnleft"></span>
+		<span class="runner-btnright"></span>
+		<a href="#" class="runner-button" {$editselectedlink_attrs}>Edit selected</a>
+		</span>
+	{END editselected_link}
+	{BEGIN saveall_link}
+		<span class="runner-btnframe" {$savealllink_span}>
+		<span class="runner-btnleft"></span>
+		<span class="runner-btnright"></span>
+		<a href="#" class="runner-button" {$savealllink_attrs}>Save all</a>
+		</span>
+	{END saveall_link}
+	{BEGIN cancelall_link}
+		<span class="runner-btnframe" {$cancelalllink_span}>
+		<span class="runner-btnleft"></span>
+		<span class="runner-btnright"></span>
+		<a href="#" class="runner-button" {$cancelalllink_attrs}>Cancel</a>
+		</span>
+	{END cancelall_link}
+
+		{BEGIN deleteselected_link}
+		<span class="runner-btnframe" {$deleteselectedlink_span}>
+		<span class="runner-btnleft"></span>
+		<span class="runner-btnright"></span>
+		<a href="#" class="runner-button" {$deleteselectedlink_attrs}>Delete selected</a>
+		</span>
+	{END deleteselected_link}
+
+	
+	
+</span></td>
+{END record_controls_block}
+
+<td class="runner-cc filler"></td>
+</tr>
+</table></td>
+<td class="runner-cr"></td>
+</tr>
+
+<tr class="{$cfooterclass_recordcontrols}">
+<td class="runner-cl"><img src="images/spacer.gif"></td>
+<td class="runner-cc"></td><td class="runner-cr"><img src="images/spacer.gif"></td>
+</tr>
+</table>
+{END container_recordcontrols}
+
+
+
+{BEGIN container_message}
+<table class="runner-c runner-c-message" cellpadding="0" >
+<tr class="{$cheaderclass_message}">
+<td class="runner-cl"><img src="images/spacer.gif"></td>
+<td class="runner-cc"></td><td class="runner-cr"><img src="images/spacer.gif"></td>
+</tr>
+<tr class="runner-row style1">
+<td class="runner-cl"></td>
+<td class="runner-cc">
+<table border="0" cellpadding="0" class="runner-hc">
+<tr>
+
+{BEGIN message_block}
+<td  class="runner-cc runner-bc runner-b-message" {$brickclass_message}><span><div class="runner-message">{$message}</div></span></td>
+{END message_block}
+
+
+</tr>
+</table></td>
+<td class="runner-cr"></td>
+</tr>
+
+<tr class="{$cfooterclass_message}">
+<td class="runner-cl"><img src="images/spacer.gif"></td>
+<td class="runner-cc"></td><td class="runner-cr"><img src="images/spacer.gif"></td>
+</tr>
+</table>
+{END container_message}
+
+
+
+{BEGIN container_grid}
+
+
+{BEGIN grid_block}
+						<table class="runner-c runner-c-grid runner-b-grid" cellpadding="0" >
+						<thead>
+															{BEGIN grid_header}
+								<tr class="runner-toprow style1 {$gridHeader_class}" >
+									{BEGIN record_header}
+									<th class="runner-cl"><img src="images/spacer.gif"></th>
+																		{BEGIN listIcons_column}
+									<th class="runner-cc" iEditCont="all">&nbsp;</th>
+									{END listIcons_column}	
+
+																		{BEGIN checkbox_column}
+									<th class="runner-cc runner-bc">
+										<input type="checkbox" {$checkboxheader_attrs}>
+									</th>
+									{END checkbox_column}
+
+																										{BEGIN id_fieldheadercolumn}
+									<th class="runner-cc ">
+									{BEGIN id_fieldheader}
+																				<a {$id_orderlinkattrs}>
+											Id
+										</a>
+									{END id_fieldheader}
+									</th>
+									{END id_fieldheadercolumn}
+
+																	{BEGIN source_id_fieldheadercolumn}
+									<th class="runner-cc ">
+									{BEGIN source_id_fieldheader}
+																				<a {$source_id_orderlinkattrs}>
+											Source Id
+										</a>
+									{END source_id_fieldheader}
+									</th>
+									{END source_id_fieldheadercolumn}
+
+																	{BEGIN source_nama_fieldheadercolumn}
+									<th class="runner-cc ">
+									{BEGIN source_nama_fieldheader}
+																				<a {$source_nama_orderlinkattrs}>
+											Source Nama
+										</a>
+									{END source_nama_fieldheader}
+									</th>
+									{END source_nama_fieldheadercolumn}
+
+																	{BEGIN tahun_fieldheadercolumn}
+									<th class="runner-cc ">
+									{BEGIN tahun_fieldheader}
+																				<a {$tahun_orderlinkattrs}>
+											Tahun
+										</a>
+									{END tahun_fieldheader}
+									</th>
+									{END tahun_fieldheadercolumn}
+
+																	{BEGIN usaha_id_fieldheadercolumn}
+									<th class="runner-cc ">
+									{BEGIN usaha_id_fieldheader}
+																				<a {$usaha_id_orderlinkattrs}>
+											Usaha Id
+										</a>
+									{END usaha_id_fieldheader}
+									</th>
+									{END usaha_id_fieldheadercolumn}
+
+																	{BEGIN invoice_no_fieldheadercolumn}
+									<th class="runner-cc ">
+									{BEGIN invoice_no_fieldheader}
+																				<a {$invoice_no_orderlinkattrs}>
+											Invoice No
+										</a>
+									{END invoice_no_fieldheader}
+									</th>
+									{END invoice_no_fieldheadercolumn}
+
+																	{BEGIN jenis_usaha_fieldheadercolumn}
+									<th class="runner-cc ">
+									{BEGIN jenis_usaha_fieldheader}
+																				<a {$jenis_usaha_orderlinkattrs}>
+											Jenis Usaha
+										</a>
+									{END jenis_usaha_fieldheader}
+									</th>
+									{END jenis_usaha_fieldheadercolumn}
+
+																	{BEGIN jenis_pajak_fieldheadercolumn}
+									<th class="runner-cc ">
+									{BEGIN jenis_pajak_fieldheader}
+																				<a {$jenis_pajak_orderlinkattrs}>
+											Jenis Pajak
+										</a>
+									{END jenis_pajak_fieldheader}
+									</th>
+									{END jenis_pajak_fieldheadercolumn}
+
+																	{BEGIN npwpd_fieldheadercolumn}
+									<th class="runner-cc ">
+									{BEGIN npwpd_fieldheader}
+																				<a {$npwpd_orderlinkattrs}>
+											Npwpd
+										</a>
+									{END npwpd_fieldheader}
+									</th>
+									{END npwpd_fieldheadercolumn}
+
+																	{BEGIN nama_wp_fieldheadercolumn}
+									<th class="runner-cc ">
+									{BEGIN nama_wp_fieldheader}
+																				<a {$nama_wp_orderlinkattrs}>
+											Nama Wp
+										</a>
+									{END nama_wp_fieldheader}
+									</th>
+									{END nama_wp_fieldheadercolumn}
+
+																	{BEGIN alamat_wp_fieldheadercolumn}
+									<th class="runner-cc ">
+									{BEGIN alamat_wp_fieldheader}
+																				<a {$alamat_wp_orderlinkattrs}>
+											Alamat Wp
+										</a>
+									{END alamat_wp_fieldheader}
+									</th>
+									{END alamat_wp_fieldheadercolumn}
+
+																	{BEGIN nama_op_fieldheadercolumn}
+									<th class="runner-cc ">
+									{BEGIN nama_op_fieldheader}
+																				<a {$nama_op_orderlinkattrs}>
+											Nama Op
+										</a>
+									{END nama_op_fieldheader}
+									</th>
+									{END nama_op_fieldheadercolumn}
+
+																	{BEGIN alamat_op_fieldheadercolumn}
+									<th class="runner-cc ">
+									{BEGIN alamat_op_fieldheader}
+																				<a {$alamat_op_orderlinkattrs}>
+											Alamat Op
+										</a>
+									{END alamat_op_fieldheader}
+									</th>
+									{END alamat_op_fieldheadercolumn}
+
+																	{BEGIN nomor_tagihan_fieldheadercolumn}
+									<th class="runner-cc ">
+									{BEGIN nomor_tagihan_fieldheader}
+																				<a {$nomor_tagihan_orderlinkattrs}>
+											Nomor Tagihan
+										</a>
+									{END nomor_tagihan_fieldheader}
+									</th>
+									{END nomor_tagihan_fieldheadercolumn}
+
+																	{BEGIN pokok_fieldheadercolumn}
+									<th class="runner-cc ">
+									{BEGIN pokok_fieldheader}
+																				<a {$pokok_orderlinkattrs}>
+											Pokok
+										</a>
+									{END pokok_fieldheader}
+									</th>
+									{END pokok_fieldheadercolumn}
+
+																	{BEGIN denda_fieldheadercolumn}
+									<th class="runner-cc ">
+									{BEGIN denda_fieldheader}
+																				<a {$denda_orderlinkattrs}>
+											Denda
+										</a>
+									{END denda_fieldheader}
+									</th>
+									{END denda_fieldheadercolumn}
+
+																	{BEGIN bunga_fieldheadercolumn}
+									<th class="runner-cc ">
+									{BEGIN bunga_fieldheader}
+																				<a {$bunga_orderlinkattrs}>
+											Bunga
+										</a>
+									{END bunga_fieldheader}
+									</th>
+									{END bunga_fieldheadercolumn}
+
+																	{BEGIN total_fieldheadercolumn}
+									<th class="runner-cc ">
+									{BEGIN total_fieldheader}
+																				<a {$total_orderlinkattrs}>
+											Total
+										</a>
+									{END total_fieldheader}
+									</th>
+									{END total_fieldheadercolumn}
+
+																	{BEGIN status_bayar_fieldheadercolumn}
+									<th class="runner-cc ">
+									{BEGIN status_bayar_fieldheader}
+																				<a {$status_bayar_orderlinkattrs}>
+											Status Bayar
+										</a>
+									{END status_bayar_fieldheader}
+									</th>
+									{END status_bayar_fieldheadercolumn}
+
+																	{BEGIN jatuh_tempo_fieldheadercolumn}
+									<th class="runner-cc ">
+									{BEGIN jatuh_tempo_fieldheader}
+																				<a {$jatuh_tempo_orderlinkattrs}>
+											Jatuh Tempo
+										</a>
+									{END jatuh_tempo_fieldheader}
+									</th>
+									{END jatuh_tempo_fieldheadercolumn}
+
+																	{BEGIN periode_fieldheadercolumn}
+									<th class="runner-cc ">
+									{BEGIN periode_fieldheader}
+																				<a {$periode_orderlinkattrs}>
+											Periode
+										</a>
+									{END periode_fieldheader}
+									</th>
+									{END periode_fieldheadercolumn}
+
+																	{BEGIN rekening_pokok_fieldheadercolumn}
+									<th class="runner-cc ">
+									{BEGIN rekening_pokok_fieldheader}
+																				<a {$rekening_pokok_orderlinkattrs}>
+											Rekening Pokok
+										</a>
+									{END rekening_pokok_fieldheader}
+									</th>
+									{END rekening_pokok_fieldheadercolumn}
+
+																	{BEGIN rekening_denda_fieldheadercolumn}
+									<th class="runner-cc ">
+									{BEGIN rekening_denda_fieldheader}
+																				<a {$rekening_denda_orderlinkattrs}>
+											Rekening Denda
+										</a>
+									{END rekening_denda_fieldheader}
+									</th>
+									{END rekening_denda_fieldheadercolumn}
+
+																	{BEGIN nama_pokok_fieldheadercolumn}
+									<th class="runner-cc ">
+									{BEGIN nama_pokok_fieldheader}
+																				<a {$nama_pokok_orderlinkattrs}>
+											Nama Pokok
+										</a>
+									{END nama_pokok_fieldheader}
+									</th>
+									{END nama_pokok_fieldheadercolumn}
+
+																	{BEGIN nama_denda_fieldheadercolumn}
+									<th class="runner-cc ">
+									{BEGIN nama_denda_fieldheader}
+																				<a {$nama_denda_orderlinkattrs}>
+											Nama Denda
+										</a>
+									{END nama_denda_fieldheader}
+									</th>
+									{END nama_denda_fieldheadercolumn}
+
+																	{BEGIN created_fieldheadercolumn}
+									<th class="runner-cc ">
+									{BEGIN created_fieldheader}
+																				<a {$created_orderlinkattrs}>
+											Created
+										</a>
+									{END created_fieldheader}
+									</th>
+									{END created_fieldheadercolumn}
+
+																	{BEGIN updated_fieldheadercolumn}
+									<th class="runner-cc ">
+									{BEGIN updated_fieldheader}
+																				<a {$updated_orderlinkattrs}>
+											Updated
+										</a>
+									{END updated_fieldheader}
+									</th>
+									{END updated_fieldheadercolumn}
+
+																	{BEGIN create_uid_fieldheadercolumn}
+									<th class="runner-cc ">
+									{BEGIN create_uid_fieldheader}
+																				<a {$create_uid_orderlinkattrs}>
+											Create Uid
+										</a>
+									{END create_uid_fieldheader}
+									</th>
+									{END create_uid_fieldheadercolumn}
+
+																	{BEGIN update_uid_fieldheadercolumn}
+									<th class="runner-cc runner-clast">
+									{BEGIN update_uid_fieldheader}
+																				<a {$update_uid_orderlinkattrs}>
+											Update Uid
+										</a>
+									{END update_uid_fieldheader}
+									</th>
+									{END update_uid_fieldheadercolumn}
+
+
+									
+									<th class="runner-cr"><img src="images/spacer.gif"></th>
+									{BEGIN endrecordheader_block}
+									<th class="runner-cs">&nbsp;</th>
+									
+									{END endrecordheader_block}
+									
+									{END record_header}
+									
+								</tr>
+								{END grid_header}
+
+						</thead>
+						<tbody>	
+															{BEGIN grid_row}
+								<tr class="runner-row style1 {$rowclass}" {$rowattrs} {$rowstyle}>
+									{BEGIN grid_record}
+									<td class="runner-cl" {$rowstyle}></td>
+
+																		{BEGIN listIcons_column}
+									<td class="runner-cc runner-bc runner-icons" iEditCont="all" {$rowstyle}>
+																		{BEGIN edit_column}
+									{BEGIN edit_link}
+									<a class="runner-button-img" {$editlink_attrs} title="Edit"><img class="runner-cicon" src="images/icon_edit_new.gif" alt="Edit"></a>
+									{END edit_link}
+									{END edit_column}
+
+																		{BEGIN inlineedit_column}
+									{BEGIN inlineedit_link}
+									<a class="runner-button-img" {$inlineeditlink_attrs} title="Inline Edit"><img class="runner-cicon" src="images/icon_inline_edit_new.gif" alt="Inline Edit"></a>
+									{END inlineedit_link}
+									{END inlineedit_column}
+
+									
+																		{BEGIN view_column}
+									{BEGIN view_link}
+									<a class="runner-button-img" {$viewlink_attrs} title="View"><img class="runner-cicon" src="images/icon_view_new.gif" alt="View"></a>
+									{END view_link}
+									{END view_column}
+									</td>	
+									{END listIcons_column}	
+
+																		{BEGIN checkbox_column}
+									<td class="runner-cc runner-bc" iEditCont="checkBox" {$rowstyle}>
+									{BEGIN checkbox}
+									<input type="checkbox" {$checkbox_attrs}>
+									{END checkbox}
+									</td>
+									{END checkbox_column}
+
+
+										{BEGIN id_fieldcolumn}
+	<td class="runner-cc  {$id_class}" {$id_style}>
+		{$id_value}
+	</td>
+{END id_fieldcolumn}
+
+	{BEGIN source_id_fieldcolumn}
+	<td class="runner-cc  {$source_id_class}" {$source_id_style}>
+		{$source_id_value}
+	</td>
+{END source_id_fieldcolumn}
+
+	{BEGIN source_nama_fieldcolumn}
+	<td class="runner-cc  {$source_nama_class}" {$source_nama_style}>
+		{$source_nama_value}
+	</td>
+{END source_nama_fieldcolumn}
+
+	{BEGIN tahun_fieldcolumn}
+	<td class="runner-cc  {$tahun_class}" {$tahun_style}>
+		{$tahun_value}
+	</td>
+{END tahun_fieldcolumn}
+
+	{BEGIN usaha_id_fieldcolumn}
+	<td class="runner-cc  {$usaha_id_class}" {$usaha_id_style}>
+		{$usaha_id_value}
+	</td>
+{END usaha_id_fieldcolumn}
+
+	{BEGIN invoice_no_fieldcolumn}
+	<td class="runner-cc  {$invoice_no_class}" {$invoice_no_style}>
+		{$invoice_no_value}
+	</td>
+{END invoice_no_fieldcolumn}
+
+	{BEGIN jenis_usaha_fieldcolumn}
+	<td class="runner-cc  {$jenis_usaha_class}" {$jenis_usaha_style}>
+		{$jenis_usaha_value}
+	</td>
+{END jenis_usaha_fieldcolumn}
+
+	{BEGIN jenis_pajak_fieldcolumn}
+	<td class="runner-cc  {$jenis_pajak_class}" {$jenis_pajak_style}>
+		{$jenis_pajak_value}
+	</td>
+{END jenis_pajak_fieldcolumn}
+
+	{BEGIN npwpd_fieldcolumn}
+	<td class="runner-cc  {$npwpd_class}" {$npwpd_style}>
+		{$npwpd_value}
+	</td>
+{END npwpd_fieldcolumn}
+
+	{BEGIN nama_wp_fieldcolumn}
+	<td class="runner-cc  {$nama_wp_class}" {$nama_wp_style}>
+		{$nama_wp_value}
+	</td>
+{END nama_wp_fieldcolumn}
+
+	{BEGIN alamat_wp_fieldcolumn}
+	<td class="runner-cc  {$alamat_wp_class}" {$alamat_wp_style}>
+		{$alamat_wp_value}
+	</td>
+{END alamat_wp_fieldcolumn}
+
+	{BEGIN nama_op_fieldcolumn}
+	<td class="runner-cc  {$nama_op_class}" {$nama_op_style}>
+		{$nama_op_value}
+	</td>
+{END nama_op_fieldcolumn}
+
+	{BEGIN alamat_op_fieldcolumn}
+	<td class="runner-cc  {$alamat_op_class}" {$alamat_op_style}>
+		{$alamat_op_value}
+	</td>
+{END alamat_op_fieldcolumn}
+
+	{BEGIN nomor_tagihan_fieldcolumn}
+	<td class="runner-cc  {$nomor_tagihan_class}" {$nomor_tagihan_style}>
+		{$nomor_tagihan_value}
+	</td>
+{END nomor_tagihan_fieldcolumn}
+
+	{BEGIN pokok_fieldcolumn}
+	<td class="runner-cc  {$pokok_class}" {$pokok_style}>
+		{$pokok_value}
+	</td>
+{END pokok_fieldcolumn}
+
+	{BEGIN denda_fieldcolumn}
+	<td class="runner-cc  {$denda_class}" {$denda_style}>
+		{$denda_value}
+	</td>
+{END denda_fieldcolumn}
+
+	{BEGIN bunga_fieldcolumn}
+	<td class="runner-cc  {$bunga_class}" {$bunga_style}>
+		{$bunga_value}
+	</td>
+{END bunga_fieldcolumn}
+
+	{BEGIN total_fieldcolumn}
+	<td class="runner-cc  {$total_class}" {$total_style}>
+		{$total_value}
+	</td>
+{END total_fieldcolumn}
+
+	{BEGIN status_bayar_fieldcolumn}
+	<td class="runner-cc  {$status_bayar_class}" {$status_bayar_style}>
+		{$status_bayar_value}
+	</td>
+{END status_bayar_fieldcolumn}
+
+	{BEGIN jatuh_tempo_fieldcolumn}
+	<td class="runner-cc  {$jatuh_tempo_class}" {$jatuh_tempo_style}>
+		{$jatuh_tempo_value}
+	</td>
+{END jatuh_tempo_fieldcolumn}
+
+	{BEGIN periode_fieldcolumn}
+	<td class="runner-cc  {$periode_class}" {$periode_style}>
+		{$periode_value}
+	</td>
+{END periode_fieldcolumn}
+
+	{BEGIN rekening_pokok_fieldcolumn}
+	<td class="runner-cc  {$rekening_pokok_class}" {$rekening_pokok_style}>
+		{$rekening_pokok_value}
+	</td>
+{END rekening_pokok_fieldcolumn}
+
+	{BEGIN rekening_denda_fieldcolumn}
+	<td class="runner-cc  {$rekening_denda_class}" {$rekening_denda_style}>
+		{$rekening_denda_value}
+	</td>
+{END rekening_denda_fieldcolumn}
+
+	{BEGIN nama_pokok_fieldcolumn}
+	<td class="runner-cc  {$nama_pokok_class}" {$nama_pokok_style}>
+		{$nama_pokok_value}
+	</td>
+{END nama_pokok_fieldcolumn}
+
+	{BEGIN nama_denda_fieldcolumn}
+	<td class="runner-cc  {$nama_denda_class}" {$nama_denda_style}>
+		{$nama_denda_value}
+	</td>
+{END nama_denda_fieldcolumn}
+
+	{BEGIN created_fieldcolumn}
+	<td class="runner-cc  {$created_class}" {$created_style}>
+		{$created_value}
+	</td>
+{END created_fieldcolumn}
+
+	{BEGIN updated_fieldcolumn}
+	<td class="runner-cc  {$updated_class}" {$updated_style}>
+		{$updated_value}
+	</td>
+{END updated_fieldcolumn}
+
+	{BEGIN create_uid_fieldcolumn}
+	<td class="runner-cc  {$create_uid_class}" {$create_uid_style}>
+		{$create_uid_value}
+	</td>
+{END create_uid_fieldcolumn}
+
+	{BEGIN update_uid_fieldcolumn}
+	<td class="runner-cc runner-clast {$update_uid_class}" {$update_uid_style}>
+		{$update_uid_value}
+	</td>
+{END update_uid_fieldcolumn}
+
+
+																		<td class="runner-cr" {$rowstyle}></td>
+									{BEGIN endrecord_block}
+									<td class="runner-cs" {$endrecordblock_attrs}>&nbsp;</td>
+									{END endrecord_block}
+																	
+									{END grid_record}
+
+								</tr>
+								{END grid_row}
+															{BEGIN grid_footer}
+																<tr class="runner-bottomrow style1{$gridFooter_class}" >
+									{BEGIN record_footer}
+									<td class="runner-cl"><img src="images/spacer.gif"></td>
+																		{BEGIN listIcons_column}
+									<td class="runner-cc"></td>
+									{END listIcons_column}	
+									
+																		{BEGIN checkbox_column}
+									<td class="runner-cc"></td>
+									{END checkbox_column}
+
+
+									{BEGIN id_fieldheadercolumn}
+<td class="runner-cc "></td>
+{END id_fieldheadercolumn}
+{BEGIN source_id_fieldheadercolumn}
+<td class="runner-cc "></td>
+{END source_id_fieldheadercolumn}
+{BEGIN source_nama_fieldheadercolumn}
+<td class="runner-cc "></td>
+{END source_nama_fieldheadercolumn}
+{BEGIN tahun_fieldheadercolumn}
+<td class="runner-cc "></td>
+{END tahun_fieldheadercolumn}
+{BEGIN usaha_id_fieldheadercolumn}
+<td class="runner-cc "></td>
+{END usaha_id_fieldheadercolumn}
+{BEGIN invoice_no_fieldheadercolumn}
+<td class="runner-cc "></td>
+{END invoice_no_fieldheadercolumn}
+{BEGIN jenis_usaha_fieldheadercolumn}
+<td class="runner-cc "></td>
+{END jenis_usaha_fieldheadercolumn}
+{BEGIN jenis_pajak_fieldheadercolumn}
+<td class="runner-cc "></td>
+{END jenis_pajak_fieldheadercolumn}
+{BEGIN npwpd_fieldheadercolumn}
+<td class="runner-cc "></td>
+{END npwpd_fieldheadercolumn}
+{BEGIN nama_wp_fieldheadercolumn}
+<td class="runner-cc "></td>
+{END nama_wp_fieldheadercolumn}
+{BEGIN alamat_wp_fieldheadercolumn}
+<td class="runner-cc "></td>
+{END alamat_wp_fieldheadercolumn}
+{BEGIN nama_op_fieldheadercolumn}
+<td class="runner-cc "></td>
+{END nama_op_fieldheadercolumn}
+{BEGIN alamat_op_fieldheadercolumn}
+<td class="runner-cc "></td>
+{END alamat_op_fieldheadercolumn}
+{BEGIN nomor_tagihan_fieldheadercolumn}
+<td class="runner-cc "></td>
+{END nomor_tagihan_fieldheadercolumn}
+{BEGIN pokok_fieldheadercolumn}
+<td class="runner-cc "></td>
+{END pokok_fieldheadercolumn}
+{BEGIN denda_fieldheadercolumn}
+<td class="runner-cc "></td>
+{END denda_fieldheadercolumn}
+{BEGIN bunga_fieldheadercolumn}
+<td class="runner-cc "></td>
+{END bunga_fieldheadercolumn}
+{BEGIN total_fieldheadercolumn}
+<td class="runner-cc "></td>
+{END total_fieldheadercolumn}
+{BEGIN status_bayar_fieldheadercolumn}
+<td class="runner-cc "></td>
+{END status_bayar_fieldheadercolumn}
+{BEGIN jatuh_tempo_fieldheadercolumn}
+<td class="runner-cc "></td>
+{END jatuh_tempo_fieldheadercolumn}
+{BEGIN periode_fieldheadercolumn}
+<td class="runner-cc "></td>
+{END periode_fieldheadercolumn}
+{BEGIN rekening_pokok_fieldheadercolumn}
+<td class="runner-cc "></td>
+{END rekening_pokok_fieldheadercolumn}
+{BEGIN rekening_denda_fieldheadercolumn}
+<td class="runner-cc "></td>
+{END rekening_denda_fieldheadercolumn}
+{BEGIN nama_pokok_fieldheadercolumn}
+<td class="runner-cc "></td>
+{END nama_pokok_fieldheadercolumn}
+{BEGIN nama_denda_fieldheadercolumn}
+<td class="runner-cc "></td>
+{END nama_denda_fieldheadercolumn}
+{BEGIN created_fieldheadercolumn}
+<td class="runner-cc "></td>
+{END created_fieldheadercolumn}
+{BEGIN updated_fieldheadercolumn}
+<td class="runner-cc "></td>
+{END updated_fieldheadercolumn}
+{BEGIN create_uid_fieldheadercolumn}
+<td class="runner-cc "></td>
+{END create_uid_fieldheadercolumn}
+{BEGIN update_uid_fieldheadercolumn}
+<td class="runner-cc runner-clast"></td>
+{END update_uid_fieldheadercolumn}
+
+									<td class="runner-cr"><img src="images/spacer.gif"></td>
+									
+									
+									{BEGIN endrecordfooter_block}
+									<td class="runner-cs"></td>
+									{END endrecordfooter_block}
+									{END record_footer}
+								</tr>
+								{END grid_footer}
+
+						</tbody>
+					</table>
+					
+
+{END grid_block}
+
+
+
+{END container_grid}
+
+
+
+{BEGIN container_pagination}
+<table class="runner-c runner-c-pagination" cellpadding="0" >
+<tr class="{$cheaderclass_pagination}">
+<td class="runner-cl"><img src="images/spacer.gif"></td>
+<td class="runner-cc"></td><td class="runner-cr"><img src="images/spacer.gif"></td>
+</tr>
+<tr class="runner-row style1">
+<td class="runner-cl"></td>
+<td class="runner-cc">
+<table border="0" cellpadding="0" class="runner-hc">
+<tr>
+
+{BEGIN pagination_block}
+<td  class="runner-cc runner-bc runner-b-pagination" {$brickclass_pagination}><span>{$pagination}</span></td>
+{END pagination_block}
+
+
+</tr>
+</table></td>
+<td class="runner-cr"></td>
+</tr>
+
+<tr class="{$cfooterclass_pagination}">
+<td class="runner-cl"><img src="images/spacer.gif"></td>
+<td class="runner-cc"></td><td class="runner-cr"><img src="images/spacer.gif"></td>
+</tr>
+</table>
+{END container_pagination}
+
+
+				</td>	
+
+				<td class="runner-right {$blockclass_right}">
+					
+				</td>	
+			</tr>
+			<tr class="runner-footer">
+				<td class="runner-bottom" colspan=3>
+					<!--%%bottom%%-->
+				</td>
+			</tr>
+		</table>
+		{$footer}
+	{END body}
+	</body>
+</html>

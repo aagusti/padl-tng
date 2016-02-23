@@ -1,0 +1,352 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<title>{$pagetitle}</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=7">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+		{BEGIN pageCSSFiles}
+		<link REL="stylesheet" href="{$pagestylepath}" type="text/css">
+		{END pageCSSFiles}
+		<!--[if IE]>
+			<link REL="stylesheet" href="styles/defaultIE.css" type="text/css">
+			{BEGIN IEcssFiles}
+			<link REL="stylesheet" href="{$stylepathIE}" type="text/css">
+			{END IEcssFiles}
+		<![endif]-->
+	</head>
+	
+	<body class="{$stylename}" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+		<table   cellpadding="0" class="runner-toptable">
+			<tr class="runner-header">
+				<td class="runner-top" colspan=3>
+					
+
+
+
+
+				</td>
+			</tr>
+			<tr class="runner-body">
+				
+				<td class="runner-left {$blockclass_left}" >
+					
+				</td>	
+				
+				<td class="runner-center {$blockclass_center}">
+					
+
+{BEGIN container_grid}
+
+
+{BEGIN grid_block}
+{BEGIN page}
+<h1>Pad Reklame</h1>
+<span>
+{BEGIN page_number}
+Page {$pageno} of {$maxpages} 
+{END page_number}
+</span>
+
+	<div class="runner-s-grid">	
+	<table class="runner-c runner-c-grid" cellpadding="0">
+		<thead>
+		{BEGIN grid_header}
+		<tr class="runner-toprow style1">
+			<td class="runner-cl"><img src="images/spacer.gif"></td>
+			{BEGIN record_header}
+					{BEGIN id_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN id_fieldheader}
+	<b>Id</b>
+	{END id_fieldheader}
+</th>
+{END id_fieldheadercolumn}
+	{BEGIN kode_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN kode_fieldheader}
+	<b>Kode</b>
+	{END kode_fieldheader}
+</th>
+{END kode_fieldheadercolumn}
+	{BEGIN kecamatan_id_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN kecamatan_id_fieldheader}
+	<b>Kecamatan Id</b>
+	{END kecamatan_id_fieldheader}
+</th>
+{END kecamatan_id_fieldheadercolumn}
+	{BEGIN kelurahan_id_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN kelurahan_id_fieldheader}
+	<b>Kelurahan Id</b>
+	{END kelurahan_id_fieldheader}
+</th>
+{END kelurahan_id_fieldheadercolumn}
+	{BEGIN latitude_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN latitude_fieldheader}
+	<b>Latitude</b>
+	{END latitude_fieldheader}
+</th>
+{END latitude_fieldheadercolumn}
+	{BEGIN longitude_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN longitude_fieldheader}
+	<b>Longitude</b>
+	{END longitude_fieldheader}
+</th>
+{END longitude_fieldheadercolumn}
+	{BEGIN pemilik_nama_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN pemilik_nama_fieldheader}
+	<b>Pemilik Nama</b>
+	{END pemilik_nama_fieldheader}
+</th>
+{END pemilik_nama_fieldheadercolumn}
+	{BEGIN pemilik_alamat_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN pemilik_alamat_fieldheader}
+	<b>Pemilik Alamat</b>
+	{END pemilik_alamat_fieldheader}
+</th>
+{END pemilik_alamat_fieldheadercolumn}
+	{BEGIN pemilik_kecamatan_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN pemilik_kecamatan_fieldheader}
+	<b>Pemilik Kecamatan</b>
+	{END pemilik_kecamatan_fieldheader}
+</th>
+{END pemilik_kecamatan_fieldheadercolumn}
+	{BEGIN pemilik_kelurahan_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN pemilik_kelurahan_fieldheader}
+	<b>Pemilik Kelurahan</b>
+	{END pemilik_kelurahan_fieldheader}
+</th>
+{END pemilik_kelurahan_fieldheadercolumn}
+	{BEGIN pemilik_kota_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN pemilik_kota_fieldheader}
+	<b>Pemilik Kota</b>
+	{END pemilik_kota_fieldheader}
+</th>
+{END pemilik_kota_fieldheadercolumn}
+	{BEGIN updated_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN updated_fieldheader}
+	<b>Updated</b>
+	{END updated_fieldheader}
+</th>
+{END updated_fieldheadercolumn}
+	{BEGIN created_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN created_fieldheader}
+	<b>Created</b>
+	{END created_fieldheader}
+</th>
+{END created_fieldheadercolumn}
+	{BEGIN update_uid_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN update_uid_fieldheader}
+	<b>Update Uid</b>
+	{END update_uid_fieldheader}
+</th>
+{END update_uid_fieldheadercolumn}
+	{BEGIN create_uid_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN create_uid_fieldheader}
+	<b>Create Uid</b>
+	{END create_uid_fieldheader}
+</th>
+{END create_uid_fieldheadercolumn}
+		
+			{END record_header}
+			<td class="runner-cr"><img src="images/spacer.gif"></td>
+			{BEGIN endrecordheader_block}
+			<td class="runner-cs">&nbsp;</td>
+			{END endrecordheader_block}
+		</tr>
+	{END grid_header}
+		</thead>
+		<tbody>	
+		{BEGIN grid_row}
+	<tr class="runner-row style1" {$rowattrs} {$rowstyle} {$rowstyle}>
+		<td class="runner-cl"></td>
+		{BEGIN grid_record}
+				{BEGIN id_fieldcolumn}
+<td  class="runner-cc {$id_class}" {$id_style}>
+	{$id_value}
+</td>
+{END id_fieldcolumn}
+	{BEGIN kode_fieldcolumn}
+<td  class="runner-cc {$kode_class}" {$kode_style}>
+	{$kode_value}
+</td>
+{END kode_fieldcolumn}
+	{BEGIN kecamatan_id_fieldcolumn}
+<td  class="runner-cc {$kecamatan_id_class}" {$kecamatan_id_style}>
+	{$kecamatan_id_value}
+</td>
+{END kecamatan_id_fieldcolumn}
+	{BEGIN kelurahan_id_fieldcolumn}
+<td  class="runner-cc {$kelurahan_id_class}" {$kelurahan_id_style}>
+	{$kelurahan_id_value}
+</td>
+{END kelurahan_id_fieldcolumn}
+	{BEGIN latitude_fieldcolumn}
+<td  class="runner-cc {$latitude_class}" {$latitude_style}>
+	{$latitude_value}
+</td>
+{END latitude_fieldcolumn}
+	{BEGIN longitude_fieldcolumn}
+<td  class="runner-cc {$longitude_class}" {$longitude_style}>
+	{$longitude_value}
+</td>
+{END longitude_fieldcolumn}
+	{BEGIN pemilik_nama_fieldcolumn}
+<td  class="runner-cc {$pemilik_nama_class}" {$pemilik_nama_style}>
+	{$pemilik_nama_value}
+</td>
+{END pemilik_nama_fieldcolumn}
+	{BEGIN pemilik_alamat_fieldcolumn}
+<td  class="runner-cc {$pemilik_alamat_class}" {$pemilik_alamat_style}>
+	{$pemilik_alamat_value}
+</td>
+{END pemilik_alamat_fieldcolumn}
+	{BEGIN pemilik_kecamatan_fieldcolumn}
+<td  class="runner-cc {$pemilik_kecamatan_class}" {$pemilik_kecamatan_style}>
+	{$pemilik_kecamatan_value}
+</td>
+{END pemilik_kecamatan_fieldcolumn}
+	{BEGIN pemilik_kelurahan_fieldcolumn}
+<td  class="runner-cc {$pemilik_kelurahan_class}" {$pemilik_kelurahan_style}>
+	{$pemilik_kelurahan_value}
+</td>
+{END pemilik_kelurahan_fieldcolumn}
+	{BEGIN pemilik_kota_fieldcolumn}
+<td  class="runner-cc {$pemilik_kota_class}" {$pemilik_kota_style}>
+	{$pemilik_kota_value}
+</td>
+{END pemilik_kota_fieldcolumn}
+	{BEGIN updated_fieldcolumn}
+<td  class="runner-cc {$updated_class}" {$updated_style}>
+	{$updated_value}
+</td>
+{END updated_fieldcolumn}
+	{BEGIN created_fieldcolumn}
+<td  class="runner-cc {$created_class}" {$created_style}>
+	{$created_value}
+</td>
+{END created_fieldcolumn}
+	{BEGIN update_uid_fieldcolumn}
+<td  class="runner-cc {$update_uid_class}" {$update_uid_style}>
+	{$update_uid_value}
+</td>
+{END update_uid_fieldcolumn}
+	{BEGIN create_uid_fieldcolumn}
+<td  class="runner-cc {$create_uid_class}" {$create_uid_style}>
+	{$create_uid_value}
+</td>
+{END create_uid_fieldcolumn}
+
+		{END grid_record}
+		<td class="runner-cr"></td>
+		{BEGIN endrecord_block}
+		<td class="runner-cs">&nbsp;</td>
+		{END endrecord_block}
+	</tr>
+{END grid_row}
+										
+								<tr class="runner-bottomrow style1">
+									<td class="runner-cl"><img src="images/spacer.gif"></td>
+									{BEGIN record_footer}
+									{BEGIN id_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END id_fieldfootercolumn}
+{BEGIN kode_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END kode_fieldfootercolumn}
+{BEGIN kecamatan_id_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END kecamatan_id_fieldfootercolumn}
+{BEGIN kelurahan_id_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END kelurahan_id_fieldfootercolumn}
+{BEGIN latitude_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END latitude_fieldfootercolumn}
+{BEGIN longitude_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END longitude_fieldfootercolumn}
+{BEGIN pemilik_nama_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END pemilik_nama_fieldfootercolumn}
+{BEGIN pemilik_alamat_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END pemilik_alamat_fieldfootercolumn}
+{BEGIN pemilik_kecamatan_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END pemilik_kecamatan_fieldfootercolumn}
+{BEGIN pemilik_kelurahan_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END pemilik_kelurahan_fieldfootercolumn}
+{BEGIN pemilik_kota_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END pemilik_kota_fieldfootercolumn}
+{BEGIN updated_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END updated_fieldfootercolumn}
+{BEGIN created_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END created_fieldfootercolumn}
+{BEGIN update_uid_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END update_uid_fieldfootercolumn}
+{BEGIN create_uid_fieldfootercolumn}
+<td class="runner-cc runner-clast"></td>
+{END create_uid_fieldfootercolumn}
+
+									{END record_footer}
+									<td class="runner-cr"><img src="images/spacer.gif"></td>
+									{BEGIN endrecordtotals_block}
+									<td class="runner-cs"></td>
+									{END endrecordtotals_block}
+								</tr>
+
+		</tbody>
+	</table>
+</div>	
+{END page}
+
+{END grid_block}
+
+
+
+{END container_grid}
+
+
+				</td>	
+
+				<td class="runner-right {$blockclass_right}">
+					
+				</td>	
+			</tr>
+			<tr class="runner-footer">
+				<td class="runner-bottom" colspan=3>
+					<!--%%bottom%%-->
+				</td>
+			</tr>
+		</table>
+		{$footer}
+	{END body}
+	</body>
+</html>

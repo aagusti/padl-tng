@@ -8,8 +8,8 @@ error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
 // -- App Info
-define('APP_TITLE'  , '[DEVEL] e-SPTPD');
-define('APP_NAME'   , 'os_pad_devel'); //no space please
+define('APP_TITLE'  , 'e-SPTPD');
+define('APP_NAME'   , 'os_pad'); //no space please
 define('APP_CORP'   , 'OpenSIPKD');
 define('APP_VERSION', '0.1');
 define('APP_YEAR'   , '2015');
@@ -22,7 +22,7 @@ define('SELECT_MODULE'  , TRUE);
 
 // -- Environment
 //define('MY_ENV', 'development'); //development testing production
-define('MY_ENV', 'development'); //development testing production
+define('MY_ENV', 'production'); //development testing production
 
 // -- System & Application
 define('MY_SYS', 'sys213');

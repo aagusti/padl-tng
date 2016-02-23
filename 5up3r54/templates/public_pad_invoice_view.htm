@@ -1,0 +1,530 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<title>{$pagetitle}</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=7">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+		{BEGIN pageCSSFiles}
+		<link REL="stylesheet" href="{$pagestylepath}" type="text/css">
+		{END pageCSSFiles}
+		<!--[if IE]>
+			<link REL="stylesheet" href="styles/defaultIE.css" type="text/css">
+			{BEGIN IEcssFiles}
+			<link REL="stylesheet" href="{$stylepathIE}" type="text/css">
+			{END IEcssFiles}
+		<![endif]-->
+	</head>
+	
+	<body class="{$stylename}" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+		<table   cellpadding="0" class="runner-toptable">
+			<tr class="runner-header">
+				<td class="runner-top" colspan=3>
+					
+
+
+
+{BEGIN container_view}
+<table class="runner-c runner-c-view" cellpadding="0" align=center>
+
+
+<tr class="runner-toprow style2 header"><td class="runner-cl"><img src="images/spacer.gif"></td><td class="runner-cc" ><div  class="runner-b-viewheader {$brickclass_viewheader}">Pad Invoice, View record [
+Id: {$show_key1}
+]</div></td><td class="runner-cr"><img src="images/spacer.gif"></td></tr>
+
+
+
+<tr  class="runner-row style1 runner-b-wrapper {$wrapperclass_fields}"><td class="runner-cl"></td><td class="runner-cc runner-brickcontents runner-wrapper" >
+
+{BEGIN container_fields}
+<table class="runner-c runner-c-fields" cellpadding="0" >
+
+
+	{BEGIN id_fieldblock}
+	<tr class="runner-toprow header style1 runner-b-viewfields"><td class="runner-cl"><img src="images/spacer.gif"></td>
+	<td class="runner-cc runner-cc1">
+		<div class="fieldlabel_id {$fielddispclass_id}">
+			<b>Id</b>
+		</div>
+		</td>
+		<td class="runner-cc alt">
+		<div class="fieldvalue_id {$fielddispclass_id}">
+			{$id_value}&nbsp;
+		</div>
+		</td>
+	<td class="runner-cr alt"><img src="images/spacer.gif"></td></tr>
+{END id_fieldblock}
+	{BEGIN source_id_fieldblock}
+	<tr class="runner-row style1 runner-b-viewfields"><td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">
+		<div class="fieldlabel_source_id {$fielddispclass_source_id}">
+			<b>Source Id</b>
+		</div>
+		</td>
+		<td class="runner-cc alt">
+		<div class="fieldvalue_source_id {$fielddispclass_source_id}">
+			{$source_id_value}&nbsp;
+		</div>
+		</td>
+	<td class="runner-cr alt"></td></tr>
+{END source_id_fieldblock}
+	{BEGIN source_nama_fieldblock}
+	<tr class="runner-row style1 runner-b-viewfields"><td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">
+		<div class="fieldlabel_source_nama {$fielddispclass_source_nama}">
+			<b>Source Nama</b>
+		</div>
+		</td>
+		<td class="runner-cc alt">
+		<div class="fieldvalue_source_nama {$fielddispclass_source_nama}">
+			{$source_nama_value}&nbsp;
+		</div>
+		</td>
+	<td class="runner-cr alt"></td></tr>
+{END source_nama_fieldblock}
+	{BEGIN tahun_fieldblock}
+	<tr class="runner-row style1 runner-b-viewfields"><td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">
+		<div class="fieldlabel_tahun {$fielddispclass_tahun}">
+			<b>Tahun</b>
+		</div>
+		</td>
+		<td class="runner-cc alt">
+		<div class="fieldvalue_tahun {$fielddispclass_tahun}">
+			{$tahun_value}&nbsp;
+		</div>
+		</td>
+	<td class="runner-cr alt"></td></tr>
+{END tahun_fieldblock}
+	{BEGIN usaha_id_fieldblock}
+	<tr class="runner-row style1 runner-b-viewfields"><td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">
+		<div class="fieldlabel_usaha_id {$fielddispclass_usaha_id}">
+			<b>Usaha Id</b>
+		</div>
+		</td>
+		<td class="runner-cc alt">
+		<div class="fieldvalue_usaha_id {$fielddispclass_usaha_id}">
+			{$usaha_id_value}&nbsp;
+		</div>
+		</td>
+	<td class="runner-cr alt"></td></tr>
+{END usaha_id_fieldblock}
+	{BEGIN invoice_no_fieldblock}
+	<tr class="runner-row style1 runner-b-viewfields"><td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">
+		<div class="fieldlabel_invoice_no {$fielddispclass_invoice_no}">
+			<b>Invoice No</b>
+		</div>
+		</td>
+		<td class="runner-cc alt">
+		<div class="fieldvalue_invoice_no {$fielddispclass_invoice_no}">
+			{$invoice_no_value}&nbsp;
+		</div>
+		</td>
+	<td class="runner-cr alt"></td></tr>
+{END invoice_no_fieldblock}
+	{BEGIN jenis_usaha_fieldblock}
+	<tr class="runner-row style1 runner-b-viewfields"><td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">
+		<div class="fieldlabel_jenis_usaha {$fielddispclass_jenis_usaha}">
+			<b>Jenis Usaha</b>
+		</div>
+		</td>
+		<td class="runner-cc alt">
+		<div class="fieldvalue_jenis_usaha {$fielddispclass_jenis_usaha}">
+			{$jenis_usaha_value}&nbsp;
+		</div>
+		</td>
+	<td class="runner-cr alt"></td></tr>
+{END jenis_usaha_fieldblock}
+	{BEGIN jenis_pajak_fieldblock}
+	<tr class="runner-row style1 runner-b-viewfields"><td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">
+		<div class="fieldlabel_jenis_pajak {$fielddispclass_jenis_pajak}">
+			<b>Jenis Pajak</b>
+		</div>
+		</td>
+		<td class="runner-cc alt">
+		<div class="fieldvalue_jenis_pajak {$fielddispclass_jenis_pajak}">
+			{$jenis_pajak_value}&nbsp;
+		</div>
+		</td>
+	<td class="runner-cr alt"></td></tr>
+{END jenis_pajak_fieldblock}
+	{BEGIN npwpd_fieldblock}
+	<tr class="runner-row style1 runner-b-viewfields"><td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">
+		<div class="fieldlabel_npwpd {$fielddispclass_npwpd}">
+			<b>Npwpd</b>
+		</div>
+		</td>
+		<td class="runner-cc alt">
+		<div class="fieldvalue_npwpd {$fielddispclass_npwpd}">
+			{$npwpd_value}&nbsp;
+		</div>
+		</td>
+	<td class="runner-cr alt"></td></tr>
+{END npwpd_fieldblock}
+	{BEGIN nama_wp_fieldblock}
+	<tr class="runner-row style1 runner-b-viewfields"><td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">
+		<div class="fieldlabel_nama_wp {$fielddispclass_nama_wp}">
+			<b>Nama Wp</b>
+		</div>
+		</td>
+		<td class="runner-cc alt">
+		<div class="fieldvalue_nama_wp {$fielddispclass_nama_wp}">
+			{$nama_wp_value}&nbsp;
+		</div>
+		</td>
+	<td class="runner-cr alt"></td></tr>
+{END nama_wp_fieldblock}
+	{BEGIN alamat_wp_fieldblock}
+	<tr class="runner-row style1 runner-b-viewfields"><td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">
+		<div class="fieldlabel_alamat_wp {$fielddispclass_alamat_wp}">
+			<b>Alamat Wp</b>
+		</div>
+		</td>
+		<td class="runner-cc alt">
+		<div class="fieldvalue_alamat_wp {$fielddispclass_alamat_wp}">
+			{$alamat_wp_value}&nbsp;
+		</div>
+		</td>
+	<td class="runner-cr alt"></td></tr>
+{END alamat_wp_fieldblock}
+	{BEGIN nama_op_fieldblock}
+	<tr class="runner-row style1 runner-b-viewfields"><td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">
+		<div class="fieldlabel_nama_op {$fielddispclass_nama_op}">
+			<b>Nama Op</b>
+		</div>
+		</td>
+		<td class="runner-cc alt">
+		<div class="fieldvalue_nama_op {$fielddispclass_nama_op}">
+			{$nama_op_value}&nbsp;
+		</div>
+		</td>
+	<td class="runner-cr alt"></td></tr>
+{END nama_op_fieldblock}
+	{BEGIN alamat_op_fieldblock}
+	<tr class="runner-row style1 runner-b-viewfields"><td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">
+		<div class="fieldlabel_alamat_op {$fielddispclass_alamat_op}">
+			<b>Alamat Op</b>
+		</div>
+		</td>
+		<td class="runner-cc alt">
+		<div class="fieldvalue_alamat_op {$fielddispclass_alamat_op}">
+			{$alamat_op_value}&nbsp;
+		</div>
+		</td>
+	<td class="runner-cr alt"></td></tr>
+{END alamat_op_fieldblock}
+	{BEGIN nomor_tagihan_fieldblock}
+	<tr class="runner-row style1 runner-b-viewfields"><td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">
+		<div class="fieldlabel_nomor_tagihan {$fielddispclass_nomor_tagihan}">
+			<b>Nomor Tagihan</b>
+		</div>
+		</td>
+		<td class="runner-cc alt">
+		<div class="fieldvalue_nomor_tagihan {$fielddispclass_nomor_tagihan}">
+			{$nomor_tagihan_value}&nbsp;
+		</div>
+		</td>
+	<td class="runner-cr alt"></td></tr>
+{END nomor_tagihan_fieldblock}
+	{BEGIN pokok_fieldblock}
+	<tr class="runner-row style1 runner-b-viewfields"><td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">
+		<div class="fieldlabel_pokok {$fielddispclass_pokok}">
+			<b>Pokok</b>
+		</div>
+		</td>
+		<td class="runner-cc alt">
+		<div class="fieldvalue_pokok {$fielddispclass_pokok}">
+			{$pokok_value}&nbsp;
+		</div>
+		</td>
+	<td class="runner-cr alt"></td></tr>
+{END pokok_fieldblock}
+	{BEGIN denda_fieldblock}
+	<tr class="runner-row style1 runner-b-viewfields"><td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">
+		<div class="fieldlabel_denda {$fielddispclass_denda}">
+			<b>Denda</b>
+		</div>
+		</td>
+		<td class="runner-cc alt">
+		<div class="fieldvalue_denda {$fielddispclass_denda}">
+			{$denda_value}&nbsp;
+		</div>
+		</td>
+	<td class="runner-cr alt"></td></tr>
+{END denda_fieldblock}
+	{BEGIN bunga_fieldblock}
+	<tr class="runner-row style1 runner-b-viewfields"><td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">
+		<div class="fieldlabel_bunga {$fielddispclass_bunga}">
+			<b>Bunga</b>
+		</div>
+		</td>
+		<td class="runner-cc alt">
+		<div class="fieldvalue_bunga {$fielddispclass_bunga}">
+			{$bunga_value}&nbsp;
+		</div>
+		</td>
+	<td class="runner-cr alt"></td></tr>
+{END bunga_fieldblock}
+	{BEGIN total_fieldblock}
+	<tr class="runner-row style1 runner-b-viewfields"><td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">
+		<div class="fieldlabel_total {$fielddispclass_total}">
+			<b>Total</b>
+		</div>
+		</td>
+		<td class="runner-cc alt">
+		<div class="fieldvalue_total {$fielddispclass_total}">
+			{$total_value}&nbsp;
+		</div>
+		</td>
+	<td class="runner-cr alt"></td></tr>
+{END total_fieldblock}
+	{BEGIN status_bayar_fieldblock}
+	<tr class="runner-row style1 runner-b-viewfields"><td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">
+		<div class="fieldlabel_status_bayar {$fielddispclass_status_bayar}">
+			<b>Status Bayar</b>
+		</div>
+		</td>
+		<td class="runner-cc alt">
+		<div class="fieldvalue_status_bayar {$fielddispclass_status_bayar}">
+			{$status_bayar_value}&nbsp;
+		</div>
+		</td>
+	<td class="runner-cr alt"></td></tr>
+{END status_bayar_fieldblock}
+	{BEGIN jatuh_tempo_fieldblock}
+	<tr class="runner-row style1 runner-b-viewfields"><td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">
+		<div class="fieldlabel_jatuh_tempo {$fielddispclass_jatuh_tempo}">
+			<b>Jatuh Tempo</b>
+		</div>
+		</td>
+		<td class="runner-cc alt">
+		<div class="fieldvalue_jatuh_tempo {$fielddispclass_jatuh_tempo}">
+			{$jatuh_tempo_value}&nbsp;
+		</div>
+		</td>
+	<td class="runner-cr alt"></td></tr>
+{END jatuh_tempo_fieldblock}
+	{BEGIN periode_fieldblock}
+	<tr class="runner-row style1 runner-b-viewfields"><td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">
+		<div class="fieldlabel_periode {$fielddispclass_periode}">
+			<b>Periode</b>
+		</div>
+		</td>
+		<td class="runner-cc alt">
+		<div class="fieldvalue_periode {$fielddispclass_periode}">
+			{$periode_value}&nbsp;
+		</div>
+		</td>
+	<td class="runner-cr alt"></td></tr>
+{END periode_fieldblock}
+	{BEGIN rekening_pokok_fieldblock}
+	<tr class="runner-row style1 runner-b-viewfields"><td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">
+		<div class="fieldlabel_rekening_pokok {$fielddispclass_rekening_pokok}">
+			<b>Rekening Pokok</b>
+		</div>
+		</td>
+		<td class="runner-cc alt">
+		<div class="fieldvalue_rekening_pokok {$fielddispclass_rekening_pokok}">
+			{$rekening_pokok_value}&nbsp;
+		</div>
+		</td>
+	<td class="runner-cr alt"></td></tr>
+{END rekening_pokok_fieldblock}
+	{BEGIN rekening_denda_fieldblock}
+	<tr class="runner-row style1 runner-b-viewfields"><td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">
+		<div class="fieldlabel_rekening_denda {$fielddispclass_rekening_denda}">
+			<b>Rekening Denda</b>
+		</div>
+		</td>
+		<td class="runner-cc alt">
+		<div class="fieldvalue_rekening_denda {$fielddispclass_rekening_denda}">
+			{$rekening_denda_value}&nbsp;
+		</div>
+		</td>
+	<td class="runner-cr alt"></td></tr>
+{END rekening_denda_fieldblock}
+	{BEGIN nama_pokok_fieldblock}
+	<tr class="runner-row style1 runner-b-viewfields"><td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">
+		<div class="fieldlabel_nama_pokok {$fielddispclass_nama_pokok}">
+			<b>Nama Pokok</b>
+		</div>
+		</td>
+		<td class="runner-cc alt">
+		<div class="fieldvalue_nama_pokok {$fielddispclass_nama_pokok}">
+			{$nama_pokok_value}&nbsp;
+		</div>
+		</td>
+	<td class="runner-cr alt"></td></tr>
+{END nama_pokok_fieldblock}
+	{BEGIN nama_denda_fieldblock}
+	<tr class="runner-row style1 runner-b-viewfields"><td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">
+		<div class="fieldlabel_nama_denda {$fielddispclass_nama_denda}">
+			<b>Nama Denda</b>
+		</div>
+		</td>
+		<td class="runner-cc alt">
+		<div class="fieldvalue_nama_denda {$fielddispclass_nama_denda}">
+			{$nama_denda_value}&nbsp;
+		</div>
+		</td>
+	<td class="runner-cr alt"></td></tr>
+{END nama_denda_fieldblock}
+	{BEGIN created_fieldblock}
+	<tr class="runner-row style1 runner-b-viewfields"><td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">
+		<div class="fieldlabel_created {$fielddispclass_created}">
+			<b>Created</b>
+		</div>
+		</td>
+		<td class="runner-cc alt">
+		<div class="fieldvalue_created {$fielddispclass_created}">
+			{$created_value}&nbsp;
+		</div>
+		</td>
+	<td class="runner-cr alt"></td></tr>
+{END created_fieldblock}
+	{BEGIN updated_fieldblock}
+	<tr class="runner-row style1 runner-b-viewfields"><td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">
+		<div class="fieldlabel_updated {$fielddispclass_updated}">
+			<b>Updated</b>
+		</div>
+		</td>
+		<td class="runner-cc alt">
+		<div class="fieldvalue_updated {$fielddispclass_updated}">
+			{$updated_value}&nbsp;
+		</div>
+		</td>
+	<td class="runner-cr alt"></td></tr>
+{END updated_fieldblock}
+	{BEGIN create_uid_fieldblock}
+	<tr class="runner-row style1 runner-b-viewfields"><td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">
+		<div class="fieldlabel_create_uid {$fielddispclass_create_uid}">
+			<b>Create Uid</b>
+		</div>
+		</td>
+		<td class="runner-cc alt">
+		<div class="fieldvalue_create_uid {$fielddispclass_create_uid}">
+			{$create_uid_value}&nbsp;
+		</div>
+		</td>
+	<td class="runner-cr alt"></td></tr>
+{END create_uid_fieldblock}
+	{BEGIN update_uid_fieldblock}
+	<tr class="runner-row style1 runner-b-viewfields"><td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">
+		<div class="fieldlabel_update_uid {$fielddispclass_update_uid}">
+			<b>Update Uid</b>
+		</div>
+		</td>
+		<td class="runner-cc alt">
+		<div class="fieldvalue_update_uid {$fielddispclass_update_uid}">
+			{$update_uid_value}&nbsp;
+		</div>
+		</td>
+	<td class="runner-cr alt"></td></tr>
+{END update_uid_fieldblock}
+
+
+
+
+<tr  class="runner-row style2 runner-b-viewbuttons {$brickclass_viewbuttons}"><td class="runner-cl"></td><td class="runner-cc runner-brickcontents" colspan=2>{BEGIN prev_button}
+<span class="runner-btnframe">
+<span class="runner-btnleft"></span>
+<span class="runner-btnright"></span>
+<a href="#" class="runner-button" {$prevbutton_attrs}>&lt;&lt;&lt;</a>
+</span>
+{END prev_button}
+{BEGIN back_button}
+<span class="runner-btnframe">
+<span class="runner-btnleft"></span>
+<span class="runner-btnright"></span>
+<a href="#" class="runner-button" {$backbutton_attrs}>Back to list</a>
+</span>
+{END back_button}
+{BEGIN next_button}
+<span class="runner-btnframe">
+<span class="runner-btnleft"></span>
+<span class="runner-btnright"></span>
+<a href="#" class="runner-button" {$nextbutton_attrs}>&gt;&gt;&gt;</a>
+</span>
+{END next_button}
+</td><td class="runner-cr"></td></tr>
+
+
+<tr class="{$cfooterclass_fields}">
+<td class="runner-cl"><img src="images/spacer.gif"></td>
+<td class="runner-cc"></td><td class="runner-cc"></td><td class="runner-cr"><img src="images/spacer.gif"></td>
+</tr>
+</table>
+{END container_fields}
+
+</td><td class="runner-cr"></td></tr>
+
+
+<tr class="{$cfooterclass_view}">
+<td class="runner-cl"><img src="images/spacer.gif"></td>
+<td class="runner-cc"></td><td class="runner-cr"><img src="images/spacer.gif"></td>
+</tr>
+</table>
+{END container_view}
+
+
+
+
+				</td>
+			</tr>
+			<tr class="runner-body">
+				
+				<td class="runner-left {$blockclass_left}" >
+					
+				</td>	
+				
+				<td class="runner-center {$blockclass_center}">
+					
+				</td>	
+
+				<td class="runner-right {$blockclass_right}">
+					
+				</td>	
+			</tr>
+			<tr class="runner-footer">
+				<td class="runner-bottom" colspan=3>
+					<!--%%bottom%%-->
+				</td>
+			</tr>
+		</table>
+		{$footer}
+	{END body}
+	</body>
+</html>

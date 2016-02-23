@@ -523,6 +523,21 @@ $('#btn_dth_new').click( function (e) {
 		return true;
 	});
 
+	function ddmmyyyy(datedefault){
+	    var dd = datedefault.getDate();
+	    var mm = datedefault.getMonth()+1;
+
+	    var yyyy = datedefault.getFullYear();
+	    if(dd<10){
+	        dd='0'+dd
+	    } 
+	    if(mm<10){
+	        mm='0'+mm
+	    } 
+	    var dateformatted = dd+'-'+mm+'-'+yyyy;
+	    return dateformatted;
+	}
+
 
 	function days_between(date1, date2, tipe) {
 
@@ -563,6 +578,31 @@ $('#btn_dth_new').click( function (e) {
 					}
 			break;
 			case 'denda':
+				    	var difference_ms = date1_ms - date2_ms;
+				    	if (difference_ms>0){		//mencegah denda muncul
+						var valtelat = 0;
+				    	}else{
+				    	date1 = ddmmyyyy(date1);
+				    	date2 = ddmmyyyy(date2);
+						$.ajax({
+							url: "<?php echo active_module_url()?>sptpd/get_jdendarek/"+date1+"/"+date2,
+							async: false,
+							success: function (j) {
+								var data = $.parseJSON(j);
+								valtelat = data['bulan_telat'];
+							},
+							error: function (xhr, desc, er) {
+								alert(er);
+							}
+						});																									
+						}													
+						//$('#denda').autoNumeric('set', denda);
+						$('#denda').autoNumeric('set', 0); //jangan muncul
+						var pad_bunga = <?=pad_bunga()?> ;
+						var pesantelat = 'Terlambat : ' + valtelat+' Bulan ( ' + pad_bunga*valtelat + ' % )';
+						$('#pesantelat').html(pesantelat);
+			 break;
+			case 'denda.old':
 				    	var difference_ms = date1_ms - date2_ms;
 				    	if (difference_ms>0){		//mencegah denda muncul
 						var r_hari_telat = 0;
@@ -658,9 +698,9 @@ $('#btn_dth_new').click( function (e) {
 	}
 
 	function hitung_denda() {
-		var sekarang = new Date();
+		var terimatgl = terimatgl_dtp.date;
 		var jatuhtempotgl = jatuhtempotgl_dtp.date;
- 		days_between(jatuhtempotgl, sekarang, 'denda');
+ 		days_between(jatuhtempotgl, terimatgl, 'denda');
 	}
 
 	function hitung_pajak() {

@@ -1,0 +1,109 @@
+<div {$pageattrs}>
+
+{BEGIN container_dcount}
+<table class="runner-c runner-c-dcount" cellpadding="0" >
+<tr class="{$cheaderclass_dcount}">
+<td class="runner-cl"><img src="images/spacer.gif"></td>
+<td class="runner-cc"></td><td class="runner-cr"><img src="images/spacer.gif"></td>
+</tr>
+
+
+<tr  class="runner-row style1 runner-b-detailspreviewheader {$brickclass_detailspreviewheader}"><td class="runner-cl"></td><td class="runner-cc runner-brickcontents" ><b>Pad Stpd</b>
+</td><td class="runner-cr"></td></tr>
+
+
+
+<tr  class="runner-row style1 runner-b-detailspreviewdetailsfount {$brickclass_detailspreviewdetailsfount}"><td class="runner-cl"></td><td class="runner-cc runner-brickcontents" >Details found: <strong>{$row_count}.</strong>
+</td><td class="runner-cr"></td></tr>
+
+
+{BEGIN display_first}
+<tr  class="runner-row style1 runner-b-detailspreviewdispfirst {$brickclass_detailspreviewdispfirst}"><td class="runner-cl"></td><td class="runner-cc runner-brickcontents" >Displaying first: <strong>{$display_count}</strong>.
+</td><td class="runner-cr"></td></tr>{END display_first}
+
+
+<tr class="{$cfooterclass_dcount}">
+<td class="runner-cl"><img src="images/spacer.gif"></td>
+<td class="runner-cc"></td><td class="runner-cr"><img src="images/spacer.gif"></td>
+</tr>
+</table>
+{END container_dcount}
+
+
+
+{BEGIN container_detailspreviewgrid}
+
+
+{BEGIN details_data}
+<table class="runner-c runner-c-detailspreviewgrid runner-b-detailspreviewgrid">
+	<tr  class="runner-toprow style1">
+		<th class="runner-cl"><img src="images/spacer.gif"></th>
+		<th class="runner-cc ">Id</th>
+		<th class="runner-cc ">Tahun</th>
+		<th class="runner-cc ">Stpdno</th>
+		<th class="runner-cc ">Stpdtgl</th>
+		<th class="runner-cc ">Spt Id</th>
+		<th class="runner-cc ">Jatuhtempotgl</th>
+		<th class="runner-cc ">Printed</th>
+		<th class="runner-cc ">Stpdcount</th>
+		<th class="runner-cc ">Bunga</th>
+		<th class="runner-cc ">Enabled</th>
+		<th class="runner-cc ">Created</th>
+		<th class="runner-cc ">Create Uid</th>
+		<th class="runner-cc ">Write Date</th>
+		<th class="runner-cc ">Write Uid</th>
+		<th class="runner-cc ">Petugas Id</th>
+		<th class="runner-cc runner-clast">Pejabat Id</th>
+		<th class="runner-cr"><img src="images/spacer.gif"></th>
+	</tr>
+	{BEGIN details_row}
+	<tr class="runner-row style1">
+		<td class="runner-cl"><img src="images/spacer.gif"></td>
+		<td class="runner-cc ">{$id_value}</td>
+		<td class="runner-cc ">{$tahun_value}</td>
+		<td class="runner-cc ">{$stpdno_value}</td>
+		<td class="runner-cc ">{$stpdtgl_value}</td>
+		<td class="runner-cc ">{$spt_id_value}</td>
+		<td class="runner-cc ">{$jatuhtempotgl_value}</td>
+		<td class="runner-cc ">{$printed_value}</td>
+		<td class="runner-cc ">{$stpdcount_value}</td>
+		<td class="runner-cc ">{$bunga_value}</td>
+		<td class="runner-cc ">{$enabled_value}</td>
+		<td class="runner-cc ">{$created_value}</td>
+		<td class="runner-cc ">{$create_uid_value}</td>
+		<td class="runner-cc ">{$write_date_value}</td>
+		<td class="runner-cc ">{$write_uid_value}</td>
+		<td class="runner-cc ">{$petugas_id_value}</td>
+		<td class="runner-cc runner-clast">{$pejabat_id_value}</td>
+		<td class="runner-cr"><img src="images/spacer.gif"></td>
+	</tr>
+	{END details_row}
+	<tr class="runner-bottomrow style1">
+		<td class="runner-cl"><img src="images/spacer.gif"></td>
+			<td class="runner-cc "></td>
+			<td class="runner-cc "></td>
+			<td class="runner-cc "></td>
+			<td class="runner-cc "></td>
+			<td class="runner-cc "></td>
+			<td class="runner-cc "></td>
+			<td class="runner-cc "></td>
+			<td class="runner-cc "></td>
+			<td class="runner-cc "></td>
+			<td class="runner-cc "></td>
+			<td class="runner-cc "></td>
+			<td class="runner-cc "></td>
+			<td class="runner-cc "></td>
+			<td class="runner-cc "></td>
+			<td class="runner-cc "></td>
+			<td class="runner-cc runner-clast"></td>
+		<td class="runner-cr"><img src="images/spacer.gif"></td>
+	</tr>
+</table>
+
+{END details_data}
+
+
+
+{END container_detailspreviewgrid}
+
+</div>

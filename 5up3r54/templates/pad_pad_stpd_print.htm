@@ -1,0 +1,397 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<title>{$pagetitle}</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=7">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+		{BEGIN pageCSSFiles}
+		<link REL="stylesheet" href="{$pagestylepath}" type="text/css">
+		{END pageCSSFiles}
+		<!--[if IE]>
+			<link REL="stylesheet" href="styles/defaultIE.css" type="text/css">
+			{BEGIN IEcssFiles}
+			<link REL="stylesheet" href="{$stylepathIE}" type="text/css">
+			{END IEcssFiles}
+		<![endif]-->
+	</head>
+	
+	<body class="{$stylename}" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+		<table   cellpadding="0" class="runner-toptable">
+			<tr class="runner-header">
+				<td class="runner-top" colspan=3>
+					
+
+{BEGIN container_master}
+<table class="runner-c runner-c-master" cellpadding="0" >
+<tr class="{$cheaderclass_master}">
+<td class="runner-cl"><img src="images/spacer.gif"></td>
+<td class="runner-cc"></td><td class="runner-cr"><img src="images/spacer.gif"></td>
+</tr>
+<tr class="runner-row style1">
+<td class="runner-cl"></td>
+<td class="runner-cc">
+<table border="0" cellpadding="0" class="runner-hc">
+<tr>
+
+{BEGIN mastertable_block}
+<td  class="runner-cc runner-bl runner-b-masterinfoprint" {$brickclass_masterinfoprint}><span>{$showmasterfile}
+</span></td>
+{END mastertable_block}
+
+<td class="runner-cc filler"></td>
+</tr>
+</table></td>
+<td class="runner-cr"></td>
+</tr>
+
+<tr class="{$cfooterclass_master}">
+<td class="runner-cl"><img src="images/spacer.gif"></td>
+<td class="runner-cc"></td><td class="runner-cr"><img src="images/spacer.gif"></td>
+</tr>
+</table>
+{END container_master}
+
+
+
+
+				</td>
+			</tr>
+			<tr class="runner-body">
+				
+				<td class="runner-left {$blockclass_left}" >
+					
+				</td>	
+				
+				<td class="runner-center {$blockclass_center}">
+					
+
+{BEGIN container_grid}
+
+
+{BEGIN grid_block}
+{BEGIN page}
+<h1>Pad Stpd</h1>
+<span>
+{BEGIN page_number}
+Page {$pageno} of {$maxpages} 
+{END page_number}
+</span>
+
+	<div class="runner-s-grid">	
+	<table class="runner-c runner-c-grid" cellpadding="0">
+		<thead>
+		{BEGIN grid_header}
+		<tr class="runner-toprow style1">
+			<td class="runner-cl"><img src="images/spacer.gif"></td>
+			{BEGIN record_header}
+					{BEGIN id_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN id_fieldheader}
+	<b>Id</b>
+	{END id_fieldheader}
+</th>
+{END id_fieldheadercolumn}
+	{BEGIN tahun_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN tahun_fieldheader}
+	<b>Tahun</b>
+	{END tahun_fieldheader}
+</th>
+{END tahun_fieldheadercolumn}
+	{BEGIN stpdno_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN stpdno_fieldheader}
+	<b>Stpdno</b>
+	{END stpdno_fieldheader}
+</th>
+{END stpdno_fieldheadercolumn}
+	{BEGIN stpdtgl_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN stpdtgl_fieldheader}
+	<b>Stpdtgl</b>
+	{END stpdtgl_fieldheader}
+</th>
+{END stpdtgl_fieldheadercolumn}
+	{BEGIN spt_id_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN spt_id_fieldheader}
+	<b>Spt Id</b>
+	{END spt_id_fieldheader}
+</th>
+{END spt_id_fieldheadercolumn}
+	{BEGIN jatuhtempotgl_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN jatuhtempotgl_fieldheader}
+	<b>Jatuhtempotgl</b>
+	{END jatuhtempotgl_fieldheader}
+</th>
+{END jatuhtempotgl_fieldheadercolumn}
+	{BEGIN printed_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN printed_fieldheader}
+	<b>Printed</b>
+	{END printed_fieldheader}
+</th>
+{END printed_fieldheadercolumn}
+	{BEGIN stpdcount_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN stpdcount_fieldheader}
+	<b>Stpdcount</b>
+	{END stpdcount_fieldheader}
+</th>
+{END stpdcount_fieldheadercolumn}
+	{BEGIN bunga_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN bunga_fieldheader}
+	<b>Bunga</b>
+	{END bunga_fieldheader}
+</th>
+{END bunga_fieldheadercolumn}
+	{BEGIN enabled_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN enabled_fieldheader}
+	<b>Enabled</b>
+	{END enabled_fieldheader}
+</th>
+{END enabled_fieldheadercolumn}
+	{BEGIN created_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN created_fieldheader}
+	<b>Created</b>
+	{END created_fieldheader}
+</th>
+{END created_fieldheadercolumn}
+	{BEGIN create_uid_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN create_uid_fieldheader}
+	<b>Create Uid</b>
+	{END create_uid_fieldheader}
+</th>
+{END create_uid_fieldheadercolumn}
+	{BEGIN write_date_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN write_date_fieldheader}
+	<b>Write Date</b>
+	{END write_date_fieldheader}
+</th>
+{END write_date_fieldheadercolumn}
+	{BEGIN write_uid_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN write_uid_fieldheader}
+	<b>Write Uid</b>
+	{END write_uid_fieldheader}
+</th>
+{END write_uid_fieldheadercolumn}
+	{BEGIN petugas_id_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN petugas_id_fieldheader}
+	<b>Petugas Id</b>
+	{END petugas_id_fieldheader}
+</th>
+{END petugas_id_fieldheadercolumn}
+	{BEGIN pejabat_id_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN pejabat_id_fieldheader}
+	<b>Pejabat Id</b>
+	{END pejabat_id_fieldheader}
+</th>
+{END pejabat_id_fieldheadercolumn}
+		
+			{END record_header}
+			<td class="runner-cr"><img src="images/spacer.gif"></td>
+			{BEGIN endrecordheader_block}
+			<td class="runner-cs">&nbsp;</td>
+			{END endrecordheader_block}
+		</tr>
+	{END grid_header}
+		</thead>
+		<tbody>	
+		{BEGIN grid_row}
+	<tr class="runner-row style1" {$rowattrs} {$rowstyle} {$rowstyle}>
+		<td class="runner-cl"></td>
+		{BEGIN grid_record}
+				{BEGIN id_fieldcolumn}
+<td  class="runner-cc {$id_class}" {$id_style}>
+	{$id_value}
+</td>
+{END id_fieldcolumn}
+	{BEGIN tahun_fieldcolumn}
+<td  class="runner-cc {$tahun_class}" {$tahun_style}>
+	{$tahun_value}
+</td>
+{END tahun_fieldcolumn}
+	{BEGIN stpdno_fieldcolumn}
+<td  class="runner-cc {$stpdno_class}" {$stpdno_style}>
+	{$stpdno_value}
+</td>
+{END stpdno_fieldcolumn}
+	{BEGIN stpdtgl_fieldcolumn}
+<td  class="runner-cc {$stpdtgl_class}" {$stpdtgl_style}>
+	{$stpdtgl_value}
+</td>
+{END stpdtgl_fieldcolumn}
+	{BEGIN spt_id_fieldcolumn}
+<td  class="runner-cc {$spt_id_class}" {$spt_id_style}>
+	{$spt_id_value}
+</td>
+{END spt_id_fieldcolumn}
+	{BEGIN jatuhtempotgl_fieldcolumn}
+<td  class="runner-cc {$jatuhtempotgl_class}" {$jatuhtempotgl_style}>
+	{$jatuhtempotgl_value}
+</td>
+{END jatuhtempotgl_fieldcolumn}
+	{BEGIN printed_fieldcolumn}
+<td  class="runner-cc {$printed_class}" {$printed_style}>
+	{$printed_value}
+</td>
+{END printed_fieldcolumn}
+	{BEGIN stpdcount_fieldcolumn}
+<td  class="runner-cc {$stpdcount_class}" {$stpdcount_style}>
+	{$stpdcount_value}
+</td>
+{END stpdcount_fieldcolumn}
+	{BEGIN bunga_fieldcolumn}
+<td  class="runner-cc {$bunga_class}" {$bunga_style}>
+	{$bunga_value}
+</td>
+{END bunga_fieldcolumn}
+	{BEGIN enabled_fieldcolumn}
+<td  class="runner-cc {$enabled_class}" {$enabled_style}>
+	{$enabled_value}
+</td>
+{END enabled_fieldcolumn}
+	{BEGIN created_fieldcolumn}
+<td  class="runner-cc {$created_class}" {$created_style}>
+	{$created_value}
+</td>
+{END created_fieldcolumn}
+	{BEGIN create_uid_fieldcolumn}
+<td  class="runner-cc {$create_uid_class}" {$create_uid_style}>
+	{$create_uid_value}
+</td>
+{END create_uid_fieldcolumn}
+	{BEGIN write_date_fieldcolumn}
+<td  class="runner-cc {$write_date_class}" {$write_date_style}>
+	{$write_date_value}
+</td>
+{END write_date_fieldcolumn}
+	{BEGIN write_uid_fieldcolumn}
+<td  class="runner-cc {$write_uid_class}" {$write_uid_style}>
+	{$write_uid_value}
+</td>
+{END write_uid_fieldcolumn}
+	{BEGIN petugas_id_fieldcolumn}
+<td  class="runner-cc {$petugas_id_class}" {$petugas_id_style}>
+	{$petugas_id_value}
+</td>
+{END petugas_id_fieldcolumn}
+	{BEGIN pejabat_id_fieldcolumn}
+<td  class="runner-cc {$pejabat_id_class}" {$pejabat_id_style}>
+	{$pejabat_id_value}
+</td>
+{END pejabat_id_fieldcolumn}
+
+		{END grid_record}
+		<td class="runner-cr"></td>
+		{BEGIN endrecord_block}
+		<td class="runner-cs">&nbsp;</td>
+		{END endrecord_block}
+	</tr>
+{END grid_row}
+										
+								<tr class="runner-bottomrow style1">
+									<td class="runner-cl"><img src="images/spacer.gif"></td>
+									{BEGIN record_footer}
+									{BEGIN id_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END id_fieldfootercolumn}
+{BEGIN tahun_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END tahun_fieldfootercolumn}
+{BEGIN stpdno_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END stpdno_fieldfootercolumn}
+{BEGIN stpdtgl_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END stpdtgl_fieldfootercolumn}
+{BEGIN spt_id_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END spt_id_fieldfootercolumn}
+{BEGIN jatuhtempotgl_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END jatuhtempotgl_fieldfootercolumn}
+{BEGIN printed_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END printed_fieldfootercolumn}
+{BEGIN stpdcount_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END stpdcount_fieldfootercolumn}
+{BEGIN bunga_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END bunga_fieldfootercolumn}
+{BEGIN enabled_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END enabled_fieldfootercolumn}
+{BEGIN created_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END created_fieldfootercolumn}
+{BEGIN create_uid_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END create_uid_fieldfootercolumn}
+{BEGIN write_date_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END write_date_fieldfootercolumn}
+{BEGIN write_uid_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END write_uid_fieldfootercolumn}
+{BEGIN petugas_id_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END petugas_id_fieldfootercolumn}
+{BEGIN pejabat_id_fieldfootercolumn}
+<td class="runner-cc runner-clast"></td>
+{END pejabat_id_fieldfootercolumn}
+
+									{END record_footer}
+									<td class="runner-cr"><img src="images/spacer.gif"></td>
+									{BEGIN endrecordtotals_block}
+									<td class="runner-cs"></td>
+									{END endrecordtotals_block}
+								</tr>
+
+		</tbody>
+	</table>
+</div>	
+{END page}
+
+{END grid_block}
+
+
+
+{END container_grid}
+
+
+				</td>	
+
+				<td class="runner-right {$blockclass_right}">
+					
+				</td>	
+			</tr>
+			<tr class="runner-footer">
+				<td class="runner-bottom" colspan=3>
+					<!--%%bottom%%-->
+				</td>
+			</tr>
+		</table>
+		{$footer}
+	{END body}
+	</body>
+</html>

@@ -1,0 +1,1207 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<title>{$pagetitle}</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=7">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+		{BEGIN pageCSSFiles}
+		<link REL="stylesheet" href="{$pagestylepath}" type="text/css">
+		{END pageCSSFiles}
+		<!--[if IE]>
+			<link REL="stylesheet" href="styles/defaultIE.css" type="text/css">
+			{BEGIN IEcssFiles}
+			<link REL="stylesheet" href="{$stylepathIE}" type="text/css">
+			{END IEcssFiles}
+		<![endif]-->
+	</head>
+	
+	<body class="{$stylename}" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+		<table   cellpadding="0" class="runner-toptable">
+			<tr class="runner-header">
+				<td class="runner-top" colspan=3>
+					
+
+{BEGIN container_master}
+<table class="runner-c runner-c-master" cellpadding="0" >
+<tr class="{$cheaderclass_master}">
+<td class="runner-cl"><img src="images/spacer.gif"></td>
+<td class="runner-cc"></td><td class="runner-cr"><img src="images/spacer.gif"></td>
+</tr>
+<tr class="runner-row style1">
+<td class="runner-cl"></td>
+<td class="runner-cc">
+<table border="0" cellpadding="0" class="runner-hc">
+<tr>
+
+{BEGIN mastertable_block}
+<td  class="runner-cc runner-bl runner-b-masterinfoprint" {$brickclass_masterinfoprint}><span>{$showmasterfile}
+</span></td>
+{END mastertable_block}
+
+<td class="runner-cc filler"></td>
+</tr>
+</table></td>
+<td class="runner-cr"></td>
+</tr>
+
+<tr class="{$cfooterclass_master}">
+<td class="runner-cl"><img src="images/spacer.gif"></td>
+<td class="runner-cc"></td><td class="runner-cr"><img src="images/spacer.gif"></td>
+</tr>
+</table>
+{END container_master}
+
+
+
+
+				</td>
+			</tr>
+			<tr class="runner-body">
+				
+				<td class="runner-left {$blockclass_left}" >
+					
+				</td>	
+				
+				<td class="runner-center {$blockclass_center}">
+					
+
+{BEGIN container_grid}
+
+
+{BEGIN grid_block}
+{BEGIN page}
+<h1>Pad Customer</h1>
+<span>
+{BEGIN page_number}
+Page {$pageno} of {$maxpages} 
+{END page_number}
+</span>
+
+	<div class="runner-s-grid">	
+	<table class="runner-c runner-c-grid" cellpadding="0">
+		<thead>
+		{BEGIN grid_header}
+		<tr class="runner-toprow style1">
+			<td class="runner-cl"><img src="images/spacer.gif"></td>
+			{BEGIN record_header}
+					{BEGIN id_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN id_fieldheader}
+	<b>Id</b>
+	{END id_fieldheader}
+</th>
+{END id_fieldheadercolumn}
+	{BEGIN parent_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN parent_fieldheader}
+	<b>Parent</b>
+	{END parent_fieldheader}
+</th>
+{END parent_fieldheadercolumn}
+	{BEGIN npwpd_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN npwpd_fieldheader}
+	<b>Npwpd</b>
+	{END npwpd_fieldheader}
+</th>
+{END npwpd_fieldheadercolumn}
+	{BEGIN rp_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN rp_fieldheader}
+	<b>Rp</b>
+	{END rp_fieldheader}
+</th>
+{END rp_fieldheadercolumn}
+	{BEGIN pb_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN pb_fieldheader}
+	<b>Pb</b>
+	{END pb_fieldheader}
+</th>
+{END pb_fieldheadercolumn}
+	{BEGIN formno_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN formno_fieldheader}
+	<b>Formno</b>
+	{END formno_fieldheader}
+</th>
+{END formno_fieldheadercolumn}
+	{BEGIN reg_date_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN reg_date_fieldheader}
+	<b>Reg Date</b>
+	{END reg_date_fieldheader}
+</th>
+{END reg_date_fieldheadercolumn}
+	{BEGIN nama_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN nama_fieldheader}
+	<b>Nama</b>
+	{END nama_fieldheader}
+</th>
+{END nama_fieldheadercolumn}
+	{BEGIN kecamatan_id_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN kecamatan_id_fieldheader}
+	<b>Kecamatan Id</b>
+	{END kecamatan_id_fieldheader}
+</th>
+{END kecamatan_id_fieldheadercolumn}
+	{BEGIN kelurahan_id_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN kelurahan_id_fieldheader}
+	<b>Kelurahan Id</b>
+	{END kelurahan_id_fieldheader}
+</th>
+{END kelurahan_id_fieldheadercolumn}
+	{BEGIN kabupaten_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN kabupaten_fieldheader}
+	<b>Kabupaten</b>
+	{END kabupaten_fieldheader}
+</th>
+{END kabupaten_fieldheadercolumn}
+	{BEGIN alamat_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN alamat_fieldheader}
+	<b>Alamat</b>
+	{END alamat_fieldheader}
+</th>
+{END alamat_fieldheadercolumn}
+	{BEGIN kodepos_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN kodepos_fieldheader}
+	<b>Kodepos</b>
+	{END kodepos_fieldheader}
+</th>
+{END kodepos_fieldheadercolumn}
+	{BEGIN telphone_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN telphone_fieldheader}
+	<b>Telphone</b>
+	{END telphone_fieldheader}
+</th>
+{END telphone_fieldheadercolumn}
+	{BEGIN wpnama_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN wpnama_fieldheader}
+	<b>Wpnama</b>
+	{END wpnama_fieldheader}
+</th>
+{END wpnama_fieldheadercolumn}
+	{BEGIN wpalamat_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN wpalamat_fieldheader}
+	<b>Wpalamat</b>
+	{END wpalamat_fieldheader}
+</th>
+{END wpalamat_fieldheadercolumn}
+	{BEGIN wpkelurahan_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN wpkelurahan_fieldheader}
+	<b>Wpkelurahan</b>
+	{END wpkelurahan_fieldheader}
+</th>
+{END wpkelurahan_fieldheadercolumn}
+	{BEGIN wpkecamatan_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN wpkecamatan_fieldheader}
+	<b>Wpkecamatan</b>
+	{END wpkecamatan_fieldheader}
+</th>
+{END wpkecamatan_fieldheadercolumn}
+	{BEGIN wpkabupaten_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN wpkabupaten_fieldheader}
+	<b>Wpkabupaten</b>
+	{END wpkabupaten_fieldheader}
+</th>
+{END wpkabupaten_fieldheadercolumn}
+	{BEGIN wptelp_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN wptelp_fieldheader}
+	<b>Wptelp</b>
+	{END wptelp_fieldheader}
+</th>
+{END wptelp_fieldheadercolumn}
+	{BEGIN wpkodepos_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN wpkodepos_fieldheader}
+	<b>Wpkodepos</b>
+	{END wpkodepos_fieldheader}
+</th>
+{END wpkodepos_fieldheadercolumn}
+	{BEGIN pnama_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN pnama_fieldheader}
+	<b>Pnama</b>
+	{END pnama_fieldheader}
+</th>
+{END pnama_fieldheadercolumn}
+	{BEGIN palamat_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN palamat_fieldheader}
+	<b>Palamat</b>
+	{END palamat_fieldheader}
+</th>
+{END palamat_fieldheadercolumn}
+	{BEGIN pkelurahan_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN pkelurahan_fieldheader}
+	<b>Pkelurahan</b>
+	{END pkelurahan_fieldheader}
+</th>
+{END pkelurahan_fieldheadercolumn}
+	{BEGIN pkecamatan_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN pkecamatan_fieldheader}
+	<b>Pkecamatan</b>
+	{END pkecamatan_fieldheader}
+</th>
+{END pkecamatan_fieldheadercolumn}
+	{BEGIN pkabupaten_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN pkabupaten_fieldheader}
+	<b>Pkabupaten</b>
+	{END pkabupaten_fieldheader}
+</th>
+{END pkabupaten_fieldheadercolumn}
+	{BEGIN ptelp_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN ptelp_fieldheader}
+	<b>Ptelp</b>
+	{END ptelp_fieldheader}
+</th>
+{END ptelp_fieldheadercolumn}
+	{BEGIN pkodepos_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN pkodepos_fieldheader}
+	<b>Pkodepos</b>
+	{END pkodepos_fieldheader}
+</th>
+{END pkodepos_fieldheadercolumn}
+	{BEGIN ijin1_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN ijin1_fieldheader}
+	<b>Ijin1</b>
+	{END ijin1_fieldheader}
+</th>
+{END ijin1_fieldheadercolumn}
+	{BEGIN ijin1no_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN ijin1no_fieldheader}
+	<b>Ijin1no</b>
+	{END ijin1no_fieldheader}
+</th>
+{END ijin1no_fieldheadercolumn}
+	{BEGIN ijin1tgl_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN ijin1tgl_fieldheader}
+	<b>Ijin1tgl</b>
+	{END ijin1tgl_fieldheader}
+</th>
+{END ijin1tgl_fieldheadercolumn}
+	{BEGIN ijin1tglakhir_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN ijin1tglakhir_fieldheader}
+	<b>Ijin1tglakhir</b>
+	{END ijin1tglakhir_fieldheader}
+</th>
+{END ijin1tglakhir_fieldheadercolumn}
+	{BEGIN ijin2_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN ijin2_fieldheader}
+	<b>Ijin2</b>
+	{END ijin2_fieldheader}
+</th>
+{END ijin2_fieldheadercolumn}
+	{BEGIN ijin2no_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN ijin2no_fieldheader}
+	<b>Ijin2no</b>
+	{END ijin2no_fieldheader}
+</th>
+{END ijin2no_fieldheadercolumn}
+	{BEGIN ijin2tgl_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN ijin2tgl_fieldheader}
+	<b>Ijin2tgl</b>
+	{END ijin2tgl_fieldheader}
+</th>
+{END ijin2tgl_fieldheadercolumn}
+	{BEGIN ijin2tglakhir_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN ijin2tglakhir_fieldheader}
+	<b>Ijin2tglakhir</b>
+	{END ijin2tglakhir_fieldheader}
+</th>
+{END ijin2tglakhir_fieldheadercolumn}
+	{BEGIN ijin3_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN ijin3_fieldheader}
+	<b>Ijin3</b>
+	{END ijin3_fieldheader}
+</th>
+{END ijin3_fieldheadercolumn}
+	{BEGIN ijin3no_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN ijin3no_fieldheader}
+	<b>Ijin3no</b>
+	{END ijin3no_fieldheader}
+</th>
+{END ijin3no_fieldheadercolumn}
+	{BEGIN ijin3tgl_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN ijin3tgl_fieldheader}
+	<b>Ijin3tgl</b>
+	{END ijin3tgl_fieldheader}
+</th>
+{END ijin3tgl_fieldheadercolumn}
+	{BEGIN ijin3tglakhir_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN ijin3tglakhir_fieldheader}
+	<b>Ijin3tglakhir</b>
+	{END ijin3tglakhir_fieldheader}
+</th>
+{END ijin3tglakhir_fieldheadercolumn}
+	{BEGIN ijin4_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN ijin4_fieldheader}
+	<b>Ijin4</b>
+	{END ijin4_fieldheader}
+</th>
+{END ijin4_fieldheadercolumn}
+	{BEGIN ijin4no_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN ijin4no_fieldheader}
+	<b>Ijin4no</b>
+	{END ijin4no_fieldheader}
+</th>
+{END ijin4no_fieldheadercolumn}
+	{BEGIN ijin4tgl_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN ijin4tgl_fieldheader}
+	<b>Ijin4tgl</b>
+	{END ijin4tgl_fieldheader}
+</th>
+{END ijin4tgl_fieldheadercolumn}
+	{BEGIN ijin4tglakhir_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN ijin4tglakhir_fieldheader}
+	<b>Ijin4tglakhir</b>
+	{END ijin4tglakhir_fieldheader}
+</th>
+{END ijin4tglakhir_fieldheadercolumn}
+	{BEGIN kukuhno_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN kukuhno_fieldheader}
+	<b>Kukuhno</b>
+	{END kukuhno_fieldheader}
+</th>
+{END kukuhno_fieldheadercolumn}
+	{BEGIN kukuhnip_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN kukuhnip_fieldheader}
+	<b>Kukuhnip</b>
+	{END kukuhnip_fieldheader}
+</th>
+{END kukuhnip_fieldheadercolumn}
+	{BEGIN kukuhtgl_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN kukuhtgl_fieldheader}
+	<b>Kukuhtgl</b>
+	{END kukuhtgl_fieldheader}
+</th>
+{END kukuhtgl_fieldheadercolumn}
+	{BEGIN kukuh_jabat_id_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN kukuh_jabat_id_fieldheader}
+	<b>Kukuh Jabat Id</b>
+	{END kukuh_jabat_id_fieldheader}
+</th>
+{END kukuh_jabat_id_fieldheadercolumn}
+	{BEGIN kukuhprinted_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN kukuhprinted_fieldheader}
+	<b>Kukuhprinted</b>
+	{END kukuhprinted_fieldheader}
+</th>
+{END kukuhprinted_fieldheadercolumn}
+	{BEGIN enabled_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN enabled_fieldheader}
+	<b>Enabled</b>
+	{END enabled_fieldheader}
+</th>
+{END enabled_fieldheadercolumn}
+	{BEGIN create_uid_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN create_uid_fieldheader}
+	<b>Create Uid</b>
+	{END create_uid_fieldheader}
+</th>
+{END create_uid_fieldheadercolumn}
+	{BEGIN tmt_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN tmt_fieldheader}
+	<b>Tmt</b>
+	{END tmt_fieldheader}
+</th>
+{END tmt_fieldheadercolumn}
+	{BEGIN customer_status_id_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN customer_status_id_fieldheader}
+	<b>Customer Status Id</b>
+	{END customer_status_id_fieldheader}
+</th>
+{END customer_status_id_fieldheadercolumn}
+	{BEGIN kembalitgl_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN kembalitgl_fieldheader}
+	<b>Kembalitgl</b>
+	{END kembalitgl_fieldheader}
+</th>
+{END kembalitgl_fieldheadercolumn}
+	{BEGIN kembalioleh_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN kembalioleh_fieldheader}
+	<b>Kembalioleh</b>
+	{END kembalioleh_fieldheader}
+</th>
+{END kembalioleh_fieldheadercolumn}
+	{BEGIN kartuprinted_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN kartuprinted_fieldheader}
+	<b>Kartuprinted</b>
+	{END kartuprinted_fieldheader}
+</th>
+{END kartuprinted_fieldheadercolumn}
+	{BEGIN kembalinip_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN kembalinip_fieldheader}
+	<b>Kembalinip</b>
+	{END kembalinip_fieldheader}
+</th>
+{END kembalinip_fieldheadercolumn}
+	{BEGIN penerimanm_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN penerimanm_fieldheader}
+	<b>Penerimanm</b>
+	{END penerimanm_fieldheader}
+</th>
+{END penerimanm_fieldheadercolumn}
+	{BEGIN penerimaalamat_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN penerimaalamat_fieldheader}
+	<b>Penerimaalamat</b>
+	{END penerimaalamat_fieldheader}
+</th>
+{END penerimaalamat_fieldheadercolumn}
+	{BEGIN penerimatgl_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN penerimatgl_fieldheader}
+	<b>Penerimatgl</b>
+	{END penerimatgl_fieldheader}
+</th>
+{END penerimatgl_fieldheadercolumn}
+	{BEGIN catatnip_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN catatnip_fieldheader}
+	<b>Catatnip</b>
+	{END catatnip_fieldheader}
+</th>
+{END catatnip_fieldheadercolumn}
+	{BEGIN kirimtgl_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN kirimtgl_fieldheader}
+	<b>Kirimtgl</b>
+	{END kirimtgl_fieldheader}
+</th>
+{END kirimtgl_fieldheadercolumn}
+	{BEGIN batastgl_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN batastgl_fieldheader}
+	<b>Batastgl</b>
+	{END batastgl_fieldheader}
+</th>
+{END batastgl_fieldheadercolumn}
+	{BEGIN petugas_jabat_id_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN petugas_jabat_id_fieldheader}
+	<b>Petugas Jabat Id</b>
+	{END petugas_jabat_id_fieldheader}
+</th>
+{END petugas_jabat_id_fieldheadercolumn}
+	{BEGIN pencatat_jabat_id_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN pencatat_jabat_id_fieldheader}
+	<b>Pencatat Jabat Id</b>
+	{END pencatat_jabat_id_fieldheader}
+</th>
+{END pencatat_jabat_id_fieldheadercolumn}
+	{BEGIN created_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN created_fieldheader}
+	<b>Created</b>
+	{END created_fieldheader}
+</th>
+{END created_fieldheadercolumn}
+	{BEGIN updated_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN updated_fieldheader}
+	<b>Updated</b>
+	{END updated_fieldheader}
+</th>
+{END updated_fieldheadercolumn}
+	{BEGIN update_uid_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN update_uid_fieldheader}
+	<b>Update Uid</b>
+	{END update_uid_fieldheader}
+</th>
+{END update_uid_fieldheadercolumn}
+	{BEGIN npwpd_old_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN npwpd_old_fieldheader}
+	<b>Npwpd Old</b>
+	{END npwpd_old_fieldheader}
+</th>
+{END npwpd_old_fieldheadercolumn}
+	{BEGIN id_old_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN id_old_fieldheader}
+	<b>Id Old</b>
+	{END id_old_fieldheader}
+</th>
+{END id_old_fieldheadercolumn}
+		
+			{END record_header}
+			<td class="runner-cr"><img src="images/spacer.gif"></td>
+			{BEGIN endrecordheader_block}
+			<td class="runner-cs">&nbsp;</td>
+			{END endrecordheader_block}
+		</tr>
+	{END grid_header}
+		</thead>
+		<tbody>	
+		{BEGIN grid_row}
+	<tr class="runner-row style1" {$rowattrs} {$rowstyle} {$rowstyle}>
+		<td class="runner-cl"></td>
+		{BEGIN grid_record}
+				{BEGIN id_fieldcolumn}
+<td  class="runner-cc {$id_class}" {$id_style}>
+	{$id_value}
+</td>
+{END id_fieldcolumn}
+	{BEGIN parent_fieldcolumn}
+<td  class="runner-cc {$parent_class}" {$parent_style}>
+	{$parent_value}
+</td>
+{END parent_fieldcolumn}
+	{BEGIN npwpd_fieldcolumn}
+<td  class="runner-cc {$npwpd_class}" {$npwpd_style}>
+	{$npwpd_value}
+</td>
+{END npwpd_fieldcolumn}
+	{BEGIN rp_fieldcolumn}
+<td  class="runner-cc {$rp_class}" {$rp_style}>
+	{$rp_value}
+</td>
+{END rp_fieldcolumn}
+	{BEGIN pb_fieldcolumn}
+<td  class="runner-cc {$pb_class}" {$pb_style}>
+	{$pb_value}
+</td>
+{END pb_fieldcolumn}
+	{BEGIN formno_fieldcolumn}
+<td  class="runner-cc {$formno_class}" {$formno_style}>
+	{$formno_value}
+</td>
+{END formno_fieldcolumn}
+	{BEGIN reg_date_fieldcolumn}
+<td  class="runner-cc {$reg_date_class}" {$reg_date_style}>
+	{$reg_date_value}
+</td>
+{END reg_date_fieldcolumn}
+	{BEGIN nama_fieldcolumn}
+<td  class="runner-cc {$nama_class}" {$nama_style}>
+	{$nama_value}
+</td>
+{END nama_fieldcolumn}
+	{BEGIN kecamatan_id_fieldcolumn}
+<td  class="runner-cc {$kecamatan_id_class}" {$kecamatan_id_style}>
+	{$kecamatan_id_value}
+</td>
+{END kecamatan_id_fieldcolumn}
+	{BEGIN kelurahan_id_fieldcolumn}
+<td  class="runner-cc {$kelurahan_id_class}" {$kelurahan_id_style}>
+	{$kelurahan_id_value}
+</td>
+{END kelurahan_id_fieldcolumn}
+	{BEGIN kabupaten_fieldcolumn}
+<td  class="runner-cc {$kabupaten_class}" {$kabupaten_style}>
+	{$kabupaten_value}
+</td>
+{END kabupaten_fieldcolumn}
+	{BEGIN alamat_fieldcolumn}
+<td  class="runner-cc {$alamat_class}" {$alamat_style}>
+	{$alamat_value}
+</td>
+{END alamat_fieldcolumn}
+	{BEGIN kodepos_fieldcolumn}
+<td  class="runner-cc {$kodepos_class}" {$kodepos_style}>
+	{$kodepos_value}
+</td>
+{END kodepos_fieldcolumn}
+	{BEGIN telphone_fieldcolumn}
+<td  class="runner-cc {$telphone_class}" {$telphone_style}>
+	{$telphone_value}
+</td>
+{END telphone_fieldcolumn}
+	{BEGIN wpnama_fieldcolumn}
+<td  class="runner-cc {$wpnama_class}" {$wpnama_style}>
+	{$wpnama_value}
+</td>
+{END wpnama_fieldcolumn}
+	{BEGIN wpalamat_fieldcolumn}
+<td  class="runner-cc {$wpalamat_class}" {$wpalamat_style}>
+	{$wpalamat_value}
+</td>
+{END wpalamat_fieldcolumn}
+	{BEGIN wpkelurahan_fieldcolumn}
+<td  class="runner-cc {$wpkelurahan_class}" {$wpkelurahan_style}>
+	{$wpkelurahan_value}
+</td>
+{END wpkelurahan_fieldcolumn}
+	{BEGIN wpkecamatan_fieldcolumn}
+<td  class="runner-cc {$wpkecamatan_class}" {$wpkecamatan_style}>
+	{$wpkecamatan_value}
+</td>
+{END wpkecamatan_fieldcolumn}
+	{BEGIN wpkabupaten_fieldcolumn}
+<td  class="runner-cc {$wpkabupaten_class}" {$wpkabupaten_style}>
+	{$wpkabupaten_value}
+</td>
+{END wpkabupaten_fieldcolumn}
+	{BEGIN wptelp_fieldcolumn}
+<td  class="runner-cc {$wptelp_class}" {$wptelp_style}>
+	{$wptelp_value}
+</td>
+{END wptelp_fieldcolumn}
+	{BEGIN wpkodepos_fieldcolumn}
+<td  class="runner-cc {$wpkodepos_class}" {$wpkodepos_style}>
+	{$wpkodepos_value}
+</td>
+{END wpkodepos_fieldcolumn}
+	{BEGIN pnama_fieldcolumn}
+<td  class="runner-cc {$pnama_class}" {$pnama_style}>
+	{$pnama_value}
+</td>
+{END pnama_fieldcolumn}
+	{BEGIN palamat_fieldcolumn}
+<td  class="runner-cc {$palamat_class}" {$palamat_style}>
+	{$palamat_value}
+</td>
+{END palamat_fieldcolumn}
+	{BEGIN pkelurahan_fieldcolumn}
+<td  class="runner-cc {$pkelurahan_class}" {$pkelurahan_style}>
+	{$pkelurahan_value}
+</td>
+{END pkelurahan_fieldcolumn}
+	{BEGIN pkecamatan_fieldcolumn}
+<td  class="runner-cc {$pkecamatan_class}" {$pkecamatan_style}>
+	{$pkecamatan_value}
+</td>
+{END pkecamatan_fieldcolumn}
+	{BEGIN pkabupaten_fieldcolumn}
+<td  class="runner-cc {$pkabupaten_class}" {$pkabupaten_style}>
+	{$pkabupaten_value}
+</td>
+{END pkabupaten_fieldcolumn}
+	{BEGIN ptelp_fieldcolumn}
+<td  class="runner-cc {$ptelp_class}" {$ptelp_style}>
+	{$ptelp_value}
+</td>
+{END ptelp_fieldcolumn}
+	{BEGIN pkodepos_fieldcolumn}
+<td  class="runner-cc {$pkodepos_class}" {$pkodepos_style}>
+	{$pkodepos_value}
+</td>
+{END pkodepos_fieldcolumn}
+	{BEGIN ijin1_fieldcolumn}
+<td  class="runner-cc {$ijin1_class}" {$ijin1_style}>
+	{$ijin1_value}
+</td>
+{END ijin1_fieldcolumn}
+	{BEGIN ijin1no_fieldcolumn}
+<td  class="runner-cc {$ijin1no_class}" {$ijin1no_style}>
+	{$ijin1no_value}
+</td>
+{END ijin1no_fieldcolumn}
+	{BEGIN ijin1tgl_fieldcolumn}
+<td  class="runner-cc {$ijin1tgl_class}" {$ijin1tgl_style}>
+	{$ijin1tgl_value}
+</td>
+{END ijin1tgl_fieldcolumn}
+	{BEGIN ijin1tglakhir_fieldcolumn}
+<td  class="runner-cc {$ijin1tglakhir_class}" {$ijin1tglakhir_style}>
+	{$ijin1tglakhir_value}
+</td>
+{END ijin1tglakhir_fieldcolumn}
+	{BEGIN ijin2_fieldcolumn}
+<td  class="runner-cc {$ijin2_class}" {$ijin2_style}>
+	{$ijin2_value}
+</td>
+{END ijin2_fieldcolumn}
+	{BEGIN ijin2no_fieldcolumn}
+<td  class="runner-cc {$ijin2no_class}" {$ijin2no_style}>
+	{$ijin2no_value}
+</td>
+{END ijin2no_fieldcolumn}
+	{BEGIN ijin2tgl_fieldcolumn}
+<td  class="runner-cc {$ijin2tgl_class}" {$ijin2tgl_style}>
+	{$ijin2tgl_value}
+</td>
+{END ijin2tgl_fieldcolumn}
+	{BEGIN ijin2tglakhir_fieldcolumn}
+<td  class="runner-cc {$ijin2tglakhir_class}" {$ijin2tglakhir_style}>
+	{$ijin2tglakhir_value}
+</td>
+{END ijin2tglakhir_fieldcolumn}
+	{BEGIN ijin3_fieldcolumn}
+<td  class="runner-cc {$ijin3_class}" {$ijin3_style}>
+	{$ijin3_value}
+</td>
+{END ijin3_fieldcolumn}
+	{BEGIN ijin3no_fieldcolumn}
+<td  class="runner-cc {$ijin3no_class}" {$ijin3no_style}>
+	{$ijin3no_value}
+</td>
+{END ijin3no_fieldcolumn}
+	{BEGIN ijin3tgl_fieldcolumn}
+<td  class="runner-cc {$ijin3tgl_class}" {$ijin3tgl_style}>
+	{$ijin3tgl_value}
+</td>
+{END ijin3tgl_fieldcolumn}
+	{BEGIN ijin3tglakhir_fieldcolumn}
+<td  class="runner-cc {$ijin3tglakhir_class}" {$ijin3tglakhir_style}>
+	{$ijin3tglakhir_value}
+</td>
+{END ijin3tglakhir_fieldcolumn}
+	{BEGIN ijin4_fieldcolumn}
+<td  class="runner-cc {$ijin4_class}" {$ijin4_style}>
+	{$ijin4_value}
+</td>
+{END ijin4_fieldcolumn}
+	{BEGIN ijin4no_fieldcolumn}
+<td  class="runner-cc {$ijin4no_class}" {$ijin4no_style}>
+	{$ijin4no_value}
+</td>
+{END ijin4no_fieldcolumn}
+	{BEGIN ijin4tgl_fieldcolumn}
+<td  class="runner-cc {$ijin4tgl_class}" {$ijin4tgl_style}>
+	{$ijin4tgl_value}
+</td>
+{END ijin4tgl_fieldcolumn}
+	{BEGIN ijin4tglakhir_fieldcolumn}
+<td  class="runner-cc {$ijin4tglakhir_class}" {$ijin4tglakhir_style}>
+	{$ijin4tglakhir_value}
+</td>
+{END ijin4tglakhir_fieldcolumn}
+	{BEGIN kukuhno_fieldcolumn}
+<td  class="runner-cc {$kukuhno_class}" {$kukuhno_style}>
+	{$kukuhno_value}
+</td>
+{END kukuhno_fieldcolumn}
+	{BEGIN kukuhnip_fieldcolumn}
+<td  class="runner-cc {$kukuhnip_class}" {$kukuhnip_style}>
+	{$kukuhnip_value}
+</td>
+{END kukuhnip_fieldcolumn}
+	{BEGIN kukuhtgl_fieldcolumn}
+<td  class="runner-cc {$kukuhtgl_class}" {$kukuhtgl_style}>
+	{$kukuhtgl_value}
+</td>
+{END kukuhtgl_fieldcolumn}
+	{BEGIN kukuh_jabat_id_fieldcolumn}
+<td  class="runner-cc {$kukuh_jabat_id_class}" {$kukuh_jabat_id_style}>
+	{$kukuh_jabat_id_value}
+</td>
+{END kukuh_jabat_id_fieldcolumn}
+	{BEGIN kukuhprinted_fieldcolumn}
+<td  class="runner-cc {$kukuhprinted_class}" {$kukuhprinted_style}>
+	{$kukuhprinted_value}
+</td>
+{END kukuhprinted_fieldcolumn}
+	{BEGIN enabled_fieldcolumn}
+<td  class="runner-cc {$enabled_class}" {$enabled_style}>
+	{$enabled_value}
+</td>
+{END enabled_fieldcolumn}
+	{BEGIN create_uid_fieldcolumn}
+<td  class="runner-cc {$create_uid_class}" {$create_uid_style}>
+	{$create_uid_value}
+</td>
+{END create_uid_fieldcolumn}
+	{BEGIN tmt_fieldcolumn}
+<td  class="runner-cc {$tmt_class}" {$tmt_style}>
+	{$tmt_value}
+</td>
+{END tmt_fieldcolumn}
+	{BEGIN customer_status_id_fieldcolumn}
+<td  class="runner-cc {$customer_status_id_class}" {$customer_status_id_style}>
+	{$customer_status_id_value}
+</td>
+{END customer_status_id_fieldcolumn}
+	{BEGIN kembalitgl_fieldcolumn}
+<td  class="runner-cc {$kembalitgl_class}" {$kembalitgl_style}>
+	{$kembalitgl_value}
+</td>
+{END kembalitgl_fieldcolumn}
+	{BEGIN kembalioleh_fieldcolumn}
+<td  class="runner-cc {$kembalioleh_class}" {$kembalioleh_style}>
+	{$kembalioleh_value}
+</td>
+{END kembalioleh_fieldcolumn}
+	{BEGIN kartuprinted_fieldcolumn}
+<td  class="runner-cc {$kartuprinted_class}" {$kartuprinted_style}>
+	{$kartuprinted_value}
+</td>
+{END kartuprinted_fieldcolumn}
+	{BEGIN kembalinip_fieldcolumn}
+<td  class="runner-cc {$kembalinip_class}" {$kembalinip_style}>
+	{$kembalinip_value}
+</td>
+{END kembalinip_fieldcolumn}
+	{BEGIN penerimanm_fieldcolumn}
+<td  class="runner-cc {$penerimanm_class}" {$penerimanm_style}>
+	{$penerimanm_value}
+</td>
+{END penerimanm_fieldcolumn}
+	{BEGIN penerimaalamat_fieldcolumn}
+<td  class="runner-cc {$penerimaalamat_class}" {$penerimaalamat_style}>
+	{$penerimaalamat_value}
+</td>
+{END penerimaalamat_fieldcolumn}
+	{BEGIN penerimatgl_fieldcolumn}
+<td  class="runner-cc {$penerimatgl_class}" {$penerimatgl_style}>
+	{$penerimatgl_value}
+</td>
+{END penerimatgl_fieldcolumn}
+	{BEGIN catatnip_fieldcolumn}
+<td  class="runner-cc {$catatnip_class}" {$catatnip_style}>
+	{$catatnip_value}
+</td>
+{END catatnip_fieldcolumn}
+	{BEGIN kirimtgl_fieldcolumn}
+<td  class="runner-cc {$kirimtgl_class}" {$kirimtgl_style}>
+	{$kirimtgl_value}
+</td>
+{END kirimtgl_fieldcolumn}
+	{BEGIN batastgl_fieldcolumn}
+<td  class="runner-cc {$batastgl_class}" {$batastgl_style}>
+	{$batastgl_value}
+</td>
+{END batastgl_fieldcolumn}
+	{BEGIN petugas_jabat_id_fieldcolumn}
+<td  class="runner-cc {$petugas_jabat_id_class}" {$petugas_jabat_id_style}>
+	{$petugas_jabat_id_value}
+</td>
+{END petugas_jabat_id_fieldcolumn}
+	{BEGIN pencatat_jabat_id_fieldcolumn}
+<td  class="runner-cc {$pencatat_jabat_id_class}" {$pencatat_jabat_id_style}>
+	{$pencatat_jabat_id_value}
+</td>
+{END pencatat_jabat_id_fieldcolumn}
+	{BEGIN created_fieldcolumn}
+<td  class="runner-cc {$created_class}" {$created_style}>
+	{$created_value}
+</td>
+{END created_fieldcolumn}
+	{BEGIN updated_fieldcolumn}
+<td  class="runner-cc {$updated_class}" {$updated_style}>
+	{$updated_value}
+</td>
+{END updated_fieldcolumn}
+	{BEGIN update_uid_fieldcolumn}
+<td  class="runner-cc {$update_uid_class}" {$update_uid_style}>
+	{$update_uid_value}
+</td>
+{END update_uid_fieldcolumn}
+	{BEGIN npwpd_old_fieldcolumn}
+<td  class="runner-cc {$npwpd_old_class}" {$npwpd_old_style}>
+	{$npwpd_old_value}
+</td>
+{END npwpd_old_fieldcolumn}
+	{BEGIN id_old_fieldcolumn}
+<td  class="runner-cc {$id_old_class}" {$id_old_style}>
+	{$id_old_value}
+</td>
+{END id_old_fieldcolumn}
+
+		{END grid_record}
+		<td class="runner-cr"></td>
+		{BEGIN endrecord_block}
+		<td class="runner-cs">&nbsp;</td>
+		{END endrecord_block}
+	</tr>
+{END grid_row}
+										
+								<tr class="runner-bottomrow style1">
+									<td class="runner-cl"><img src="images/spacer.gif"></td>
+									{BEGIN record_footer}
+									{BEGIN id_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END id_fieldfootercolumn}
+{BEGIN parent_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END parent_fieldfootercolumn}
+{BEGIN npwpd_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END npwpd_fieldfootercolumn}
+{BEGIN rp_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END rp_fieldfootercolumn}
+{BEGIN pb_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END pb_fieldfootercolumn}
+{BEGIN formno_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END formno_fieldfootercolumn}
+{BEGIN reg_date_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END reg_date_fieldfootercolumn}
+{BEGIN nama_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END nama_fieldfootercolumn}
+{BEGIN kecamatan_id_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END kecamatan_id_fieldfootercolumn}
+{BEGIN kelurahan_id_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END kelurahan_id_fieldfootercolumn}
+{BEGIN kabupaten_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END kabupaten_fieldfootercolumn}
+{BEGIN alamat_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END alamat_fieldfootercolumn}
+{BEGIN kodepos_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END kodepos_fieldfootercolumn}
+{BEGIN telphone_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END telphone_fieldfootercolumn}
+{BEGIN wpnama_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END wpnama_fieldfootercolumn}
+{BEGIN wpalamat_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END wpalamat_fieldfootercolumn}
+{BEGIN wpkelurahan_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END wpkelurahan_fieldfootercolumn}
+{BEGIN wpkecamatan_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END wpkecamatan_fieldfootercolumn}
+{BEGIN wpkabupaten_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END wpkabupaten_fieldfootercolumn}
+{BEGIN wptelp_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END wptelp_fieldfootercolumn}
+{BEGIN wpkodepos_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END wpkodepos_fieldfootercolumn}
+{BEGIN pnama_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END pnama_fieldfootercolumn}
+{BEGIN palamat_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END palamat_fieldfootercolumn}
+{BEGIN pkelurahan_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END pkelurahan_fieldfootercolumn}
+{BEGIN pkecamatan_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END pkecamatan_fieldfootercolumn}
+{BEGIN pkabupaten_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END pkabupaten_fieldfootercolumn}
+{BEGIN ptelp_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END ptelp_fieldfootercolumn}
+{BEGIN pkodepos_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END pkodepos_fieldfootercolumn}
+{BEGIN ijin1_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END ijin1_fieldfootercolumn}
+{BEGIN ijin1no_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END ijin1no_fieldfootercolumn}
+{BEGIN ijin1tgl_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END ijin1tgl_fieldfootercolumn}
+{BEGIN ijin1tglakhir_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END ijin1tglakhir_fieldfootercolumn}
+{BEGIN ijin2_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END ijin2_fieldfootercolumn}
+{BEGIN ijin2no_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END ijin2no_fieldfootercolumn}
+{BEGIN ijin2tgl_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END ijin2tgl_fieldfootercolumn}
+{BEGIN ijin2tglakhir_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END ijin2tglakhir_fieldfootercolumn}
+{BEGIN ijin3_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END ijin3_fieldfootercolumn}
+{BEGIN ijin3no_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END ijin3no_fieldfootercolumn}
+{BEGIN ijin3tgl_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END ijin3tgl_fieldfootercolumn}
+{BEGIN ijin3tglakhir_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END ijin3tglakhir_fieldfootercolumn}
+{BEGIN ijin4_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END ijin4_fieldfootercolumn}
+{BEGIN ijin4no_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END ijin4no_fieldfootercolumn}
+{BEGIN ijin4tgl_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END ijin4tgl_fieldfootercolumn}
+{BEGIN ijin4tglakhir_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END ijin4tglakhir_fieldfootercolumn}
+{BEGIN kukuhno_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END kukuhno_fieldfootercolumn}
+{BEGIN kukuhnip_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END kukuhnip_fieldfootercolumn}
+{BEGIN kukuhtgl_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END kukuhtgl_fieldfootercolumn}
+{BEGIN kukuh_jabat_id_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END kukuh_jabat_id_fieldfootercolumn}
+{BEGIN kukuhprinted_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END kukuhprinted_fieldfootercolumn}
+{BEGIN enabled_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END enabled_fieldfootercolumn}
+{BEGIN create_uid_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END create_uid_fieldfootercolumn}
+{BEGIN tmt_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END tmt_fieldfootercolumn}
+{BEGIN customer_status_id_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END customer_status_id_fieldfootercolumn}
+{BEGIN kembalitgl_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END kembalitgl_fieldfootercolumn}
+{BEGIN kembalioleh_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END kembalioleh_fieldfootercolumn}
+{BEGIN kartuprinted_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END kartuprinted_fieldfootercolumn}
+{BEGIN kembalinip_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END kembalinip_fieldfootercolumn}
+{BEGIN penerimanm_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END penerimanm_fieldfootercolumn}
+{BEGIN penerimaalamat_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END penerimaalamat_fieldfootercolumn}
+{BEGIN penerimatgl_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END penerimatgl_fieldfootercolumn}
+{BEGIN catatnip_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END catatnip_fieldfootercolumn}
+{BEGIN kirimtgl_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END kirimtgl_fieldfootercolumn}
+{BEGIN batastgl_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END batastgl_fieldfootercolumn}
+{BEGIN petugas_jabat_id_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END petugas_jabat_id_fieldfootercolumn}
+{BEGIN pencatat_jabat_id_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END pencatat_jabat_id_fieldfootercolumn}
+{BEGIN created_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END created_fieldfootercolumn}
+{BEGIN updated_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END updated_fieldfootercolumn}
+{BEGIN update_uid_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END update_uid_fieldfootercolumn}
+{BEGIN npwpd_old_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END npwpd_old_fieldfootercolumn}
+{BEGIN id_old_fieldfootercolumn}
+<td class="runner-cc runner-clast"></td>
+{END id_old_fieldfootercolumn}
+
+									{END record_footer}
+									<td class="runner-cr"><img src="images/spacer.gif"></td>
+									{BEGIN endrecordtotals_block}
+									<td class="runner-cs"></td>
+									{END endrecordtotals_block}
+								</tr>
+
+		</tbody>
+	</table>
+</div>	
+{END page}
+
+{END grid_block}
+
+
+
+{END container_grid}
+
+
+				</td>	
+
+				<td class="runner-right {$blockclass_right}">
+					
+				</td>	
+			</tr>
+			<tr class="runner-footer">
+				<td class="runner-bottom" colspan=3>
+					<!--%%bottom%%-->
+				</td>
+			</tr>
+		</table>
+		{$footer}
+	{END body}
+	</body>
+</html>

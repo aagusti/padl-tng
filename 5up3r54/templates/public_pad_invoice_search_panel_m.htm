@@ -1,0 +1,131 @@
+<div class="searchOptions bottomPanelBorder" {$srchOpt_attrs}>
+	<!-- Search panel content -->
+	<div class="srchCritTop" style="display: none;">
+		Criteria:&nbsp;
+		<input type="radio" name="srchType" class="runner-radio-button" {$all_checkbox}> {BEGIN all_checkbox_label}all{END all_checkbox_label}
+		&nbsp;&nbsp;&nbsp;
+		<input type="radio" name="srchType" class="runner-radio-button" {$any_checkbox}> {BEGIN any_checkbox_label}any{END any_checkbox_label}
+	</div>
+	
+	<div class="addOption">
+		<span class="runner-btnframe">
+		<span class="runner-btnleft"></span>
+		<span class="runner-btnright"></span>
+		<a href="#" id="showHideControlChooseMenu{$id}" class="runner-button" {$showHideCtrls_attrs}>Add field</a>
+		</span>
+		&nbsp;&nbsp;&nbsp;
+		<span class="runner-btnframe">
+		<span class="runner-btnleft"></span>
+		<span class="runner-btnright"></span>
+		<a href="#" id="showHideSearchType{$id}" class="runner-button" {$showHideCtrlsOpt_attrs}>{$showHideOpt_mess}</a>
+		</span>
+	</div>
+	
+	<!-- choose controls div -->
+	<div class="runner-panel controlChooseMenu" {$controlChooseMenuDiv_attrs}>
+		{BEGIN addSearch_id}
+			<a href="#" id="addSearchControl_id" class="addSearchControl" {$addSearchControl_id_attrs}>Id</a><br>
+		{END addSearch_id}
+		{BEGIN addSearch_source_id}
+			<a href="#" id="addSearchControl_source_id" class="addSearchControl" {$addSearchControl_source_id_attrs}>Source Id</a><br>
+		{END addSearch_source_id}
+		{BEGIN addSearch_source_nama}
+			<a href="#" id="addSearchControl_source_nama" class="addSearchControl" {$addSearchControl_source_nama_attrs}>Source Nama</a><br>
+		{END addSearch_source_nama}
+		{BEGIN addSearch_tahun}
+			<a href="#" id="addSearchControl_tahun" class="addSearchControl" {$addSearchControl_tahun_attrs}>Tahun</a><br>
+		{END addSearch_tahun}
+		{BEGIN addSearch_usaha_id}
+			<a href="#" id="addSearchControl_usaha_id" class="addSearchControl" {$addSearchControl_usaha_id_attrs}>Usaha Id</a><br>
+		{END addSearch_usaha_id}
+		{BEGIN addSearch_invoice_no}
+			<a href="#" id="addSearchControl_invoice_no" class="addSearchControl" {$addSearchControl_invoice_no_attrs}>Invoice No</a><br>
+		{END addSearch_invoice_no}
+		{BEGIN addSearch_jenis_usaha}
+			<a href="#" id="addSearchControl_jenis_usaha" class="addSearchControl" {$addSearchControl_jenis_usaha_attrs}>Jenis Usaha</a><br>
+		{END addSearch_jenis_usaha}
+		{BEGIN addSearch_jenis_pajak}
+			<a href="#" id="addSearchControl_jenis_pajak" class="addSearchControl" {$addSearchControl_jenis_pajak_attrs}>Jenis Pajak</a><br>
+		{END addSearch_jenis_pajak}
+		{BEGIN addSearch_npwpd}
+			<a href="#" id="addSearchControl_npwpd" class="addSearchControl" {$addSearchControl_npwpd_attrs}>Npwpd</a><br>
+		{END addSearch_npwpd}
+		{BEGIN addSearch_nama_wp}
+			<a href="#" id="addSearchControl_nama_wp" class="addSearchControl" {$addSearchControl_nama_wp_attrs}>Nama Wp</a><br>
+		{END addSearch_nama_wp}
+		{BEGIN addSearch_alamat_wp}
+			<a href="#" id="addSearchControl_alamat_wp" class="addSearchControl" {$addSearchControl_alamat_wp_attrs}>Alamat Wp</a><br>
+		{END addSearch_alamat_wp}
+		{BEGIN addSearch_nama_op}
+			<a href="#" id="addSearchControl_nama_op" class="addSearchControl" {$addSearchControl_nama_op_attrs}>Nama Op</a><br>
+		{END addSearch_nama_op}
+		{BEGIN addSearch_alamat_op}
+			<a href="#" id="addSearchControl_alamat_op" class="addSearchControl" {$addSearchControl_alamat_op_attrs}>Alamat Op</a><br>
+		{END addSearch_alamat_op}
+		{BEGIN addSearch_nomor_tagihan}
+			<a href="#" id="addSearchControl_nomor_tagihan" class="addSearchControl" {$addSearchControl_nomor_tagihan_attrs}>Nomor Tagihan</a><br>
+		{END addSearch_nomor_tagihan}
+		{BEGIN addSearch_pokok}
+			<a href="#" id="addSearchControl_pokok" class="addSearchControl" {$addSearchControl_pokok_attrs}>Pokok</a><br>
+		{END addSearch_pokok}
+		{BEGIN addSearch_denda}
+			<a href="#" id="addSearchControl_denda" class="addSearchControl" {$addSearchControl_denda_attrs}>Denda</a><br>
+		{END addSearch_denda}
+		{BEGIN addSearch_bunga}
+			<a href="#" id="addSearchControl_bunga" class="addSearchControl" {$addSearchControl_bunga_attrs}>Bunga</a><br>
+		{END addSearch_bunga}
+		{BEGIN addSearch_total}
+			<a href="#" id="addSearchControl_total" class="addSearchControl" {$addSearchControl_total_attrs}>Total</a><br>
+		{END addSearch_total}
+		{BEGIN addSearch_status_bayar}
+			<a href="#" id="addSearchControl_status_bayar" class="addSearchControl" {$addSearchControl_status_bayar_attrs}>Status Bayar</a><br>
+		{END addSearch_status_bayar}
+		{BEGIN addSearch_jatuh_tempo}
+			<a href="#" id="addSearchControl_jatuh_tempo" class="addSearchControl" {$addSearchControl_jatuh_tempo_attrs}>Jatuh Tempo</a><br>
+		{END addSearch_jatuh_tempo}
+		{BEGIN addSearch_periode}
+			<a href="#" id="addSearchControl_periode" class="addSearchControl" {$addSearchControl_periode_attrs}>Periode</a><br>
+		{END addSearch_periode}
+		{BEGIN addSearch_rekening_pokok}
+			<a href="#" id="addSearchControl_rekening_pokok" class="addSearchControl" {$addSearchControl_rekening_pokok_attrs}>Rekening Pokok</a><br>
+		{END addSearch_rekening_pokok}
+		{BEGIN addSearch_rekening_denda}
+			<a href="#" id="addSearchControl_rekening_denda" class="addSearchControl" {$addSearchControl_rekening_denda_attrs}>Rekening Denda</a><br>
+		{END addSearch_rekening_denda}
+		{BEGIN addSearch_nama_pokok}
+			<a href="#" id="addSearchControl_nama_pokok" class="addSearchControl" {$addSearchControl_nama_pokok_attrs}>Nama Pokok</a><br>
+		{END addSearch_nama_pokok}
+		{BEGIN addSearch_nama_denda}
+			<a href="#" id="addSearchControl_nama_denda" class="addSearchControl" {$addSearchControl_nama_denda_attrs}>Nama Denda</a><br>
+		{END addSearch_nama_denda}
+		{BEGIN addSearch_created}
+			<a href="#" id="addSearchControl_created" class="addSearchControl" {$addSearchControl_created_attrs}>Created</a><br>
+		{END addSearch_created}
+		{BEGIN addSearch_updated}
+			<a href="#" id="addSearchControl_updated" class="addSearchControl" {$addSearchControl_updated_attrs}>Updated</a><br>
+		{END addSearch_updated}
+		{BEGIN addSearch_create_uid}
+			<a href="#" id="addSearchControl_create_uid" class="addSearchControl" {$addSearchControl_create_uid_attrs}>Create Uid</a><br>
+		{END addSearch_create_uid}
+		{BEGIN addSearch_update_uid}
+			<a href="#" id="addSearchControl_update_uid" class="addSearchControl" {$addSearchControl_update_uid_attrs}>Update Uid</a><br>
+		{END addSearch_update_uid}
+	</div>
+	
+	<div class="controlsBlock">
+		{BEGIN searchCtrlBlock}
+		<div class="srchPanelRow" {$filterRow_attrs}>
+			<div class="srchPanelCell">{$delCtrlButt}&nbsp;{$fLabel}:&nbsp;</div>
+			<div class="srchPanelCell srchPanelCell2">{$searchtype} {$searchcontrol} {$searchcontrol1}</div>
+		</div>
+		{END searchCtrlBlock}
+	</div>
+		
+	<div class="bottomSearchButt" align="left" {$bottomSearchButt_attrs}>
+		<span class="runner-btnframe">
+		<span class="runner-btnleft"></span>
+		<span class="runner-btnright"></span>
+		<a href="#" class="runner-button" {$searchbutton_attrs}>Search</a>
+		</span>
+	</div>
+</div>

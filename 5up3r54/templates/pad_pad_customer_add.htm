@@ -1,0 +1,1107 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<title>{$pagetitle}</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=7">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+		{BEGIN pageCSSFiles}
+		<link REL="stylesheet" href="{$pagestylepath}" type="text/css">
+		{END pageCSSFiles}
+		<!--[if IE]>
+			<link REL="stylesheet" href="styles/defaultIE.css" type="text/css">
+			{BEGIN IEcssFiles}
+			<link REL="stylesheet" href="{$stylepathIE}" type="text/css">
+			{END IEcssFiles}
+		<![endif]-->
+	</head>
+	
+	<body class="{$stylename}" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+		<table   cellpadding="0" class="runner-toptable">
+			<tr class="runner-header">
+				<td class="runner-top" colspan=3>
+					
+
+{BEGIN container_add}
+<table class="runner-c runner-c-add" cellpadding="0" align=center>
+
+
+<tr class="runner-toprow style2 header"><td class="runner-cl"><img src="images/spacer.gif"></td><td class="runner-cc" ><div  class="runner-b-addheader {$brickclass_addheader}">Pad Customer, Add new record</div></td><td class="runner-cr"><img src="images/spacer.gif"></td></tr>
+
+
+{BEGIN message_block}
+<tr  class="runner-row style1 runner-b-message {$brickclass_message}"><td class="runner-cl"></td><td class="runner-cc runner-brickcontents" ><div class="runner-message">{$message}</div></td><td class="runner-cr"></td></tr>{END message_block}
+
+
+
+<tr  class="runner-row style1 runner-b-wrapper {$wrapperclass_fields}"><td class="runner-cl"></td><td class="runner-cc runner-brickcontents runner-wrapper" >
+
+{BEGIN container_fields}
+<table class="runner-c runner-c-fields" cellpadding="0" >
+<tr class="{$cheaderclass_fields}">
+<td class="runner-cl"><img src="images/spacer.gif"></td>
+<td class="runner-cc"></td><td class="runner-cc alt"></td><td class="runner-cr alt"><img src="images/spacer.gif"></td>
+</tr>
+
+
+	{BEGIN parent_fieldblock}
+	<tr class="runner-row style1 runner-b-addfields"><td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">
+		<div class="fieldlabel_parent {$fielddispclass_parent}">
+			{BEGIN parent_label}Parent{END parent_label}
+		</div>
+	</td>
+	<td class="runner-cc alt runner-fixedcell">
+		<div class="fieldcontrol_parent {$fielddispclass_parent}">
+			{$parent_editcontrol}&nbsp;
+		</div>
+	</td>
+	<td class="runner-cr alt"></td></tr>
+{END parent_fieldblock}
+	{BEGIN npwpd_fieldblock}
+	<tr class="runner-row style1 runner-b-addfields"><td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">
+		<div class="fieldlabel_npwpd {$fielddispclass_npwpd}">
+			{BEGIN npwpd_label}Npwpd{END npwpd_label}
+		</div>
+	</td>
+	<td class="runner-cc alt runner-fixedcell">
+		<div class="fieldcontrol_npwpd {$fielddispclass_npwpd}">
+			{$npwpd_editcontrol}&nbsp;
+		</div>
+	</td>
+	<td class="runner-cr alt"></td></tr>
+{END npwpd_fieldblock}
+	{BEGIN rp_fieldblock}
+	<tr class="runner-row style1 runner-b-addfields"><td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">
+		<div class="fieldlabel_rp {$fielddispclass_rp}">
+			{BEGIN rp_label}Rp{END rp_label}
+		</div>
+	</td>
+	<td class="runner-cc alt runner-fixedcell">
+		<div class="fieldcontrol_rp {$fielddispclass_rp}">
+			{$rp_editcontrol}&nbsp;
+		</div>
+	</td>
+	<td class="runner-cr alt"></td></tr>
+{END rp_fieldblock}
+	{BEGIN pb_fieldblock}
+	<tr class="runner-row style1 runner-b-addfields"><td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">
+		<div class="fieldlabel_pb {$fielddispclass_pb}">
+			{BEGIN pb_label}Pb{END pb_label}
+		</div>
+	</td>
+	<td class="runner-cc alt runner-fixedcell">
+		<div class="fieldcontrol_pb {$fielddispclass_pb}">
+			{$pb_editcontrol}&nbsp;
+		</div>
+	</td>
+	<td class="runner-cr alt"></td></tr>
+{END pb_fieldblock}
+	{BEGIN formno_fieldblock}
+	<tr class="runner-row style1 runner-b-addfields"><td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">
+		<div class="fieldlabel_formno {$fielddispclass_formno}">
+			{BEGIN formno_label}Formno{END formno_label}
+		</div>
+	</td>
+	<td class="runner-cc alt runner-fixedcell">
+		<div class="fieldcontrol_formno {$fielddispclass_formno}">
+			{$formno_editcontrol}&nbsp;
+		</div>
+	</td>
+	<td class="runner-cr alt"></td></tr>
+{END formno_fieldblock}
+	{BEGIN reg_date_fieldblock}
+	<tr class="runner-row style1 runner-b-addfields"><td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">
+		<div class="fieldlabel_reg_date {$fielddispclass_reg_date}">
+			{BEGIN reg_date_label}Reg Date{END reg_date_label}
+		</div>
+	</td>
+	<td class="runner-cc alt runner-fixedcell">
+		<div class="fieldcontrol_reg_date {$fielddispclass_reg_date}">
+			{$reg_date_editcontrol}&nbsp;
+		</div>
+	</td>
+	<td class="runner-cr alt"></td></tr>
+{END reg_date_fieldblock}
+	{BEGIN nama_fieldblock}
+	<tr class="runner-row style1 runner-b-addfields"><td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">
+		<div class="fieldlabel_nama {$fielddispclass_nama}">
+			{BEGIN nama_label}Nama{END nama_label}
+		</div>
+	</td>
+	<td class="runner-cc alt runner-fixedcell">
+		<div class="fieldcontrol_nama {$fielddispclass_nama}">
+			{$nama_editcontrol}&nbsp;
+		</div>
+	</td>
+	<td class="runner-cr alt"></td></tr>
+{END nama_fieldblock}
+	{BEGIN kecamatan_id_fieldblock}
+	<tr class="runner-row style1 runner-b-addfields"><td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">
+		<div class="fieldlabel_kecamatan_id {$fielddispclass_kecamatan_id}">
+			{BEGIN kecamatan_id_label}Kecamatan Id{END kecamatan_id_label}
+		</div>
+	</td>
+	<td class="runner-cc alt runner-fixedcell">
+		<div class="fieldcontrol_kecamatan_id {$fielddispclass_kecamatan_id}">
+			{$kecamatan_id_editcontrol}&nbsp;
+		</div>
+	</td>
+	<td class="runner-cr alt"></td></tr>
+{END kecamatan_id_fieldblock}
+	{BEGIN kelurahan_id_fieldblock}
+	<tr class="runner-row style1 runner-b-addfields"><td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">
+		<div class="fieldlabel_kelurahan_id {$fielddispclass_kelurahan_id}">
+			{BEGIN kelurahan_id_label}Kelurahan Id{END kelurahan_id_label}
+		</div>
+	</td>
+	<td class="runner-cc alt runner-fixedcell">
+		<div class="fieldcontrol_kelurahan_id {$fielddispclass_kelurahan_id}">
+			{$kelurahan_id_editcontrol}&nbsp;
+		</div>
+	</td>
+	<td class="runner-cr alt"></td></tr>
+{END kelurahan_id_fieldblock}
+	{BEGIN kabupaten_fieldblock}
+	<tr class="runner-row style1 runner-b-addfields"><td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">
+		<div class="fieldlabel_kabupaten {$fielddispclass_kabupaten}">
+			{BEGIN kabupaten_label}Kabupaten{END kabupaten_label}
+		</div>
+	</td>
+	<td class="runner-cc alt runner-fixedcell">
+		<div class="fieldcontrol_kabupaten {$fielddispclass_kabupaten}">
+			{$kabupaten_editcontrol}&nbsp;
+		</div>
+	</td>
+	<td class="runner-cr alt"></td></tr>
+{END kabupaten_fieldblock}
+	{BEGIN alamat_fieldblock}
+	<tr class="runner-row style1 runner-b-addfields"><td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">
+		<div class="fieldlabel_alamat {$fielddispclass_alamat}">
+			{BEGIN alamat_label}Alamat{END alamat_label}
+		</div>
+	</td>
+	<td class="runner-cc alt runner-fixedcell">
+		<div class="fieldcontrol_alamat {$fielddispclass_alamat}">
+			{$alamat_editcontrol}&nbsp;
+		</div>
+	</td>
+	<td class="runner-cr alt"></td></tr>
+{END alamat_fieldblock}
+	{BEGIN kodepos_fieldblock}
+	<tr class="runner-row style1 runner-b-addfields"><td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">
+		<div class="fieldlabel_kodepos {$fielddispclass_kodepos}">
+			{BEGIN kodepos_label}Kodepos{END kodepos_label}
+		</div>
+	</td>
+	<td class="runner-cc alt runner-fixedcell">
+		<div class="fieldcontrol_kodepos {$fielddispclass_kodepos}">
+			{$kodepos_editcontrol}&nbsp;
+		</div>
+	</td>
+	<td class="runner-cr alt"></td></tr>
+{END kodepos_fieldblock}
+	{BEGIN telphone_fieldblock}
+	<tr class="runner-row style1 runner-b-addfields"><td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">
+		<div class="fieldlabel_telphone {$fielddispclass_telphone}">
+			{BEGIN telphone_label}Telphone{END telphone_label}
+		</div>
+	</td>
+	<td class="runner-cc alt runner-fixedcell">
+		<div class="fieldcontrol_telphone {$fielddispclass_telphone}">
+			{$telphone_editcontrol}&nbsp;
+		</div>
+	</td>
+	<td class="runner-cr alt"></td></tr>
+{END telphone_fieldblock}
+	{BEGIN wpnama_fieldblock}
+	<tr class="runner-row style1 runner-b-addfields"><td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">
+		<div class="fieldlabel_wpnama {$fielddispclass_wpnama}">
+			{BEGIN wpnama_label}Wpnama{END wpnama_label}
+		</div>
+	</td>
+	<td class="runner-cc alt runner-fixedcell">
+		<div class="fieldcontrol_wpnama {$fielddispclass_wpnama}">
+			{$wpnama_editcontrol}&nbsp;
+		</div>
+	</td>
+	<td class="runner-cr alt"></td></tr>
+{END wpnama_fieldblock}
+	{BEGIN wpalamat_fieldblock}
+	<tr class="runner-row style1 runner-b-addfields"><td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">
+		<div class="fieldlabel_wpalamat {$fielddispclass_wpalamat}">
+			{BEGIN wpalamat_label}Wpalamat{END wpalamat_label}
+		</div>
+	</td>
+	<td class="runner-cc alt runner-fixedcell">
+		<div class="fieldcontrol_wpalamat {$fielddispclass_wpalamat}">
+			{$wpalamat_editcontrol}&nbsp;
+		</div>
+	</td>
+	<td class="runner-cr alt"></td></tr>
+{END wpalamat_fieldblock}
+	{BEGIN wpkelurahan_fieldblock}
+	<tr class="runner-row style1 runner-b-addfields"><td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">
+		<div class="fieldlabel_wpkelurahan {$fielddispclass_wpkelurahan}">
+			{BEGIN wpkelurahan_label}Wpkelurahan{END wpkelurahan_label}
+		</div>
+	</td>
+	<td class="runner-cc alt runner-fixedcell">
+		<div class="fieldcontrol_wpkelurahan {$fielddispclass_wpkelurahan}">
+			{$wpkelurahan_editcontrol}&nbsp;
+		</div>
+	</td>
+	<td class="runner-cr alt"></td></tr>
+{END wpkelurahan_fieldblock}
+	{BEGIN wpkecamatan_fieldblock}
+	<tr class="runner-row style1 runner-b-addfields"><td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">
+		<div class="fieldlabel_wpkecamatan {$fielddispclass_wpkecamatan}">
+			{BEGIN wpkecamatan_label}Wpkecamatan{END wpkecamatan_label}
+		</div>
+	</td>
+	<td class="runner-cc alt runner-fixedcell">
+		<div class="fieldcontrol_wpkecamatan {$fielddispclass_wpkecamatan}">
+			{$wpkecamatan_editcontrol}&nbsp;
+		</div>
+	</td>
+	<td class="runner-cr alt"></td></tr>
+{END wpkecamatan_fieldblock}
+	{BEGIN wpkabupaten_fieldblock}
+	<tr class="runner-row style1 runner-b-addfields"><td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">
+		<div class="fieldlabel_wpkabupaten {$fielddispclass_wpkabupaten}">
+			{BEGIN wpkabupaten_label}Wpkabupaten{END wpkabupaten_label}
+		</div>
+	</td>
+	<td class="runner-cc alt runner-fixedcell">
+		<div class="fieldcontrol_wpkabupaten {$fielddispclass_wpkabupaten}">
+			{$wpkabupaten_editcontrol}&nbsp;
+		</div>
+	</td>
+	<td class="runner-cr alt"></td></tr>
+{END wpkabupaten_fieldblock}
+	{BEGIN wptelp_fieldblock}
+	<tr class="runner-row style1 runner-b-addfields"><td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">
+		<div class="fieldlabel_wptelp {$fielddispclass_wptelp}">
+			{BEGIN wptelp_label}Wptelp{END wptelp_label}
+		</div>
+	</td>
+	<td class="runner-cc alt runner-fixedcell">
+		<div class="fieldcontrol_wptelp {$fielddispclass_wptelp}">
+			{$wptelp_editcontrol}&nbsp;
+		</div>
+	</td>
+	<td class="runner-cr alt"></td></tr>
+{END wptelp_fieldblock}
+	{BEGIN wpkodepos_fieldblock}
+	<tr class="runner-row style1 runner-b-addfields"><td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">
+		<div class="fieldlabel_wpkodepos {$fielddispclass_wpkodepos}">
+			{BEGIN wpkodepos_label}Wpkodepos{END wpkodepos_label}
+		</div>
+	</td>
+	<td class="runner-cc alt runner-fixedcell">
+		<div class="fieldcontrol_wpkodepos {$fielddispclass_wpkodepos}">
+			{$wpkodepos_editcontrol}&nbsp;
+		</div>
+	</td>
+	<td class="runner-cr alt"></td></tr>
+{END wpkodepos_fieldblock}
+	{BEGIN pnama_fieldblock}
+	<tr class="runner-row style1 runner-b-addfields"><td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">
+		<div class="fieldlabel_pnama {$fielddispclass_pnama}">
+			{BEGIN pnama_label}Pnama{END pnama_label}
+		</div>
+	</td>
+	<td class="runner-cc alt runner-fixedcell">
+		<div class="fieldcontrol_pnama {$fielddispclass_pnama}">
+			{$pnama_editcontrol}&nbsp;
+		</div>
+	</td>
+	<td class="runner-cr alt"></td></tr>
+{END pnama_fieldblock}
+	{BEGIN palamat_fieldblock}
+	<tr class="runner-row style1 runner-b-addfields"><td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">
+		<div class="fieldlabel_palamat {$fielddispclass_palamat}">
+			{BEGIN palamat_label}Palamat{END palamat_label}
+		</div>
+	</td>
+	<td class="runner-cc alt runner-fixedcell">
+		<div class="fieldcontrol_palamat {$fielddispclass_palamat}">
+			{$palamat_editcontrol}&nbsp;
+		</div>
+	</td>
+	<td class="runner-cr alt"></td></tr>
+{END palamat_fieldblock}
+	{BEGIN pkelurahan_fieldblock}
+	<tr class="runner-row style1 runner-b-addfields"><td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">
+		<div class="fieldlabel_pkelurahan {$fielddispclass_pkelurahan}">
+			{BEGIN pkelurahan_label}Pkelurahan{END pkelurahan_label}
+		</div>
+	</td>
+	<td class="runner-cc alt runner-fixedcell">
+		<div class="fieldcontrol_pkelurahan {$fielddispclass_pkelurahan}">
+			{$pkelurahan_editcontrol}&nbsp;
+		</div>
+	</td>
+	<td class="runner-cr alt"></td></tr>
+{END pkelurahan_fieldblock}
+	{BEGIN pkecamatan_fieldblock}
+	<tr class="runner-row style1 runner-b-addfields"><td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">
+		<div class="fieldlabel_pkecamatan {$fielddispclass_pkecamatan}">
+			{BEGIN pkecamatan_label}Pkecamatan{END pkecamatan_label}
+		</div>
+	</td>
+	<td class="runner-cc alt runner-fixedcell">
+		<div class="fieldcontrol_pkecamatan {$fielddispclass_pkecamatan}">
+			{$pkecamatan_editcontrol}&nbsp;
+		</div>
+	</td>
+	<td class="runner-cr alt"></td></tr>
+{END pkecamatan_fieldblock}
+	{BEGIN pkabupaten_fieldblock}
+	<tr class="runner-row style1 runner-b-addfields"><td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">
+		<div class="fieldlabel_pkabupaten {$fielddispclass_pkabupaten}">
+			{BEGIN pkabupaten_label}Pkabupaten{END pkabupaten_label}
+		</div>
+	</td>
+	<td class="runner-cc alt runner-fixedcell">
+		<div class="fieldcontrol_pkabupaten {$fielddispclass_pkabupaten}">
+			{$pkabupaten_editcontrol}&nbsp;
+		</div>
+	</td>
+	<td class="runner-cr alt"></td></tr>
+{END pkabupaten_fieldblock}
+	{BEGIN ptelp_fieldblock}
+	<tr class="runner-row style1 runner-b-addfields"><td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">
+		<div class="fieldlabel_ptelp {$fielddispclass_ptelp}">
+			{BEGIN ptelp_label}Ptelp{END ptelp_label}
+		</div>
+	</td>
+	<td class="runner-cc alt runner-fixedcell">
+		<div class="fieldcontrol_ptelp {$fielddispclass_ptelp}">
+			{$ptelp_editcontrol}&nbsp;
+		</div>
+	</td>
+	<td class="runner-cr alt"></td></tr>
+{END ptelp_fieldblock}
+	{BEGIN pkodepos_fieldblock}
+	<tr class="runner-row style1 runner-b-addfields"><td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">
+		<div class="fieldlabel_pkodepos {$fielddispclass_pkodepos}">
+			{BEGIN pkodepos_label}Pkodepos{END pkodepos_label}
+		</div>
+	</td>
+	<td class="runner-cc alt runner-fixedcell">
+		<div class="fieldcontrol_pkodepos {$fielddispclass_pkodepos}">
+			{$pkodepos_editcontrol}&nbsp;
+		</div>
+	</td>
+	<td class="runner-cr alt"></td></tr>
+{END pkodepos_fieldblock}
+	{BEGIN ijin1_fieldblock}
+	<tr class="runner-row style1 runner-b-addfields"><td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">
+		<div class="fieldlabel_ijin1 {$fielddispclass_ijin1}">
+			{BEGIN ijin1_label}Ijin1{END ijin1_label}
+		</div>
+	</td>
+	<td class="runner-cc alt runner-fixedcell">
+		<div class="fieldcontrol_ijin1 {$fielddispclass_ijin1}">
+			{$ijin1_editcontrol}&nbsp;
+		</div>
+	</td>
+	<td class="runner-cr alt"></td></tr>
+{END ijin1_fieldblock}
+	{BEGIN ijin1no_fieldblock}
+	<tr class="runner-row style1 runner-b-addfields"><td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">
+		<div class="fieldlabel_ijin1no {$fielddispclass_ijin1no}">
+			{BEGIN ijin1no_label}Ijin1no{END ijin1no_label}
+		</div>
+	</td>
+	<td class="runner-cc alt runner-fixedcell">
+		<div class="fieldcontrol_ijin1no {$fielddispclass_ijin1no}">
+			{$ijin1no_editcontrol}&nbsp;
+		</div>
+	</td>
+	<td class="runner-cr alt"></td></tr>
+{END ijin1no_fieldblock}
+	{BEGIN ijin1tgl_fieldblock}
+	<tr class="runner-row style1 runner-b-addfields"><td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">
+		<div class="fieldlabel_ijin1tgl {$fielddispclass_ijin1tgl}">
+			{BEGIN ijin1tgl_label}Ijin1tgl{END ijin1tgl_label}
+		</div>
+	</td>
+	<td class="runner-cc alt runner-fixedcell">
+		<div class="fieldcontrol_ijin1tgl {$fielddispclass_ijin1tgl}">
+			{$ijin1tgl_editcontrol}&nbsp;
+		</div>
+	</td>
+	<td class="runner-cr alt"></td></tr>
+{END ijin1tgl_fieldblock}
+	{BEGIN ijin1tglakhir_fieldblock}
+	<tr class="runner-row style1 runner-b-addfields"><td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">
+		<div class="fieldlabel_ijin1tglakhir {$fielddispclass_ijin1tglakhir}">
+			{BEGIN ijin1tglakhir_label}Ijin1tglakhir{END ijin1tglakhir_label}
+		</div>
+	</td>
+	<td class="runner-cc alt runner-fixedcell">
+		<div class="fieldcontrol_ijin1tglakhir {$fielddispclass_ijin1tglakhir}">
+			{$ijin1tglakhir_editcontrol}&nbsp;
+		</div>
+	</td>
+	<td class="runner-cr alt"></td></tr>
+{END ijin1tglakhir_fieldblock}
+	{BEGIN ijin2_fieldblock}
+	<tr class="runner-row style1 runner-b-addfields"><td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">
+		<div class="fieldlabel_ijin2 {$fielddispclass_ijin2}">
+			{BEGIN ijin2_label}Ijin2{END ijin2_label}
+		</div>
+	</td>
+	<td class="runner-cc alt runner-fixedcell">
+		<div class="fieldcontrol_ijin2 {$fielddispclass_ijin2}">
+			{$ijin2_editcontrol}&nbsp;
+		</div>
+	</td>
+	<td class="runner-cr alt"></td></tr>
+{END ijin2_fieldblock}
+	{BEGIN ijin2no_fieldblock}
+	<tr class="runner-row style1 runner-b-addfields"><td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">
+		<div class="fieldlabel_ijin2no {$fielddispclass_ijin2no}">
+			{BEGIN ijin2no_label}Ijin2no{END ijin2no_label}
+		</div>
+	</td>
+	<td class="runner-cc alt runner-fixedcell">
+		<div class="fieldcontrol_ijin2no {$fielddispclass_ijin2no}">
+			{$ijin2no_editcontrol}&nbsp;
+		</div>
+	</td>
+	<td class="runner-cr alt"></td></tr>
+{END ijin2no_fieldblock}
+	{BEGIN ijin2tgl_fieldblock}
+	<tr class="runner-row style1 runner-b-addfields"><td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">
+		<div class="fieldlabel_ijin2tgl {$fielddispclass_ijin2tgl}">
+			{BEGIN ijin2tgl_label}Ijin2tgl{END ijin2tgl_label}
+		</div>
+	</td>
+	<td class="runner-cc alt runner-fixedcell">
+		<div class="fieldcontrol_ijin2tgl {$fielddispclass_ijin2tgl}">
+			{$ijin2tgl_editcontrol}&nbsp;
+		</div>
+	</td>
+	<td class="runner-cr alt"></td></tr>
+{END ijin2tgl_fieldblock}
+	{BEGIN ijin2tglakhir_fieldblock}
+	<tr class="runner-row style1 runner-b-addfields"><td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">
+		<div class="fieldlabel_ijin2tglakhir {$fielddispclass_ijin2tglakhir}">
+			{BEGIN ijin2tglakhir_label}Ijin2tglakhir{END ijin2tglakhir_label}
+		</div>
+	</td>
+	<td class="runner-cc alt runner-fixedcell">
+		<div class="fieldcontrol_ijin2tglakhir {$fielddispclass_ijin2tglakhir}">
+			{$ijin2tglakhir_editcontrol}&nbsp;
+		</div>
+	</td>
+	<td class="runner-cr alt"></td></tr>
+{END ijin2tglakhir_fieldblock}
+	{BEGIN ijin3_fieldblock}
+	<tr class="runner-row style1 runner-b-addfields"><td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">
+		<div class="fieldlabel_ijin3 {$fielddispclass_ijin3}">
+			{BEGIN ijin3_label}Ijin3{END ijin3_label}
+		</div>
+	</td>
+	<td class="runner-cc alt runner-fixedcell">
+		<div class="fieldcontrol_ijin3 {$fielddispclass_ijin3}">
+			{$ijin3_editcontrol}&nbsp;
+		</div>
+	</td>
+	<td class="runner-cr alt"></td></tr>
+{END ijin3_fieldblock}
+	{BEGIN ijin3no_fieldblock}
+	<tr class="runner-row style1 runner-b-addfields"><td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">
+		<div class="fieldlabel_ijin3no {$fielddispclass_ijin3no}">
+			{BEGIN ijin3no_label}Ijin3no{END ijin3no_label}
+		</div>
+	</td>
+	<td class="runner-cc alt runner-fixedcell">
+		<div class="fieldcontrol_ijin3no {$fielddispclass_ijin3no}">
+			{$ijin3no_editcontrol}&nbsp;
+		</div>
+	</td>
+	<td class="runner-cr alt"></td></tr>
+{END ijin3no_fieldblock}
+	{BEGIN ijin3tgl_fieldblock}
+	<tr class="runner-row style1 runner-b-addfields"><td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">
+		<div class="fieldlabel_ijin3tgl {$fielddispclass_ijin3tgl}">
+			{BEGIN ijin3tgl_label}Ijin3tgl{END ijin3tgl_label}
+		</div>
+	</td>
+	<td class="runner-cc alt runner-fixedcell">
+		<div class="fieldcontrol_ijin3tgl {$fielddispclass_ijin3tgl}">
+			{$ijin3tgl_editcontrol}&nbsp;
+		</div>
+	</td>
+	<td class="runner-cr alt"></td></tr>
+{END ijin3tgl_fieldblock}
+	{BEGIN ijin3tglakhir_fieldblock}
+	<tr class="runner-row style1 runner-b-addfields"><td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">
+		<div class="fieldlabel_ijin3tglakhir {$fielddispclass_ijin3tglakhir}">
+			{BEGIN ijin3tglakhir_label}Ijin3tglakhir{END ijin3tglakhir_label}
+		</div>
+	</td>
+	<td class="runner-cc alt runner-fixedcell">
+		<div class="fieldcontrol_ijin3tglakhir {$fielddispclass_ijin3tglakhir}">
+			{$ijin3tglakhir_editcontrol}&nbsp;
+		</div>
+	</td>
+	<td class="runner-cr alt"></td></tr>
+{END ijin3tglakhir_fieldblock}
+	{BEGIN ijin4_fieldblock}
+	<tr class="runner-row style1 runner-b-addfields"><td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">
+		<div class="fieldlabel_ijin4 {$fielddispclass_ijin4}">
+			{BEGIN ijin4_label}Ijin4{END ijin4_label}
+		</div>
+	</td>
+	<td class="runner-cc alt runner-fixedcell">
+		<div class="fieldcontrol_ijin4 {$fielddispclass_ijin4}">
+			{$ijin4_editcontrol}&nbsp;
+		</div>
+	</td>
+	<td class="runner-cr alt"></td></tr>
+{END ijin4_fieldblock}
+	{BEGIN ijin4no_fieldblock}
+	<tr class="runner-row style1 runner-b-addfields"><td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">
+		<div class="fieldlabel_ijin4no {$fielddispclass_ijin4no}">
+			{BEGIN ijin4no_label}Ijin4no{END ijin4no_label}
+		</div>
+	</td>
+	<td class="runner-cc alt runner-fixedcell">
+		<div class="fieldcontrol_ijin4no {$fielddispclass_ijin4no}">
+			{$ijin4no_editcontrol}&nbsp;
+		</div>
+	</td>
+	<td class="runner-cr alt"></td></tr>
+{END ijin4no_fieldblock}
+	{BEGIN ijin4tgl_fieldblock}
+	<tr class="runner-row style1 runner-b-addfields"><td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">
+		<div class="fieldlabel_ijin4tgl {$fielddispclass_ijin4tgl}">
+			{BEGIN ijin4tgl_label}Ijin4tgl{END ijin4tgl_label}
+		</div>
+	</td>
+	<td class="runner-cc alt runner-fixedcell">
+		<div class="fieldcontrol_ijin4tgl {$fielddispclass_ijin4tgl}">
+			{$ijin4tgl_editcontrol}&nbsp;
+		</div>
+	</td>
+	<td class="runner-cr alt"></td></tr>
+{END ijin4tgl_fieldblock}
+	{BEGIN ijin4tglakhir_fieldblock}
+	<tr class="runner-row style1 runner-b-addfields"><td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">
+		<div class="fieldlabel_ijin4tglakhir {$fielddispclass_ijin4tglakhir}">
+			{BEGIN ijin4tglakhir_label}Ijin4tglakhir{END ijin4tglakhir_label}
+		</div>
+	</td>
+	<td class="runner-cc alt runner-fixedcell">
+		<div class="fieldcontrol_ijin4tglakhir {$fielddispclass_ijin4tglakhir}">
+			{$ijin4tglakhir_editcontrol}&nbsp;
+		</div>
+	</td>
+	<td class="runner-cr alt"></td></tr>
+{END ijin4tglakhir_fieldblock}
+	{BEGIN kukuhno_fieldblock}
+	<tr class="runner-row style1 runner-b-addfields"><td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">
+		<div class="fieldlabel_kukuhno {$fielddispclass_kukuhno}">
+			{BEGIN kukuhno_label}Kukuhno{END kukuhno_label}
+		</div>
+	</td>
+	<td class="runner-cc alt runner-fixedcell">
+		<div class="fieldcontrol_kukuhno {$fielddispclass_kukuhno}">
+			{$kukuhno_editcontrol}&nbsp;
+		</div>
+	</td>
+	<td class="runner-cr alt"></td></tr>
+{END kukuhno_fieldblock}
+	{BEGIN kukuhnip_fieldblock}
+	<tr class="runner-row style1 runner-b-addfields"><td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">
+		<div class="fieldlabel_kukuhnip {$fielddispclass_kukuhnip}">
+			{BEGIN kukuhnip_label}Kukuhnip{END kukuhnip_label}
+		</div>
+	</td>
+	<td class="runner-cc alt runner-fixedcell">
+		<div class="fieldcontrol_kukuhnip {$fielddispclass_kukuhnip}">
+			{$kukuhnip_editcontrol}&nbsp;
+		</div>
+	</td>
+	<td class="runner-cr alt"></td></tr>
+{END kukuhnip_fieldblock}
+	{BEGIN kukuhtgl_fieldblock}
+	<tr class="runner-row style1 runner-b-addfields"><td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">
+		<div class="fieldlabel_kukuhtgl {$fielddispclass_kukuhtgl}">
+			{BEGIN kukuhtgl_label}Kukuhtgl{END kukuhtgl_label}
+		</div>
+	</td>
+	<td class="runner-cc alt runner-fixedcell">
+		<div class="fieldcontrol_kukuhtgl {$fielddispclass_kukuhtgl}">
+			{$kukuhtgl_editcontrol}&nbsp;
+		</div>
+	</td>
+	<td class="runner-cr alt"></td></tr>
+{END kukuhtgl_fieldblock}
+	{BEGIN kukuh_jabat_id_fieldblock}
+	<tr class="runner-row style1 runner-b-addfields"><td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">
+		<div class="fieldlabel_kukuh_jabat_id {$fielddispclass_kukuh_jabat_id}">
+			{BEGIN kukuh_jabat_id_label}Kukuh Jabat Id{END kukuh_jabat_id_label}
+		</div>
+	</td>
+	<td class="runner-cc alt runner-fixedcell">
+		<div class="fieldcontrol_kukuh_jabat_id {$fielddispclass_kukuh_jabat_id}">
+			{$kukuh_jabat_id_editcontrol}&nbsp;
+		</div>
+	</td>
+	<td class="runner-cr alt"></td></tr>
+{END kukuh_jabat_id_fieldblock}
+	{BEGIN kukuhprinted_fieldblock}
+	<tr class="runner-row style1 runner-b-addfields"><td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">
+		<div class="fieldlabel_kukuhprinted {$fielddispclass_kukuhprinted}">
+			{BEGIN kukuhprinted_label}Kukuhprinted{END kukuhprinted_label}
+		</div>
+	</td>
+	<td class="runner-cc alt runner-fixedcell">
+		<div class="fieldcontrol_kukuhprinted {$fielddispclass_kukuhprinted}">
+			{$kukuhprinted_editcontrol}&nbsp;
+		</div>
+	</td>
+	<td class="runner-cr alt"></td></tr>
+{END kukuhprinted_fieldblock}
+	{BEGIN enabled_fieldblock}
+	<tr class="runner-row style1 runner-b-addfields"><td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">
+		<div class="fieldlabel_enabled {$fielddispclass_enabled}">
+			{BEGIN enabled_label}Enabled{END enabled_label}
+		</div>
+	</td>
+	<td class="runner-cc alt runner-fixedcell">
+		<div class="fieldcontrol_enabled {$fielddispclass_enabled}">
+			{$enabled_editcontrol}&nbsp;
+		</div>
+	</td>
+	<td class="runner-cr alt"></td></tr>
+{END enabled_fieldblock}
+	{BEGIN create_uid_fieldblock}
+	<tr class="runner-row style1 runner-b-addfields"><td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">
+		<div class="fieldlabel_create_uid {$fielddispclass_create_uid}">
+			{BEGIN create_uid_label}Create Uid{END create_uid_label}
+		</div>
+	</td>
+	<td class="runner-cc alt runner-fixedcell">
+		<div class="fieldcontrol_create_uid {$fielddispclass_create_uid}">
+			{$create_uid_editcontrol}&nbsp;
+		</div>
+	</td>
+	<td class="runner-cr alt"></td></tr>
+{END create_uid_fieldblock}
+	{BEGIN tmt_fieldblock}
+	<tr class="runner-row style1 runner-b-addfields"><td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">
+		<div class="fieldlabel_tmt {$fielddispclass_tmt}">
+			{BEGIN tmt_label}Tmt{END tmt_label}
+		</div>
+	</td>
+	<td class="runner-cc alt runner-fixedcell">
+		<div class="fieldcontrol_tmt {$fielddispclass_tmt}">
+			{$tmt_editcontrol}&nbsp;
+		</div>
+	</td>
+	<td class="runner-cr alt"></td></tr>
+{END tmt_fieldblock}
+	{BEGIN customer_status_id_fieldblock}
+	<tr class="runner-row style1 runner-b-addfields"><td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">
+		<div class="fieldlabel_customer_status_id {$fielddispclass_customer_status_id}">
+			{BEGIN customer_status_id_label}Customer Status Id{END customer_status_id_label}
+		</div>
+	</td>
+	<td class="runner-cc alt runner-fixedcell">
+		<div class="fieldcontrol_customer_status_id {$fielddispclass_customer_status_id}">
+			{$customer_status_id_editcontrol}&nbsp;
+		</div>
+	</td>
+	<td class="runner-cr alt"></td></tr>
+{END customer_status_id_fieldblock}
+	{BEGIN kembalitgl_fieldblock}
+	<tr class="runner-row style1 runner-b-addfields"><td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">
+		<div class="fieldlabel_kembalitgl {$fielddispclass_kembalitgl}">
+			{BEGIN kembalitgl_label}Kembalitgl{END kembalitgl_label}
+		</div>
+	</td>
+	<td class="runner-cc alt runner-fixedcell">
+		<div class="fieldcontrol_kembalitgl {$fielddispclass_kembalitgl}">
+			{$kembalitgl_editcontrol}&nbsp;
+		</div>
+	</td>
+	<td class="runner-cr alt"></td></tr>
+{END kembalitgl_fieldblock}
+	{BEGIN kembalioleh_fieldblock}
+	<tr class="runner-row style1 runner-b-addfields"><td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">
+		<div class="fieldlabel_kembalioleh {$fielddispclass_kembalioleh}">
+			{BEGIN kembalioleh_label}Kembalioleh{END kembalioleh_label}
+		</div>
+	</td>
+	<td class="runner-cc alt runner-fixedcell">
+		<div class="fieldcontrol_kembalioleh {$fielddispclass_kembalioleh}">
+			{$kembalioleh_editcontrol}&nbsp;
+		</div>
+	</td>
+	<td class="runner-cr alt"></td></tr>
+{END kembalioleh_fieldblock}
+	{BEGIN kartuprinted_fieldblock}
+	<tr class="runner-row style1 runner-b-addfields"><td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">
+		<div class="fieldlabel_kartuprinted {$fielddispclass_kartuprinted}">
+			{BEGIN kartuprinted_label}Kartuprinted{END kartuprinted_label}
+		</div>
+	</td>
+	<td class="runner-cc alt runner-fixedcell">
+		<div class="fieldcontrol_kartuprinted {$fielddispclass_kartuprinted}">
+			{$kartuprinted_editcontrol}&nbsp;
+		</div>
+	</td>
+	<td class="runner-cr alt"></td></tr>
+{END kartuprinted_fieldblock}
+	{BEGIN kembalinip_fieldblock}
+	<tr class="runner-row style1 runner-b-addfields"><td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">
+		<div class="fieldlabel_kembalinip {$fielddispclass_kembalinip}">
+			{BEGIN kembalinip_label}Kembalinip{END kembalinip_label}
+		</div>
+	</td>
+	<td class="runner-cc alt runner-fixedcell">
+		<div class="fieldcontrol_kembalinip {$fielddispclass_kembalinip}">
+			{$kembalinip_editcontrol}&nbsp;
+		</div>
+	</td>
+	<td class="runner-cr alt"></td></tr>
+{END kembalinip_fieldblock}
+	{BEGIN penerimanm_fieldblock}
+	<tr class="runner-row style1 runner-b-addfields"><td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">
+		<div class="fieldlabel_penerimanm {$fielddispclass_penerimanm}">
+			{BEGIN penerimanm_label}Penerimanm{END penerimanm_label}
+		</div>
+	</td>
+	<td class="runner-cc alt runner-fixedcell">
+		<div class="fieldcontrol_penerimanm {$fielddispclass_penerimanm}">
+			{$penerimanm_editcontrol}&nbsp;
+		</div>
+	</td>
+	<td class="runner-cr alt"></td></tr>
+{END penerimanm_fieldblock}
+	{BEGIN penerimaalamat_fieldblock}
+	<tr class="runner-row style1 runner-b-addfields"><td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">
+		<div class="fieldlabel_penerimaalamat {$fielddispclass_penerimaalamat}">
+			{BEGIN penerimaalamat_label}Penerimaalamat{END penerimaalamat_label}
+		</div>
+	</td>
+	<td class="runner-cc alt runner-fixedcell">
+		<div class="fieldcontrol_penerimaalamat {$fielddispclass_penerimaalamat}">
+			{$penerimaalamat_editcontrol}&nbsp;
+		</div>
+	</td>
+	<td class="runner-cr alt"></td></tr>
+{END penerimaalamat_fieldblock}
+	{BEGIN penerimatgl_fieldblock}
+	<tr class="runner-row style1 runner-b-addfields"><td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">
+		<div class="fieldlabel_penerimatgl {$fielddispclass_penerimatgl}">
+			{BEGIN penerimatgl_label}Penerimatgl{END penerimatgl_label}
+		</div>
+	</td>
+	<td class="runner-cc alt runner-fixedcell">
+		<div class="fieldcontrol_penerimatgl {$fielddispclass_penerimatgl}">
+			{$penerimatgl_editcontrol}&nbsp;
+		</div>
+	</td>
+	<td class="runner-cr alt"></td></tr>
+{END penerimatgl_fieldblock}
+	{BEGIN catatnip_fieldblock}
+	<tr class="runner-row style1 runner-b-addfields"><td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">
+		<div class="fieldlabel_catatnip {$fielddispclass_catatnip}">
+			{BEGIN catatnip_label}Catatnip{END catatnip_label}
+		</div>
+	</td>
+	<td class="runner-cc alt runner-fixedcell">
+		<div class="fieldcontrol_catatnip {$fielddispclass_catatnip}">
+			{$catatnip_editcontrol}&nbsp;
+		</div>
+	</td>
+	<td class="runner-cr alt"></td></tr>
+{END catatnip_fieldblock}
+	{BEGIN kirimtgl_fieldblock}
+	<tr class="runner-row style1 runner-b-addfields"><td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">
+		<div class="fieldlabel_kirimtgl {$fielddispclass_kirimtgl}">
+			{BEGIN kirimtgl_label}Kirimtgl{END kirimtgl_label}
+		</div>
+	</td>
+	<td class="runner-cc alt runner-fixedcell">
+		<div class="fieldcontrol_kirimtgl {$fielddispclass_kirimtgl}">
+			{$kirimtgl_editcontrol}&nbsp;
+		</div>
+	</td>
+	<td class="runner-cr alt"></td></tr>
+{END kirimtgl_fieldblock}
+	{BEGIN batastgl_fieldblock}
+	<tr class="runner-row style1 runner-b-addfields"><td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">
+		<div class="fieldlabel_batastgl {$fielddispclass_batastgl}">
+			{BEGIN batastgl_label}Batastgl{END batastgl_label}
+		</div>
+	</td>
+	<td class="runner-cc alt runner-fixedcell">
+		<div class="fieldcontrol_batastgl {$fielddispclass_batastgl}">
+			{$batastgl_editcontrol}&nbsp;
+		</div>
+	</td>
+	<td class="runner-cr alt"></td></tr>
+{END batastgl_fieldblock}
+	{BEGIN petugas_jabat_id_fieldblock}
+	<tr class="runner-row style1 runner-b-addfields"><td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">
+		<div class="fieldlabel_petugas_jabat_id {$fielddispclass_petugas_jabat_id}">
+			{BEGIN petugas_jabat_id_label}Petugas Jabat Id{END petugas_jabat_id_label}
+		</div>
+	</td>
+	<td class="runner-cc alt runner-fixedcell">
+		<div class="fieldcontrol_petugas_jabat_id {$fielddispclass_petugas_jabat_id}">
+			{$petugas_jabat_id_editcontrol}&nbsp;
+		</div>
+	</td>
+	<td class="runner-cr alt"></td></tr>
+{END petugas_jabat_id_fieldblock}
+	{BEGIN pencatat_jabat_id_fieldblock}
+	<tr class="runner-row style1 runner-b-addfields"><td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">
+		<div class="fieldlabel_pencatat_jabat_id {$fielddispclass_pencatat_jabat_id}">
+			{BEGIN pencatat_jabat_id_label}Pencatat Jabat Id{END pencatat_jabat_id_label}
+		</div>
+	</td>
+	<td class="runner-cc alt runner-fixedcell">
+		<div class="fieldcontrol_pencatat_jabat_id {$fielddispclass_pencatat_jabat_id}">
+			{$pencatat_jabat_id_editcontrol}&nbsp;
+		</div>
+	</td>
+	<td class="runner-cr alt"></td></tr>
+{END pencatat_jabat_id_fieldblock}
+	{BEGIN created_fieldblock}
+	<tr class="runner-row style1 runner-b-addfields"><td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">
+		<div class="fieldlabel_created {$fielddispclass_created}">
+			{BEGIN created_label}Created{END created_label}
+		</div>
+	</td>
+	<td class="runner-cc alt runner-fixedcell">
+		<div class="fieldcontrol_created {$fielddispclass_created}">
+			{$created_editcontrol}&nbsp;
+		</div>
+	</td>
+	<td class="runner-cr alt"></td></tr>
+{END created_fieldblock}
+	{BEGIN updated_fieldblock}
+	<tr class="runner-row style1 runner-b-addfields"><td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">
+		<div class="fieldlabel_updated {$fielddispclass_updated}">
+			{BEGIN updated_label}Updated{END updated_label}
+		</div>
+	</td>
+	<td class="runner-cc alt runner-fixedcell">
+		<div class="fieldcontrol_updated {$fielddispclass_updated}">
+			{$updated_editcontrol}&nbsp;
+		</div>
+	</td>
+	<td class="runner-cr alt"></td></tr>
+{END updated_fieldblock}
+	{BEGIN update_uid_fieldblock}
+	<tr class="runner-row style1 runner-b-addfields"><td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">
+		<div class="fieldlabel_update_uid {$fielddispclass_update_uid}">
+			{BEGIN update_uid_label}Update Uid{END update_uid_label}
+		</div>
+	</td>
+	<td class="runner-cc alt runner-fixedcell">
+		<div class="fieldcontrol_update_uid {$fielddispclass_update_uid}">
+			{$update_uid_editcontrol}&nbsp;
+		</div>
+	</td>
+	<td class="runner-cr alt"></td></tr>
+{END update_uid_fieldblock}
+	{BEGIN npwpd_old_fieldblock}
+	<tr class="runner-row style1 runner-b-addfields"><td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">
+		<div class="fieldlabel_npwpd_old {$fielddispclass_npwpd_old}">
+			{BEGIN npwpd_old_label}Npwpd Old{END npwpd_old_label}
+		</div>
+	</td>
+	<td class="runner-cc alt runner-fixedcell">
+		<div class="fieldcontrol_npwpd_old {$fielddispclass_npwpd_old}">
+			{$npwpd_old_editcontrol}&nbsp;
+		</div>
+	</td>
+	<td class="runner-cr alt"></td></tr>
+{END npwpd_old_fieldblock}
+	{BEGIN id_old_fieldblock}
+	<tr class="runner-row style1 runner-b-addfields"><td class="runner-cl"></td>
+	<td class="runner-cc runner-cc1">
+		<div class="fieldlabel_id_old {$fielddispclass_id_old}">
+			{BEGIN id_old_label}Id Old{END id_old_label}
+		</div>
+	</td>
+	<td class="runner-cc alt runner-fixedcell">
+		<div class="fieldcontrol_id_old {$fielddispclass_id_old}">
+			{$id_old_editcontrol}&nbsp;
+		</div>
+	</td>
+	<td class="runner-cr alt"></td></tr>
+{END id_old_fieldblock}
+
+
+
+{BEGIN legend}
+<tr  class="runner-row style3 runner-b-legend {$brickclass_legend}"><td class="runner-cl"></td><td class="runner-cc runner-brickcontents" colspan=2><span id="required_block{$id}">
+<img src="images/icon_required.gif" alt="bullet"> - Required field
+</span>
+</td><td class="runner-cr"></td></tr>{END legend}
+
+
+
+<tr  class="runner-row style2 runner-b-addbuttons {$brickclass_addbuttons}"><td class="runner-cl"></td><td class="runner-cc runner-brickcontents" colspan=2>{BEGIN save_button}
+<span class="runner-btnframe">
+<span class="runner-btnleft"></span>
+<span class="runner-btnright"></span>
+<a href="#" class="runner-button" {$savebutton_attrs}>Save</a>
+</span>
+{END save_button}
+{BEGIN cancel_button}
+<span class="runner-btnframe">
+<span class="runner-btnleft"></span>
+<span class="runner-btnright"></span>
+<a href="#" class="runner-button" {$cancelbutton_attrs}>Cancel</a>
+</span>
+{END cancel_button}
+{BEGIN back_button}
+<span class="runner-btnframe">
+<span class="runner-btnleft"></span>
+<span class="runner-btnright"></span>
+<a href="#" class="runner-button" {$backbutton_attrs}>Back to list</a>
+</span>
+{END back_button}
+{BEGIN backToMenu_button}
+<span class="runner-btnframe">
+<span class="runner-btnleft"></span>
+<span class="runner-btnright"></span>
+<a href="#" class="runner-button" {$backToMenubutton_attrs}>Back to menu</a>
+</span>
+{END backToMenu_button}</td><td class="runner-cr"></td></tr>
+
+
+<tr class="{$cfooterclass_fields}">
+<td class="runner-cl"><img src="images/spacer.gif"></td>
+<td class="runner-cc"></td><td class="runner-cc"></td><td class="runner-cr"><img src="images/spacer.gif"></td>
+</tr>
+</table>
+{END container_fields}
+
+</td><td class="runner-cr"></td></tr>
+
+
+<tr class="{$cfooterclass_add}">
+<td class="runner-cl"><img src="images/spacer.gif"></td>
+<td class="runner-cc"></td><td class="runner-cr"><img src="images/spacer.gif"></td>
+</tr>
+</table>
+{END container_add}
+
+
+
+
+				</td>
+			</tr>
+			<tr class="runner-body">
+				
+				<td class="runner-left {$blockclass_left}" >
+					
+				</td>	
+				
+				<td class="runner-center {$blockclass_center}">
+					
+				</td>	
+
+				<td class="runner-right {$blockclass_right}">
+					
+				</td>	
+			</tr>
+			<tr class="runner-footer">
+				<td class="runner-bottom" colspan=3>
+					<!--%%bottom%%-->
+				</td>
+			</tr>
+		</table>
+		{$footer}
+	{END body}
+	</body>
+</html>

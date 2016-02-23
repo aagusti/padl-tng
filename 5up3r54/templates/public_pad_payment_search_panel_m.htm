@@ -1,0 +1,89 @@
+<div class="searchOptions bottomPanelBorder" {$srchOpt_attrs}>
+	<!-- Search panel content -->
+	<div class="srchCritTop" style="display: none;">
+		Criteria:&nbsp;
+		<input type="radio" name="srchType" class="runner-radio-button" {$all_checkbox}> {BEGIN all_checkbox_label}all{END all_checkbox_label}
+		&nbsp;&nbsp;&nbsp;
+		<input type="radio" name="srchType" class="runner-radio-button" {$any_checkbox}> {BEGIN any_checkbox_label}any{END any_checkbox_label}
+	</div>
+	
+	<div class="addOption">
+		<span class="runner-btnframe">
+		<span class="runner-btnleft"></span>
+		<span class="runner-btnright"></span>
+		<a href="#" id="showHideControlChooseMenu{$id}" class="runner-button" {$showHideCtrls_attrs}>Add field</a>
+		</span>
+		&nbsp;&nbsp;&nbsp;
+		<span class="runner-btnframe">
+		<span class="runner-btnleft"></span>
+		<span class="runner-btnright"></span>
+		<a href="#" id="showHideSearchType{$id}" class="runner-button" {$showHideCtrlsOpt_attrs}>{$showHideOpt_mess}</a>
+		</span>
+	</div>
+	
+	<!-- choose controls div -->
+	<div class="runner-panel controlChooseMenu" {$controlChooseMenuDiv_attrs}>
+		{BEGIN addSearch_id}
+			<a href="#" id="addSearchControl_id" class="addSearchControl" {$addSearchControl_id_attrs}>Id</a><br>
+		{END addSearch_id}
+		{BEGIN addSearch_invoice_id}
+			<a href="#" id="addSearchControl_invoice_id" class="addSearchControl" {$addSearchControl_invoice_id_attrs}>Invoice Id</a><br>
+		{END addSearch_invoice_id}
+		{BEGIN addSearch_tgl}
+			<a href="#" id="addSearchControl_tgl" class="addSearchControl" {$addSearchControl_tgl_attrs}>Tgl</a><br>
+		{END addSearch_tgl}
+		{BEGIN addSearch_tagihan}
+			<a href="#" id="addSearchControl_tagihan" class="addSearchControl" {$addSearchControl_tagihan_attrs}>Tagihan</a><br>
+		{END addSearch_tagihan}
+		{BEGIN addSearch_denda}
+			<a href="#" id="addSearchControl_denda" class="addSearchControl" {$addSearchControl_denda_attrs}>Denda</a><br>
+		{END addSearch_denda}
+		{BEGIN addSearch_total_bayar}
+			<a href="#" id="addSearchControl_total_bayar" class="addSearchControl" {$addSearchControl_total_bayar_attrs}>Total Bayar</a><br>
+		{END addSearch_total_bayar}
+		{BEGIN addSearch_iso_request}
+			<a href="#" id="addSearchControl_iso_request" class="addSearchControl" {$addSearchControl_iso_request_attrs}>Iso Request</a><br>
+		{END addSearch_iso_request}
+		{BEGIN addSearch_transmission}
+			<a href="#" id="addSearchControl_transmission" class="addSearchControl" {$addSearchControl_transmission_attrs}>Transmission</a><br>
+		{END addSearch_transmission}
+		{BEGIN addSearch_settlement}
+			<a href="#" id="addSearchControl_settlement" class="addSearchControl" {$addSearchControl_settlement_attrs}>Settlement</a><br>
+		{END addSearch_settlement}
+		{BEGIN addSearch_stan}
+			<a href="#" id="addSearchControl_stan" class="addSearchControl" {$addSearchControl_stan_attrs}>Stan</a><br>
+		{END addSearch_stan}
+		{BEGIN addSearch_ntb}
+			<a href="#" id="addSearchControl_ntb" class="addSearchControl" {$addSearchControl_ntb_attrs}>Ntb</a><br>
+		{END addSearch_ntb}
+		{BEGIN addSearch_ntp}
+			<a href="#" id="addSearchControl_ntp" class="addSearchControl" {$addSearchControl_ntp_attrs}>Ntp</a><br>
+		{END addSearch_ntp}
+		{BEGIN addSearch_bank_id}
+			<a href="#" id="addSearchControl_bank_id" class="addSearchControl" {$addSearchControl_bank_id_attrs}>Bank Id</a><br>
+		{END addSearch_bank_id}
+		{BEGIN addSearch_channel_id}
+			<a href="#" id="addSearchControl_channel_id" class="addSearchControl" {$addSearchControl_channel_id_attrs}>Channel Id</a><br>
+		{END addSearch_channel_id}
+		{BEGIN addSearch_bank_ip}
+			<a href="#" id="addSearchControl_bank_ip" class="addSearchControl" {$addSearchControl_bank_ip_attrs}>Bank Ip</a><br>
+		{END addSearch_bank_ip}
+	</div>
+	
+	<div class="controlsBlock">
+		{BEGIN searchCtrlBlock}
+		<div class="srchPanelRow" {$filterRow_attrs}>
+			<div class="srchPanelCell">{$delCtrlButt}&nbsp;{$fLabel}:&nbsp;</div>
+			<div class="srchPanelCell srchPanelCell2">{$searchtype} {$searchcontrol} {$searchcontrol1}</div>
+		</div>
+		{END searchCtrlBlock}
+	</div>
+		
+	<div class="bottomSearchButt" align="left" {$bottomSearchButt_attrs}>
+		<span class="runner-btnframe">
+		<span class="runner-btnleft"></span>
+		<span class="runner-btnright"></span>
+		<a href="#" class="runner-button" {$searchbutton_attrs}>Search</a>
+		</span>
+	</div>
+</div>

@@ -1,0 +1,382 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<title>{$pagetitle}</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=7">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+		{BEGIN pageCSSFiles}
+		<link REL="stylesheet" href="{$pagestylepath}" type="text/css">
+		{END pageCSSFiles}
+		<!--[if IE]>
+			<link REL="stylesheet" href="styles/defaultIE.css" type="text/css">
+			{BEGIN IEcssFiles}
+			<link REL="stylesheet" href="{$stylepathIE}" type="text/css">
+			{END IEcssFiles}
+		<![endif]-->
+	</head>
+	
+	<body class="{$stylename}" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+		<table   cellpadding="0" class="runner-toptable">
+			<tr class="runner-header">
+				<td class="runner-top" colspan=3>
+					
+
+{BEGIN container_master}
+<table class="runner-c runner-c-master" cellpadding="0" >
+<tr class="{$cheaderclass_master}">
+<td class="runner-cl"><img src="images/spacer.gif"></td>
+<td class="runner-cc"></td><td class="runner-cr"><img src="images/spacer.gif"></td>
+</tr>
+<tr class="runner-row style1">
+<td class="runner-cl"></td>
+<td class="runner-cc">
+<table border="0" cellpadding="0" class="runner-hc">
+<tr>
+
+{BEGIN mastertable_block}
+<td  class="runner-cc runner-bl runner-b-masterinfoprint" {$brickclass_masterinfoprint}><span>{$showmasterfile}
+</span></td>
+{END mastertable_block}
+
+<td class="runner-cc filler"></td>
+</tr>
+</table></td>
+<td class="runner-cr"></td>
+</tr>
+
+<tr class="{$cfooterclass_master}">
+<td class="runner-cl"><img src="images/spacer.gif"></td>
+<td class="runner-cc"></td><td class="runner-cr"><img src="images/spacer.gif"></td>
+</tr>
+</table>
+{END container_master}
+
+
+
+
+				</td>
+			</tr>
+			<tr class="runner-body">
+				
+				<td class="runner-left {$blockclass_left}" >
+					
+				</td>	
+				
+				<td class="runner-center {$blockclass_center}">
+					
+
+{BEGIN container_grid}
+
+
+{BEGIN grid_block}
+{BEGIN page}
+<h1>Pad Payment</h1>
+<span>
+{BEGIN page_number}
+Page {$pageno} of {$maxpages} 
+{END page_number}
+</span>
+
+	<div class="runner-s-grid">	
+	<table class="runner-c runner-c-grid" cellpadding="0">
+		<thead>
+		{BEGIN grid_header}
+		<tr class="runner-toprow style1">
+			<td class="runner-cl"><img src="images/spacer.gif"></td>
+			{BEGIN record_header}
+					{BEGIN id_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN id_fieldheader}
+	<b>Id</b>
+	{END id_fieldheader}
+</th>
+{END id_fieldheadercolumn}
+	{BEGIN invoice_id_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN invoice_id_fieldheader}
+	<b>Invoice Id</b>
+	{END invoice_id_fieldheader}
+</th>
+{END invoice_id_fieldheadercolumn}
+	{BEGIN tgl_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN tgl_fieldheader}
+	<b>Tgl</b>
+	{END tgl_fieldheader}
+</th>
+{END tgl_fieldheadercolumn}
+	{BEGIN tagihan_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN tagihan_fieldheader}
+	<b>Tagihan</b>
+	{END tagihan_fieldheader}
+</th>
+{END tagihan_fieldheadercolumn}
+	{BEGIN denda_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN denda_fieldheader}
+	<b>Denda</b>
+	{END denda_fieldheader}
+</th>
+{END denda_fieldheadercolumn}
+	{BEGIN total_bayar_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN total_bayar_fieldheader}
+	<b>Total Bayar</b>
+	{END total_bayar_fieldheader}
+</th>
+{END total_bayar_fieldheadercolumn}
+	{BEGIN iso_request_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN iso_request_fieldheader}
+	<b>Iso Request</b>
+	{END iso_request_fieldheader}
+</th>
+{END iso_request_fieldheadercolumn}
+	{BEGIN transmission_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN transmission_fieldheader}
+	<b>Transmission</b>
+	{END transmission_fieldheader}
+</th>
+{END transmission_fieldheadercolumn}
+	{BEGIN settlement_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN settlement_fieldheader}
+	<b>Settlement</b>
+	{END settlement_fieldheader}
+</th>
+{END settlement_fieldheadercolumn}
+	{BEGIN stan_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN stan_fieldheader}
+	<b>Stan</b>
+	{END stan_fieldheader}
+</th>
+{END stan_fieldheadercolumn}
+	{BEGIN ntb_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN ntb_fieldheader}
+	<b>Ntb</b>
+	{END ntb_fieldheader}
+</th>
+{END ntb_fieldheadercolumn}
+	{BEGIN ntp_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN ntp_fieldheader}
+	<b>Ntp</b>
+	{END ntp_fieldheader}
+</th>
+{END ntp_fieldheadercolumn}
+	{BEGIN bank_id_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN bank_id_fieldheader}
+	<b>Bank Id</b>
+	{END bank_id_fieldheader}
+</th>
+{END bank_id_fieldheadercolumn}
+	{BEGIN channel_id_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN channel_id_fieldheader}
+	<b>Channel Id</b>
+	{END channel_id_fieldheader}
+</th>
+{END channel_id_fieldheadercolumn}
+	{BEGIN bank_ip_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN bank_ip_fieldheader}
+	<b>Bank Ip</b>
+	{END bank_ip_fieldheader}
+</th>
+{END bank_ip_fieldheadercolumn}
+		
+			{END record_header}
+			<td class="runner-cr"><img src="images/spacer.gif"></td>
+			{BEGIN endrecordheader_block}
+			<td class="runner-cs">&nbsp;</td>
+			{END endrecordheader_block}
+		</tr>
+	{END grid_header}
+		</thead>
+		<tbody>	
+		{BEGIN grid_row}
+	<tr class="runner-row style1" {$rowattrs} {$rowstyle} {$rowstyle}>
+		<td class="runner-cl"></td>
+		{BEGIN grid_record}
+				{BEGIN id_fieldcolumn}
+<td  class="runner-cc {$id_class}" {$id_style}>
+	{$id_value}
+</td>
+{END id_fieldcolumn}
+	{BEGIN invoice_id_fieldcolumn}
+<td  class="runner-cc {$invoice_id_class}" {$invoice_id_style}>
+	{$invoice_id_value}
+</td>
+{END invoice_id_fieldcolumn}
+	{BEGIN tgl_fieldcolumn}
+<td  class="runner-cc {$tgl_class}" {$tgl_style}>
+	{$tgl_value}
+</td>
+{END tgl_fieldcolumn}
+	{BEGIN tagihan_fieldcolumn}
+<td  class="runner-cc {$tagihan_class}" {$tagihan_style}>
+	{$tagihan_value}
+</td>
+{END tagihan_fieldcolumn}
+	{BEGIN denda_fieldcolumn}
+<td  class="runner-cc {$denda_class}" {$denda_style}>
+	{$denda_value}
+</td>
+{END denda_fieldcolumn}
+	{BEGIN total_bayar_fieldcolumn}
+<td  class="runner-cc {$total_bayar_class}" {$total_bayar_style}>
+	{$total_bayar_value}
+</td>
+{END total_bayar_fieldcolumn}
+	{BEGIN iso_request_fieldcolumn}
+<td  class="runner-cc {$iso_request_class}" {$iso_request_style}>
+	{$iso_request_value}
+</td>
+{END iso_request_fieldcolumn}
+	{BEGIN transmission_fieldcolumn}
+<td  class="runner-cc {$transmission_class}" {$transmission_style}>
+	{$transmission_value}
+</td>
+{END transmission_fieldcolumn}
+	{BEGIN settlement_fieldcolumn}
+<td  class="runner-cc {$settlement_class}" {$settlement_style}>
+	{$settlement_value}
+</td>
+{END settlement_fieldcolumn}
+	{BEGIN stan_fieldcolumn}
+<td  class="runner-cc {$stan_class}" {$stan_style}>
+	{$stan_value}
+</td>
+{END stan_fieldcolumn}
+	{BEGIN ntb_fieldcolumn}
+<td  class="runner-cc {$ntb_class}" {$ntb_style}>
+	{$ntb_value}
+</td>
+{END ntb_fieldcolumn}
+	{BEGIN ntp_fieldcolumn}
+<td  class="runner-cc {$ntp_class}" {$ntp_style}>
+	{$ntp_value}
+</td>
+{END ntp_fieldcolumn}
+	{BEGIN bank_id_fieldcolumn}
+<td  class="runner-cc {$bank_id_class}" {$bank_id_style}>
+	{$bank_id_value}
+</td>
+{END bank_id_fieldcolumn}
+	{BEGIN channel_id_fieldcolumn}
+<td  class="runner-cc {$channel_id_class}" {$channel_id_style}>
+	{$channel_id_value}
+</td>
+{END channel_id_fieldcolumn}
+	{BEGIN bank_ip_fieldcolumn}
+<td  class="runner-cc {$bank_ip_class}" {$bank_ip_style}>
+	{$bank_ip_value}
+</td>
+{END bank_ip_fieldcolumn}
+
+		{END grid_record}
+		<td class="runner-cr"></td>
+		{BEGIN endrecord_block}
+		<td class="runner-cs">&nbsp;</td>
+		{END endrecord_block}
+	</tr>
+{END grid_row}
+										
+								<tr class="runner-bottomrow style1">
+									<td class="runner-cl"><img src="images/spacer.gif"></td>
+									{BEGIN record_footer}
+									{BEGIN id_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END id_fieldfootercolumn}
+{BEGIN invoice_id_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END invoice_id_fieldfootercolumn}
+{BEGIN tgl_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END tgl_fieldfootercolumn}
+{BEGIN tagihan_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END tagihan_fieldfootercolumn}
+{BEGIN denda_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END denda_fieldfootercolumn}
+{BEGIN total_bayar_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END total_bayar_fieldfootercolumn}
+{BEGIN iso_request_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END iso_request_fieldfootercolumn}
+{BEGIN transmission_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END transmission_fieldfootercolumn}
+{BEGIN settlement_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END settlement_fieldfootercolumn}
+{BEGIN stan_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END stan_fieldfootercolumn}
+{BEGIN ntb_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END ntb_fieldfootercolumn}
+{BEGIN ntp_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END ntp_fieldfootercolumn}
+{BEGIN bank_id_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END bank_id_fieldfootercolumn}
+{BEGIN channel_id_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END channel_id_fieldfootercolumn}
+{BEGIN bank_ip_fieldfootercolumn}
+<td class="runner-cc runner-clast"></td>
+{END bank_ip_fieldfootercolumn}
+
+									{END record_footer}
+									<td class="runner-cr"><img src="images/spacer.gif"></td>
+									{BEGIN endrecordtotals_block}
+									<td class="runner-cs"></td>
+									{END endrecordtotals_block}
+								</tr>
+
+		</tbody>
+	</table>
+</div>	
+{END page}
+
+{END grid_block}
+
+
+
+{END container_grid}
+
+
+				</td>	
+
+				<td class="runner-right {$blockclass_right}">
+					
+				</td>	
+			</tr>
+			<tr class="runner-footer">
+				<td class="runner-bottom" colspan=3>
+					<!--%%bottom%%-->
+				</td>
+			</tr>
+		</table>
+		{$footer}
+	{END body}
+	</body>
+</html>

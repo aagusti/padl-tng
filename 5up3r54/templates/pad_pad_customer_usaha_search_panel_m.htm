@@ -1,0 +1,230 @@
+<div class="searchOptions bottomPanelBorder" {$srchOpt_attrs}>
+	<!-- Search panel content -->
+	<div class="srchCritTop" style="display: none;">
+		Criteria:&nbsp;
+		<input type="radio" name="srchType" class="runner-radio-button" {$all_checkbox}> {BEGIN all_checkbox_label}all{END all_checkbox_label}
+		&nbsp;&nbsp;&nbsp;
+		<input type="radio" name="srchType" class="runner-radio-button" {$any_checkbox}> {BEGIN any_checkbox_label}any{END any_checkbox_label}
+	</div>
+	
+	<div class="addOption">
+		<span class="runner-btnframe">
+		<span class="runner-btnleft"></span>
+		<span class="runner-btnright"></span>
+		<a href="#" id="showHideControlChooseMenu{$id}" class="runner-button" {$showHideCtrls_attrs}>Add field</a>
+		</span>
+		&nbsp;&nbsp;&nbsp;
+		<span class="runner-btnframe">
+		<span class="runner-btnleft"></span>
+		<span class="runner-btnright"></span>
+		<a href="#" id="showHideSearchType{$id}" class="runner-button" {$showHideCtrlsOpt_attrs}>{$showHideOpt_mess}</a>
+		</span>
+	</div>
+	
+	<!-- choose controls div -->
+	<div class="runner-panel controlChooseMenu" {$controlChooseMenuDiv_attrs}>
+		{BEGIN addSearch_id}
+			<a href="#" id="addSearchControl_id" class="addSearchControl" {$addSearchControl_id_attrs}>Id</a><br>
+		{END addSearch_id}
+		{BEGIN addSearch_konterid}
+			<a href="#" id="addSearchControl_konterid" class="addSearchControl" {$addSearchControl_konterid_attrs}>Konterid</a><br>
+		{END addSearch_konterid}
+		{BEGIN addSearch_reg_date}
+			<a href="#" id="addSearchControl_reg_date" class="addSearchControl" {$addSearchControl_reg_date_attrs}>Reg Date</a><br>
+		{END addSearch_reg_date}
+		{BEGIN addSearch_customer_id}
+			<a href="#" id="addSearchControl_customer_id" class="addSearchControl" {$addSearchControl_customer_id_attrs}>Customer Id</a><br>
+		{END addSearch_customer_id}
+		{BEGIN addSearch_usaha_id}
+			<a href="#" id="addSearchControl_usaha_id" class="addSearchControl" {$addSearchControl_usaha_id_attrs}>Usaha Id</a><br>
+		{END addSearch_usaha_id}
+		{BEGIN addSearch_so}
+			<a href="#" id="addSearchControl_so" class="addSearchControl" {$addSearchControl_so_attrs}>So</a><br>
+		{END addSearch_so}
+		{BEGIN addSearch_kecamatan_id}
+			<a href="#" id="addSearchControl_kecamatan_id" class="addSearchControl" {$addSearchControl_kecamatan_id_attrs}>Kecamatan Id</a><br>
+		{END addSearch_kecamatan_id}
+		{BEGIN addSearch_kelurahan_id}
+			<a href="#" id="addSearchControl_kelurahan_id" class="addSearchControl" {$addSearchControl_kelurahan_id_attrs}>Kelurahan Id</a><br>
+		{END addSearch_kelurahan_id}
+		{BEGIN addSearch_notes}
+			<a href="#" id="addSearchControl_notes" class="addSearchControl" {$addSearchControl_notes_attrs}>Notes</a><br>
+		{END addSearch_notes}
+		{BEGIN addSearch_enabled}
+			<a href="#" id="addSearchControl_enabled" class="addSearchControl" {$addSearchControl_enabled_attrs}>Enabled</a><br>
+		{END addSearch_enabled}
+		{BEGIN addSearch_create_uid}
+			<a href="#" id="addSearchControl_create_uid" class="addSearchControl" {$addSearchControl_create_uid_attrs}>Create Uid</a><br>
+		{END addSearch_create_uid}
+		{BEGIN addSearch_customer_status_id}
+			<a href="#" id="addSearchControl_customer_status_id" class="addSearchControl" {$addSearchControl_customer_status_id_attrs}>Customer Status Id</a><br>
+		{END addSearch_customer_status_id}
+		{BEGIN addSearch_aktifnotes}
+			<a href="#" id="addSearchControl_aktifnotes" class="addSearchControl" {$addSearchControl_aktifnotes_attrs}>Aktifnotes</a><br>
+		{END addSearch_aktifnotes}
+		{BEGIN addSearch_tmt}
+			<a href="#" id="addSearchControl_tmt" class="addSearchControl" {$addSearchControl_tmt_attrs}>Tmt</a><br>
+		{END addSearch_tmt}
+		{BEGIN addSearch_air_zona_id}
+			<a href="#" id="addSearchControl_air_zona_id" class="addSearchControl" {$addSearchControl_air_zona_id_attrs}>Air Zona Id</a><br>
+		{END addSearch_air_zona_id}
+		{BEGIN addSearch_air_manfaat_id}
+			<a href="#" id="addSearchControl_air_manfaat_id" class="addSearchControl" {$addSearchControl_air_manfaat_id_attrs}>Air Manfaat Id</a><br>
+		{END addSearch_air_manfaat_id}
+		{BEGIN addSearch_def_pajak_id}
+			<a href="#" id="addSearchControl_def_pajak_id" class="addSearchControl" {$addSearchControl_def_pajak_id_attrs}>Def Pajak Id</a><br>
+		{END addSearch_def_pajak_id}
+		{BEGIN addSearch_opnm}
+			<a href="#" id="addSearchControl_opnm" class="addSearchControl" {$addSearchControl_opnm_attrs}>Opnm</a><br>
+		{END addSearch_opnm}
+		{BEGIN addSearch_opalamat}
+			<a href="#" id="addSearchControl_opalamat" class="addSearchControl" {$addSearchControl_opalamat_attrs}>Opalamat</a><br>
+		{END addSearch_opalamat}
+		{BEGIN addSearch_latitude}
+			<a href="#" id="addSearchControl_latitude" class="addSearchControl" {$addSearchControl_latitude_attrs}>Latitude</a><br>
+		{END addSearch_latitude}
+		{BEGIN addSearch_longitude}
+			<a href="#" id="addSearchControl_longitude" class="addSearchControl" {$addSearchControl_longitude_attrs}>Longitude</a><br>
+		{END addSearch_longitude}
+		{BEGIN addSearch_created}
+			<a href="#" id="addSearchControl_created" class="addSearchControl" {$addSearchControl_created_attrs}>Created</a><br>
+		{END addSearch_created}
+		{BEGIN addSearch_updated}
+			<a href="#" id="addSearchControl_updated" class="addSearchControl" {$addSearchControl_updated_attrs}>Updated</a><br>
+		{END addSearch_updated}
+		{BEGIN addSearch_update_uid}
+			<a href="#" id="addSearchControl_update_uid" class="addSearchControl" {$addSearchControl_update_uid_attrs}>Update Uid</a><br>
+		{END addSearch_update_uid}
+		{BEGIN addSearch_kd_restojmlmeja}
+			<a href="#" id="addSearchControl_kd_restojmlmeja" class="addSearchControl" {$addSearchControl_kd_restojmlmeja_attrs}>Kd Restojmlmeja</a><br>
+		{END addSearch_kd_restojmlmeja}
+		{BEGIN addSearch_kd_restojmlkursi}
+			<a href="#" id="addSearchControl_kd_restojmlkursi" class="addSearchControl" {$addSearchControl_kd_restojmlkursi_attrs}>Kd Restojmlkursi</a><br>
+		{END addSearch_kd_restojmlkursi}
+		{BEGIN addSearch_kd_restojmltamu}
+			<a href="#" id="addSearchControl_kd_restojmltamu" class="addSearchControl" {$addSearchControl_kd_restojmltamu_attrs}>Kd Restojmltamu</a><br>
+		{END addSearch_kd_restojmltamu}
+		{BEGIN addSearch_kd_filmkursi}
+			<a href="#" id="addSearchControl_kd_filmkursi" class="addSearchControl" {$addSearchControl_kd_filmkursi_attrs}>Kd Filmkursi</a><br>
+		{END addSearch_kd_filmkursi}
+		{BEGIN addSearch_kd_filmpertunjukan}
+			<a href="#" id="addSearchControl_kd_filmpertunjukan" class="addSearchControl" {$addSearchControl_kd_filmpertunjukan_attrs}>Kd Filmpertunjukan</a><br>
+		{END addSearch_kd_filmpertunjukan}
+		{BEGIN addSearch_kd_filmtarif}
+			<a href="#" id="addSearchControl_kd_filmtarif" class="addSearchControl" {$addSearchControl_kd_filmtarif_attrs}>Kd Filmtarif</a><br>
+		{END addSearch_kd_filmtarif}
+		{BEGIN addSearch_kd_bilyarmeja}
+			<a href="#" id="addSearchControl_kd_bilyarmeja" class="addSearchControl" {$addSearchControl_kd_bilyarmeja_attrs}>Kd Bilyarmeja</a><br>
+		{END addSearch_kd_bilyarmeja}
+		{BEGIN addSearch_kd_bilyartarif}
+			<a href="#" id="addSearchControl_kd_bilyartarif" class="addSearchControl" {$addSearchControl_kd_bilyartarif_attrs}>Kd Bilyartarif</a><br>
+		{END addSearch_kd_bilyartarif}
+		{BEGIN addSearch_kd_bilyarkegiatan}
+			<a href="#" id="addSearchControl_kd_bilyarkegiatan" class="addSearchControl" {$addSearchControl_kd_bilyarkegiatan_attrs}>Kd Bilyarkegiatan</a><br>
+		{END addSearch_kd_bilyarkegiatan}
+		{BEGIN addSearch_kd_diskopengunjung}
+			<a href="#" id="addSearchControl_kd_diskopengunjung" class="addSearchControl" {$addSearchControl_kd_diskopengunjung_attrs}>Kd Diskopengunjung</a><br>
+		{END addSearch_kd_diskopengunjung}
+		{BEGIN addSearch_kd_diskotarif}
+			<a href="#" id="addSearchControl_kd_diskotarif" class="addSearchControl" {$addSearchControl_kd_diskotarif_attrs}>Kd Diskotarif</a><br>
+		{END addSearch_kd_diskotarif}
+		{BEGIN addSearch_mall_id}
+			<a href="#" id="addSearchControl_mall_id" class="addSearchControl" {$addSearchControl_mall_id_attrs}>Mall Id</a><br>
+		{END addSearch_mall_id}
+		{BEGIN addSearch_cash_register}
+			<a href="#" id="addSearchControl_cash_register" class="addSearchControl" {$addSearchControl_cash_register_attrs}>Cash Register</a><br>
+		{END addSearch_cash_register}
+		{BEGIN addSearch_pelaporan}
+			<a href="#" id="addSearchControl_pelaporan" class="addSearchControl" {$addSearchControl_pelaporan_attrs}>Pelaporan</a><br>
+		{END addSearch_pelaporan}
+		{BEGIN addSearch_pembukuan}
+			<a href="#" id="addSearchControl_pembukuan" class="addSearchControl" {$addSearchControl_pembukuan_attrs}>Pembukuan</a><br>
+		{END addSearch_pembukuan}
+		{BEGIN addSearch_bandara}
+			<a href="#" id="addSearchControl_bandara" class="addSearchControl" {$addSearchControl_bandara_attrs}>Bandara</a><br>
+		{END addSearch_bandara}
+		{BEGIN addSearch_wajib_pajak}
+			<a href="#" id="addSearchControl_wajib_pajak" class="addSearchControl" {$addSearchControl_wajib_pajak_attrs}>Wajib Pajak</a><br>
+		{END addSearch_wajib_pajak}
+		{BEGIN addSearch_jumlah_karyawan}
+			<a href="#" id="addSearchControl_jumlah_karyawan" class="addSearchControl" {$addSearchControl_jumlah_karyawan_attrs}>Jumlah Karyawan</a><br>
+		{END addSearch_jumlah_karyawan}
+		{BEGIN addSearch_tanggal_tutup}
+			<a href="#" id="addSearchControl_tanggal_tutup" class="addSearchControl" {$addSearchControl_tanggal_tutup_attrs}>Tanggal Tutup</a><br>
+		{END addSearch_tanggal_tutup}
+		{BEGIN addSearch_parkir_luas}
+			<a href="#" id="addSearchControl_parkir_luas" class="addSearchControl" {$addSearchControl_parkir_luas_attrs}>Parkir Luas</a><br>
+		{END addSearch_parkir_luas}
+		{BEGIN addSearch_parkir_masuk}
+			<a href="#" id="addSearchControl_parkir_masuk" class="addSearchControl" {$addSearchControl_parkir_masuk_attrs}>Parkir Masuk</a><br>
+		{END addSearch_parkir_masuk}
+		{BEGIN addSearch_parkir_tarif_mobil}
+			<a href="#" id="addSearchControl_parkir_tarif_mobil" class="addSearchControl" {$addSearchControl_parkir_tarif_mobil_attrs}>Parkir Tarif Mobil</a><br>
+		{END addSearch_parkir_tarif_mobil}
+		{BEGIN addSearch_parkir_tambahan}
+			<a href="#" id="addSearchControl_parkir_tambahan" class="addSearchControl" {$addSearchControl_parkir_tambahan_attrs}>Parkir Tambahan</a><br>
+		{END addSearch_parkir_tambahan}
+		{BEGIN addSearch_parkir_kapasitas_mobil}
+			<a href="#" id="addSearchControl_parkir_kapasitas_mobil" class="addSearchControl" {$addSearchControl_parkir_kapasitas_mobil_attrs}>Parkir Kapasitas Mobil</a><br>
+		{END addSearch_parkir_kapasitas_mobil}
+		{BEGIN addSearch_parkir_mobil_hari}
+			<a href="#" id="addSearchControl_parkir_mobil_hari" class="addSearchControl" {$addSearchControl_parkir_mobil_hari_attrs}>Parkir Mobil Hari</a><br>
+		{END addSearch_parkir_mobil_hari}
+		{BEGIN addSearch_parkir_keluar}
+			<a href="#" id="addSearchControl_parkir_keluar" class="addSearchControl" {$addSearchControl_parkir_keluar_attrs}>Parkir Keluar</a><br>
+		{END addSearch_parkir_keluar}
+		{BEGIN addSearch_parkir_motor_luas}
+			<a href="#" id="addSearchControl_parkir_motor_luas" class="addSearchControl" {$addSearchControl_parkir_motor_luas_attrs}>Parkir Motor Luas</a><br>
+		{END addSearch_parkir_motor_luas}
+		{BEGIN addSearch_parkir_motor_masuk}
+			<a href="#" id="addSearchControl_parkir_motor_masuk" class="addSearchControl" {$addSearchControl_parkir_motor_masuk_attrs}>Parkir Motor Masuk</a><br>
+		{END addSearch_parkir_motor_masuk}
+		{BEGIN addSearch_parkir_motor_keluar}
+			<a href="#" id="addSearchControl_parkir_motor_keluar" class="addSearchControl" {$addSearchControl_parkir_motor_keluar_attrs}>Parkir Motor Keluar</a><br>
+		{END addSearch_parkir_motor_keluar}
+		{BEGIN addSearch_parkir_tarif_motor}
+			<a href="#" id="addSearchControl_parkir_tarif_motor" class="addSearchControl" {$addSearchControl_parkir_tarif_motor_attrs}>Parkir Tarif Motor</a><br>
+		{END addSearch_parkir_tarif_motor}
+		{BEGIN addSearch_parkir_motor_tambahan}
+			<a href="#" id="addSearchControl_parkir_motor_tambahan" class="addSearchControl" {$addSearchControl_parkir_motor_tambahan_attrs}>Parkir Motor Tambahan</a><br>
+		{END addSearch_parkir_motor_tambahan}
+		{BEGIN addSearch_parkir_kapasitas_motor}
+			<a href="#" id="addSearchControl_parkir_kapasitas_motor" class="addSearchControl" {$addSearchControl_parkir_kapasitas_motor_attrs}>Parkir Kapasitas Motor</a><br>
+		{END addSearch_parkir_kapasitas_motor}
+		{BEGIN addSearch_parkir_motor_hari}
+			<a href="#" id="addSearchControl_parkir_motor_hari" class="addSearchControl" {$addSearchControl_parkir_motor_hari_attrs}>Parkir Motor Hari</a><br>
+		{END addSearch_parkir_motor_hari}
+		{BEGIN addSearch_kelompok_usaha_id}
+			<a href="#" id="addSearchControl_kelompok_usaha_id" class="addSearchControl" {$addSearchControl_kelompok_usaha_id_attrs}>Kelompok Usaha Id</a><br>
+		{END addSearch_kelompok_usaha_id}
+		{BEGIN addSearch_zona_id}
+			<a href="#" id="addSearchControl_zona_id" class="addSearchControl" {$addSearchControl_zona_id_attrs}>Zona Id</a><br>
+		{END addSearch_zona_id}
+		{BEGIN addSearch_manfaat_id}
+			<a href="#" id="addSearchControl_manfaat_id" class="addSearchControl" {$addSearchControl_manfaat_id_attrs}>Manfaat Id</a><br>
+		{END addSearch_manfaat_id}
+		{BEGIN addSearch_golongan_id}
+			<a href="#" id="addSearchControl_golongan_id" class="addSearchControl" {$addSearchControl_golongan_id_attrs}>Golongan Id</a><br>
+		{END addSearch_golongan_id}
+		{BEGIN addSearch_id_old}
+			<a href="#" id="addSearchControl_id_old" class="addSearchControl" {$addSearchControl_id_old_attrs}>Id Old</a><br>
+		{END addSearch_id_old}
+	</div>
+	
+	<div class="controlsBlock">
+		{BEGIN searchCtrlBlock}
+		<div class="srchPanelRow" {$filterRow_attrs}>
+			<div class="srchPanelCell">{$delCtrlButt}&nbsp;{$fLabel}:&nbsp;</div>
+			<div class="srchPanelCell srchPanelCell2">{$searchtype} {$searchcontrol} {$searchcontrol1}</div>
+		</div>
+		{END searchCtrlBlock}
+	</div>
+		
+	<div class="bottomSearchButt" align="left" {$bottomSearchButt_attrs}>
+		<span class="runner-btnframe">
+		<span class="runner-btnleft"></span>
+		<span class="runner-btnright"></span>
+		<a href="#" class="runner-button" {$searchbutton_attrs}>Search</a>
+		</span>
+	</div>
+</div>

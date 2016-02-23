@@ -1,0 +1,367 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+		<title>{$pagetitle}</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=7">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link REL="stylesheet" href="styles/default.css" type="text/css">
+		{BEGIN rtlCSS}
+		<link REL="stylesheet" href="styles/defaultRTL.css" type="text/css">
+		{END rtlCSS}
+		{BEGIN styleCSSFiles}
+		<link REL="stylesheet" href="{$stylepath}" type="text/css">
+		{END styleCSSFiles}
+		{BEGIN pageCSSFiles}
+		<link REL="stylesheet" href="{$pagestylepath}" type="text/css">
+		{END pageCSSFiles}
+		<!--[if IE]>
+			<link REL="stylesheet" href="styles/defaultIE.css" type="text/css">
+			{BEGIN IEcssFiles}
+			<link REL="stylesheet" href="{$stylepathIE}" type="text/css">
+			{END IEcssFiles}
+		<![endif]-->
+	</head>
+	
+	<body class="{$stylename}" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+		<table   cellpadding="0" class="runner-toptable">
+			<tr class="runner-header">
+				<td class="runner-top" colspan=3>
+					
+
+{BEGIN container_master}
+<table class="runner-c runner-c-master" cellpadding="0" >
+<tr class="{$cheaderclass_master}">
+<td class="runner-cl"><img src="images/spacer.gif"></td>
+<td class="runner-cc"></td><td class="runner-cr"><img src="images/spacer.gif"></td>
+</tr>
+<tr class="runner-row style1">
+<td class="runner-cl"></td>
+<td class="runner-cc">
+<table border="0" cellpadding="0" class="runner-hc">
+<tr>
+
+{BEGIN mastertable_block}
+<td  class="runner-cc runner-bl runner-b-masterinfoprint" {$brickclass_masterinfoprint}><span>{$showmasterfile}
+</span></td>
+{END mastertable_block}
+
+<td class="runner-cc filler"></td>
+</tr>
+</table></td>
+<td class="runner-cr"></td>
+</tr>
+
+<tr class="{$cfooterclass_master}">
+<td class="runner-cl"><img src="images/spacer.gif"></td>
+<td class="runner-cc"></td><td class="runner-cr"><img src="images/spacer.gif"></td>
+</tr>
+</table>
+{END container_master}
+
+
+
+
+				</td>
+			</tr>
+			<tr class="runner-body">
+				
+				<td class="runner-left {$blockclass_left}" >
+					
+				</td>	
+				
+				<td class="runner-center {$blockclass_center}">
+					
+
+{BEGIN container_grid}
+
+
+{BEGIN grid_block}
+{BEGIN page}
+<h1>Pad Terima</h1>
+<span>
+{BEGIN page_number}
+Page {$pageno} of {$maxpages} 
+{END page_number}
+</span>
+
+	<div class="runner-s-grid">	
+	<table class="runner-c runner-c-grid" cellpadding="0">
+		<thead>
+		{BEGIN grid_header}
+		<tr class="runner-toprow style1">
+			<td class="runner-cl"><img src="images/spacer.gif"></td>
+			{BEGIN record_header}
+					{BEGIN id_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN id_fieldheader}
+	<b>Id</b>
+	{END id_fieldheader}
+</th>
+{END id_fieldheadercolumn}
+	{BEGIN tahun_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN tahun_fieldheader}
+	<b>Tahun</b>
+	{END tahun_fieldheader}
+</th>
+{END tahun_fieldheadercolumn}
+	{BEGIN terimano_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN terimano_fieldheader}
+	<b>Terimano</b>
+	{END terimano_fieldheader}
+</th>
+{END terimano_fieldheadercolumn}
+	{BEGIN terimatgl_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN terimatgl_fieldheader}
+	<b>Terimatgl</b>
+	{END terimatgl_fieldheader}
+</th>
+{END terimatgl_fieldheadercolumn}
+	{BEGIN jmlterima_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN jmlterima_fieldheader}
+	<b>Jmlterima</b>
+	{END jmlterima_fieldheader}
+</th>
+{END jmlterima_fieldheadercolumn}
+	{BEGIN customer_id_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN customer_id_fieldheader}
+	<b>Customer Id</b>
+	{END customer_id_fieldheader}
+</th>
+{END customer_id_fieldheadercolumn}
+	{BEGIN npwpd_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN npwpd_fieldheader}
+	<b>Npwpd</b>
+	{END npwpd_fieldheader}
+</th>
+{END npwpd_fieldheadercolumn}
+	{BEGIN nobukti_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN nobukti_fieldheader}
+	<b>Nobukti</b>
+	{END nobukti_fieldheader}
+</th>
+{END nobukti_fieldheadercolumn}
+	{BEGIN notes_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN notes_fieldheader}
+	<b>Notes</b>
+	{END notes_fieldheader}
+</th>
+{END notes_fieldheadercolumn}
+	{BEGIN enabled_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN enabled_fieldheader}
+	<b>Enabled</b>
+	{END enabled_fieldheader}
+</th>
+{END enabled_fieldheadercolumn}
+	{BEGIN create_date_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN create_date_fieldheader}
+	<b>Create Date</b>
+	{END create_date_fieldheader}
+</th>
+{END create_date_fieldheadercolumn}
+	{BEGIN create_uid_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN create_uid_fieldheader}
+	<b>Create Uid</b>
+	{END create_uid_fieldheader}
+</th>
+{END create_uid_fieldheadercolumn}
+	{BEGIN write_date_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN write_date_fieldheader}
+	<b>Write Date</b>
+	{END write_date_fieldheader}
+</th>
+{END write_date_fieldheadercolumn}
+	{BEGIN write_uid_fieldheadercolumn}
+<th class="runner-cc">
+	{BEGIN write_uid_fieldheader}
+	<b>Write Uid</b>
+	{END write_uid_fieldheader}
+</th>
+{END write_uid_fieldheadercolumn}
+		
+			{END record_header}
+			<td class="runner-cr"><img src="images/spacer.gif"></td>
+			{BEGIN endrecordheader_block}
+			<td class="runner-cs">&nbsp;</td>
+			{END endrecordheader_block}
+		</tr>
+	{END grid_header}
+		</thead>
+		<tbody>	
+		{BEGIN grid_row}
+	<tr class="runner-row style1" {$rowattrs} {$rowstyle} {$rowstyle}>
+		<td class="runner-cl"></td>
+		{BEGIN grid_record}
+				{BEGIN id_fieldcolumn}
+<td  class="runner-cc {$id_class}" {$id_style}>
+	{$id_value}
+</td>
+{END id_fieldcolumn}
+	{BEGIN tahun_fieldcolumn}
+<td  class="runner-cc {$tahun_class}" {$tahun_style}>
+	{$tahun_value}
+</td>
+{END tahun_fieldcolumn}
+	{BEGIN terimano_fieldcolumn}
+<td  class="runner-cc {$terimano_class}" {$terimano_style}>
+	{$terimano_value}
+</td>
+{END terimano_fieldcolumn}
+	{BEGIN terimatgl_fieldcolumn}
+<td  class="runner-cc {$terimatgl_class}" {$terimatgl_style}>
+	{$terimatgl_value}
+</td>
+{END terimatgl_fieldcolumn}
+	{BEGIN jmlterima_fieldcolumn}
+<td  class="runner-cc {$jmlterima_class}" {$jmlterima_style}>
+	{$jmlterima_value}
+</td>
+{END jmlterima_fieldcolumn}
+	{BEGIN customer_id_fieldcolumn}
+<td  class="runner-cc {$customer_id_class}" {$customer_id_style}>
+	{$customer_id_value}
+</td>
+{END customer_id_fieldcolumn}
+	{BEGIN npwpd_fieldcolumn}
+<td  class="runner-cc {$npwpd_class}" {$npwpd_style}>
+	{$npwpd_value}
+</td>
+{END npwpd_fieldcolumn}
+	{BEGIN nobukti_fieldcolumn}
+<td  class="runner-cc {$nobukti_class}" {$nobukti_style}>
+	{$nobukti_value}
+</td>
+{END nobukti_fieldcolumn}
+	{BEGIN notes_fieldcolumn}
+<td  class="runner-cc {$notes_class}" {$notes_style}>
+	{$notes_value}
+</td>
+{END notes_fieldcolumn}
+	{BEGIN enabled_fieldcolumn}
+<td  class="runner-cc {$enabled_class}" {$enabled_style}>
+	{$enabled_value}
+</td>
+{END enabled_fieldcolumn}
+	{BEGIN create_date_fieldcolumn}
+<td  class="runner-cc {$create_date_class}" {$create_date_style}>
+	{$create_date_value}
+</td>
+{END create_date_fieldcolumn}
+	{BEGIN create_uid_fieldcolumn}
+<td  class="runner-cc {$create_uid_class}" {$create_uid_style}>
+	{$create_uid_value}
+</td>
+{END create_uid_fieldcolumn}
+	{BEGIN write_date_fieldcolumn}
+<td  class="runner-cc {$write_date_class}" {$write_date_style}>
+	{$write_date_value}
+</td>
+{END write_date_fieldcolumn}
+	{BEGIN write_uid_fieldcolumn}
+<td  class="runner-cc {$write_uid_class}" {$write_uid_style}>
+	{$write_uid_value}
+</td>
+{END write_uid_fieldcolumn}
+
+		{END grid_record}
+		<td class="runner-cr"></td>
+		{BEGIN endrecord_block}
+		<td class="runner-cs">&nbsp;</td>
+		{END endrecord_block}
+	</tr>
+{END grid_row}
+										
+								<tr class="runner-bottomrow style1">
+									<td class="runner-cl"><img src="images/spacer.gif"></td>
+									{BEGIN record_footer}
+									{BEGIN id_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END id_fieldfootercolumn}
+{BEGIN tahun_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END tahun_fieldfootercolumn}
+{BEGIN terimano_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END terimano_fieldfootercolumn}
+{BEGIN terimatgl_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END terimatgl_fieldfootercolumn}
+{BEGIN jmlterima_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END jmlterima_fieldfootercolumn}
+{BEGIN customer_id_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END customer_id_fieldfootercolumn}
+{BEGIN npwpd_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END npwpd_fieldfootercolumn}
+{BEGIN nobukti_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END nobukti_fieldfootercolumn}
+{BEGIN notes_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END notes_fieldfootercolumn}
+{BEGIN enabled_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END enabled_fieldfootercolumn}
+{BEGIN create_date_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END create_date_fieldfootercolumn}
+{BEGIN create_uid_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END create_uid_fieldfootercolumn}
+{BEGIN write_date_fieldfootercolumn}
+<td class="runner-cc "></td>
+{END write_date_fieldfootercolumn}
+{BEGIN write_uid_fieldfootercolumn}
+<td class="runner-cc runner-clast"></td>
+{END write_uid_fieldfootercolumn}
+
+									{END record_footer}
+									<td class="runner-cr"><img src="images/spacer.gif"></td>
+									{BEGIN endrecordtotals_block}
+									<td class="runner-cs"></td>
+									{END endrecordtotals_block}
+								</tr>
+
+		</tbody>
+	</table>
+</div>	
+{END page}
+
+{END grid_block}
+
+
+
+{END container_grid}
+
+
+				</td>	
+
+				<td class="runner-right {$blockclass_right}">
+					
+				</td>	
+			</tr>
+			<tr class="runner-footer">
+				<td class="runner-bottom" colspan=3>
+					<!--%%bottom%%-->
+				</td>
+			</tr>
+		</table>
+		{$footer}
+	{END body}
+	</body>
+</html>
